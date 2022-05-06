@@ -1,8 +1,118 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-   <div class="col-lg-5 col-md-12">
+<div class="pcoded-main-container">
+    <div class="pcoded-content">
+        <div class="col-lg-5 col-md-12">
+                <!-- page statustic card start -->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="text-c-yellow">$30200</h4>
+                                        <h6 class="text-muted m-b-0">All Earnings</h6>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <i class="feather icon-bar-chart-2 f-28"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-c-yellow">
+                                <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <p class="text-white m-b-0">% change</p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="feather icon-trending-up text-white f-16"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="text-c-green">290+</h4>
+                                        <h6 class="text-muted m-b-0">Page Views</h6>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <i class="feather icon-file-text f-28"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-c-green">
+                                <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <p class="text-white m-b-0">% change</p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="feather icon-trending-up text-white f-16"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="text-c-red">145</h4>
+                                        <h6 class="text-muted m-b-0">Task</h6>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <i class="feather icon-calendar f-28"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-c-red">
+                                <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <p class="text-white m-b-0">% change</p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="feather icon-trending-down text-white f-16"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="text-c-blue">500</h4>
+                                        <h6 class="text-muted m-b-0">Downloads</h6>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <i class="feather icon-thumbs-down f-28"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-c-blue">
+                                <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <p class="text-white m-b-0">% change</p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="feather icon-trending-down text-white f-16"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- page statustic card end -->
+            </div>
+    </div>
+</div>
+<!--   <div class="col-lg-5 col-md-12">
         <!-- page statustic card start -->
-        <div class="row">
+<!--        <div class="row">
             <div class="col-sm-6">
                 <div class="card">
                     <div class="card-body">
@@ -27,8 +137,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>    
         </div>
+        <div>
         <div class="col-sm-3 col-xs-6"> <a href="<?=site_url('sid_core')?>" class="small-box-footer" title="Lihat Dusun">
           <div class="small-box bg-red">
             <div class="inner">
@@ -91,3 +202,5 @@
         <div class="col-sm-2 col-xs-6"> <a class="btn btn-block btn-social btn-success" href="<?=site_url('laporan_rentan')?>"> <i class="fa fa-wheelchair"></i>Rentan</a> </div>
         <div class="col-sm-2 col-xs-6"> <a class="btn btn-block btn-social bg-purple" href="<?=site_url('dpt')?>"> <i class="fa fa-hand-o-up"></i> DPT </a> </div>
         <div class="col-sm-2 col-xs-6"> <a class="btn btn-block btn-social btn-primary" href="<?=site_url('gis')?>"> <i class="fa fa-gift"></i> Maps </a> </div>
+      </div>
+              -->

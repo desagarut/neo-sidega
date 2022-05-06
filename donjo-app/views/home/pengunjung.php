@@ -66,18 +66,26 @@
 <!-- Highcharts -->
 <script src="<?= base_url()?>assets/js/highcharts/exporting.js"></script>
 <script src="<?= base_url()?>assets/js/highcharts/highcharts-more.js"></script>
-
-<div class='col-md-3'>
-    <div class="box box-success box-solid">
-        <div class="box-header with-border">
-            <h3 class="box-title">Pengunjung Web </h3>
-            <div class="box-tools pull-right">
-                <a href="<?=site_url("pengunjung")?>"><span class="label label-default"> Detail</span></a>
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-            </div>
-        </div>				
-        <div class='box-body'>
-            <div class="box-group" id="accordion">
+	
+<div class="col-lg-3 col-md-12">
+  <div class="card">
+    <div class="card-header">
+      <h5>Pengunjung Website</h5>
+      <div class="card-header-right">
+        <div class="btn-group card-option">
+          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="feather icon-more-horizontal"></i> </button>
+          <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+            <li class="dropdown-item full-card"><a href="<?=site_url("pengunjung")?>"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+            <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+            <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+            <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+		
+        <div class='card-body'>
+            <div class="card-group" id="accordion">
                 <div class="col-md-12">
                     <!-- Ini Grafik -->
                     <br>

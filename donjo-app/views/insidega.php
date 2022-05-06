@@ -61,7 +61,7 @@
                 <input type="checkbox" id="checkbox" class="form-checkbox">
                 Tampilkan sandi </div>
               <br />
-              <button type="submit" class="btn btn-primary" >MASUK</button>
+              <button type="submit" class="btn btn-primary text-right" >MASUK</button>
               <?php if ($this->session->insidega == -1 && $this->session->insidega_try < 4): ?>
               <div class="error">
                 <p style="color:red; text-transform:uppercase">Login Gagal.<br />
