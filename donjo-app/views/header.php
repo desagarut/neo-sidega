@@ -115,14 +115,14 @@
         
 		<?php // require __DIR__ .'/head_tags.php' ?>
 		</head>
-<!--<body class="<?= $this->setting->warna_tema_admin; ?> sidebar-mini fixed <?php if ($minsidebar==1): ?>sidebar-collapse<?php endif ?>">-->
+<!--<body class="<? //= $this->setting->warna_tema_admin; ?> sidebar-mini fixed <?php if ($minsidebar==1): ?>sidebar-collapse<?php endif ?>">-->
  <body class=""   >
-<!--[ Pre-loader ] start
+<!--[ Pre-loader ] start-->
 	<div class="loader-bg">
 		<div class="loader-track">
 			<div class="loader-fill"></div>
 		</div>
-	</div> -->
+	</div> 
 	<!-- [ Pre-loader ] End --> 
         
 <!-- [ Header ] start -->
