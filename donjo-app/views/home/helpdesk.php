@@ -1,4 +1,4 @@
-<div class="col-lg-3 col-md-12">
+<div class="col-lg-4 col-md-12">
                 <div class="card">
                     <div class="card-header">
                     <h5>Helpdesk</h5>
