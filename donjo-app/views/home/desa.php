@@ -35,8 +35,8 @@
  
         <div class="row">
 			<?php $this->load->view('home/peta.php');?>
+			<?php //$this->load->view('home/kependudukan.php');?>
             <?php $this->load->view('home/rekap_sppt.php');?>
-            <?php //$this->load->view('home/program_bantuan.php');?>
 			<?php $this->load->view('home/layanan.php');?>
             
         </div>
