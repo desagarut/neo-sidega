@@ -3,9 +3,9 @@
     <!-- [ navigation menu ] start -->
     <nav class="pcoded-navbar menu-light">
 		<div class="navbar-wrapper ">
-			<div class="navbar-content scroll-div">
+		<div class="navbar-content scroll-div">
 				
-				<div class="">
+				<div>
 					<div class="main-menu-header">
 						<img class="img-radius" src="<?= gambar_desa($desa['logo']); ?>" alt="User-Profile-Image">
 						<div class="user-details">
@@ -14,28 +14,45 @@
 					</div>
 					<div class="collapse" id="nav-user-link">
 						<ul class="list-unstyled">
-							<li class="list-group-item"><a href="user-profile.html"><i class="feather icon-user m-r-5"></i>View Profile</a></li>
+							<li class="list-group-item"><a href="<?= site_url('user_setting'); ?>"><i class="feather icon-user m-r-5"></i>View Profile</a></li>
 							<li class="list-group-item"><a href="#!"><i class="feather icon-settings m-r-5"></i>Settings</a></li>
-							<li class="list-group-item"><a href="auth-normal-sign-in.html"><i class="feather icon-log-out m-r-5"></i>Logout</a></li>
+							<li class="list-group-item"><a href="<?= site_url('insidega/logout'); ?>"><i class="feather icon-log-out m-r-5"></i>Logout</a></li>
 						</ul>
 					</div>
-				</div>
+				</div>	
 				
-				<ul class="nav pcoded-inner-navbar ">
+				<ul class="nav pcoded-inner-navbar sidenav-inner">
 					<li class="nav-item pcoded-menu-caption">
-					    <label>Navigation</label>
+					<label><a href="<?=site_url()?>beranda">Menu</a></label>
 					</li>
-					<li class="nav-item">
-					    <a href="<?=site_url()?>beranda" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+
+			<?php foreach ($modul AS $mod): ?>
+				<?php if ($this->CI->cek_hak_akses('b', $mod['url'])): ?>
+					<?php if (count($mod['submodul'])==0): ?>
+					<li class="<?= jecho($this->modul_ini, $mod['id'], 'nav-item active'); ?>">
+					    <a href="<?= site_url("$mod[url]"); ?>"><span class="pcoded-micon">
+							<i class="fa <?= $mod['ikon']; ?>" <?= jecho($this->modul_ini, $mod['id'], 'text-aqua'); ?>></i></span><span class="pcoded-mtext"><?= $mod['modul']; ?></span>
+						</a>
 					</li>
-					<li class="nav-item pcoded-hasmenu">
-					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Page layouts</span></a>
-					    <ul class="pcoded-submenu">
-					        <li><a href="layout-vertical.html" target="_blank">Vertical</a></li>
+
+					<?php else : ?>
+
+					<li class="nav-item pcoded-hasmenu <?= jecho($this->modul_ini, $mod['id'], 'active'); ?>">
+					    <a href="<?= site_url("$mod[url]"); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa <?= $mod['ikon']; ?> <?= jecho($this->modul_ini, $mod['id'], 'text-aqua'); ?>"></i></span><span class="pcoded-mtext"><?= $mod['modul']; ?></span></a>
+					    <ul class="pcoded-submenu <?= jecho($this->modul_ini, $mod['id'], 'active'); ?>">
+						<?php foreach ($mod['submodul'] as $submod): ?>
+					        <li class="<?= jecho($this->sub_modul_ini, $submod['id'], 'active'); ?>"><a href="<?= site_url("$submod[url]"); ?>">Vertical
+								<i class="fa <?= ($submod['ikon'] != NULL) ? $submod['ikon'] : 'fa-circle-o'; ?> <?= jecho($this->sub_modul_ini, $submod['id'], 'text-red'); ?>"></i> <?= $submod['modul']; ?></a>
+							</li>
 					        <li><a href="layout-horizontal.html" target="_blank">Horizontal</a></li>
+						<?php endforeach; ?>	
 					    </ul>
 					</li>
-					<li class="nav-item pcoded-menu-caption">
+					<?php endif; ?>
+				<?php endif; ?>
+			<?php endforeach; ?>
+
+<!--					<li class="nav-item pcoded-menu-caption">
 					    <label>UI Element</label>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
@@ -88,23 +105,24 @@
 					    </ul>
 					</li>
 					<li class="nav-item"><a href="sample-page.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li>
-
+					-->
 				</ul>
 				
-				<!--<div class="card text-center">
+				<div class="card text-center">
 					<div class="card-block">
 						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-						<i class="feather icon-sunset f-40"></i>
-						<h6 class="mt-3">Download Pro</h6>
-						<p>Getting more features with pro version</p>
-						<a href="https://1.envato.market/qG0m5" target="_blank" class="btn btn-primary btn-sm text-white m-0">Upgrade Now</a>
+						<img src="<?php echo base_url() . 'assets/files/logo/neosidega.fw.png'; ?>" style="width:40px" alt="" class="logo">
+						<h6 class="mt-3">Selamat</h6>
+						<p>Anda sedang menggunakan <br/>SIDeGa Versi <?= AmbilVersi() ?></p>
+						<a href="https://desagarut.id" target="_blank" class="btn btn-primary btn-sm text-white m-0">Website SIDeGa</a>
 					</div>
-				</div>-->
+				</div>
 				
 			</div>
 		</div>
 	</nav>
-	    <!-- [ navigation menu ] end -->
+	<!-- [ navigation menu ] end -->
+    
         
 <!--
 <aside class="main-sidebar">
@@ -135,7 +153,7 @@
             </div>		
         </div>
 
-		<ul class="sidebar-menu" data-widget="tree">
+		<ul class="sidebar-menu" data-widget="tree">-->
 			<!--<li class="header">MENU UTAMA</li>-->
 <!--			<?php foreach ($modul AS $mod): ?>
 				<?php if ($this->CI->cek_hak_akses('b', $mod['url'])): ?>

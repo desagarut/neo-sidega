@@ -1,4 +1,4 @@
-<style type="text/css">
+<!--<style type="text/css">
     .text-white {
         color: white;
     }
@@ -14,7 +14,7 @@
         margin-left: 5px;
         margin-right: 5px;
     }
-</style>
+</style>-->
 <div class="pcoded-main-container">
     <div class="pcoded-content">
         <!-- [ breadcrumb ] start -->

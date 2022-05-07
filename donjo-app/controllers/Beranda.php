@@ -8,8 +8,6 @@ class Beranda extends Admin_Controller {
 
 		$this->load->library('release');
 
-		$this->load->model('header_model');
-		$this->load->model('program_bantuan_model');
 		$this->load->model('surat_model');
 		$this->load->model('web_pengunjung_model');
 		$this->load->model('notif_model');
