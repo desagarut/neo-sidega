@@ -1,4 +1,3 @@
-<!-- https://itsolutionstuff.com/post/how-to-create-dynamic-sitemap-in-php-codeigniterexample.html -->
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>

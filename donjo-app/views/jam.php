@@ -1,3 +1,5 @@
+<?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
 <script type="text/javascript">
 function currentTime() {
   var date = new Date(); /* creating object of Date class */

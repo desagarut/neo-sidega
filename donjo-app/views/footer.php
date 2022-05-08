@@ -1,7 +1,17 @@
-<!--<script src="<?= base_url()?>assets/js/adminlte.min.js"></script>-->
-<script src="<?= base_url()?>assets/js/validasi.js"></script> 
-<!--<script src="<?= base_url()?>assets/js/jquery.validate.min.js"></script> -->
-<!--<script src="<?= base_url()?>assets/js/localization/messages_id.js"></script> -->
+
+            <script src="<?= base_url() ?>assets/js/plugins/gmaps.min.js"></script>
+            <script src="<?= base_url() ?>assets/js/pages/google-maps.js"></script>            
+            <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+           
+            <!-- Required Js -->
+            <!-- Required Js -->
+            <script src="<?= base_url()?>assets/js/vendor-all.min.js"></script>
+            <script src="<?= base_url()?>assets/js/plugins/bootstrap.min.js"></script>
+            <script src="<?= base_url()?>assets/js/ripple.js"></script>
+            <script src="<?= base_url()?>assets/js/pcoded.min.js"></script>
+
+            <script src="<?= base_url()?>assets/js/validasi.js"></script> 
+            <script src="<?= base_url()?>assets/js/jquery.validate.min.js"></script>
 
 <!-- NOTIFICATION--> 
 <!--

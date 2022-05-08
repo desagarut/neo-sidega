@@ -1,54 +1,78 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>
-        <?= $this->setting->admin_title
-            . ' ' . ucwords($this->setting->sebutan_desa)
-            . (($desa['nama_desa']) ? ' ' . $desa['nama_desa'] : '')
-            . get_dynamic_title_page_from_path();
-        ?>
-    </title>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <meta name="theme-color" content="#E08E0B">
+		<title>
+        <?=$this->setting->admin_title
+				. ' ' . ucwords($this->setting->sebutan_desa)
+				. (($desa['nama_desa']) ? ' ' . $desa['nama_desa']: '')
+				. get_dynamic_title_page_from_path();
+			?>
+        </title>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+            <meta name="theme-color" content="#E08E0B">
 
-    <?php if (is_file(LOKASI_LOGO_DESA . "favicon.ico")) : ?>
-        <link rel="shortcut icon" href="<?= base_url() ?><?= LOKASI_LOGO_DESA ?>favicon.ico" />
-    <?php else : ?>
-        <link rel="shortcut icon" href="<?= base_url() ?>favicon.ico" />
-    <?php endif; ?>
-    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?= base_url() ?>rss.xml" />
+		<?php if (is_file(LOKASI_LOGO_DESA . "favicon.ico")): ?>
+		<link rel="shortcut icon" href="<?= base_url()?><?= LOKASI_LOGO_DESA?>favicon.ico" />
+		<?php else: ?>
+		<link rel="shortcut icon" href="<?= base_url()?>favicon.ico" />
+		<?php endif; ?>
+		<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?= base_url()?>rss.xml" />
 
-    <!-- css neo -->
-    <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
+            <!-- css neo -->
+            <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
+            <link rel="stylesheet" href="<?= base_url() ?>assets/css/plugins/prism-coy.css">
 
-    <!-- Diperlukan untuk global automatic base_url oleh external js file -->
-    <script type="text/javascript">
-        var BASE_URL = "<?= base_url(); ?>";
-        var SITE_URL = "<?= site_url(); ?>";
-    </script>
+            <script src="<?= base_url() ?>assets/js/plugins/gmaps.min.js"></script>
+            <script src="<?= base_url() ?>assets/js/pages/google-maps.js"></script>            
+            <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+           
+            <!-- Required Js -->
+            <script src="<?= base_url() ?>assets/js/vendor-all.min.js"></script>
+            <script src="<?= base_url() ?>assets/js/plugins/bootstrap.min.js"></script>
+            <script src="<?= base_url() ?>assets/js/ripple.js"></script>
+            <script src="<?= base_url() ?>assets/js/pcoded.min.js"></script>  
+			<script src="<?= base_url() ?>assets/js/plugins/apexcharts.min.js"></script>
+            <script src="<?= base_url() ?>assets/js/analytics.js"></script>
+            <script src="<?= base_url() ?>assets/js/menu-setting.min.js"></script>
+            <script src="<?= base_url() ?>assets/js/uikit.min.js"></script>
+            <script src="<?= base_url() ?>assets/js/waves.min.js"></script>
 
-    <?php require __DIR__ . '/head_tags.php' ?>
-</head>
-<!--<body class="<? //= $this->setting->warna_tema_admin; 
-                    ?> sidebar-mini fixed <?php if ($minsidebar == 1) : ?>sidebar-collapse<?php endif ?>">-->
+            <script src="<?= base_url()?>assets/js/validasi.js"></script> 
+            <script src="<?= base_url()?>assets/js/jquery.validate.min.js"></script>
 
-<body>
-    <!--[ Pre-loader ] start-->
-    <div class="loader-bg">
-        <div class="loader-track">
-            <div class="loader-fill"></div>
-        </div>
-    </div>
-    <!-- [ Pre-loader ] End -->
+           <!--<script src="<?= base_url() ?>assets/js/pages/dashboard-main.js"></script>-->
 
-    <!-- [ Header ] start -->
+            <!-- prism Js 
+            <script src="<?= base_url() ?>assets/js/plugins/prism.js"></script>
+            <script src="<?= base_url() ?>assets/js/horizontal-menu.js"></script>-->
+
+
+
+		<!-- Diperlukan untuk global automatic base_url oleh external js file -->
+		<script type="text/javascript">
+			var BASE_URL = "<?= base_url(); ?>";
+			var SITE_URL = "<?= site_url(); ?>";
+		</script>
+
+		<?php require __DIR__ .'/head_tags.php' ?>
+		</head>
+<!--<body class="<? //= $this->setting->warna_tema_admin; ?> sidebar-mini fixed <?php if ($minsidebar==1): ?>sidebar-collapse<?php endif ?>">-->
+ <body>
+<!--[ Pre-loader ] start-->
+	<div class="loader-bg">
+		<div class="loader-track">
+			<div class="loader-fill"></div>
+		</div>
+	</div> 
+	<!-- [ Pre-loader ] End --> 
+        
+<!-- [ Header ] start -->
     <header class="navbar pcoded-header navbar-expand-lg navbar-light header-blue">
         <div class="m-header">
             <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
-            <a href="<?= site_url() ?>first" target="_blank" class="b-brand">
-
+            <a href="<?=site_url()?>first" target="_blank" class="b-brand">
+            
                 <!-- ========   change your logo hear   ============ -->
                 <img src="<?php echo base_url() . 'assets/files/logo/neosidega.fw.png'; ?>" style="width:40px" alt="" class="logo">
                 <img src="<?php echo base_url() . 'assets/files/logo/neosidega.fw.png'; ?>" style="width:40px" alt="" class="logo-thumb">
@@ -71,19 +95,19 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <!--
-                <?php if (ENVIRONMENT == 'development') : ?>
+                <?php if (ENVIRONMENT == 'development'): ?>
                         <li class="nav-item"> <a> <i class="feather icon-user" title="Development"></i><span class="badge">Development</span> </a></li>
                 <?php endif; ?>
-                <?php if ($this->CI->cek_hak_akses('b', 'permohonan_surat_admin')) : ?>
+                <?php if ($this->CI->cek_hak_akses('b', 'permohonan_surat_admin')): ?>
                     <li class="nav-item"> <a href="<?= site_url('permohonan_surat_admin/clear'); ?>"> <span><i class="fa fa-print" title="Permohonan Surat"></i>&nbsp;</span> <span class="badge" id="b_permohonan_surat" ></span> </a> </li>
                 <?php endif; ?>
-                <?php if ($this->CI->cek_hak_akses('b', 'komentar')) : ?>
+                <?php if ($this->CI->cek_hak_akses('b', 'komentar')): ?>
                         <li class="nav-item"><a href="<?= site_url('komentar'); ?>"> <span><i class="feather icon-user" title="Komentar"></i>&nbsp;</span> <span class="badge" id="b_komentar"></span> </a> </li>
                 <?php endif; ?>
-                <?php if ($this->CI->cek_hak_akses('b', 'mailbox')) : ?>
+                <?php if ($this->CI->cek_hak_akses('b', 'mailbox')): ?>
                 <li> <a href="<?= site_url('mailbox'); ?>"> <span><i class="feather icon-user" title="Pesan Masuk"></i>&nbsp;</span> <span class="badge" id="b_inbox" style="display: none;"></span> </a> </li>
                 <?php endif; ?>
-                -->
+                -->     
                 <li>
                     <div class="dropdown">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon feather icon-bell"></i></a>
@@ -153,7 +177,7 @@
                         <div class="dropdown-menu dropdown-menu-right profile-notification">
                             <div class="pro-head">
                                 <img src="<?= AmbilFoto($foto); ?>" class="img-radius" alt="User-Profile-Image">
-                                <span><?= $nama ?></span>
+                                <span><?=$nama?></span>
                                 <a href="<?= site_url('insidega/logout'); ?>" class="dud-logout" title="Logout">
                                     <i class="feather icon-log-out"></i>
                                 </a>
@@ -168,7 +192,7 @@
                 </li>
             </ul>
         </div>
-        <input id="success-code" type="hidden" value="<?= $_SESSION['success'] ?>">
-
-    </header>
-    <!-- [ Header ] end -->
+	</header>
+	<!-- [ Header ] end -->
+    
+    <input id="success-code" type="hidden" value="<?= $_SESSION['success']?>">
