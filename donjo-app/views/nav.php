@@ -38,7 +38,8 @@
 						<?php else : ?>
 
 							<li class="nav-item pcoded-hasmenu <?= jecho($this->modul_ini, $mod['id'], 'active'); ?>">
-								<a href="<?= site_url("$mod[url]"); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa <?= $mod['ikon']; ?> <?= jecho($this->modul_ini, $mod['id'], 'text-aqua'); ?>"></i></span><span class="pcoded-mtext"><?= $mod['modul']; ?></span></a>
+								<!--<a href="<?= site_url("$mod[url]"); ?>" class="nav-link "><span class="pcoded-micon"><i class="fa <?= $mod['ikon']; ?> <?= jecho($this->modul_ini, $mod['id'], 'text-aqua'); ?>"></i></span><span class="pcoded-mtext"><?= $mod['modul']; ?></span></a>-->
+								<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="fa <?= $mod['ikon']; ?> <?= jecho($this->modul_ini, $mod['id'], 'text-aqua'); ?>"></i></span><span class="pcoded-mtext"><?= $mod['modul']; ?></span></a>
 								<ul class="pcoded-submenu <?= jecho($this->modul_ini, $mod['id'], 'active'); ?>">
 									<?php foreach ($mod['submodul'] as $submod) : ?>
 										<li class="<?= jecho($this->sub_modul_ini, $submod['id'], 'active'); ?>"><a href="<?= site_url("$submod[url]"); ?>">

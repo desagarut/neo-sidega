@@ -24067,7 +24067,7 @@ div.dtk-focus-alt table.dataTable tbody th.focus {
 }
 
 .auth-wrapper .card .card-body {
-    padding: 20px 25px 20px 40px;
+    padding: 10px 10px 10px 10px;
 }
 
 @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -24087,11 +24087,11 @@ div.dtk-focus-alt table.dataTable tbody th.focus {
 }
 
 .auth-wrapper .auth-content:not(.container) {
-    width: 400px;
+    width: 80%;
 }
 
 .auth-wrapper .auth-content:not(.container) .card-body {
-    padding: 40px 35px;
+    padding: 10px 10px;
 }
 
 @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -24184,7 +24184,7 @@ div.dtk-focus-alt table.dataTable tbody th.focus {
 
 .auth-wrapper .img-logo-overlay {
     position: absolute;
-    top: 40px;
+    top: 0px;
     left: 50px;
 }
 

@@ -38,22 +38,7 @@ function initMap() {
 	margin-top:auto;
   }
 </style>
-<section class="content">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="box box-info">
-                    <div class='modal-body'>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div id="map_desa"></div>
-                                <input type="hidden" name="lat" id="lat" value="<?= $wil_ini['lat']?>"/>
-                                <input type="hidden" name="lng" id="lng" value="<?= $wil_ini['lng']?>" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-	
 
+<div class="col-sm-12">
+	<div id="map_desa"></div>
+</div>
