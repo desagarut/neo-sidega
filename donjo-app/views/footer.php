@@ -4,11 +4,13 @@
             <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
            
             <!-- Required Js -->
-            <!-- Required Js -->
             <script src="<?= base_url()?>assets/js/vendor-all.min.js"></script>
             <script src="<?= base_url()?>assets/js/plugins/bootstrap.min.js"></script>
             <script src="<?= base_url()?>assets/js/ripple.js"></script>
             <script src="<?= base_url()?>assets/js/pcoded.min.js"></script>
+
+			<script src="<?= base_url()?>assets/js/plugins/apexcharts.min.js"></script>
+			<!--<script src="<?= base_url()?>assets/js/pages/chart-apex.js"></script>-->
 
             <script src="<?= base_url()?>assets/js/validasi.js"></script> 
             <script src="<?= base_url()?>assets/js/jquery.validate.min.js"></script>

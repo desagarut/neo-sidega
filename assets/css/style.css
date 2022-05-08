@@ -10837,8 +10837,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 @font-face {
     font-family: "pct";
-  src: url("<?= base_url() ?>assets/fonts/pct.eot");
-  src: url("<?= base_url() ?>assets/fonts/pct.eot?#iefix") format("embedded-opentype"), url("<?= base_url() ?>assets/fonts/pct.woff") format("woff"), url("<?= base_url() ?>assets/fonts/pct.ttf") format("truetype"), url("<?= base_url() ?>assets/fonts/pct.svg#pct") format("svg");
+  src: url("../fonts/pct.eot");
+  src: url("../fonts/pct.eot?#iefix") format("embedded-opentype"), url("../fonts/pct.woff") format("woff"), url("../fonts/pct.ttf") format("truetype"), url("../fonts/pct.svg#pct") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -10922,9 +10922,9 @@ a.text-dark:hover, a.text-dark:focus {
 
 @font-face {
     font-family: "feather";
-  src: url("<?= base_url() ?>assets/fonts/feather.eot?t=1501841394106");
+  src: url("../fonts/feather.eot?t=1501841394106");
   /* IE9*/
-  src: url("<?= base_url() ?>assets/fonts/feather.eot?t=1501841394106#iefix") format("embedded-opentype"), url("<?= base_url() ?>assets/fonts/feather.woff?t=1501841394106") format("woff"), url("<?= base_url() ?>assets/fonts/feather.ttf?t=1501841394106") format("truetype"), url("<?= base_url() ?>assets/fonts/feather.svg?t=1501841394106#feather") format("svg");
+  src: url("../fonts/feather.eot?t=1501841394106#iefix") format("embedded-opentype"), url("../fonts/feather.woff?t=1501841394106") format("woff"), url("../fonts/feather.ttf?t=1501841394106") format("truetype"), url("../fonts/feather.svg?t=1501841394106#feather") format("svg");
   /* iOS 4.1- */
 }
 
@@ -23408,7 +23408,7 @@ pre[class*=language-]:before {
 }
 
 .widget-profile-card-3 {
-    background-image: url("<?= base_url() ?>assets/images/widget/slider5.jpg");
+    background-image: url("../images/widget/slider5.jpg");
     background-size: cover;
     padding: 50px 0;
     text-align: center;
@@ -23474,7 +23474,7 @@ pre[class*=language-]:before {
     color: #fff;
     text-align: center;
     padding-top: 45px;
-    background-image: url("<?= base_url() ?>assets/images/widget/blur-bg.png");
+    background-image: url("../images/widget/blur-bg.png");
     background-size: cover;
 }
 
@@ -24190,7 +24190,7 @@ div.dtk-focus-alt table.dataTable tbody th.focus {
 
 /* image varient start */
 .aut-bg-img {
-    background-image: url("<?= base_url() ?>assets/images/auth/img-auth-big.jpg");
+    background-image: url("../images/auth/img-auth-big.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
