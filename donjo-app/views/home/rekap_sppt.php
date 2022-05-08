@@ -1,62 +1,5 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<script>
-  'use strict';
-  $(document).ready(function() {
-    setTimeout(function() {
-      $(function() {
-        var options = {
-          chart: {
-            height: 250,
-            type: 'donut',
-          },
-          labels: ['Pajak Terhutang', 'Pajak Lunas'],
-          series: [<?= $d->pajak_terhutang ?>, <?= $d->pajak_lunas ?>],
-          colors: ["#ff5252", "#4680ff"],
-          legend: {
-            show: true,
-            position: 'bottom',
-          },
-          plotOptions: {
-            pie: {
-              donut: {
-                labels: {
-                  show: true,
-                  name: {
-                    show: true
-                  },
-                  value: {
-                    show: true
-                  }
-                }
-              }
-            }
-          },
-          dataLabels: {
-            enabled: true,
-            dropShadow: {
-              enabled: false,
-            }
-          },
-          responsive: [{
-            breakpoint: 480,
-            options: {
-              legend: {
-                position: 'bottom'
-              }
-            }
-          }]
-        }
-        var chart = new ApexCharts(
-          document.querySelector("#pie-chart-sppt"),
-          options
-        );
-        chart.render();
-      });
-    })
-  });
-</script>
-
 <div class="col-md-4">
   <div class="card user-card2">
     <div class="card-body text-center">
@@ -66,7 +9,7 @@
         </div>-->
 
       <div class="col-md-12">
-        <div id="pie-chart-sppt style="width:100%"></div>
+        <div id="pie-chart-2" style="width:100%"></div>
       </div>
 
       <?php

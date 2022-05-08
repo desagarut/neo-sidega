@@ -22,6 +22,7 @@
 
     <!-- css neo -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/plugins/prism-coy.css">
 
     <!-- Diperlukan untuk global automatic base_url oleh external js file -->
     <script type="text/javascript">

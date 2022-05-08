@@ -1947,8 +1947,9 @@ $(document).ready(function() {
                     height: 320,
                     type: 'donut',
                 },
-                series: [44, 55, 41, 17, 15],
-                colors: ["#4680ff", "#0e9e4a", "#00acc1", "#ffba57", "#ff5252"],
+                labels: ['Pajak Lunas','Pajak Terhutang'],
+                series: [80, 20],
+                colors: ["#0e9e4a", "#ff5252"],
                 legend: {
                     show: true,
                     position: 'bottom',

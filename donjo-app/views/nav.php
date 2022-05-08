@@ -14,8 +14,8 @@
 				</div>
 				<div class="collapse" id="nav-user-link">
 					<ul class="list-unstyled">
-						<li class="list-group-item"><a href="<?= site_url('user_setting'); ?>"><i class="feather icon-user m-r-5"></i>View Profile</a></li>
-						<li class="list-group-item"><a href="#!"><i class="feather icon-settings m-r-5"></i>Settings</a></li>
+						<li class="list-group-item"><a href="<?= site_url('identitas_desa'); ?>"><i class="feather icon-user m-r-5"></i>View Profile</a></li>
+						<li class="list-group-item"><a href="<?= site_url('setting'); ?>"><i class="feather icon-settings m-r-5"></i>Settings</a></li>
 						<li class="list-group-item"><a href="<?= site_url('insidega/logout'); ?>"><i class="feather icon-log-out m-r-5"></i>Logout</a></li>
 					</ul>
 				</div>
