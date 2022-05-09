@@ -15,15 +15,13 @@
 
 	<script src="<?= base_url()?>assets/js/plugins/bootstrap.min.js"></script>
 	<script src="<?= base_url()?>assets/js/plugins/apexcharts.min.js"></script>
-	<script src="<?= base_url()?>assets/js/pages/chart-apex.js"></script>
+	<!--<script src="<?= base_url()?>assets/js/pages/chart-apex.js"></script>-->
 
 	<script src="<?= base_url()?>assets/js/plugins/jquery-ui.min.js"></script>
 	<script src="<?= base_url()?>assets/js/jquery.validate.min.js"></script>
 
 
-	<script src="<?= base_url()?>assets/js/pages/dashboard-main.js"></script>
 	<script src="<?= base_url()?>assets/js/analytics.js"></script>
-
 
 	<script src="<?= base_url()?>assets/js/validasi.js"></script> 
 	<script src="<?= base_url()?>assets/js/jquery.validate.min.js"></script>

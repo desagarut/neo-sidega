@@ -72,19 +72,22 @@
 								<a href="#confirm-delete" class="btn btn-danger mb-2 mr-2" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("penduduk/delete_all/$p/$o"); ?>')"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 							<?php endif; ?>
 
-							<div class="btn-group mb-2 mr-2">
+
+							<!--<div class="btn-group mb-2 mr-2">
 								<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aksi Lainnya</button>
-								<div class="dropdown-menu">
+								<div class="dropdown-menu">-->
 										<!--<button type="button" class="btn  btn-primary" data-toggle="modal" data-target="#exampleModalLive">Launch demo modal</button>-->
-									<a href="<?= site_url("penduduk/ajax_cetak/$o/cetak"); ?>" class="dropdown-item" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="feather icon-printer"></i>&nbsp; Cetak</a>
+									<!--<a href="<?= site_url("penduduk/ajax_cetak/$o/cetak"); ?>" class="dropdown-item" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="feather icon-printer"></i>&nbsp; Cetak</a>
 									<a href="<?= site_url("penduduk/ajax_cetak/$o/unduh"); ?>" class="dropdown-item" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="feather icon-download"></i>&nbsp; Unduh</a>
 									<a href="<?= site_url("penduduk/ajax_adv_search"); ?>" class="dropdown-item" title="Pencarian Spesifik" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pencarian Spesifik"><i class="feather icon-search"></i>&nbsp; Pencarian Spesifik</a>
 									<a href="<?= site_url("penduduk/search_kumpulan_nik"); ?>" class="dropdown-item" title="Pilihan Kumpulan NIK" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pilihan Kumpulan NIK"><i class="feather icon-users"></i>&nbsp; Pilihan Kumpulan NIK</a>
 									<a href="<?= site_url("penduduk_log/clear"); ?>" class="dropdown-item" title="Log Data Penduduk"><i class="feather icon-book"></i>&nbsp; Log Penduduk</a>
 								</div>
-							</div>
-
-							<a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-warning mb-2 mr-2"><i class="fa fa-refresh"></i>Bersihkan</a>
+							</div>-->
+							<a href="<?= site_url("penduduk_log/clear"); ?>" class="btn btn-info mb-2 mr-2">&nbsp; Log Penduduk</a>
+							<a href="<?= site_url("penduduk/ajax_cetak/$o/cetak"); ?>" target="_blank"><button type="button" class="btn btn-icon btn-success mb-2 mr-2"><i class="feather icon-printer"></i></button></a>
+							<a href="<?= site_url("penduduk/ajax_cetak/$o/unduh"); ?>" target="_blank"><button type="button" class="btn btn-icon btn-success mb-2 mr-2"><i class="feather icon-download-cloud"></i></button></a>
+							<a href="<?= site_url("{$this->controller}/clear"); ?>"><button type="button" class="btn  btn-icon btn-warning mb-2 mr-2"><i class="feather icon-refresh-cw"></i></button></a>
 
 						</div>
 
