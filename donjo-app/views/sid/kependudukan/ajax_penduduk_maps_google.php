@@ -43,6 +43,29 @@ function initMap() {
   }
 </style>
 <form id="validasi1" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">	
+
+<div class="card-body">
+	<div id="modalBox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="myModalLabel">Modal Title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<p class="mb-0"><div id="map_penduduk"></div>
+				<input type="hidden" name="lat" id="lat" value="<?= $penduduk['lat']?>"/>
+                <input type="hidden" name="lng" id="lng" value="<?= $penduduk['lng']?>" /></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn  btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn  btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--
 <div class='modal-body'>
 		<div class="row">
 			<div class="col-sm-12">
@@ -56,5 +79,5 @@ function initMap() {
             <button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
             <button type="submit" class="btn btn-social btn-box btn-success btn-sm"><i class='fa fa-check'></i> Simpan</button>
 		</div>
-    </div>
+    </div>-->
 </form>

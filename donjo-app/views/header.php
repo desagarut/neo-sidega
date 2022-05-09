@@ -22,6 +22,8 @@
 
     <!-- css neo -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/jquery-ui.min.css">
+
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/plugins/prism-coy.css">
 
     <!-- Diperlukan untuk global automatic base_url oleh external js file -->
@@ -29,6 +31,11 @@
         var BASE_URL = "<?= base_url(); ?>";
         var SITE_URL = "<?= site_url(); ?>";
     </script>
+
+    <script src="<?= base_url()?>assets/js/jquery.min.js"></script>
+    <script src="<?= base_url()?>assets/js/jquery-ui.min.js"></script>
+
+
 
     <?php require __DIR__ . '/head_tags.php' ?>
 </head>
