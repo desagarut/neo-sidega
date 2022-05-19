@@ -1,11 +1,12 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Daftar Pembangunan</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('hom_sid') ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Daftar Pembangunan</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainformexcel" name="mainformexcel"method="post" class="form-horizontal">
 			<div class="row">
@@ -16,7 +17,7 @@
 								<i class="fa fa-plus"></i>Tambah Data
 							</a>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="row">
@@ -62,7 +63,7 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 <?php $this->load->view('global/confirm_delete'); ?>
 <script>

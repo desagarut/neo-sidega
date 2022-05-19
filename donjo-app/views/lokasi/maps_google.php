@@ -37,16 +37,17 @@ function initMap() {
   }
 </style>
 
-<div class="content-wrapper">
+<div class="pcoded-main-container">
 
-	<section class="content-header">
+
+	<div class="page-header">
 		<h1>Lokasi <?= $lokasi['nama']?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('plan')?>"> Pengaturan Lokasi</a></li>
 			<li class="active">Lokasi <?= $lokasi['nama']?></li>
 		</ol>
-	</section>
+	</div>
 
 <form action="<?= $form_action?>" method="post" id="validasi">
 	<div class='modal-body'>

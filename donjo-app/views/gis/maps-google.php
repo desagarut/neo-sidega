@@ -94,7 +94,8 @@ function initMap() {
 }
 
 </script>
-<div class="content-wrapper">
+<div class="pcoded-main-container">
+
       <div class="map">
         <div id="peta_wilayah_desa" style="height: 630px"></div>
       </div>

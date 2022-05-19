@@ -4,7 +4,7 @@
 													<div class="box-header with-border">
 														<h3 class="box-title"><strong>Impor Data PPLS</strong></h3>
 													</div>
-													<div class="box-body">
+													<div class="card-body">
 														<div class="row">
 															<div class="col-sm-12">
 																<p>Mempersiapkan data dengan bentuk excel untuk Impor ke dalam database SID:</p>
@@ -119,5 +119,5 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>

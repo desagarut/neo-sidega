@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="box box-danger">
-					<div class="box-body">
+					<div class="card-body">
 						<div class="form-group">
 							<label>Program Bantuan Untuk Ditampilkan</label>
 							<select name="program_bantuan" class="form-control select2 input-sm required" style="width: 100%;">

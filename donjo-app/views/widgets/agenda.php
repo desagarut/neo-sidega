@@ -5,7 +5,7 @@
 </style>
 
 <div class="box box-primary box-solid">
-	<div class="box-header">
+	<div class="card-header">
 		<h3 class="box-title"><i class="fa fa-calendar"></i> Agenda</a></h3>
 	</div>
 	<div id="agenda" class="box-body">

@@ -1,12 +1,13 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Panduan Program Bantuan</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?=site_url('program_bantuan')?>"> Daftar Program Bantuan</a></li>
 			<li class="active"> Panduan Program Bantuan</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
@@ -14,7 +15,7 @@
 					<div class="box-header with-border">
 						<a href="<?=site_url('program_bantuan')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<h4>Keterangan</h4>
 						<p><strong>Program Bantuan</strong> adalah modul untuk pengelolaan data aktivitas program kerja dan keterlibatan warga, baik secara personal, keluarga, rumah tangga, maupun kelompok/organisasi.</p>
 						<h4>Panduan</h4>
@@ -39,5 +40,5 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>

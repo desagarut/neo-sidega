@@ -1,5 +1,6 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Form Tambah/Ubah</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
@@ -7,7 +8,7 @@
 			<li><a href='<?= site_url("tawa/layanan/$album")?>'><i class="fa fa-dashboard"></i> Daftar Layanan</a></li>
 			<li class="active">Tambah/Ubah</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 			<div class="row">
@@ -17,7 +18,7 @@
 							<a href="<?= site_url("tawa/layanan/$album")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Artikel">
 								<i class="fa fa-arrow-circle-left "></i>Kembali</a>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="form-group">
 								<label class="control-label col-sm-4" for="nama">Nama Layanan</label>
 								<div class="col-sm-6">
@@ -182,5 +183,5 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>

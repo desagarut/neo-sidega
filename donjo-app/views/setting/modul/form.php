@@ -3,8 +3,9 @@
 		font-family: fontAwesome
 	}
 </style>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<?php if ($modul['parent']!='0'): ?>
 		<h1>Pengaturan Sub Modul</h1>
 		<?php else: ?>
@@ -18,7 +19,7 @@
 			<?php endif ?>
 			<li class="active">Pengaturan Modul</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row" >
 			<form id="validasi" action="<?=$form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
@@ -30,7 +31,7 @@
 								<a href="<?= site_url()?>modul/sub_modul/<?=($modul['parent'])?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Sub Modul</a>
 							<?php endif ?>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="form-group">
 								<label class="col-sm-4 control-label" for="pamong_nama"><?php if ($modul['parent']!='0'): ?>Nama Sub Modul<?php else: ?>Nama Modul<?php endif ?></label>
 								<div class="col-sm-6">
@@ -73,7 +74,7 @@
 				</div>
 			</form>
 		</div>
-	</section>
+	</div>
 </div>
 
 <script>

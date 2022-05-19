@@ -10,12 +10,8 @@
 	<script src="<?= base_url()?>assets/js/ripple.js"></script>
 	<script src="<?= base_url()?>assets/js/pcoded.min.js"></script>
 
-	<!--<script src="<?= base_url()?>assets/js/uikit.min.js"></script>
-	<script src="<?= base_url()?>assets/js/waves.min.js"></script>-->
-
 	<script src="<?= base_url()?>assets/js/plugins/bootstrap.min.js"></script>
 	<script src="<?= base_url()?>assets/js/plugins/apexcharts.min.js"></script>
-	<!--<script src="<?= base_url()?>assets/js/pages/chart-apex.js"></script>-->
 
 	<script src="<?= base_url()?>assets/js/plugins/jquery-ui.min.js"></script>
 	<script src="<?= base_url()?>assets/js/jquery.validate.min.js"></script>
@@ -27,6 +23,31 @@
 	<script src="<?= base_url()?>assets/js/jquery.validate.min.js"></script>
 	<script src="<?= base_url()?>assets/js/localization/messages_id.js"></script>
 	<script src="<?= base_url()?>assets/js/numeral.min.js"></script>
+
+		<!-- OpenStreetMap Js-->
+		<script src="<?= base_url()?>assets/js/leaflet.js"></script>
+	<script src="<?= base_url()?>assets/js/turf.min.js"></script>
+	<script src="<?= base_url()?>assets/js/leaflet-geoman.min.js"></script>
+	<script src="<?= base_url()?>assets/js/leaflet.filelayer.js"></script>
+	<script src="<?= base_url()?>assets/js/togeojson.js"></script>
+	<script src="<?= base_url()?>assets/js/togpx.js"></script>
+	<script src="<?= base_url()?>assets/js/leaflet-providers.js"></script>
+	<script src="<?= base_url()?>assets/js/L.Control.Locate.min.js"></script>
+	<script src="<?= base_url()?>assets/js/leaflet.markercluster.js"></script>
+	<script src="<?= base_url()?>assets/js/peta.js"></script>
+	<script src="<?= base_url()?>assets/js/leaflet-measure-path.js"></script>
+	<script src="<?= base_url()?>assets/js/apbdes_manual.js"></script>
+	<script src="<?= base_url()?>assets/js/mapbox-gl.js"></script>
+	<script src="<?= base_url()?>assets/js/leaflet-mapbox-gl.js"></script>
+	<script src="<?= base_url()?>assets/js/shp.js"></script>
+	<script src="<?= base_url()?>assets/js/leaflet.shpfile.js"></script>
+	<script src="<?= base_url()?>assets/js/leaflet.groupedlayercontrol.min.js"></script>
+	<script src="<?= base_url()?>assets/js/leaflet.browser.print.js"></script>
+	<script src="<?= base_url()?>assets/js/leaflet.browser.print.utils.js"></script>
+	<script src="<?= base_url()?>assets/js/leaflet.browser.print.sizes.js"></script>
+	<script src="<?= base_url()?>assets/js/dom-to-image.min.js"></script>
+
+
 
 <!-- NOTIFICATION--> 
 <!--

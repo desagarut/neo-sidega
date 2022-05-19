@@ -2,4 +2,4 @@
 
 <section class="map">
 	<?php $this->load->view($halaman_peta); ?>
-</section>
+</div>

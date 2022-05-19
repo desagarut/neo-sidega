@@ -8,7 +8,7 @@
       <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#dokumen"><i class="fa fa-minus"></i></button>
     </div>
   </div>
-  <div class="box-body">
+  <div class="card-body">
     <div class="table-responsive">
       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped">
         <thead>

@@ -6,7 +6,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="box box-danger">
-				<div class="box-body">
+				<div class="card-body">
 					<table class="table table-bordered table-striped table-hover" >
 						<tbody>
 							<tr>
@@ -24,7 +24,7 @@
 		</div>
 		<div class="col-sm-12">
 			<div class="box box-danger">
-				<div class="box-body">
+				<div class="card-body">
 					<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 						<?php include("donjo-app/views/covid19/vaksin/form_isian_peserta_vaksin.php"); ?>
 					</form>

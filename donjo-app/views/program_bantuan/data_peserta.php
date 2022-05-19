@@ -1,5 +1,6 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Data Peserta Program Bantuan</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
@@ -7,14 +8,14 @@
 			<li><a href="<?= site_url("program_bantuan/detail/$detail[id]")?>"> Rincian Program Bantuan</a></li>
 			<li class="active">Data Peserta Program Bantuan</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="box box-info">
 			<div class="box-header with-border">
 				<a href="<?= site_url('program_bantuan')?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
 				<a href="<?= site_url("program_bantuan/detail/$detail[id]")?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Rincian Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Rincian Program Bantuan</a>
 			</div>
-			<div class="box-body">
+			<div class="card-body">
 				<?php include('donjo-app/views/program_bantuan/rincian.php'); ?>
 				<h5><b>Data Peserta</b></h4>
 				<div class="table-responsive">
@@ -147,5 +148,5 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>

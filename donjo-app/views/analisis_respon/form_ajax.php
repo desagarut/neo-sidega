@@ -61,7 +61,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="box box-danger">
-						<div class="box-body">
+						<div class="card-body">
 							<div class="table-responsive" style="height:60vh;">
 								<table class="table table-bordered dataTable nowrap">
 									<?php foreach ($list_jawab AS $data): ?>

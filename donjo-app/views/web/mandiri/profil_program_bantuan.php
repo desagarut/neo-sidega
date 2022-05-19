@@ -31,7 +31,7 @@
                 </div>
 
 
-                <div class="box-body">
+                <div class="card-body">
                     <?php if ($bantuan_penduduk) : ?>
                         <i class="fa fa-caret-right"></i> <b>SASARAN PENDUDUK</b>
                         <div class="table-responsive">

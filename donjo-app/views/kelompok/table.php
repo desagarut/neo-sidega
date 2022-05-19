@@ -17,14 +17,15 @@
 
 </script>
 
-<div class="content-wrapper">
-  <section class="content-header">
+<div class="pcoded-main-container">
+
+  <div class="page-header">
     <h1>Pengelolaan Kelompok</h1>
     <ol class="breadcrumb">
       <li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
       <li class="active">Pengelolaan Kelompok</li>
     </ol>
-  </section>
+  </div>
   <section class="content" id="maincontent">
   <form id="mainform" name="mainform" action="" method="post">
   <div class="row">
@@ -61,7 +62,7 @@
     <a href="<?= site_url("kelompok/dialog/unduh"); ?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Kelompok"><i class="fa fa-download"></i> Unduh</a> 
     <a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan</a> 
 </div>
-  <div class="box-body">
+  <div class="card-body">
   <div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
   <form id="mainform" name="mainform" action="" method="post">
     <div class="row">
@@ -137,6 +138,6 @@
 </div>
 </div>
 </form>
-</section>
+</div>
 </div>
 <?php $this->load->view('global/confirm_delete'); ?>

@@ -26,7 +26,7 @@
           </ul>
           </p>
         </div>
-        <div class="box-footer">
+        <div class="card-footer">
         </div>
   </div>
 </div>

@@ -1,11 +1,12 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Pesan <?= $tipe_mailbox ?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('hom_sid')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active"><?= $tipe_mailbox ?></li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form action="<?= site_url('mailbox/form') ?>" class="form-horizontal" method="post">
 			<div class="row">
@@ -16,7 +17,7 @@
 								<i class="fa fa-arrow-circle-left "></i>Kembali ke <?= $tipe_mailbox ?>
             	</a>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="form-group">
 								<label class="control-label col-sm-2" for="owner"><?= $owner ?></label>
 								<div class="col-sm-9">
@@ -54,7 +55,7 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 <script>
 	$(document).ready(function() {

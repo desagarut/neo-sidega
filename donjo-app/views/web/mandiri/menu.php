@@ -50,7 +50,7 @@
       <li> <a href="<?= site_url();?>mandiri_web/ganti_pin"><i class="fa fa-key"></i> <span> Ganti Password</span>  </a> </li>
       <li> <a href="<?= site_url();?>mandiri_web/logout"><i class="fa fa-sign-out"></i> <span> Keluar</span>  </a> </li>
     </ul>
-  </section>
+  </div>
 </aside>
 <script type="text/javascript">
 

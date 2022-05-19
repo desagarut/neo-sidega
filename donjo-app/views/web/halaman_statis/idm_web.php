@@ -139,7 +139,7 @@ $(document).ready(function () {
 
 <section class="main-wrapper">
     <div class="box box-info">
-        <div class="box-body">
+        <div class="card-body">
             <div class="row">
                 <div class="col-sm-12">
                     <?php if ($idm->error_msg): ?>
@@ -282,4 +282,4 @@ $(document).ready(function () {
             </div>
         </div>
     </div>
-</section>
+</div>

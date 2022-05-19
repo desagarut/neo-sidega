@@ -18,8 +18,9 @@
 	th.horizontal {width: 20%}
 
 </style>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Rincian Mutasi Letter-C</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('home')?>"><i class="fa fa-home"></i> Home</a></li>
@@ -27,7 +28,7 @@
 			<li><a href="<?= site_url('letterc/rincian/'.$letterc[id])?>"> Rincian Letter-C</a></li>
 			<li class="active">Mutasi Letter-C</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
@@ -41,7 +42,7 @@
 						<a href="<?=site_url('letterc/rincian/'.$letterc[id])?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Letter-C"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Rincian Letter-C</a>
 						</a>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -52,7 +53,7 @@
 												<div class="box-header with-border">
 													<h3 class="box-title">Rincian Letter-C</h3>
 												</div>
-												<div class="box-body">
+												<div class="card-body">
 													<table class="table table-bordered table-striped table-hover" >
 														<tbody>
 															<tr>
@@ -84,7 +85,7 @@
 												<div class="box-header with-border">
 													<h3 class="box-title">Rincian Persil</h3>
 												</div>
-												<div class="box-body">
+												<div class="card-body">
 													<table class="table table-bordered table-striped table-hover" >
 														<tbody>
 															<tr>
@@ -193,6 +194,6 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 

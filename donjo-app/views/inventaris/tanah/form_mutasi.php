@@ -1,12 +1,13 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Isi Data Mutasi Inventaris Tanah</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url() ?>inventaris_tanah"><i class="fa fa-dashboard"></i>Daftar Inventaris Tanah</a></li>
 			<li class="active">Isi Data Mutasi</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form class="form-horizontal" id="validasi" name="form_mutasi_tanah" method="post" action="<?= site_url("api_inventaris_tanah/add_mutasi"); ?>">
 			<input type="hidden" name="id_inventaris_tanah" id="id_inventaris_tanah" value="<?= $main->id; ?>">
@@ -19,7 +20,7 @@
             <div class="box-header with-border">
 							<a href="<?= site_url() ?>inventaris_tanah" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Daftar Inventaris Tanah</a>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
@@ -92,7 +93,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="box-footer">
+						<div class="card-footer">
 							<div class="col-xs-12">
 								<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
 								<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
@@ -102,7 +103,7 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 <script>
 	$(document).ready(function()

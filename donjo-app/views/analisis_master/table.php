@@ -20,9 +20,10 @@
 
 </script>
 
-<div class="content-wrapper">
+<div class="pcoded-main-container">
 
-	<section class="content-header">
+
+	<div class="page-header">
 
 		<h1>Master Pengumpulan Data Potensi/Sumber Daya </h1>
 
@@ -34,7 +35,7 @@
 
 		</ol>
 
-	</section>
+	</div>
 
 	<section class="content" id="maincontent">
 
@@ -56,7 +57,7 @@
 
 					</div>
 
-					<div class="box-body">
+					<div class="card-body">
 
 						<div class="row">
 
@@ -328,7 +329,7 @@
 
 		</div>
 
-	</section>
+	</div>
 
 </div>
 

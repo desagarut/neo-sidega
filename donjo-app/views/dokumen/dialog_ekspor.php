@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="box box-danger">
-					<div class="box-body">
+					<div class="card-body">
 						<p>
 							Ekspor data dan dokumen informasi publik untuk diimpor ke aplikasi di tingkat supra-desa, seperti PPID kabupaten atau ke aplikasi OpenDK
 						</p>

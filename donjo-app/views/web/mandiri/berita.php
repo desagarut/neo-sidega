@@ -38,4 +38,4 @@
 			Belum ada arsip konten web.
 		<?php endif; ?>
 	</div>
-</section>
+</div>

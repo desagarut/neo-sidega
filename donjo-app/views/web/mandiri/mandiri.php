@@ -12,7 +12,8 @@ table.table th {
 	const LOKASI_DOKUMEN = '<?= base_url().LOKASI_DOKUMEN ?>';
 </script>
 
-<div class="content-wrapper">
+<div class="pcoded-main-container">
+
   <section class="content" id="maincontent">
     <div class="row">
       <div class="col-md-12">
@@ -44,7 +45,7 @@ table.table th {
             
           </div>
           <div class="box box-primary box-solid">
-            <div class="box-body"> 
+            <div class="card-body"> 
             <a class="btn btn-app" style="color:#06F" href="<?=site_url('arsip')?>" title="Tulis Berita"><i class="fa fa-bullhorn text-yellow"></i> Berita</a> 
               <a class="btn btn-app" style="color:#06F" href="<?= site_url('mandiri_web/mandiri/1/3');?>" title="Pesan"><span class="badge bg-aqua"></span><i class="fa fa-envelope text-green"></i> Pesan </a> 
               <a class="btn btn-app" style="color:#06F" href="<?= site_url('mandiri_web/mandiri/1/2');?>"> <i class="fa fa-paper-plane-o text-aqua"></i> Buat Surat</a> 
@@ -142,7 +143,7 @@ table.table th {
             
             <!-- /.box-header -->
             
-            <div class="box-body"><small> <strong><i class="fa fa-book margin-r-5"></i> Pendidikan Terakhir</strong></small>
+            <div class="card-body"><small> <strong><i class="fa fa-book margin-r-5"></i> Pendidikan Terakhir</strong></small>
               <p class="text-muted"> <small>
                 <?= strtoupper($penduduk['pendidikan_kk'])?>
                 </small> </p>
@@ -202,6 +203,6 @@ table.table th {
         
       </div>
     </div>
-  </section>
+  </div>
 </div>
 

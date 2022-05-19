@@ -25,7 +25,7 @@
 		<div class="box-header with-border">
 			<h3 class="box-title">Rincian Program</h3>
 		</div>
-		<div class="box-body">
+		<div class="card-body">
 			<div class="table-responsive">
 				<table class="table table-bordered table-striped table-hover tabel-rincian">
 					<tbody>
@@ -46,7 +46,7 @@
 		<div class="box-header with-border">
 			<h3 class="box-title">Identitas Pada Kartu Peserta</h3>
 		</div>
-		<div class="box-body">
+		<div class="card-body">
 			<input type="hidden" name="program_id" value="<?= $program_id?>"/>
 			<div class="form-group">
 				<label for="no_id_kartu" class="col-sm-4 control-label">Nomor Kartu Peserta</label>

@@ -1,11 +1,12 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Daftar Inventaris Peralatan Dan Mesin</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Daftar Inventaris Peralatan Dan Mesin</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainformexcel" name="mainformexcel" action="" method="post" class="form-horizontal">
 			<div class="row">
@@ -25,7 +26,7 @@
 								<i class="fa fa-download"></i>Unduh
             	</a>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="row">
@@ -182,7 +183,7 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 <?php $this->load->view('global/confirm_delete');?>
 <script>

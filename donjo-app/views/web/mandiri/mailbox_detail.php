@@ -1,8 +1,9 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-  <div class="content-wrapper">
+  <div class="pcoded-main-container">
+
     <!-- Content Header (Page header) -->
-    <section class="content-header">
+    <div class="page-header">
       <h1>
         Mailbox
         <small>13 new messages</small>
@@ -11,28 +12,28 @@
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Mailbox</li>
       </ol>
-    </section>
+    </div>
 
-    <section class="content">
+    <div class="card">
         <div class="row">
             <div class="col-md-3">
                 <?php $this->load->view('web/mandiri/mailbox_menu.php');?>
             </div>
             <div class="col-md-9">
               <div class="box box-info">
-                <div class="box-header">
+                <div class="card-header">
                     <h3 class="box-title">Layanan Surat</h3>
                     <?php if($pesan) : ?>
                         <form action="<?= site_url('mailbox_web/form') ?>" class="form-horizontal" method="post">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="box no-border">
-                                        <div class="box-header">
+                                        <div class="card-header">
                                             <a href="<?= site_url("mandiri_web/mandiri/1/3/$kat")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Artikel">
                                                 <i class="fa fa-arrow-circle-left "></i>Kembali ke <?= $tipe_mailbox ?>
                                             </a>
                                         </div>
-                                        <div class="box-body">
+                                        <div class="card-body">
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="owner"><?= $owner ?></label>
                                                 <div class="col-sm-9">
@@ -76,7 +77,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </div>
 
 

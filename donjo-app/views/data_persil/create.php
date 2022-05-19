@@ -1,13 +1,14 @@
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Pengelolaan Data Letter-C <?=ucwords($this->setting->sebutan_deskel)?> <?= $kelurahan["nama_deskel"];?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?=site_url('home')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?=site_url('data_persil/clear')?>"> Daftar Letter-C</a></li>
 			<li class="active">Pengelolaan Data Letter-C</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-3">
@@ -15,14 +16,14 @@
 			</div>
 			<div class="col-md-9">
 				<div class="box box-info">
-					<div class="box-body">
+					<div class="card-body">
 						<div class="box-header with-border">
 							<a href="<?= site_url('letterc/clear')?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Letter-C"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Letter-C</a>
 						</div>
 						<div class="row">
 							<div class="col-sm-12">
 								<form action="" id="main" name="main" method="POST" class="form-horizontal">
-									<div class="box-body">
+									<div class="card-body">
 
 										<div class="form-group ">
 											<label for="jenis_pemilik" class="col-sm-3 control-label">Jenis Pemilik</label>
@@ -77,7 +78,7 @@
 									</div>
 								</form>
 								<form name='mainform' action="<?= site_url('letterc/simpan_letterc')?>" method="POST"  id="validasi" class="form-horizontal">
-									<div class="box-body">
+									<div class="card-body">
 										<input id="jenis_pemilik" name="jenis_pemilik" type="hidden" value="1">
 										<input type="hidden" name="nik_lama" value="<?= $pemilik["nik_lama"] ?>"/>
 										<input type="hidden" name="nik" value="<?= $pemilik["nik"] ?>"/>
@@ -115,7 +116,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="box-footer">
+									<div class="card-footer">
 										<div class="col-xs-12">
 											<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
 											<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
@@ -128,7 +129,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 <script>
 	$(document).ready(function(){

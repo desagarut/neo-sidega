@@ -4,7 +4,7 @@
   <div class="box-header with-border">
     <h5><b>Rincian Keluarga</b></h5>
   </div>
-  <div class="box-body">
+  <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered table-striped table-hover tabel-rincian">
         <tbody>
@@ -38,7 +38,7 @@
       </table>
     </div>
   </div>
-  <div class="box-body">
+  <div class="card-body">
     <h5><b>Daftar Anggota Keluarga</b></h5>
     <div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
       <form id="mainform" name="mainform" action="" method="post">

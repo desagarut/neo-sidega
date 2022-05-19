@@ -12,7 +12,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="box box-danger">
-					<div class="box-body">
+					<div class="card-body">
 						<div class="form-group">
 							<div class="alert alert-warning" role="alert"><i class="fa fa-exclamation-triangle"></i>
 								Data yang diimpor berisi data beberapa desa dan akan menyebabkan nilai laporan dan grafik salah. Untuk menghapus data desa lain, pilih desa anda dan klik tombol 'Berishkan'.

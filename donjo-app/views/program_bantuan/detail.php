@@ -8,15 +8,16 @@
 	});
 </script>
 <?php $detail = $program[0]; ?>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Program Bantuan <?= $detail['nama']; ?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('program_bantuan')?>"> Daftar Program Bantuan</a></li>
 			<li class="active">Program Bantuan <?= $detail['nama']; ?></li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" method="post">
 			<div class="box box-info">
@@ -42,7 +43,7 @@
 					<a href="<?= site_url('program_bantuan')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan
 					</a>
 				</div>
-				<div class="box-body">
+				<div class="card-body">
 					<div class="row">
 						<div class="col-sm-12">
 							<input type="hidden" id="program_id" name="program_id" value="<?= $detail['id']?>">
@@ -130,7 +131,7 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 <?php $this->load->view('global/confirm_delete');?>
 

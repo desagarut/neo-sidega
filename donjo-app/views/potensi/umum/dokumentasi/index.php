@@ -1,11 +1,12 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Dokumentasi Potensi Umum</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('hom_sid') ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Dokumentasi Potensi Umum</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainformexcel" name="mainformexcel"method="post" class="form-horizontal">
 			<div class="row">
@@ -19,7 +20,7 @@
 							<a href="<?= site_url("potensi_umum/dialog_daftar/{$potensi_umum->id}/unduh")?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Pembangunan" title="Unduh Data Pembangunan <?= $potensi_umum->judul ?> "><i class="fa fa-download "></i> Unduh</a>
 							<a href="<?= site_url('potensi_umum') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fa fa-arrow-circle-left"></i> Kembali </a>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<h5 class="text-bold">Rincian Dokumen</h5>
 							<div class="table-responsive">
 								<table class="table table-bordered table-striped table-hover tabel-rincian">
@@ -71,7 +72,7 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 <?php $this->load->view('global/confirm_delete'); ?>
 <script>

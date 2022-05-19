@@ -18,10 +18,10 @@
 </script>	  
 
 	<section class="content" id="maincontent">
-					<div class="box-body">
+					<div class="card-body">
 							<div class="col-sm-12">
 							<!--	<form action="" id="main" name="main" method="POST" class="form-horizontal">
-									<div class="box-body">
+									<div class="card-body">
 										<div id="warga_desa">
 											<?php// if ($wajib_pajak): ?>
                                             <div class="col-sm-8">
@@ -107,7 +107,7 @@
 								</form>-->
                                 
 								<form name='mainform' action="<?= site_url('data_sppt/simpan_pembayaran')?>" method="POST"  id="validasi" class="form-horizontal">
-									<div class="box-body">
+									<div class="card-body">
                                         <input id="nomor" name="nomor" type="hidden" value="<?= ($data_tagih["nomor"])?>">
 										<input id="nama_wp" name="nama_wp" type="hidden" value="<?= ($data_tagih["nama_wp"])?>">
 										<input id="letak_op" name="letak_op" type="hidden" value="<?= ($data_tagih["letak_op"])?>">
@@ -217,7 +217,7 @@
                                             </div>
 										</div>
                                     </div>
-                                    <div class="box-footer">
+                                    <div class="card-footer">
 										<div class="col-xs-12">
 											<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
 											<button type="submit" class="btn btn-social btn-box btn-success btn-sm pull-right"><i class="fa fa-check"></i> Bayar Sekarang</button>
@@ -226,4 +226,4 @@
 								</form>
 							</div>
 					</div>
-	</section>
+	</div>

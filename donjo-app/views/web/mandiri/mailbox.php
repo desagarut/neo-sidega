@@ -2,21 +2,22 @@
 
 <!-- Content Wrapper. Contains page content -->
 
-<div class="content-wrapper"> 
+<div class="pcoded-main-container">
+ 
   
   <!-- Content Header (Page header) -->
   
-  <section class="content-header">
+  <div class="page-header">
     <h1> Mailbox </h1>
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
       <li class="active">Mailbox</li>
     </ol>
-  </section>
+  </div>
   
   <!-- Main content -->
   
-  <section class="content">
+  <div class="card">
     <div class="row">
     <div class="col-md-3">
       <?php $this->load->view('web/mandiri/mailbox_menu.php');?>
@@ -26,7 +27,7 @@
     
     <div class="col-md-9">
       <div class="box box-info">
-        <div class="box-header">
+        <div class="card-header">
           <h3 class="box-title">Pesan</h3>
           <div class="box-tools">
             <div class="input-group input-group-sm" style="width: 150px;">
@@ -79,7 +80,7 @@
     
     <!-- /.row --> 
     
-  </section>
+  </div>
   
   <!-- /.content --> 
   
@@ -95,13 +96,13 @@
 
 		<div class="col-sm-12">
 
-			<div class="box-header">
+			<div class="card-header">
 
 				<a href="<?= site_url('mailbox_web/form') ?>" class="btn text-white btn-box btn-social btn-success btn-md inline-block" title="Tulis Pesan"><i class="fa fa-plus"></i> Tulis Pesan</a>
 
 			</div>
 
-			<div class="box-body">
+			<div class="card-body">
 
 				<ul class="nav nav-tabs">
 
@@ -123,7 +124,7 @@
 
 		<div class="col-sm-12">
 
-			<div class="box-body">
+			<div class="card-body">
 
 				<div class="table-responsive">
 
@@ -197,4 +198,4 @@
 
 	</div>
 
-</section>-->
+</div>-->

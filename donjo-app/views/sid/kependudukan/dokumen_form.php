@@ -30,7 +30,7 @@ $(document).ready(function() {
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="box box-danger">
-					<div class="box-body">
+					<div class="card-body">
 						<div class="form-group">
 							<label for="nama">Nama / Jenis Dokumen</label>
 							<input id="nama" name="nama" class="form-control input-sm nomor_sk required" type="text" placeholder="Nama Dokumen" value="<?= $dokumen['nama']?>"></input>	<input type="hidden" name="id_pend" value="<?= $penduduk['id']?>"/>

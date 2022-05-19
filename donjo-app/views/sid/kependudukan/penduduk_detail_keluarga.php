@@ -1,7 +1,7 @@
 
 	<section class="content" id="maincontent">
 		<div class="box box-info">
-			<div class="box-body">
+			<div class="card-body">
 				<h5><b>Rincian Keluarga</b></h5>
 				<div class="table-responsive">
 					<table class="table table-bordered table-striped table-hover tabel-rincian">
@@ -40,7 +40,7 @@
 					</table>
 				</div>
 			</div>
-			<div class="box-body">
+			<div class="card-body">
 				<h5><b>Daftar Anggota Keluarga</b></h5>
 				<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
 					<form id="mainform" name="mainform" action="" method="post">
@@ -116,4 +116,4 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>

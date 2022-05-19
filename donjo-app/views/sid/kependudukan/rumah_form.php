@@ -30,7 +30,7 @@ $(document).ready(function() {
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="box box-danger">
-					<div class="box-body">
+					<div class="card-body">
 						<div class="form-group">
 							<label for="nama">Nama Rumah</label>
 							<input id="nama" name="nama" class="form-control" type="text" placeholder="Nama Rumah" value="<?= $rumah['nama']?>"></input>	<input type="hidden" name="id_pend" value="<?= $penduduk['id']?>"/>

@@ -17,15 +17,16 @@
 	.padat {width: 1%;}
 	th.horizontal {width: 20%;}
 </style>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Rincian Letter-C</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('home')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('letterc')?>"> Daftar Letter-C</a></li>
 			<li class="active">Rincian Letter-C</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
@@ -39,7 +40,7 @@
 							<i class="fa fa-print"></i>Cetak Letter-C
 						</a>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -50,7 +51,7 @@
 												<div class="box-header with-border">
 													<h3 class="box-title">Rincian Letter-C</h3>
 												</div>
-												<div class="box-body">
+												<div class="card-body">
 													<table class="table table-bordered  table-striped table-hover" >
 														<tbody>
 															<tr>
@@ -135,6 +136,6 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 

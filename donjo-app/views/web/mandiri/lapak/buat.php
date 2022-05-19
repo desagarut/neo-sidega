@@ -6,7 +6,7 @@ Anda belum memiliki lapak, masukan nama toko anda untuk membuatnya,
 		<?php echo $validation_error; ?>
 	<?php endif ?>
 	<div class="box box-primary">
-		<div class="box-body">
+		<div class="card-body">
 			<form method="POST" class="form-horizontal">
 				<div class="header-profile">
 					<lable class="text-right uppercase">

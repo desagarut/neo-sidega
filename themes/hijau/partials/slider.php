@@ -4,6 +4,8 @@
 
 <div class="container">
   <section id="portfolio-details" class="portfolio-details">
+  <?php $this->load->view($folder_themes .'/partials/running_text') ?>
+
     <div class="row">
       <div class="col-md-8">
         <div class="portfolio-details-container">

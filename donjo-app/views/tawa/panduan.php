@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
 	<section class="content" id="maincontent">
-				<div class="box-body">
+				<div class="card-body">
 					<h4>Kelompok Usaha Transportasi:</h4>
 					<p>
 						<ul>
@@ -20,4 +20,4 @@ Bisnis travel selanjutnya adalah point to point. Travel jenis ini adalah travel 
 						</ul>
 					</p>
 				</div>
-	</section>
+	</div>

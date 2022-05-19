@@ -1,5 +1,6 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Pengaturan <?= $kat_nama?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
@@ -10,7 +11,7 @@
 			<?php endif; ?>
 			<li class="active">Pengaturan <?= $kat_nama?></li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 			<div class="box box-info">
@@ -25,7 +26,7 @@
 						</a>
 					<?php endif; ?>
 				</div>
-				<div class="box-body">
+				<div class="card-body">
 					<div class="form-group">
 						<label class="control-label col-sm-4" for="nama">Judul Dokumen</label>
 						<div class="col-sm-6">
@@ -78,6 +79,6 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 

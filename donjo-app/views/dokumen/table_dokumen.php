@@ -23,14 +23,15 @@ $(document).ready(function()
 });
 
 </script>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1><?= $kat_nama?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
       <li class="active"><?= $kat_nama ?></li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
@@ -60,7 +61,7 @@ $(document).ready(function()
 	            	</a>
 	            <?php endif; ?>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -211,6 +212,6 @@ $(document).ready(function()
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 <?php $this->load->view('global/confirm_delete');?>

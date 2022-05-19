@@ -5,14 +5,15 @@
      cursor: default;
   }
 </style>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Buku Administrasi Pembangunan</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active"><?= $subtitle ?></li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-3">
@@ -22,5 +23,5 @@
 				<?php $this->load->view($main_content) ?>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>

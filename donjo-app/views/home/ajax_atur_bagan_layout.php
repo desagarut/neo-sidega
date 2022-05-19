@@ -7,7 +7,7 @@
 <form id="validasi" action="<?=site_url('setting/update')?>" method="POST" class="form-horizontal">
 	<div id="atur_bagan" class='modal-body'>
 		<div class="box box-primary">
-			<div class="box-body">
+			<div class="card-body">
 				<?php foreach ($this->$list_setting as $setting): ?>
 					<?php if ($setting->kategori != 'development' OR ($this->config->item("environment") == 'development' )): ?>
 						<div class="form-group">

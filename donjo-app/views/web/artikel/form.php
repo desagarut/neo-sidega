@@ -36,15 +36,16 @@
 		remove_script_host : false
 	});
 </script>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Form Artikel <?= $kategori['kategori']; ?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url("web"); ?>"> Daftar Artikel</a></li>
 			<li class="active">Form Artikel</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="validasi" action="<?= $form_action; ?>" method="POST" enctype="multipart/form-data">
 			<div class="row">
@@ -58,7 +59,7 @@
 								<a href="<?= site_url('artikel/' . buat_slug($artikel)); ?>" target="_blank" class="btn btn-social btn-box bg-green btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-eye"></i> Lihat Artikel</a>
 							<?php endif; ?>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="form-group">
 								<label class="control-label" for="judul">Judul Artikel</label>
 								<input id="judul" name="judul" class="form-control input-sm required" type="text" placeholder="Judul Artikel" minlength="5" maxlength="100" value="<?= htmlspecialchars($artikel['judul'])?>" ></input>
@@ -256,5 +257,5 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>

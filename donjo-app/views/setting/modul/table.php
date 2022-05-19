@@ -53,8 +53,9 @@
 		});
 	</script>
 <?php endif; ?>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Manajemen <?= $sub_modul ? 'Submodul' : 'Modul';?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
@@ -66,14 +67,14 @@
 				<li class="active">Manajemen Submodul</li>
 			<?php endif; ?>
 		</ol>
-	</section>
+	</div>
 	<?php if(!$sub_modul): ?>
 		<section class="content" id="maincontent">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="box box-info">
 						<form id="validasi" action="<?= site_url("modul/ubah_server")?>" method="POST" class="form-horizontal">
-							<div class="box-body">
+							<div class="card-body">
 								<h4>Penggunaan Server</h4>
 								<div class="form-group" >
 									<label class="col-sm-3 control-label">Penggunaan SIDeGa di <?= ucwords($this->setting->sebutan_desa)?></label>
@@ -151,14 +152,14 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 	<?php endif; ?>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="box box-info">
 					<?php if(!$sub_modul): ?>
-						<div class="box-body">
+						<div class="card-body">
 							<h4>Pengaturan Modul</h4>
 							<div class="row">
 								<div class="col-xs-12 text-center">
@@ -199,7 +200,7 @@
 						<div class="box-header with-border">
 						 <strong> Modul Utama : <?=$sub_modul['modul']?></strong>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 					<?php endif; ?>
 					<div class="row">
 						<div class="col-sm-12">
@@ -244,5 +245,5 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>

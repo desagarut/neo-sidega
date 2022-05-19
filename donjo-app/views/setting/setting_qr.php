@@ -7,14 +7,15 @@
 		margin-right: 5px;
 	}
 </style>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>QR Code</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">QR Code</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-6">
@@ -23,7 +24,7 @@
 						<h3 class="box-title">Buat QR Code</h3>
 					</div>
 					<form id="mainform" name="mainform" action="" method="post">
-						<div class="box-body">
+						<div class="card-body">
 							<div class="form-group">
 								<label for="namaqr">Nama File :</label>
 								<input class="form-control input-sm nama_terbatas required" type="text" id="namaqr" name="namaqr" maxlength="15" value="<?= $qrcode['namaqr']; ?>"></input>
@@ -76,7 +77,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="box-footer">
+						<div class="card-footer">
 							<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
 							<button id="generate" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
 						</div>
@@ -88,7 +89,7 @@
 					<div class="box-header with-border">
 						<h3 class="box-title">Scan QR Code</h3>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="form-group">
 							<label for="pathqr"></label>
 							<center>
@@ -106,7 +107,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 
 <!-- File Manager -->

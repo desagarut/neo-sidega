@@ -1,26 +1,7 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 <style>
 .table {
-	font-size: 12px;
-}
-.bg-identitas {
-	width: 100%;
-	height: 300px;
-	background: url('<?= gambar_desa($main['kantor_desa'], TRUE); ?>');
-	background-repeat: no-repeat;
-	background-position: center center;
-}
-.img-identitas {
-	margin: 30px auto;
-	width: 100px;
-	padding: 3px;
-}
-.text-identitas {
-	text-align: center;
-	font-weight: bold;
-	color: #fff;
-	text-shadow: 2px 2px 2px #0c83c5;
-	;
+	font-size: 14px;
 }
 </style>
 
@@ -48,37 +29,36 @@
 		<!-- [ Main Content ] start -->
 		<div class="row">
 			<div class="col-xl-12 col-md-12">
+      <?php $this->load->view('identitas_desa/peta.php');?>
 
       <div class="card">
-
 
       <form id="mainform" name="mainform" action="" method="post">
 
           <div class="card-header">
         
             <div class="col-md-12">
-              <?php $this->load->view('identitas_desa/peta.php');?>
               <div class="pull-right">
               <?php if ($this->CI->cek_hak_akses('h')): ?>
-              <a href="<?= site_url('identitas_desa/form'); ?>" class="btn btn-social btn-box btn-warning btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Ubah Data" ><i class="fa fa-edit"></i> Ubah Data
+              <a href="<?= site_url('identitas_desa/form'); ?>" class="btn btn-warning" title="Ubah Data" ><i class="fa fa-edit"></i> Ubah Data
               <?= $desa; ?>
               </a> 
               <!--<a href="<?= site_url('identitas_desa/maps/kantor'); ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-map-marker'></i> Lokasi Kantor <?= $desa; ?></a>--> 
-              <a href="<?= site_url('identitas_desa/maps/kantor'); ?>" class="btn btn-social btn-box btn-info btn-sm" title="Ubah Lokasi Kantor Desa"><i class='fa fa-map-marker'></i> Lokasi Kantor
+              <a href="<?= site_url('identitas_desa/maps/kantor'); ?>" class="btn btn-success " title="Ubah Lokasi Kantor Desa"><i class="feather mr-2 icon-map-pin"></i> Lokasi Kantor
               <?= $desa; ?>
               </a> 
               <!--<a href="<?= site_url('identitas_desa/maps/wilayah'); ?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-map'></i> Peta Wilayah <?= $desa; ?></a>--> 
-              <a href="<?= site_url('identitas_desa/maps/wilayah'); ?>" class="btn btn-social btn-box btn-primary btn-sm" title="Ubah Wilayah Desa"><i class='fa fa-google'></i> Peta Google </a>
-              <a href="<?= site_url('identitas_desa/maps_openstreet/wilayah'); ?>" class="btn btn-social btn-box bg-blue btn-sm" title="Ubah Wilayah Desa"><i class='fa fa-map'></i> Peta Openstreet</a>
+              <a href="<?= site_url('identitas_desa/maps/wilayah'); ?>" class="btn btn-primary" title="Ubah Wilayah Desa"><i class="feather mr-2 icon-map"></i> Wilayah Desa | Google </a>
+              <a href="<?= site_url('identitas_desa/maps_openstreet/wilayah'); ?>" class="btn btn-secondary" title="Ubah Wilayah Desa"><i class='feather mr-2 icon-map'></i> Wilayah Desa | OSM</a>
               <?php endif; ?>
               </div>
             </div>
           </div>
 
 
-          <div class="card-body">
+          <div class="card-body table-border-style">
             <div class="table-responsive">
-              <table class="table table-bordered table-striped table-hover tabel-rincian">
+              <table class="table table-hover">
                 <tbody>
                   <tr>
                     <th colspan="3" style="background-color:#606BFD; color:#fff"><strong>

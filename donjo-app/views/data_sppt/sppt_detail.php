@@ -56,15 +56,16 @@ th.horizontal {
 }
 </style>
 
-<div class="content-wrapper">
-  <section class="content-header">
+<div class="pcoded-main-container">
+
+  <div class="page-header">
     <h1>Detail DATA SPPT PBB</h1>
     <ol class="breadcrumb">
       <li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
       <li><a href="<?= site_url('data_sppt')?>"> Daftar SPPT</a></li>
       <li class="active">Detail Data SPPT</li>
     </ol>
-  </section>
+  </div>
   <section class="content" id="maincontent">
     <div class="row">
       <div class="col-md-4 col-lg-3">
@@ -78,7 +79,7 @@ th.horizontal {
 						</a>--> 
             <a href="<?=site_url('data_sppt')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Daftar SPPT"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar SPPT</a> 
             <a href="<?= site_url("data_sppt/form_data_sppt/".$sppt['id'])?>" class="btn btn-social btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank"><i class="fa fa-print"></i>Cetak SPPT</a> </div>
-          <div class="box-body">
+          <div class="card-body">
             <div class="row">
               <div class="col-sm-12">
                 <div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -86,7 +87,7 @@ th.horizontal {
                     <input type="hidden" name="id" value="<?php echo $this->uri->segment(4) ?>">
                     <div class="row">
                       <div class="col-sm-12">
-                        <div class="box-body"> 
+                        <div class="card-body"> 
                           <h4 class="box-title">Detail Data SPPT PBB</h4>
                             <!-- Map box -->
                           <div class='modal-body'>
@@ -223,5 +224,5 @@ th.horizontal {
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>

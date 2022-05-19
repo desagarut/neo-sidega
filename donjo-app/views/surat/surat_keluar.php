@@ -9,14 +9,15 @@
 		});
 	});
 </script>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Arsip Layanan Surat</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Arsip Layanan Surat</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
@@ -28,7 +29,7 @@
 						<a href="<?= site_url('keluar/dialog_cetak/unduh')?>" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Arsip Layanan Surat"><i class="fa fa-download"></i> Unduh</a>
 						<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan Filter</a>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -194,6 +195,6 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 <?php $this->load->view('global/confirm_delete');?>

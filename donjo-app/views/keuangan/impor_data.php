@@ -1,14 +1,15 @@
 <style type="text/css">
 	.nowrap { white-space: nowrap; }
 </style>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Impor Data Siskeudes</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Impor Data Siskeudes</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data">
 			<input type="hidden" name="jenis_impor" id="jenis_impor" value="baru">
@@ -17,7 +18,7 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="box box-danger">
-							<div class="box-body">
+							<div class="card-body">
 								<div class="col-sm-6">
 									<div class="form-group">
 										<label for="file"  class="control-label">Berkas Database Siskuedes :</label>
@@ -80,7 +81,7 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 
 <div class="modal fade in"  id="getCodeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

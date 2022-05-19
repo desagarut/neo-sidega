@@ -1,11 +1,12 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Kotak Pesan</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('hom_sid')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Kotak Pesan</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
@@ -17,7 +18,7 @@
 							<a href="#confirm-delete" title="Arsipkan Data" <?php if(!$filter_archived) : ?>onclick="deleteAllBox('mainform','<?=site_url("mailbox/archive_all/$kat/$p/$o")?>')"<?php endif ?> class="btn btn-social btn-flat btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih" <?php $filter_archived and print('disabled') ?>><i class='fa fa-file-archive-o'></i> Arsipkan Data Terpilih</a>
 							<a href="<?= site_url("mailbox/clear/$kat/$p/$o") ?>" class="btn btn-social btn-flat bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan Filter</a>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -196,6 +197,6 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 

@@ -1,6 +1,7 @@
 <?php if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<div class="content-wrapper">
+<div class="pcoded-main-container">
+
 	<section class='content' id="maincontent">
         <div class='row'>
 			<div class='col-md-12'>
@@ -93,7 +94,7 @@
 				</div>
             </div>
         </div>
-    </section>
+    </div>
 </div>    
     
 <script type="text/javascript">

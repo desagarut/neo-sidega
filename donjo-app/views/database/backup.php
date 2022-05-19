@@ -4,7 +4,7 @@
 													<div class="box-header with-border">
 														<h3 class="box-title"><strong>Backup Database SID</strong></h3>
 													</div>
-													<div class="box-body">
+													<div class="card-body">
 														<div class="row">
 															<div class="col-sm-8">
 																<form class="form-horizontal">
@@ -40,7 +40,7 @@
 													<div class="box-header with-border">
 														<h3 class="box-title"><strong>Restore Database SID</strong></h3>
 													</div>
-													<div class="box-body">
+													<div class="card-body">
 														<div class="row">
 															<div class="col-sm-12">
 																<p>Backup yang dibuat dapat dipergunakan untuk mengembalikan database SID anda apabila ada masalah. Klik tombol Restore di bawah untuk menggantikan keseluruhan database SID dengan data hasil backup terdahulu.</p>
@@ -91,5 +91,5 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>

@@ -1,11 +1,12 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Anjungan Layanan Mandiri</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Anjungan Layanan Mandiri</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
@@ -13,7 +14,7 @@
 	        <div class="box-header with-border">
 						<a href="<?=site_url('anjungan/form')?>" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Anjungan Layanan Mandiri"><i class="fa fa-plus"></i> Tambah Anjungan Layanan Mandiri</a>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="table-responsive">
@@ -52,7 +53,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 <?php $this->load->view('global/confirm_delete');?>
 

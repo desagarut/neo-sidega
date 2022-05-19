@@ -1,13 +1,14 @@
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Laporan Kelompok Rentan</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Laporan Kelompok Rentan</li>
 		</ol>
-	</section>
-	<section class="content">
+	</div>
+	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
 				<form id="mainform" name="mainform" action="<?= site_url('laporan/bulan')?>" method="post" class="form-horizontal">
@@ -46,7 +47,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="row">
 								<div class="col-sm-12">
 									<?php if ($dusun!=''): ?>
@@ -164,6 +165,6 @@
 				</form>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 

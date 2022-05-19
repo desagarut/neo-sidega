@@ -1,6 +1,7 @@
 <?php if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<div class="content-wrapper">
+<div class="pcoded-main-container">
+
 	<section class="content" id="maincontent">
         <div class="row">
 			<div class="col-md-12">
@@ -14,7 +15,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="box-body">
+                    <div class="card-body">
                         <input type="hidden" id="tab" value="<?= $tab?>">
                         <div class="box box-solid" align="left">
                           <ul class="nav nav-tabs">
@@ -91,7 +92,7 @@
 				</div>
             </div>
         </div>
-    </section>
+    </div>
 </div>    
     
 <script type="text/javascript">

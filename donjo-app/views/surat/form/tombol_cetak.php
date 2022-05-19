@@ -1,4 +1,4 @@
-<div class="box-footer">
+<div class="card-footer">
 	<div class="row">
 		<div class="col-xs-12">
 			<?php if ($mandiri): ?>

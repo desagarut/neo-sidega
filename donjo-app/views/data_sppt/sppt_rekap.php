@@ -1,7 +1,8 @@
 <?php ?>
 
-<div class="content-wrapper">
-  <section class="content-header">
+<div class="pcoded-main-container">
+
+  <div class="page-header">
     <h1>Pengelolaan SPPT
       <?= ucwords($this->setting->sebutan_desa)?>
       <?= $desa["nama_desa"];?>
@@ -10,7 +11,7 @@
       <li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
       <li class="active">Rekapitulasi SPPT PBB</li>
     </ol>
-  </section>
+  </div>
   <section class="content" id="maincontent">
   <div class="row">
     <div class="col-md-3">
@@ -23,7 +24,7 @@
             if(isset($data)){
                 $d = $data->row();
             ?>
-          <div class="box">
+          <div class="card">
             <div class="box-header box-info with-border">
               <h3 class="box-title">Rekapitulasi SPPT PBB</h3>
               <div class="box-tools pull-right">
@@ -43,7 +44,7 @@
             </div>
             
             <!-- /.box-header -->
-            <div class="box-body">
+            <div class="card-body">
               <div class="row">
                 <div class="col-md-3">
                   <div id="canvas-holder">
@@ -99,7 +100,7 @@
               <!-- /.row --> 
             </div>
             <!-- ./box-body -->
-            <div class="box-footer">
+            <div class="card-footer">
               <div class="row">
                 <div class="col-sm-3 col-xs-6">
                   <div class="description-block border-right"> <span class="description-percentage text-purple"><i class="fa fa-users"></i>
@@ -155,7 +156,7 @@
   </div>
 </div>
 </div>
-</section>
+</div>
 </div>
 <script src="<?= base_url()?>assets/js/Chart.js"></script> 
 <script>

@@ -1,12 +1,13 @@
 <?php ?>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Manual Input Tagihan SPPT PBB</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Input Tagihan SPPT PBB</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
             <div class="col-md-3">
@@ -14,13 +15,13 @@
             </div>
 			<div class="col-md-9">
 				<div class="box box-info">
-					<div class="box-header">
+					<div class="card-header">
                         <h3>Tambah Tagihan SPPT PBB</h3>
 					</div>
                     <!-- MODAL ADD GLOBAL-->
-                    <div class="box-body">
+                    <div class="card-body">
                         <form class="form-horizontal">
-                            <div class="box box-header">
+                            <div class="card card-header">
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" >Tahun</label>
                                     <div class="col-sm-8">
@@ -144,7 +145,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 <?php $this->load->view('global/confirm_delete');?>
 

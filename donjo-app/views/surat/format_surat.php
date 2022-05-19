@@ -1,11 +1,12 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Cetak Layanan Surat</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Cetak Layanan Surat</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
@@ -24,7 +25,7 @@
 							</div>
 						</form>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<?php if ($data['favorit']=1): ?>
 							<div class="row">
 								<div class="col-sm-12">
@@ -118,6 +119,6 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 

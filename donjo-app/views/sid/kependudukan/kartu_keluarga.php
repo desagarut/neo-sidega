@@ -1,5 +1,6 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Salinan Kartu Keluarga</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
@@ -7,7 +8,7 @@
 			<li><a href="<?= site_url("keluarga/anggota/$p/$o/$id_kk")?>"> Daftar Anggota Keluarga</a></li>
 			<li class="active">Kartu Keluarga</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content"  id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
@@ -23,11 +24,11 @@
 								<i class="fa fa-arrow-circle-left"></i>Kembali Ke Daftar Keluarga
 							</a>
 						</div>
-						<div class="box-header">
+						<div class="card-header">
 							<h3 class="text-center"><strong>SALINAN KARTU KELUARGA</strong></h3>
 							<h5 class="text-center"><strong>No.  <?= $kepala_kk['no_kk']?> </strong></h5>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="row">
 								<div class="col-sm-8">
 									<div class="form-group">
@@ -186,7 +187,7 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 
 

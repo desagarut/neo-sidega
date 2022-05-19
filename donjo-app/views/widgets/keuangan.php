@@ -94,10 +94,10 @@
   }
 </style>
 <div class="box box-primary box-solid">
-  <div class="box-header">
+  <div class="card-header">
     <h3 class="box-title"><a href="<?= site_url('artikel/kategori/1001') ?>"><i class="fa fa-bar-chart"></i> Statistik Keuangan Desa</a></h3>
   </div>
-  <div class="box-body">
+  <div class="card-body">
     <div id="widget-keuangan-container">
       <div id="grafik-judul" style="width: 100%; position: static;">
         <div class="dropdown" style="position: absolute; top: 14px;">

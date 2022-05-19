@@ -19,7 +19,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="box box-danger">
-					<div class="box-body">
+					<div class="card-body">
 						<div class="form-group">
 							<label>Status dasar penduduk</label>
 							<label>: <?= $log_status_dasar['status'] ?></label>

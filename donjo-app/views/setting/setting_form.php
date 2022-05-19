@@ -1,19 +1,20 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1><?= $judul ?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active"><?= $judul ?></li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<form id="validasi" action="<?=site_url('setting/update')?>" method="POST" class="form-horizontal">
 				<div class="col-md-12">
 					<div class="box box-primary">
-						<div class="box-body">
+						<div class="card-body">
 							<?php foreach ($this->$list_setting as $setting): ?>
 								<?php if ($setting->kategori != 'development' OR ($this->config->item("environment") == 'development' )): ?>
 									<div class="form-group">
@@ -93,5 +94,5 @@
 				</div>
 			</form>
 		</div>
-	</section>
+	</div>
 </div>

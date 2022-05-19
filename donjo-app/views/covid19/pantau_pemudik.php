@@ -5,14 +5,15 @@
 	}
 </style>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Pemantauan Isolasi Mandiri Saat Pandemi Covid-19</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Data Pemudik</li>
 		</ol>
-	</section>
+	</div>
 
 	<section class="content" id="maincontent">
 		<div class="row">
@@ -21,7 +22,7 @@
 					<div class="box-header with-border">
 						<h3 class="box-title"><strong>Form Pemantauan</strong></h3>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data">
 
 							<input type="hidden" id="this_url" value="<?= $this_url ?>" >
@@ -99,7 +100,7 @@
 								</div>
 						</form>
 					</div>
-					<div class="box-footer">
+					<div class="card-footer">
 						<div class="box-tools pull-right">
 							<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right" onclick="$('#'+'validasi').submit();"><i class="fa fa-check"></i> Simpan</button>
 						</div>
@@ -114,7 +115,7 @@
 						<a href="<?= site_url("covid19/daftar/unduh/$filter_tgl/$filter_nik")?>" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh" target="_blank"><i class="fa fa-download"></i> Unduh
 						</a>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="row">
 							<form id="filterform" name="filterform" action="" method="post">
 
@@ -265,7 +266,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 
 <?php $this->load->view('global/confirm_delete');?>

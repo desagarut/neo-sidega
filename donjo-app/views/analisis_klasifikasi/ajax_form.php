@@ -5,7 +5,7 @@
 	<div class='modal-body'>
 		<div class="row">
 			<div class="col-sm-12">
-				<div class="box-body">
+				<div class="card-body">
 					<div class="form-group">
 						<label class="control-label" for="nama">Klasifikasi</label>
 						<input  id="nama" class="form-control input-sm required nomor_sk" maxlength="20" type="text" placeholder="Klasifikasi" name="nama" value="<?= $analisis_klasifikasi['nama']?>">

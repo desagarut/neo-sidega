@@ -9,7 +9,7 @@
 		<div class="row">
 			<div class="col-md-12">
 					<form id="validasi1" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
-						<div class="box-body">
+						<div class="card-body">
 							<div class="row">
 								<div class="col-sm-12">
 								<div class="form-group">

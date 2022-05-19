@@ -20,8 +20,9 @@
 	} );
 </script>
 
-<div class="content-wrapper">
-  <section class="content-header">
+<div class="pcoded-main-container">
+
+  <div class="page-header">
     <h1>Pengelolaan SPPT
       <?= ucwords($this->setting->sebutan_desa)?>
       <?= $desa["nama_desa"];?>
@@ -30,7 +31,7 @@
       <li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Homes</a></li>
       <li class="active">Daftar Tagihan & Pembayaran SPPT PBB</li>
     </ol>
-  </section>
+  </div>
   <section class="content" id="maincontent">
   <form id="mainform" name="mainform" action="" method="post">
   <div class="row">
@@ -39,15 +40,15 @@
   </div>
   <div class="col-md-8 col-lg-9">
   <div class="box box-info">
-  <div class="box-header">
+  <div class="card-header">
     <div class="box-header with-border"> <a href="<?=site_url("data_sppt/tagihan_daftar/")?>" class="btn btn-social bg-blue btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Tagihan"> <i class="fa fa-arrow-left"></i>Master Data</a> <a href="<?=site_url("data_sppt/tagihan_cetak")?>" class="btn btn-social bg-green btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank"> <i class="fa fa-print"></i> Cetak </a> 
     <a href="<?=site_url("data_sppt/tagihan_unduh")?>" class="btn btn-social btn-box bg-teal btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Tagihan" title="Unduh Data Tagihan"> <i class="fa fa-download"></i>Unduh </a> 
     <!-- <a href="<?= site_url('data_sppt/import')?>" class="btn btn-social bg-teal btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data SPPT" title="Unduh Data SPPT"> <i class="fa fa-upload"></i>Unggah </a> --><a href="<?= site_url("data_sppt/clear_tagih")?>" class="btn btn-social bg-yellow btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan</a> </div>
   </div>
-  <div class="box-body">
+  <div class="card-body">
   <div class="row">
   <div class="col-sm-12">
-  <div class="box-body">
+  <div class="card-body">
   <div class="row">
   <div class="col-sm-12">
   <div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -145,6 +146,6 @@
 </div>
 </div>
 </form>
-</section>
+</div>
 </div>
 <?php $this->load->view('global/confirm_delete');?>

@@ -4,7 +4,7 @@
 													<div class="box-header with-border">
 														<h3 class="box-title"><strong>Impor Data Buku Induk Penduduk</strong></h3>
 													</div>
-													<div class="box-body">
+													<div class="card-body">
 														<div class="row">
 															<div class="col-sm-12">
 																<form action="<?= $form_action?>" method="post" enctype="multipart/form-data" id="excell" class="form-horizontal">
@@ -122,5 +122,5 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>

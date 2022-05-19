@@ -1,14 +1,15 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Pengaturan Rentang Umur</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url("statistik/clear/13")?>"> Statistik Kependudukan</a></li>
 			<li class="active">Pengaturan Rentang Umur</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
@@ -26,7 +27,7 @@
 								<i class="fa fa-arrow-circle-left "></i>Kembali ke Data Statistik
 							</a>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
 								<form id="mainform" name="mainform" action="" method="post">
 									<div class="row">
@@ -65,6 +66,6 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 <?php $this->load->view('global/confirm_delete');?>

@@ -1,14 +1,15 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Disposisi Surat Masuk</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('surat_masuk'); ?>"> Daftar Surat Masuk</a></li>
 			<li class="active">Disposisi Surat Masuk</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="box box-info">
 			<div class="box-header with-border">
@@ -17,7 +18,7 @@
 				</a>
 			</div>
 			<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal nomor-urut">
-				<div class="box-body">
+				<div class="card-body">
 					<input type="hidden" id="nomor_urut_lama" name="nomor_urut_lama" value="<?= $surat_masuk['nomor_urut']?>">
 					<input type="hidden" id="url_remote" name="url_remote" value="<?= site_url('surat_masuk/nomor_surat_duplikat')?>">
 					<div class="form-group">
@@ -133,7 +134,7 @@
 				</div>
 			</form>
 		</div>
-	</section>
+	</div>
 </div>
 <script type="text/javascript">
 	$(function() {

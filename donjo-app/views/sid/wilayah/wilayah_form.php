@@ -1,12 +1,13 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
     <h1>Pengelolaan Data <?= ucwords($this->setting->sebutan_dusun)?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('sid_core')?>"> Daftar <?= ucwords($this->setting->sebutan_dusun)?></a></li>
 			<li class="active">Data <?= ucwords($this->setting->sebutan_dusun)?></li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
@@ -16,11 +17,11 @@
 							<i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar <?= ucwords($this->setting->sebutan_dusun)?>
            	</a>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
 								<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data"  class="form-horizontal">
-									<div class="box-body">
+									<div class="card-body">
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="form-group">
@@ -71,7 +72,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 <script src="<?= base_url()?>assets/js/validasi.js"></script>
 <script src="<?= base_url()?>assets/js/jquery.validate.min.js"></script>

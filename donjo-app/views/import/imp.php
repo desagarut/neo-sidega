@@ -4,7 +4,7 @@
 														<div class="box-header with-border">
 															<h3 class="box-title"><strong>Impor Data Kependudukan</strong></h3>
 														</div>
-														<div class="box-body">
+														<div class="card-body">
 															<form action="<?= $form_action?>" method="post" enctype="multipart/form-data" id="excell" class="form-horizontal">
 																<div class="row">
 																	<div class="col-sm-12">
@@ -97,7 +97,7 @@
 													<div class="box-header with-border">
 														<h3 class="box-title"><strong>Impor Pengelompokan Data Rumah Tangga</strong></h3>
 													</div>
-													<div class="box-body">
+													<div class="card-body">
 														<form action="<?=$form_action3?>" method="post" enctype="multipart/form-data" id="kelompok" class="form-horizontal">
 															<div class="row">
 																<div class="col-sm-12">
@@ -174,5 +174,5 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>

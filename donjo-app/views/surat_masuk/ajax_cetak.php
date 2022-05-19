@@ -16,7 +16,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="box box-danger">
-					<div class="box-body">
+					<div class="card-body">
 						<div class="form-group">
 							<label for="tahun">Tahun</label>
 							<select class="form-control input-sm" name="tahun">

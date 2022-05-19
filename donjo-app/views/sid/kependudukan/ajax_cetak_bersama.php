@@ -22,7 +22,7 @@
 </style>
 <div class='modal-body'>
 	<div class="box box-danger">
-		<div class="box-body">
+		<div class="card-body">
 			<div class="row">
 				<div class="col-sm-12">
 					<label for="nama">Centang kotak berikut apabila NIK/No. KK ingin disensor</label>

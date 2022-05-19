@@ -15,7 +15,7 @@
 			</div>
 			<div class="col-sm-9">
 				<div class="box box-danger">
-					<div class="box-body">
+					<div class="card-body">
 						<div class="form-group">
 							<label for="tgl_peristiwa">Username</label>
 							<input name="nama" type="hidden" value="<?=$main['nama']?>" />

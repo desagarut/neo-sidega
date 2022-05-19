@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="box box-danger">
-				<div class="box-body">
+				<div class="card-body">
 					<div class="table-responsive">
 						<table class="table table-bordered dataTable table-hover nowrap">
 							<thead class="bg-gray disabled color-palette">

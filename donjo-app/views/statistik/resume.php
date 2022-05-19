@@ -1,13 +1,14 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Resume Statistik</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?=site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Resume Statistik <?= $dusun; ?></li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
@@ -137,7 +138,7 @@
                                 <div class="col-sm-2 col-xs-6">
                                 <canvas style="display: inline-block; width: 100px; height: 100px; vertical-align: top;" width="100" height="100"></canvas>
                                     <div class="box box-solid">
-                                    <div class="box-header">
+                                    <div class="card-header">
                                       <h3 class="box-title text-danger">Sparkline Pie</h3>
                         
                                       <div class="box-tools pull-right">
@@ -158,7 +159,7 @@
                 </div>        
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 <script type="text/javascript">
 	var chart;

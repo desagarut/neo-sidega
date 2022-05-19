@@ -11,7 +11,7 @@
     <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
   </div>
 </div>
-<div class="box-body">
+<div class="card-body">
   <div class="chart">
     <canvas id="areaChart" style="height:250px"></canvas>
   </div>

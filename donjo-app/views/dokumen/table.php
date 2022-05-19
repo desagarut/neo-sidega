@@ -43,7 +43,7 @@ $(document).ready(function()
     	</a>
     <?php endif; ?>
 	</div>
-	<div class="box-body">
+	<div class="card-body">
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">

@@ -66,14 +66,15 @@
 <script src="<?= base_url()?>assets/js/highcharts/exporting.js"></script>
 <script src="<?= base_url()?>assets/js/highcharts/highcharts-more.js"></script>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Statistik Pengunjung Website</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Statistik Pengunjung Website</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
@@ -93,7 +94,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="row">
 								<div class="col-lg-2 col-xs-6">
 									<div class="small-box bg-red">
@@ -168,7 +169,7 @@
 									  </div>
 								</div>
 							</div>
-							<div class="box-header">
+							<div class="card-header">
 								<hr>
 								<h4 class="text-center"><strong>Statistik Pengunjung Website <?= $main['judul'] ?><strong></h4>
 								<hr>
@@ -225,5 +226,5 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>

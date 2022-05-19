@@ -3,7 +3,7 @@
 		<h3 class="box-title"><?= $heading ?></h3>
 	</div>
   </style>
-	<div class="box-body">
+	<div class="card-body">
 		<div class="row">
       <form id="peraturanForm" onsubmit="formAction(); return false;">
   			<div class="col-md-3">

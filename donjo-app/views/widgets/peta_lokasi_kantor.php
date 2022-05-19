@@ -33,12 +33,12 @@
 </style>
 <!-- widget Peta Lokasi Kantor Desa -->
 <div class="box box-primary box-solid">
-	<div class="box-header">
+	<div class="card-header">
 		<h3 class="box-title">
 			<i class="fa fa-map-marker"></i><?="Lokasi Kantor ".ucwords($this->setting->sebutan_desa)?>
 		</h3>
 	</div>
-	<div class="box-body">
+	<div class="card-body">
 		<div id="map_canvas" style="height:200px;"></div>
 		<button class="btn btn-success btn-block"><a href="https://www.openstreetmap.org/#map=15/<?=$data_config['lat']."/".$data_config['lng']?>" style="color:#fff;" target="_blank">Buka Peta</a></button>
 		<button class="btn btn-success btn-block" data-toggle="collapse" data-target="#collapse2" aria-expanded="false">

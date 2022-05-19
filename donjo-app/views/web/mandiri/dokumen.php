@@ -15,12 +15,13 @@ table.table th {
 <?php // include('donjo-app/views/web/mandiri/menu.php'); ?>
 <?php $this->load->view('web/mandiri/menu.php'); ?>
          
-<div class="content-wrapper">
+<div class="pcoded-main-container">
+
   <section class='content' id="maincontent">
     <div class='row'>
       <div class='col-md-12'>
         <div class="box box-info" style="margin-top: 10px;">
-          <div class="box-body">
+          <div class="card-body">
             <button type="button" title="Tambah Dokumen" data-remote="false" data-toggle="modal" data-target="#modal" data-title="Tambah Dokumen" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" id="tambah_dokumen"><i class='fa fa-plus'></i>Tambah Dokumen</button>
             <div class="table-responsive">
               <table class="table table-striped table-bordered" id="dokumen">
@@ -41,7 +42,7 @@ table.table th {
         </div> 
         </div>
     </div>
- </section>
+ </div>
  </div>         
 <div class="modal fade in" id="dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -71,7 +72,7 @@ table.table th {
           <div class="row">
             <div class="col-sm-12">
               <div class="box box-danger">
-                <div class="box-body">
+                <div class="card-body">
                   <div class="form-group">
                     <label for="nama_dokumen">Nama / Jenis Dokumen</label>
                     <div class="input-group col-sm-12">

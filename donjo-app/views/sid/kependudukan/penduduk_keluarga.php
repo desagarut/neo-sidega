@@ -19,7 +19,7 @@
 				<a href="<?=site_url("keluarga/index/$p/$o")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Keluarga"><i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar Keluarga
 				</a>
 			</div>
-			<div class="box-body">
+			<div class="card-body">
 				<h5><b>Rincian Keluarga</b></h5>
 				<div class="table-responsive">
 					<table class="table table-bordered table-striped table-hover tabel-rincian">
@@ -58,7 +58,7 @@
 					</table>
 				</div>
 			</div>
-			<div class="box-body">
+			<div class="card-body">
 				<h5><b>Daftar Anggota Keluarga</b></h5>
 				<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
 					<form id="mainform" name="mainform" action="" method="post">
@@ -128,4 +128,4 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>

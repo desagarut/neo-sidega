@@ -580,7 +580,7 @@
                               <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i> </button>
                             </div>
                           </div>
-                          <div class="box-body">
+                          <div class="card-body">
                             <?php $this->load->view($folder_themes . '/sid/kependudukan/penduduk_map.php') ?>
                           </div>
                           <div class="box-footer" align="right">
@@ -599,7 +599,7 @@
                               <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i> </button>
                             </div>
                           </div>
-                          <div class="box-body">
+                          <div class="card-body">
                             <table class="table table-bordered table-striped table-hover detail">
                               <tr>
                                 <th class="padat">No</th>
@@ -642,7 +642,7 @@
                               <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i> </button>
                             </div>
                           </div>
-                          <div class="box-body">
+                          <div class="card-body">
                             <table class="table table-bordered table-striped table-hover detail">
                               <tr>
                                 <th class="padat">No</th>
@@ -662,7 +662,7 @@
                               <?php endforeach; ?>
                             </table>
                           </div>
-                          <div class="box-footer"> </div>
+                          <div class="card-footer"> </div>
                         </div>
                         <div class="box box-success">
                           <div class="box-header with-border">

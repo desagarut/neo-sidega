@@ -1,9 +1,9 @@
 <!-- widget Galeri-->
 <div class="box box-primary box-solid">
-	<div class="box-header">
+	<div class="card-header">
 		<h3 class="box-title"><a href="<?= site_url('first/gallery');?>"><i class="fa fa-camera"></i> Galeri Foto</a></h3>
 	</div>
-	<div class="box-body">
+	<div class="card-body">
 		<ul id="li-komentar" class="sidebar-latest">
 			<?php foreach ($w_gal As $data): ?>
 				<?php if (is_file(LOKASI_GALERI . "sedang_" . $data['gambar'])): ?>

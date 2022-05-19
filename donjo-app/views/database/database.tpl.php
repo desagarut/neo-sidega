@@ -1,19 +1,20 @@
 <?php	$this->load->view('header', $this->header); ?>
 <?php	$this->load->view('nav'); ?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Pengaturan Database</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Pengaturan Database</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
 					<div class="box box-info">
-						<div class="box-body">
+						<div class="card-body">
 								<div class="row">
 									<div class="col-xs-12">
 											<div class="nav-tabs-custom">

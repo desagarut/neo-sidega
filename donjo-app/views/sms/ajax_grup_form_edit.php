@@ -6,7 +6,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="box box-danger">
-					<div class="box-body">
+					<div class="card-body">
 						<div class="form-group">
 							<label class="control-label" for="nama_grup">Nama Group</label>
 							<input name="nama_grup" class="form-control input-sm required" type="text" value="<?=$grup['nama_grup']?>" />

@@ -1,12 +1,13 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Pengaturan Format Surat Desa</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('surat_master'); ?>"> Format Surat Desa</a></li>
 			<li class="active">Pengaturan Format Surat</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="box box-info">
 			<div class="box-header with-border">
@@ -15,7 +16,7 @@
 				</a>
 			</div>
 			<form id="validasi" action="<?= $form_action; ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
-				<div class="box-body">
+				<div class="card-body">
 					<div class="form-group">
 						<label class="col-sm-3 control-label" for="kode_surat">Kode/Klasifikasi Surat</label>
 						<div class="col-sm-7">
@@ -112,13 +113,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="box-footer">
+				<div class="card-footer">
 					<button type="reset" class="btn btn-social btn-box btn-danger btn-sm" onclick="reset_form($(this).val());"><i class="fa fa-times"></i> Batal</button>
 					<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
 				</div>
 			</form>
 		</div>
-	</section>
+	</div>
 </div>
 <script>
 	$('document').ready(function() {

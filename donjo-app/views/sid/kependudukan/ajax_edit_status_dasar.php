@@ -33,7 +33,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="box box-danger">
-					<div class="box-body">
+					<div class="card-body">
 						<div class="form-group">
 							<label for="status_dasar">Status Dasar Baru</label>
 							<select id="status_dasar" name="status_dasar" class="form-control select2 input-sm required">

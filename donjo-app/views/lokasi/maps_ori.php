@@ -91,21 +91,22 @@ window.onload = function()
 	}
 </style>
 <!-- Menampilkan OpenStreetMap dalam Box modal bootstrap (AdminLTE)  -->
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Lokasi <?= $lokasi['nama']?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('plan')?>"> Pengaturan Lokasi</a></li>
 			<li class="active">Lokasi <?= $lokasi['nama']?></li>
 		</ol>
-	</section>
-	<section class="content">
+	</div>
+	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="box box-info">
 					<form id="validasi1" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
-						<div class="box-body">
+						<div class="card-body">
 							<div class="row">
 								<div class="col-sm-12">
 									<div id="mapx">
@@ -138,7 +139,7 @@ window.onload = function()
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 
 <script>

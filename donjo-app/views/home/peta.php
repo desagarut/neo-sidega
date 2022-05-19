@@ -40,11 +40,11 @@ function initMap() {
         //Style polygon
         var batasWilayah = new google.maps.Polygon({
             paths: polygon_desa,
-			strokeColor: '#c31b68',
-			strokeOpacity: 0.9,
-			strokeWeight: 3,
-			fillColor: '#fd7e14',
-			fillOpacity: 0.25
+            strokeColor: '<?=$desa['warna_garis']?>',
+            strokeOpacity: 1,
+            strokeWeight: 3,
+            fillColor: '<?=$desa['warna']?>',
+            fillOpacity: 0.25
         });
 
         batasWilayah.setMap(map)
@@ -71,7 +71,7 @@ function initMap() {
       </div>
     </div>
     <div class="card-body">
-        <div id="peta-desa" class="set-map" style="height: 350px"></div>
+        <div id="peta-desa" class="set-map" style="height: 405px"></div>
     </div>
   </div>
 </div>

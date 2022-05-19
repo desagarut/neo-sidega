@@ -17,7 +17,7 @@
 </script>	  
 
 	<section class="content" id="maincontent">
-        <div class="box-body">
+        <div class="card-body">
             <div class="row">
                 <div class="col-sm-12">
                     <table class="table table-responsive">
@@ -36,7 +36,7 @@
                     </table>
                     <div class="row">
                         <form name='mainform' action="<?= site_url('data_sppt/update_tagihan_save')?>" method="POST"  class="form-horizontal">
-                            <div class="box-body">
+                            <div class="card-body">
                                 <input id="id_tagih" name="id_tagih" type="hidden" value="<?= ($ubah_tagih["id_tagih"])?>">
                                <!--<input id="tahun_tagih" name="tahun_tagih" type="hidden" value="<?= ($ubah_tagih["tahun_tagih"])?>">
                                 <input id="pbb_terhutang" name="pbb_terhutang" type="hidden" value="<?= ($ubah_tagih["pbb_terhutang"])?>">
@@ -67,7 +67,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="box-footer">
+                            <div class="card-footer">
                                 <div class="col-xs-12">
                                     <button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
                                     <button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
@@ -78,4 +78,4 @@
                 </div>
             </div>
         </div>
-	</section>
+	</div>

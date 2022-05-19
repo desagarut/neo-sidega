@@ -1,12 +1,13 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Panduan Data Letter-C <?=ucwords($this->setting->sebutan_deskel)?> <?= $kelurahan["nama_deskel"];?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('home')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('data_persil/clear')?>"> Daftar Persil</a></li>
 			<li class="active">Panduan Persil</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
@@ -15,7 +16,7 @@
 				</div>
 				<div class="col-md-9">
 					<div class="box box-info">
-						<div class="box-body">
+						<div class="card-body">
 							<h4>Keterangan</h4>
 							<p><strong>Modul Data Letter-C</strong> adalah modul untuk pengelolaan data tentang kepemilikan lahan, termasuk riwayat kepemilikan.</p>
 							<h4>Panduan</h4>
@@ -38,6 +39,6 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 

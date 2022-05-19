@@ -1,17 +1,18 @@
 <?php ?>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Manual Input Anggaran dan Realisasi APBDes</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Manual Input APBDes</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="box box-info">
-					<div class="box-header">
+					<div class="card-header">
 						<a href="#" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-toggle="modal" data-target="#ModalAdd"><i class="fa fa-plus"></i> Tambah Data</a>
 						<a href="#" id="btn_salin" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-plus"></i>Tambah Data dari Template</a>
 					</div>
@@ -32,7 +33,7 @@
 							</div>
 						</form>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<!-- tab panes -->
 						<div role="tabpanel" class="tab-pane" id="tab-header">
 							<div class="row">
@@ -47,7 +48,7 @@
 									<div class="tab-content">
 										<!-- TAB PENDAPATAN -->
 										<div role="tabpanel" class="tab-pane active" id="pendapatan_tab">
-											<div class="box-header">
+											<div class="card-header">
 												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 											</div>
 											<form id="mainform" name="mainform" action="" method="post">
@@ -77,7 +78,7 @@
 										</div>
 										<!-- TAB BELANJA -->
 										<div role="tabpanel" class="tab-pane" id="belanja_tab">
-											<div class="box-header">
+											<div class="card-header">
 												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_bl','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 											</div>
 											<form id="mainform_bl" name="mainform_bl" action="" method="post">
@@ -107,7 +108,7 @@
 										</div>
 										<!-- TAB PEMBIAYAAN -->
 										<div role="tabpanel" class="tab-pane" id="pembiayaan_tab">
-											<div class="box-header">
+											<div class="card-header">
 												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_by','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 											</div>
 											<form id="mainform_by" name="mainform_by" action="" method="post">
@@ -144,7 +145,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 <?php $this->load->view('global/confirm_delete');?>
 

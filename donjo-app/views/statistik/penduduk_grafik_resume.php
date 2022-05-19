@@ -167,7 +167,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="box-body">
+	<div class="card-body">
 		<div id="container_<?=$lap?>"></div>
 		<div id="contentpane">
 			<div class="ui-layout-north panel top"></div>
@@ -179,7 +179,7 @@
 	<div class="box-header with-border">
 		<h3 class="box-title">Tabel <?= $heading ?></h3>
 	</div>
-	<div class="box-body">
+	<div class="card-body">
 		<div class="table-responsive">
 		<table class="table table-striped">
 			<thead>

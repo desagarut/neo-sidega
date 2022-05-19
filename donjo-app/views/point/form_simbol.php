@@ -59,14 +59,15 @@
 	}
 
 </style>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Pengaturan Simbol Lokasi</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Pengaturan Simbol Lokasi</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 			<div class="row">
@@ -81,7 +82,7 @@
 								<i class="fa fa-copy"></i>Salin Simbol Default
             	</a>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="form-group">
 								<div class="col-sm-10">
 									<div  class="vertical-scrollbar" style="max-height:460px;">
@@ -104,7 +105,7 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 <!--MODAL TAMBAH SIMBOL-->
 <div class="modal fade" id="ModalSimbol" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

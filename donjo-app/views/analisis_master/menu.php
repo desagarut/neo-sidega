@@ -38,9 +38,10 @@
 
 ?>
 
-<div class="content-wrapper">
+<div class="pcoded-main-container">
 
-	<section class="content-header">
+
+	<div class="page-header">
 
 		<h1><?= $_SESSION['analisis_nama']; ?> [ <?= $asubjek?> ]</h1>
 
@@ -54,7 +55,7 @@
 
 		</ol>
 
-	</section>
+	</div>
 
 	<section class="content" id="maincontent">
 
@@ -78,7 +79,7 @@
 
 						</div>
 
-						<div class="box-body">
+						<div class="card-body">
 
 							<div class="col-sm-12">
 
@@ -102,7 +103,7 @@
 
 		</form>
 
-	</section>
+	</div>
 
 </div>
 

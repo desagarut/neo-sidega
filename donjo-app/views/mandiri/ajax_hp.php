@@ -17,7 +17,7 @@
 			</tr>
 		</table>
 		<div class="box box-danger">
-			<div class="box-body">
+			<div class="card-body">
 				<div class="form-group">
 					<label class="control-label" for="telepon">Nomor Telepon</label>
 					<input name="telepon" class="form-control input-sm digits" minlength="8" maxlength="16" type="text" placeholder="No. HP Warga" value="<?= $penduduk['telepon'] ?>"></input>

@@ -21,7 +21,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="box box-danger">
-					<div class="box-body">
+					<div class="card-body">
 						<label class="control-label" for="nama">Unggah Template Format Surat</label>
 						<div class="input-group input-group-sm">
 							<input type="text" class="form-control input-sm required" id="file_path">

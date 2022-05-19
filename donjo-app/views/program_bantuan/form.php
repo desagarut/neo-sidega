@@ -1,6 +1,7 @@
-<div class="content-wrapper">
+<div class="pcoded-main-container">
+
 	<?php $detail = $program[0];?>
-	<section class="content-header">
+	<div class="page-header">
 		<h1>Peserta Program Bantuan</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
@@ -8,7 +9,7 @@
 			<li><a href="<?= site_url("program_bantuan/detail/$detail[id]")?>"> Rincian Program Bantuan</a></li>
 			<li class="active">Peserta Program Bantuan</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
@@ -17,7 +18,7 @@
 						<a href="<?= site_url('program_bantuan')?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
 						<a href="<?= site_url("program_bantuan/detail/$detail[id]")?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Rincian Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Rincian Program Bantuan</a>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
 								<?php include('donjo-app/views/program_bantuan/rincian.php'); ?>
@@ -47,7 +48,7 @@
 														<i class="fa fa-user"></i>
 														<h3 class="box-title">Konfirmasi Peserta</h3>
 													</div>
-													<div class="box-body">
+													<div class="card-body">
 														<?php include('donjo-app/views/program_bantuan/konfirmasi_peserta.php'); ?>
 													</div>
 												</div>
@@ -60,7 +61,7 @@
 													<h3 class="box-title">Identitas Pada Kartu Peserta</h3>
 												</div>
 												<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
-													<div class="box-body">
+													<div class="card-body">
 														<input name="peserta" type="hidden" value="<?= $individu['id_peserta']?>">
 														<input name="kartu_id_pend" type="hidden" value="<?= $individu['id']?>">
 														<div class="form-group">
@@ -118,7 +119,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="box-footer">
+													<div class="card-footer">
 														<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
 														<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
 													</div>
@@ -133,6 +134,6 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 

@@ -10,8 +10,9 @@
 	});
 </script>
 
-<div class="content-wrapper">
-  <section class="content-header">
+<div class="pcoded-main-container">
+
+  <div class="page-header">
     <h1>Detail Fasilitas Wisata</h1>
     <ol class="breadcrumb">
       <li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
@@ -20,7 +21,7 @@
         <?= $sub['nama']?>
       </li>
     </ol>
-  </section>
+  </div>
   
   <section class="content" id="maincontent">
   <form id="mainform" name="mainform" action="" method="post">
@@ -37,7 +38,7 @@
       </div>
       
       <div class="box box-warning collapsed-box">
-        <div class="box-header"> <i class="fa fa-calendar"></i>
+        <div class="card-header"> <i class="fa fa-calendar"></i>
           <h3 class="box-title"><strong>INFO WISATA</strong></h3>
           <!-- tools box -->
           <div class="pull-right box-tools"> 
@@ -187,7 +188,7 @@
             <!-- /. tools --> 
             </div>
           
-          <div class="box-body">
+          <div class="card-body">
               <div class="row">
               <div class="col-sm-12">
               <div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -329,6 +330,6 @@
           </div>
       </div>
   </form>
-  </section>
+  </div>
 </div>
 <?php $this->load->view('global/confirm_delete');?>

@@ -1,13 +1,14 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Data Suplemen <?= ($set_sasaran == 0)? '' : "Sasaran $sasaran[$set_sasaran]"; ?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Data Suplemen</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="box box-info">
@@ -15,7 +16,7 @@
 					<a href="<?=site_url('suplemen/form')?>" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Suplemen Baru"><i class="fa fa-plus"></i> Tambah Suplemen Baru</a>
 					<a href="<?=site_url('suplemen/panduan')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Program Bantuan Baru"><i class="fa fa-question-circle"></i> Panduan</a>
 				</div>
-				<div class="box-body">
+				<div class="card-body">
 					<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
 						<form id="mainform" name="mainform" action="" method="post">
 							<select class="form-control input-sm" name="sasaran" onchange="formAction('mainform', '<?= site_url('suplemen'); ?>')">
@@ -72,6 +73,6 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 <?php $this->load->view('global/confirm_delete');?>

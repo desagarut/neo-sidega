@@ -1,11 +1,12 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Kirim Pesan</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('hom_sid')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Kirim Pesan</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
@@ -15,7 +16,7 @@
 							<i class="fa fa-arrow-circle-left "></i>Kembali ke halaman Kotak Pesan
 						</a>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<form action="" id="main" method="POST" class="form-horizontal" name="main">
 							<div class="form-group">
 								<label class="control-label col-sm-2" for="owner">Penerima</label>
@@ -73,7 +74,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 <script>
 	$(document).ready(function() {

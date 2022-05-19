@@ -48,10 +48,10 @@ function initMap() {
 	//Style polygon batas wilayah desa
 	var batasWilayah = new google.maps.Polygon({
 		paths: polygon_desa,
-		strokeColor: '#c31b68',
-		strokeOpacity: 0.5,
+		strokeColor: '<?=$desa['warna_garis']?>',
+		strokeOpacity: 1,
 		strokeWeight: 3,
-		fillColor: '#fd7e14',
+		fillColor: '<?=$desa['warna']?>',
 		fillOpacity: 0.35,
 		title: 'Wilayah Desa <?php echo ucwords($this->setting->sebutan_desa); ?><?php echo ucwords($desa['nama_desa'])?>',
 	});
@@ -66,6 +66,6 @@ function initMap() {
 
 <div class="map-section" style="padding-top:58px">
     <div class="col-sm-12">
-      <div id="peta_wilayah_desa" style="height: 500px"></div>
+      <div id="peta_wilayah_desa" style="height: 600px"></div>
     </div>
 </div>

@@ -1,13 +1,14 @@
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Daftar Anggota Keluarga</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('keluarga/clear')?>"> Daftar Keluarga</a></li>
 			<li class="active">Daftar Anggota Keluarga</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="box box-info">
 			<div class="box-header with-border">
@@ -30,7 +31,7 @@
 				<a href="<?=site_url("keluarga/index/$p/$o")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Keluarga"><i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar Keluarga
 				</a>
 			</div>
-			<div class="box-body">
+			<div class="card-body">
 				<h5><b>Rincian Keluarga</b></h5>
 				<div class="table-responsive">
 					<table class="table table-bordered table-striped table-hover tabel-rincian">
@@ -69,7 +70,7 @@
 					</table>
 				</div>
 			</div>
-			<div class="box-body">
+			<div class="card-body">
 				<h5><b>Daftar Anggota Keluarga</b></h5>
 				<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
 					<form id="mainform" name="mainform" action="" method="post">
@@ -143,6 +144,6 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 <?php $this->load->view('global/confirm_delete');?>

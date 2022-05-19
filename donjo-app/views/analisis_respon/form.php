@@ -44,9 +44,10 @@
 
 
 
-<div class="content-wrapper">
+<div class="pcoded-main-container">
 
-	<section class="content-header">
+
+	<div class="page-header">
 
 		<h1>Input Data Sensus - <?= $analisis_master['nama']?></h1>
 
@@ -64,9 +65,9 @@
 
 		</ol>
 
-	</section>
+	</div>
 
-	</section>
+	</div>
 
 	<section class="content"  id="maincontent">
 
@@ -108,7 +109,7 @@
 
 						</div>
 
-						<div class="box-body">
+						<div class="card-body">
 
 							<div class="row">
 
@@ -464,7 +465,7 @@
 
 		</form>
 
-	</section>
+	</div>
 
 </div>
 

@@ -46,16 +46,17 @@ function initMap() {
   }
 </style>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Lokasi : <?=$toko['nama']?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('toko_warga') ?>"> Daftar Toko</a></li>
 			<li class="active">Lokasi <?=$toko['nama']?></li>
 		</ol>
-	</section>
-	<section class="content">
+	</div>
+	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="box box-info">
@@ -80,5 +81,5 @@ function initMap() {
 				</div>
             </div>
         </div>
-	</section>
+	</div>
 </div>

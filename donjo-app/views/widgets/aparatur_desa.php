@@ -20,11 +20,11 @@
 <!-- widget Aparatur Desa -->
 <div class="box box-primary box-solid">
 
-	<div class="box-header">
+	<div class="card-header">
 		<h3 class="box-title"><i class="fa fa-user"></i> Aparatur <?= ucwords($this->setting->sebutan_desa)?></h3>
 	</div>
 
-	<div class="box-body">
+	<div class="card-body">
 		<div id="aparatur_desa" class="cycle-slideshow"
 		data-cycle-pause-on-hover=true
 		data-cycle-fx=scrollHorz

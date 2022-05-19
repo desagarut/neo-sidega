@@ -1,12 +1,13 @@
-<div class="content-wrapper">
-  <section class="content-header">
+<div class="pcoded-main-container">
+
+  <div class="page-header">
     <h1>Detil Pemudik</h1>
     <ol class="breadcrumb">
       <li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
       <li><a href="<?= site_url('covid19')?>"><i class="fa fa-home"></i> Data Pemudik</a></li>
       <li class="active">Detil Pemudik</li>
     </ol>
-  </section>
+  </div>
   <section class="content" id="maincontent">
     <div class="row">
       <div class="col-md-12">
@@ -26,7 +27,7 @@
             <h3 class="box-title">Detil Pemudik</h3>
           </div>
 
-          <div class="box-body">
+          <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered" >
                 <tbody>
@@ -93,7 +94,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 
 <div class='modal fade' id='edit-warga' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>

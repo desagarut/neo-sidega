@@ -1,14 +1,15 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Pengaturan Garis</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('garis')?>"><i class="fa fa-dashboard"></i> Daftar Garis</a></li>
 			<li class="active">Pengaturan Garis</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 	<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 			<div class="row">
@@ -22,7 +23,7 @@
 								<i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar Garis
             	</a>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="form-group">
 								<label class="control-label col-sm-3">Nama Garis / Properti</label>
 								<div class="col-sm-7">
@@ -89,7 +90,7 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 <script>
 	function reset_form()

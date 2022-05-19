@@ -9,14 +9,15 @@
 		$("[name='setting["+key+"][old_gambar]']").val('');
 	}
 </script>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Pengaturan Sinergi Program</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Pengaturan Sinergi Program</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="validasi" action="<?= $form_action ?>" method="POST" enctype="multipart/form-data">
 			<div class="row">
@@ -27,7 +28,7 @@
 								<i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar Widget
 							</a>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -134,7 +135,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="box-footer">
+						<div class="card-footer">
 							<div class="col-xs-12">
 								<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
 								<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
@@ -144,6 +145,6 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 

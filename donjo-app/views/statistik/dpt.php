@@ -4,7 +4,7 @@
 	<div class="box-header with-border">
 		<h3 class="box-title">Daftar Calon Pemilih Berdasarkan Wilayah (pada tgl pemilihan <?= $tanggal_pemilihan; ?>)</h3>
 	</div>
-	<div class="box-body">
+	<div class="card-body">
 		<?php if(count($main) > 0): ?>
 			<table id="dpt" class="table table-striped">
 				<thead>

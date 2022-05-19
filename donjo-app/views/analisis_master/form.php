@@ -24,9 +24,10 @@
 
 
 
-<div class="content-wrapper">
+<div class="pcoded-main-container">
 
-	<section class="content-header">
+
+	<div class="page-header">
 
 		<h1>Pengaturan Master Analisis</h1>
 
@@ -40,9 +41,9 @@
 
 		</ol>
 
-	</section>
+	</div>
 
-	<section class="content">
+	<div class="card">
 
 		<div class="row">
 
@@ -58,7 +59,7 @@
 
 					<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data"  class="form-horizontal">
 
-						<div class="box-body">
+						<div class="card-body">
 
 							<div class="row">
 
@@ -264,7 +265,7 @@
 
 						</div>
 
-						<div class="box-footer">
+						<div class="card-footer">
 
 							<div class="col-xs-12">
 
@@ -286,7 +287,7 @@
 
 		</div>
 
-	</section>
+	</div>
 
 </div>
 

@@ -22,7 +22,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="box box-danger">
-					<div class="box-body">
+					<div class="card-body">
 						<div class="form-group">
 							<p><label class="control-label">Contoh urutan format dapat dilihat pada <a href="<?= base_url()?>assets/import/data_persil.xls">tautan berikut</a></label></p>
 						</div>

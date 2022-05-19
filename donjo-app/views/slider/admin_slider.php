@@ -1,11 +1,12 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Pengaturan Slider Besar</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Pengaturan Slider Besar</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainform" action="<?= site_url('web/update_slider')?>" method="POST" class="form-horizontal">
 			<div class="row">
@@ -14,7 +15,7 @@
 						<div class="box-header with-border">
 								Pilih sumber gambar untuk ditampilkan di slider besar:
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="row">
 								<div data-toggle="buttons">
 									<div class="col-sm-12">
@@ -52,6 +53,6 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 

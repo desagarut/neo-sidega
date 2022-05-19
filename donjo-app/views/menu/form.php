@@ -1,13 +1,14 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Pengaturan Menu Statis</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Pengaturan Menu Statis</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="validasi" action="<?= $form_action; ?>" method="POST" class="form-horizontal">
 			<div class="row">
@@ -21,7 +22,7 @@
 								<i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar Menu
 							</a>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="form-group">
 								<label class="control-label col-sm-4" for="nama">Nama</label>
 								<div class="col-sm-6">
@@ -108,7 +109,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="box-footer">
+						<div class="card-footer">
 							<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
 							<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right confirm"><i class="fa fa-check"></i> Simpan</button>
 						</div>
@@ -116,7 +117,7 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 <script>
 	function ganti_jenis_link(jenis) {

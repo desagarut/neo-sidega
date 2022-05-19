@@ -1,13 +1,14 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Kode Isian Form Surat</h1>
 		<ol class="breadcrumb">
       <li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('surat_master')?>"> Format Surat Desa</a></li>
 			<li class="active">Kode Isian Form Surat</li>
 		</ol>
-	</section>
-	<section class="content">
+	</div>
+	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="box box-info">
@@ -19,7 +20,7 @@
 					<div class="box-header with-border">
 						<h3 class="box-title"><i class="fa fa-info-circle"></i> <strong>Kode Isian Format Surat <?= $surat_master['nama']?></strong></h3>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-7">
 								<p>
@@ -52,5 +53,5 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>

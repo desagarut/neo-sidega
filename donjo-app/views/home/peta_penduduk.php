@@ -1,11 +1,11 @@
 <!-- widget Peta Wilayah Desa -->
 <div class="box box-primary box-solid">
-    <div class="box-header">
+    <div class="card-header">
         <h3 class="box-title">
         <i class="fa fa-map-marker"></i>
         <?="Wilayah ".ucwords($this->setting->sebutan_desa)?></h3>
     </div>
-    <div class="box-body">
+    <div class="card-body">
         <div id="map_wilayah" style="height:200px;"></div>
         <a href="<?=site_url()?>gis">Buka peta</a>
     </div>
@@ -85,12 +85,12 @@
 
 <!-- widget Peta Lokasi Kantor Desa -->
 <div class="box box-primary box-solid">
-	<div class="box-header">
+	<div class="card-header">
 		<h3 class="box-title">
 			<i class="fa fa-map-marker"></i><?="Lokasi Kantor ".ucwords($this->setting->sebutan_desa)?>
 		</h3>
 	</div>
-	<div class="box-body">
+	<div class="card-body">
 		<div id="map_lokasi" style="height:200px;"></div>
 		<button class="btn btn-success btn-block"><a href="<?=site_url()?>gis" style="color:#fff;" target="_blank">Buka Peta</a></button>
 		<button class="btn btn-success btn-block" data-toggle="collapse" data-target="#collapse2" aria-expanded="false">

@@ -2,7 +2,7 @@
 	<div class="box-header with-border">
 
 	</div>
-	<div class="box-body">
+	<div class="card-body">
 
 	</div>
 </div>

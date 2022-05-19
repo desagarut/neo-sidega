@@ -1,17 +1,18 @@
 <meta charset="utf-8" />
 <link rel="stylesheet" href="<?= base_url()?>assets/css/vuetify.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-<div class="content-wrapper">
-<section class="content-header">
+<div class="pcoded-main-container">
+
+<div class="page-header">
 	<h1>Info Layanan Pelanggan</h1>
 	<ol class="breadcrumb">
 		<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 		<li class="active">Info Layanan Pelanggan</li>
 	</ol>
-</section>
-<section class="content">
+</div>
+<div class="card">
 	<div class="box box-info">
-		<div class="box-body">
+		<div class="card-body">
 			<div class="row">
 				<div class="col-sm-12">
 					<input type="hidden" id="id_desa" name="id_desa"/>
@@ -131,7 +132,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 <script src="<?= base_url()?>assets/js/axios.min.js"></script>
 <script>

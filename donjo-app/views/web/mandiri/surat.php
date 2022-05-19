@@ -11,19 +11,20 @@ table.table th {
 	const LOKASI_DOKUMEN = '<?= base_url().LOKASI_DOKUMEN ?>';
 </script>
 
-<div class="content-wrapper">
+<div class="pcoded-main-container">
+
   <section class='content' id="maincontent">
     <div class='row'>
       <div class='col-md-12'>
         <div class="box box-info" style="margin-top: 10px;">
-          <div class="box-body">
+          <div class="card-body">
             <form class="contact_form" id="validasi" action="<?= site_url('permohonan_surat/form/'.$permohonan[id])?>" method="POST" enctype="multipart/form-data">
               <div class="box-header with-border"> <span><strong>LAYANAN PERMOHONAN SURAT</strong></span>
                 <input type="hidden" name="pemohon" value="<?= $_SESSION['nama']?>"/>
                 <input type="hidden" readonly="readonly" name="nik" value="<?= $_SESSION['nik']?>"/>
                 <input type="hidden" id="id_permohonan" name="id_permohonan" value="<?= $permohonan['id']?>"/>
               </div>
-              <div class="box-body">
+              <div class="card-body">
                 <div class="form form-horizontal">
                   <?php if ($permohonan): ?>
                   <div class="alert alert-warning" role="alert"> <span style="font-size: larger;">Lengkapi permohonan surat tanggal
@@ -70,7 +71,7 @@ table.table th {
                     <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#surat"><i class="fa fa-minus"></i></button>
                   </div>
                 </div>
-                <div class="box-body">
+                <div class="card-body">
                   <div class="table-responsive">
                     <table class="table table-striped table-bordered" id="syarat_surat">
                       <thead>
@@ -89,7 +90,7 @@ table.table th {
                     </table>
                   </div>
                 </div>
-                <div class="box-footer">
+                <div class="card-footer">
                   <div class="col-xs-12">
                     <button type="reset" class="btn btn-social btn-box btn-danger btn-sm invisible"><i class="fa fa-times"></i> Batal</button>
                     <button type="submit" class="btn btn-primary pull-right" id="isi_form"><i class="fa fa-sign-in"></i> Isi Form</button>
@@ -106,7 +107,7 @@ table.table th {
               <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#dokumen"><i class="fa fa-minus"></i></button>
             </div>
           </div>
-          <div class="box-body">
+          <div class="card-body">
             <button type="button" title="Tambah Dokumen" data-remote="false" data-toggle="modal" data-target="#modal" data-title="Tambah Dokumen" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" id="tambah_dokumen"><i class='fa fa-plus'></i>Tambah Dokumen</button>
             <div class="table-responsive">
               <table class="table table-striped table-bordered" id="dokumen">
@@ -127,7 +128,7 @@ table.table th {
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 <div class="modal fade in" id="dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -157,7 +158,7 @@ table.table th {
           <div class="row">
             <div class="col-sm-12">
               <div class="box box-danger">
-                <div class="box-body">
+                <div class="card-body">
                   <div class="form-group">
                     <label for="nama_dokumen">Nama / Jenis Dokumen</label>
                     <div class="input-group col-sm-12">

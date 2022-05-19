@@ -1,11 +1,12 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Pengaturan Teks Berjalan</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Pengaturan Teks Berjalan</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="validasi" action="<?= $form_action?>" method="POST">
 			<div class="row">
@@ -16,7 +17,7 @@
 								<i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar Teks
 							</a>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="col-md-12">
 								<div class="form-group">
 									<label class="control-label" for="isi_teks_berjalan">Isi teks berjalan</label>
@@ -51,5 +52,5 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>

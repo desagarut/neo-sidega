@@ -20,7 +20,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="box box-danger">
-					<div class="box-body">
+					<div class="card-body">
 						<div class="form-group">
 							<label for="file"  class="control-label">File Master Analisis :</label>
 							<div class="input-group input-group-sm">

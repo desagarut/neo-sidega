@@ -6,7 +6,7 @@
 	#arsip_artikel td { padding-bottom: 2px; }
 </style>
 <div class="box box-primary box-solid">
-	<div class="box-header">
+	<div class="card-header">
 		<h3 class="box-title"><a href="<?= site_url("arsip")?>"><i class="fa fa-archive"></i> Arsip Artikel</a></h3>
 	</div>
 	<div id="arsip_artikel" class="box-body">

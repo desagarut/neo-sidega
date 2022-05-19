@@ -4,7 +4,7 @@
 													<div class="box-header with-border">
 														<h3 class="box-title"><strong>Ekspor Data <?= ucwords($this->setting->sebutan_desa); ?></strong></h3>
 													</div>
-													<div class="box-body">
+													<div class="card-body">
 														<div class="row">
 															<div class="col-md-8">
 																<table class="table table-striped table-hover">
@@ -47,5 +47,5 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>

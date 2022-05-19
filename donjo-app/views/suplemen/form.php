@@ -1,21 +1,22 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Form Data Suplemen</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('suplemen')?>"> Data Suplemen</a></li>
 			<li class="active">Form Data Suplemen</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="box box-info">
 			<div class="box-header with-border">
 				<a href="<?= site_url('suplemen')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Daftar Suplemen</a>
 			</div>
 			<form id="validasi" action="<?= $form_action; ?>" method="POST" class="form-horizontal">
-				<div class="box-body">
+				<div class="card-body">
 					<div class="form-group">
 						<label class="col-sm-3 control-label" for="id_master">Sasaran Data</label>
 						<div class="col-sm-7">
@@ -47,11 +48,11 @@
 						 </div>
 					</div>
 				</div>
-				<div class="box-footer">
+				<div class="card-footer">
 					<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
 					<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
 				</div>
 			</form>
 		</div>
-	</section>
+	</div>
 </div>

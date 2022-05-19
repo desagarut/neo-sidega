@@ -16,8 +16,8 @@ function initMap() {
         }
     <?php else: ?>
         var center = {
-            lat: -7.202686,
-            lng: 107.8866398,
+            lat: -7.2027243,
+            lng: 107.8866452,
         }
     <?php endif; ?>
 
@@ -42,10 +42,10 @@ function initMap() {
 	//Style polygon batas wilayah desa
 	var batasWilayah = new google.maps.Polygon({
 		paths: polygon_desa,
-		strokeColor: '#c31b68',
-		strokeOpacity: 0.5,
+		strokeColor: '<?=$wil_ini['warna_garis']?>',
+		strokeOpacity: 1,
 		strokeWeight: 3,
-		fillColor: '#fd7e14',
+		fillColor: '<?=$wil_ini['warna']?>',
 		fillOpacity: 0.25
 	});
 
@@ -55,8 +55,9 @@ function initMap() {
 
 </script>
 
-<div class='row'>
-  <div class="pad">
-    <div id="peta_wilayah_desa" style="height: 300px"></div>
-  </div>
+
+<div class="card">
+    <div class="card-body">
+        <div id="peta_wilayah_desa" class="set-map" style="height:400px;"></div>
+    </div>
 </div>

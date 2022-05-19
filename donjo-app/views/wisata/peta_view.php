@@ -60,7 +60,7 @@ function initMap() {
 </div>
 <div class="col-sm-9">
   <div class="box box-warning">
-    <div class="box-body">
+    <div class="card-body">
       <div id="map_penduduk"></div>
     </div>
   </div>

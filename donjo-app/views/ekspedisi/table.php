@@ -14,7 +14,7 @@
 		<a href="<?= site_url("{$this->controller}/dialog/cetak/$o")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Buku Ekspedisi" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Ekspedisi"><i class="fa fa-print "></i> Cetak</a>
 		<a href="<?= site_url("{$this->controller}/dialog/unduh/$o")?>" title="Unduh Buku Ekspedisi" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Buku Ekspedisi" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Buku Ekspedisi"><i class="fa fa-download"></i> Unduh</a>
 	</div>
-	<div class="box-body">
+	<div class="card-body">
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">

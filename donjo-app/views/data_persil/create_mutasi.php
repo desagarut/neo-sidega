@@ -1,6 +1,7 @@
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Pengelolaan Data Letter-C <?=ucwords($this->setting->sebutan_deskel)?> <?= $kelurahan["nama_deskel"];?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?=site_url('home')?>"><i class="fa fa-home"></i> Home</a></li>
@@ -8,7 +9,7 @@
 			<li><a href="<?=site_url('letterc/rincian/'. $letterc[id])?>"> Rincian Letter-C</a></li>
 			<li class="active">Pengelolaan Data Letter-C</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-3">
@@ -16,7 +17,7 @@
 			</div>
 			<div class="col-md-9">
 				<div class="box box-info">
-					<div class="box-body">
+					<div class="card-body">
 						<div class="box-header with-border">
 							<a href="<?= site_url('letterc/rincian/'. $letterc[id])?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Rincian Letter-C"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Rincian Letter-C</a>
 							<?php if ($persil): ?>
@@ -28,7 +29,7 @@
 								<div class="box-header with-border">
 									<h3 class="box-title">Rincian Letter-C</h3>
 								</div>
-								<div class="box-body">
+								<div class="card-body">
 									<?php if ($pemilik): ?>
 										<div class="form-group">
 											<label class="col-sm-3 control-label">Nama Pemilik</label>
@@ -75,7 +76,7 @@
 										</h4>
 									</div>
 									<div id="persil" class="panel-collapse">
-										<div class="box-body">
+										<div class="card-body">
 											<form action="" id="main" name="main" method="POST" class="form-horizontal">
 												<div class="form-group" >
 									  			<label class="col-sm-3 control-label" for="id_pend">Nomor Persil</label>
@@ -141,11 +142,11 @@
 
 									<?php if (empty($persil['letterc_awal']) and empty($mutasi)): ?>
 										<div id="letterc_awal">
-											<div class="box-body">
+											<div class="card-body">
 												<a href="<?= site_url('letterc/awal_persil/'. $letterc[id] .'/' .$persil['id'])?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block col-sm-2" title="Kembali Ke Rincian Letter-C"><i class="fa fa-step-backward"></i>Letter-C Awal</a>
 												<span style="padding-left: 10px;">Catat Letter-C ini sebagai pemilik awal keseluruhan persil <?= $persil["nomor"] ?></span>
 											</div>
-											<div class="box-body">
+											<div class="card-body">
 												<a class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block col-sm-2" title="Kembali Ke Rincian Letter-C" onclick="tambah_mutasi();"><i class="fa fa-plus"></i>Tambah Mutasi</a>
 												<span style="padding-left: 10px;">Tambah mutasi Letter-C <?= $letterc['nomor']?> untuk persil <?= $persil['nomor']?></span>
 											</div>
@@ -168,7 +169,7 @@
 													</h4>
 												</div>
 												<div id="bidang_persil" class="panel-collapse">
-													<div class="box-body">
+													<div class="card-body">
 														<div class="form-group">
 															<label for="no_bidang_persil" class="col-sm-3 control-label">Nomor Bidang Mutasi</label>
 															<div class="col-sm-4">
@@ -195,7 +196,7 @@
 													</h4>
 												</div>
 												<div id="mutasi" class="panel-collapse">
-													<div class="box-body">
+													<div class="card-body">
 														<div class="form-group">
 															<label for="tanggal_mutasi" class="col-sm-3 control-label">Tanggal Perubahan</label>
 															<div class="col-sm-4">
@@ -257,7 +258,7 @@
 												</div>
 												<input type="hidden" name="jenis_mutasi" value="<?= $mutasi['jenis_mutasi']?>">
 												<div id="pemilik_awal" class="panel-collapse">
-													<div class="box-body">
+													<div class="card-body">
 														<div class="form-group">
 															<label for="no_objek_pajak" class="col-sm-3 control-label">Nomor Objek Pajak</label>
 															<div class="col-sm-8">
@@ -273,7 +274,7 @@
 												</div>
 											<?php endif; ?>
 
-											<div class="box-footer">
+											<div class="card-footer">
 												<div class="col-xs-12">
 													<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
 													<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
@@ -289,7 +290,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 <script>
 	function pilih_lokasi(pilih)

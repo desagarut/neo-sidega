@@ -1,19 +1,20 @@
-<div class="content-wrapper">
+<div class="pcoded-main-container">
+
 	<?php $detail = $data[0];?>
-	<section class="content-header">
+	<div class="page-header">
 		<h1>Profil Penerima Manfaat Program</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('program_bantuan')?>"> Daftar Program Bantuan</a></li>
 			<li class="active">Profil Penerima Program Bantuan</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="box box-info">
 			<div class="box-header with-border">
 				<a href="<?= site_url('program_bantuan')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
 			</div>
-			<div class="box-body">
+			<div class="card-body">
 				<h5><b>Profil Penerima Manfaat Program Bantuan</b></h5>
 				<div class="table-responsive">
 					<table class="table table-bordered  table-striped table-hover tabel-rincian" >
@@ -58,6 +59,6 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 

@@ -1,14 +1,15 @@
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Pengaturan Dokumen Persyaratan Surat</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('surat_mohon')?>"> Dokumen Persyaratan Surat</a></li>
 			<li class="active">Pengaturan Dokumen Persyaratan Surat</li>
 		</ol>
-	</section>
-	<section class="content">
+	</div>
+	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="box box-info">
@@ -17,9 +18,9 @@
 							<i class="fa fa-arrow-circle-left "></i>Kembali ke Dokumen Persyaratan Surat
            	</a>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data"  class="form-horizontal">
-							<div class="box-body">
+							<div class="card-body">
 								<div class="row">
 									<div class="col-sm-12">
 										<div class="form-group">
@@ -31,7 +32,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="box-footer">
+							<div class="card-footer">
 								<div class="col-xs-12">
 									<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
 									<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
@@ -42,5 +43,5 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>

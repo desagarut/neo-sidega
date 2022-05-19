@@ -164,16 +164,17 @@
   }
 </style>
 
-<div class="content-wrapper">
-  <section class="content-header">
+<div class="pcoded-main-container">
+
+  <div class="page-header">
 		<h1>Peta <?= $area['nama']?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url("area")?>"> Pengaturan Area </a></li>
 			<li class="active">Peta <?= $area['nama']?></li>
 		</ol>
-	</section>
-  <section class="content">
+	</div>
+  <div class="card">
 
 
     <div class='modal-body'>
@@ -195,5 +196,5 @@
         <button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
         <button type="submit" class="btn btn-social btn-box btn-info btn-sm" data-dismiss="modal" id="simpan_wilayah"><i class='fa fa-check'></i> Simpan</button>
     </div>
-	</section>
+	</div>
 </div>

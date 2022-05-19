@@ -42,7 +42,7 @@
 
 				<div class="box box-danger">
 
-					<div class="box-body">
+					<div class="card-body">
 
 						<div class="form-group">
 

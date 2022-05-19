@@ -54,15 +54,16 @@
 		overflow-y: auto;
 	}
 </style>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Pengaturan Tipe Lokasi</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('point')?>"><i class="fa fa-dashboard"></i> Daftar Tipe Lokasi</a></li>
 			<li class="active">Pengaturan Lokasi</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 			<div class="row">
@@ -76,7 +77,7 @@
 								<i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar Tipe Lokasi
             	</a>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="form-group">
 								<label for="nama"  class="col-sm-2 control-label">Nama Jenis Lokasi</label>
 								<div class="col-sm-8">
@@ -122,7 +123,7 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 <script>
 	function li_active()

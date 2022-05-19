@@ -270,7 +270,8 @@
 		/*height:80vh*/
 	}
 </style>
-<div class="content-wrapper">
+<div class="pcoded-main-container">
+
 	<form id="mainform_map" name="mainform_map" action="" method="post">
 		<div class="row">
 			<div class="col-md-12">

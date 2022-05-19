@@ -16,19 +16,19 @@
 </style>
 
 <div class="content-wrapper periksa">
-	<section class="content-header">
+	<div class="page-header">
 		<h1>Periksa Surat</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('permohonan_surat_admin/index/1/0')?>"> Daftar Permohonan Surat</a></li>
 			<li class="active">Surat Keterangan</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content periksa">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="box box-info">
-					<div class="box-body">
+					<div class="card-body">
 						<form class="form-horizontal">
 						  <div class="form-group">
 						    <label class="control-label col-sm-2">Pemohon:</label>
@@ -56,13 +56,13 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="box box-warning collapsed-box">
-					<div class="box-header">
+					<div class="card-header">
 	          <div class="box-tools pull-right">
 	            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
 	          </div>
 						<h4>Periksa persyaratan</h4>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						Periksa setiap dokumen untuk memastikan sesuai dengan persyaratan surat ini.
 						Kalau persyaratan belum lengkap:
 						<ul>
@@ -82,7 +82,7 @@
 	        <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#surat"><i class="fa fa-minus"></i></button>
 	      </div>
 	    </div>
-	    <div class="box-body">
+	    <div class="card-body">
 	      <table class="table table-striped table-bordered table-responsive" id="surat">
 	        <tr>
 	          <th width="2"><center>No</center></th>
@@ -109,13 +109,13 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="box box-warning collapsed-box">
-					<div class="box-header">
+					<div class="card-header">
 	          <div class="box-tools pull-right">
 	            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
 	          </div>
 						<h4>Periksa isian form</h4>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						Kalau isian sudah lengkap:
 						<ul>
 							<li>Klik Ekspor Dok untuk mencetak surat. Lampiran dapat diunduh di Arsip Layanan.</li>
@@ -133,7 +133,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 
 <div class="form-surat" id="periksa-permohonan">

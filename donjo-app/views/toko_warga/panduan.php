@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
 	<section class="content" id="maincontent">
-				<div class="box-body">
+				<div class="card-body">
 					<h4>Kelompok Usaha Perdagangan:</h4>
 					<p>
 						<ul>
@@ -14,4 +14,4 @@
 						</ul>
 					</p>
 				</div>
-	</section>
+	</div>

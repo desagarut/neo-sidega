@@ -52,20 +52,21 @@
 <script src="<?= base_url()?>assets/js/highcharts/highcharts.js"></script>
 <script src="<?= base_url()?>assets/js/highcharts/exporting.js"></script>
 <script src="<?= base_url()?>assets/js/highcharts/highcharts-more.js"></script>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Grafik Surat Keluar</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('keluar')?>"> Daftar Surat Keluar</a></li>
 			<li class="active">Grafik Surat Keluar</li>
 		</ol>
-	</section>
-	<section class="content">
+	</div>
+	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="box box-info">
-					<div class="box-body">
+					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
 								<div id="container"></div>
@@ -75,5 +76,5 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>

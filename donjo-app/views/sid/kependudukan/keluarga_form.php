@@ -1,12 +1,13 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Data Keluarga</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('keluarga/clear')?>"> Daftar Keluarga</a></li>
 			<li class="active">Data Keluarga</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="<?= $form_action?>" method="post" enctype="multipart/form-data">
 			<div class="row">
@@ -49,6 +50,6 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 

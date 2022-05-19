@@ -30,7 +30,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 
 	<?php if($this->setting->provinsi_covid) : ?>
 	<section id="covid-provinsi">
@@ -58,5 +58,5 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 	<?php endif ?>

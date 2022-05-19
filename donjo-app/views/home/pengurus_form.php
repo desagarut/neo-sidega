@@ -5,23 +5,24 @@
 		color: red;
 	}
 </style>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Staf Pemerintahan <?= ucwords($this->setting->sebutan_desa)?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('pengurus')?>"</i> Daftar Staf Pemerintahan</a></li>
 			<li class="active">Staf Pemerintahan <?= ucwords($this->setting->sebutan_desa)?></li>
 		</ol>
-	</section>
-	<section class="content">
+	</div>
+	<div class="card">
 		<div class="row" >
 			<div class="col-sm-12">
 				<div class="box box-info">
 					<div class="box-header with-border">
 						<a href="<?= site_url()?>pengurus" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Staf</a>
 					</div>
-					<div class="box-body">
+					<div class="card-body">
 						<div class="form-group col-sm-12 form-horizontal">
 							<label class="col-sm-4 col-lg-2 control-label kiri" for="status">DATA STAF</label>
 							<div class="btn-group col-sm-8 kiri" data-toggle="buttons">
@@ -75,7 +76,7 @@
 				</div>
 				<div class="col-md-9">
 					<div class="box box-primary">
-						<div class="box-body">
+						<div class="card-body">
 							<div class="form-group">
 								<label class="col-sm-4 control-label" for="pamong_nama">Nama Pegawai <?= ucwords($this->setting->sebutan_desa)?></label>
 								<div class="col-sm-7">
@@ -274,7 +275,7 @@
 				</div>
 			</form>
 		</div>
-	</section>
+	</div>
 </div>
 <script>
 	$('document').ready(function()

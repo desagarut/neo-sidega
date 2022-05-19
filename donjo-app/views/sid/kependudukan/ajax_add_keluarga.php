@@ -12,7 +12,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="box box-danger">
-					<div class="box-body">
+					<div class="card-body">
 						<div class="form-group">
 							<label for="nik_kepala">Kepala Keluarga (dari penduduk yang tidak memiliki No. KK)</label>
 							<?php if ($penduduk): ?>

@@ -1,14 +1,15 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Daftar Anggota Rumah Tangga</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('rtm/clear')?>"> Daftar Rumah Tangga</a></li>
 			<li class="active">Daftar Anggota Rumah Tangga</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="box box-info">
 			<div class="box-header with-border">
@@ -22,7 +23,7 @@
 					<i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar Rumah Tangga
 				</a>
 			</div>
-			<div class="box-body">
+			<div class="card-body">
 				<h5><b>Rincian Keluarga</b></h5>
 				<div class="table-responsive">
 					<table class="table table-bordered table-striped table-hover tabel-rincian">
@@ -61,7 +62,7 @@
 					</table>
 				</div>
 			</div>
-			<div class="box-body">
+			<div class="card-body">
 				<h5><b>Daftar Anggota</b></h5>
 				<form id="mainform" name="mainform" action="" method="post">
 					<div class="table-responsive">
@@ -112,6 +113,6 @@
 				</form>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 <?php $this->load->view('global/confirm_delete');?>

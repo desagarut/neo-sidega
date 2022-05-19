@@ -1,14 +1,15 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Data Anggota Kelompok</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('kelompok'); ?>"> Daftar Kelompok</a></li>
 			<li class="active">Data Anggota Kelompok</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<div class="row">
 			<div class="col-md-12">
@@ -34,7 +35,7 @@
 							</div>
 						</div>
 						<div class="col-md-9">
-							<div class="box-body">
+							<div class="card-body">
 								<div class="form-group">
 									<label class="col-sm-3 control-label"  for="id_penduduk">Nama Anggota</label>
 									<div class="col-sm-5">
@@ -80,7 +81,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="box-footer">
+						<div class="card-footer">
 							<div class="col-xs-12">
 								<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
 								<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
@@ -90,7 +91,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 
 

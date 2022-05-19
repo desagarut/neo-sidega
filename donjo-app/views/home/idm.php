@@ -156,19 +156,20 @@ $(document).ready(function () {
 	}
 </style>
 
-<div class="content-wrapper">
+<div class="pcoded-main-container">
+
 	<?php if (empty($halaman_statis)): ?>
-		<section class="content-header">
+		<div class="page-header">
 			<h1>Status IDM <?= ucwords($this->setting->sebutan_desa)?></h1>
 			<ol class="breadcrumb">
 				<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 				<li class="active">Status IDM <?= ucwords($this->setting->sebutan_desa)?></li>
 			</ol>
-		</section>
+		</div>
 	<?php endif; ?>
-	<section class="content">
+	<div class="card">
 		<div class="box box-info">
-			<div class="box-body">
+			<div class="card-body">
 				<div class="row">
 					<div class="col-sm-12">
 						<?php if ($idm->error_msg): ?>
@@ -312,5 +313,5 @@ $(document).ready(function () {
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>

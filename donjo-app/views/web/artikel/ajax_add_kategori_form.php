@@ -6,7 +6,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="box box-danger">
-					<div class="box-body">
+					<div class="card-body">
 						<div class="form-group">
 							<label for="nama">Nama Kategori</label>
 							<input id="kategori" name="kategori" class="form-control input-sm" type="text" value=""></input>

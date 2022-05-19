@@ -1,20 +1,20 @@
 <div class='col-md-6'>
-    <div class="box">
-            <div class="box-header">
+    <div class="card">
+            <div class="card-header">
               <h3 class="box-title">Application Buttons</h3>
             </div>
 <!--        <div class='box-body'>
  		<div class="row">
             <div class='col-md-12'>
                 <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="box-body">
+                        <div class="card-body">
                             <a href="https://kecamatancisompet.id" target="_blank" class="btn btn-block btn-social btn-info">
                                 <span class="info-box-icon bg-clear"><img src="<?= gambar_desa($desa['logo']);?>" class="img-circle" alt="Website GarutKab.Go.ID" width="70px"></span> DASH. KECAMATAN</a>
                         </div>
                 </div>
             
                 <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="box-body">
+                    <div class="card-body">
                         <a href="https://garutkab.go.id" target="_blank" class="btn btn-block btn-social btn-info">
                             <span class="info-box-icon bg-clear"><img src="<?= gambar_desa($desa['logo']);?>" class="img-circle" alt="Website GarutKab.Go.ID" width="70px"></span> PEMKAB GARUT</a>
                     </div>
@@ -23,7 +23,7 @@
              <!--   <div class="clearfix visible-sm-block"></div>
             
                 <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="box-body">
+                    <div class="card-body">
                         <a href="http://prodeskel.binapemdes.kemendagri.go.id/mpublik/" target="_blank" class="btn btn-block btn-social btn-success">
                             <span class="info-box-icon bg-clear"><img src="<?php echo base_url().'desa/logo/kemdagri.png'; ?>" class="img-circle" alt="" width="70px"></span> PRODESKEL
                           </a>
@@ -32,7 +32,7 @@
                 </div>
                 
                 <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="box-body">
+                    <div class="card-body">
                         <a href="http://epdeskel.kemendagri.go.id/app_Login/" target="_blank" class="btn btn-block btn-social btn-success">
                             <span class="info-box-icon bg-clear"><img src="<?php echo base_url().'desa/logo/kemdagri.png'; ?>" class="img-circle" alt="" width="70px"></span> EPDESKEL
                           </a>

@@ -4,7 +4,7 @@
 													<div class="box-header with-border">
 														<h3 class="box-title"><strong>Kosongkan Database SID</strong></h3>
 													</div>
-													<div class="box-body">
+													<div class="card-body">
 														<div class="row">
 															<div class="col-sm-12">
 																<p>Biasanya pada saat menginstall SID, <?= $this->setting->sebutan_desa ?> mengimpor data awal yang merupakan
@@ -77,7 +77,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 <script>
 	$('#submit').click(function()

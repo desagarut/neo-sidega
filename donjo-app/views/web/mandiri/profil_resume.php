@@ -6,16 +6,16 @@
     <!-- timeline time label -->
     <li>
       <div class="box box-warning">
-        <div class="box-header">Lokasi Rumah</div>
-        <div class="box-body">
+        <div class="card-header">Lokasi Rumah</div>
+        <div class="card-body">
           <?php $this->load->view('web/mandiri/penduduk_map.php');?>
         </div>
       </div>
     </li>
     <li>
       <div class="box box-warning">
-        <div class="box-header">Foto Rumah</div>
-        <div class="box-body">
+        <div class="card-header">Foto Rumah</div>
+        <div class="card-body">
           <table class="table table-bordered table-striped table-hover detail">
             <tr>
               <th class="padat">No</th>
@@ -41,8 +41,8 @@
     </li>
     <li>
       <div class="box box-warning">
-        <div class="box-header">Program Bantuan</div>
-<div class="box-body">
+        <div class="card-header">Program Bantuan</div>
+<div class="card-body">
                     <?php if ($bantuan_penduduk) : ?>
                         <b>SASARAN PENDUDUK</b>
                         <div class="table-responsive">

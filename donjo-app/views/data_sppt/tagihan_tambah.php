@@ -18,10 +18,10 @@
 </script>	  
 
 	<section class="content" id="maincontent">
-					<div class="box-body">
+					<div class="card-body">
 							<div class="col-sm-12">
 								<form name='mainform' action="<?= site_url('data_sppt/simpan_tagihan')?>" method="POST"  id="validasi" class="form-horizontal">
-									<div class="box-body">
+									<div class="card-body">
 										<input id="nomor" name="nomor" type="hidden" value="<?= ($sppt["nomor"])?>">
 										<input id="nama_wp" name="nama_wp" type="hidden" value="<?= ($sppt["nama_wp"])?>">
 										<input id="letak_op" name="letak_op" type="hidden" value="<?= ($sppt["letak_op"])?>">
@@ -137,7 +137,7 @@
                                             </div>
 										</div>
                                     </div>
-                                    <div class="box-footer">
+                                    <div class="card-footer">
 										<div class="col-xs-12">
 											<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
 											<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
@@ -146,4 +146,4 @@
 								</form>
 							</div>
 					</div>
-	</section>
+	</div>

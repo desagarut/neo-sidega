@@ -1,13 +1,14 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Statistik Kependudukan</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?=site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Statistik Kependudukan <?= $dusun; ?></li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
@@ -34,7 +35,7 @@
 							<?php endif; ?>
 							<a href="<?= site_url("{$this->controller}/clear/$lap") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan Filter</a>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<?php if ($lap < 50): ?>
 								<h4 class="box-title text-center"><b>Data Kependudukan Menurut <?= ($stat); ?></b></h4>
 							<?php else: ?>
@@ -43,7 +44,7 @@
 							<div id="chart" hidden="true"> </div>
 						</div>
 						<hr>
-						<div class="box-body">
+						<div class="card-body">
 							<?php if (($lap <= 20 OR $lap == 'bantuan_penduduk') AND $lap <> 'kelas_sosial' AND $lap <> 'bantuan_keluarga') : ?>
 								<div class="row">
 									<div class="col-sm-12 form-inline">
@@ -164,7 +165,7 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 <script type="text/javascript">
 	var chart;

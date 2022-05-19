@@ -35,7 +35,24 @@
     <script src="<?= base_url()?>assets/js/jquery.min.js"></script>
     <script src="<?= base_url()?>assets/js/jquery-ui.min.js"></script>
 
+		<!-- OpenStreetMap Css -->
+		<link rel="stylesheet" href="<?= base_url()?>assets/css/leaflet.css" />
+		<link rel="stylesheet" href="<?= base_url()?>assets/css/leaflet-geoman.css" />
+		<link rel="stylesheet" href="<?= base_url()?>assets/css/L.Control.Locate.min.css" />
+		<link rel="stylesheet" href="<?= base_url()?>assets/css/MarkerCluster.css" />
+		<link rel="stylesheet" href="<?= base_url()?>assets/css/MarkerCluster.Default.css" />
+		<link rel="stylesheet" href="<?= base_url()?>assets/css/leaflet-measure-path.css" />
+		<link rel="stylesheet" href="<?= base_url()?>assets/css/mapbox-gl.css" />
+		<link rel="stylesheet" href="<?= base_url()?>assets/css/L.Control.Shapefile.css" />
+		<link rel="stylesheet" href="<?= base_url()?>assets/css/leaflet.groupedlayercontrol.min.css" />
+		<link rel="stylesheet" href="<?= base_url()?>assets/css/peta.css">
 
+		<!-- Untuk ubahan style desa -->
+		<?php if (is_file("desa/css/insidega.css")): ?>
+		<link type='text/css' href="<?= base_url()?>desa/css/insidega.css" rel='Stylesheet' />
+		<?php endif; ?>
+		<!-- Diperlukan untuk script jquery khusus halaman -->
+		<script src="<?= base_url() ?>assets/bootstrap/js/jquery.min.js"></script>
 
     <?php require __DIR__ . '/head_tags.php' ?>
 </head>

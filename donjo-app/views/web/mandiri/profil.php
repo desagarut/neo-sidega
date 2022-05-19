@@ -4,7 +4,8 @@ table.table th {
 	text-align: left;
 }
 </style>
-<div class="content-wrapper">
+<div class="pcoded-main-container">
+
   <section class="content" id="maincontent">
     <div class="row">
       <div class="col-md-12">
@@ -57,7 +58,7 @@ table.table th {
               <small><h4 class="box-title">Ringkasan</h4></small>
             </div>
             <!-- /.box-header -->
-            <div class="box-body"><small> <strong><i class="fa fa-book margin-r-5"></i> Pendidikan Terakhir</strong></small>
+            <div class="card-body"><small> <strong><i class="fa fa-book margin-r-5"></i> Pendidikan Terakhir</strong></small>
               <p class="text-muted">
                 <small><?= strtoupper($penduduk['pendidikan_kk'])?></small>
               </p>
@@ -140,5 +141,5 @@ table.table th {
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>

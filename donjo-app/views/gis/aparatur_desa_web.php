@@ -51,7 +51,7 @@
 
 
 
-			<div class="box-body">
+			<div class="card-body">
 
 				<div id="aparatur_desa" class="cycle-slideshow"
 

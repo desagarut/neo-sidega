@@ -20,21 +20,22 @@
 	}
 </style>
 <!-- Menampilkan OpenStreetMap -->
-<div class="content-wrapper">
-  <section class="content-header">
+<div class="pcoded-main-container">
+
+  <div class="page-header">
 		<h1>Peta <?= $garis['nama']?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url("garis")?>"> Pengaturan garis </a></li>
 			<li class="active">Peta <?= $garis['nama']?></li>
 		</ol>
-	</section>
-  <section class="content">
+	</div>
+  <div class="card">
     <div class="row">
       <div class="col-md-12">
         <div class="box box-info">
           <form action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
-            <div class="box-body">
+            <div class="card-body">
               <div class="row">
                 <div class="col-sm-12">
                   <div id="map">
@@ -56,7 +57,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 
 <script>

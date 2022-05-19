@@ -1,8 +1,9 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="pcoded-main-container">
+
     <!-- Content Header (Page header) -->
-    <section class="content-header">
+    <div class="page-header">
       <h1>
         Mailbox
         <small>13 new messages</small>
@@ -11,10 +12,10 @@
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Mailbox</li>
       </ol>
-    </section>
+    </div>
 
     <!-- Main content -->
-    <section class="content">
+    <div class="card">
       <div class="row">
         <div class="col-md-3">
 			<?php $this->load->view('web/mandiri/mailbox_menu.php');?>
@@ -22,12 +23,12 @@
         <!-- /.col -->
         <div class="col-md-9">
           <div class="box box-info">
-            <div class="box-header">
+            <div class="card-header">
                 <a href="<?= site_url("mandiri_web/mandiri/1/3")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Artikel">
                     <i class="fa fa-arrow-circle-left "></i>Kembali ke halaman Kotak Pesan
                 </a>
             </div>
-            <div class="box-body">
+            <div class="card-body">
                 <form action="<?= $form_action ?>" class="form form-horizontal" id="validasi" method="POST">
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="email">NIK</label>
@@ -66,7 +67,7 @@
             </div>
         </div>
         </div>
-    </section>
+    </div>
   </div>  
 <script>
 	$(document).ready(function() {

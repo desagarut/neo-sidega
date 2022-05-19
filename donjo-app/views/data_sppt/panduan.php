@@ -1,12 +1,13 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Panduan Data SPPT PBB <?=ucwords($this->setting->sebutan_desa)?> <?= $desa["nama_desa"];?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('data_sppt/clear')?>"> Daftar SPPT PBB</a></li>
 			<li class="active">Panduan SPPT PBB</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
@@ -15,7 +16,7 @@
 				</div>
 				<div class="col-md-9">
 					<div class="box box-info">
-						<div class="box-body">
+						<div class="card-body">
 							<h4>Keterangan</h4>
 							<p><strong>Modul Data SPPT PBB</strong> adalah modul untuk pengelolaan data tentang kepemilikan lahan, termasuk riwayat kepemilikan.</p>
 							<h4>Panduan</h4>
@@ -38,6 +39,6 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 

@@ -10,21 +10,22 @@
 		});
 	});
 </script>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Pendaftar Layanan Masyarakat</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Pendaftar Layanan Masyarakat</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="box box-info">
 				<div class="box-header with-border">
 					<a href="<?= site_url('mandiri/ajax_pin'); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Buat PIN Warga" class="btn btn-social btn-box btn-success btn-sm"><i class="fa fa-plus"></i> Tambah Pengguna</a>
 				</div>
-				<div class="box-body">
+				<div class="card-body">
 					<form id="mainform" name="mainform" action="" method="post">
 						<div class="row">
 							<div class="col-sm-12 form-inline">
@@ -136,7 +137,7 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 <?php $this->load->view('global/confirm_delete');?>
 <!-- Notifikasi PIN Warga -->

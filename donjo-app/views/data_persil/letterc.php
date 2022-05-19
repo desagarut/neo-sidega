@@ -18,14 +18,15 @@
 	  } );
   } );
 </script>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Daftar Letter-C <?= ucwords($this->setting->sebutan_desa)?> <?= $kelurahan["nama_desa"];?></h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('home')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Daftar Letter-C</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
@@ -34,10 +35,10 @@
 				</div>
 				<div class="col-md-8 col-lg-9">
 					<div class="box box-info">
-						<div class="box-header">
+						<div class="card-header">
 							<h4 class="text-center"><strong>DAFTAR LETTER C</strong></h4>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -109,6 +110,6 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 

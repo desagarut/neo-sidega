@@ -1,12 +1,13 @@
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1><?= empty($data) ? 'Tambah' : 'Ubah'?> Klasifikasi Surat</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url().$this->controller.'/index'?>"><i class="fa fa-dashboard"></i> Daftar Klasifikasi Surat</a></li>
 			<li class="active"><?= empty($data) ? 'Tambah' : 'Ubah'?> Klasifikasi Surat</li>
 		</ol>
-	</section>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 			<div class="row">
@@ -17,7 +18,7 @@
 								<i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar Klasifikasi Surat
             	</a>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="form-group">
 								<label class="control-label col-sm-4" for="kode">Kode</label>
 								<div class="col-sm-6">
@@ -47,5 +48,5 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>

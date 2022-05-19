@@ -8,8 +8,9 @@
 		default: return null;
 	endswitch;
 ?>
-<div class="content-wrapper">
-	<section class="content-header">
+<div class="pcoded-main-container">
+
+	<div class="page-header">
 		<h1>Laporan Hasil Analisis</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
@@ -17,8 +18,8 @@
 			<li><a href="<?= site_url() ?>analisis_laporan/leave"><?= $analisis_master['nama']?></a></li>
 			<li class="active">Laporan Hasil Klasifikasi</li>
 		</ol>
-	</section>
-	</section>
+	</div>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
@@ -56,7 +57,7 @@
 								</table>
 							</div>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="row">
 								<div class="col-sm-12">
 									<h5 class="box-title">DAFTAR ANGGOTA</h5>
@@ -128,6 +129,6 @@
 				</div>
 			</div>
 		</form>
-	</section>
+	</div>
 </div>
 

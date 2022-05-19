@@ -1,9 +1,9 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<div class="runningtext container">
+<div class="runningtext">
   <?php foreach ($teks_berjalan AS $teks): ?>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-lg-12 col-md-12">
         <h6><a href="<?= $teks['tautan'] ?>" title="Baca Selengkapnya">
           <marquee onmouseover="this.stop()" onmouseout="this.start()">
           <?= $teks['teks']?>
