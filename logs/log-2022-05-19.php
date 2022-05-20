@@ -11,3 +11,4 @@ GROUP BY `c`.`id`, `cu`.`id`
 ORDER BY cast(c.nomor as unsigned)
  LIMIT 50
 ERROR - 2022-05-19 22:11:00 --> Severity: error --> Exception: Call to a member function result_array() on bool D:\laragon\www\neo-sidega\donjo-app\models\Data_sppt_model.php 129
+ERROR - 2022-05-19 15:53:29 --> Severity: error --> Exception: Class 'CI_Controller' not found D:\laragon\www\neo-sidega\system\core\CodeIgniter.php 369
