@@ -57,23 +57,36 @@ th.horizontal {
 </style>
 
 <div class="pcoded-main-container">
-
-  <div class="page-header">
-    <h1>Detail DATA SPPT PBB</h1>
-    <ol class="breadcrumb">
-      <li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
-      <li><a href="<?= site_url('data_sppt')?>"> Daftar SPPT</a></li>
-      <li class="active">Detail Data SPPT</li>
-    </ol>
-  </div>
-  <section class="content" id="maincontent">
-    <div class="row">
-      <div class="col-md-4 col-lg-3">
-        <?php $this->load->view('data_sppt/menu.php')?>
+  <div class="pcoded-content">
+    <!-- [ breadcrumb ] start -->
+    <div class="page-header">
+      <div class="page-block">
+        <div class="row class-items-center">
+          <div class="col-md-12">
+            <div class="page-header-title">
+              <h5 class="m-b-10">Pengelolaan SPPT <?= ucwords($this->setting->sebutan_desa) ?> <?= $desa["nama_desa"]; ?></h5>
+            </div>
+            <ul class="breadcrumb">
+              <li class="breadcrumb-item"><a href="<?= site_url('beranda') ?>"><i class="feather icon-home"></i></a></li>
+							<li class="breadcrumb-item"><a href="#!">Pertanahan</a></li>
+              <li class="breadcrumb-item"><a href="#!">Detai Data SPPT PBB</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="col-md-8 col-lg-9">
-        <div class="box box-info">
-          <div class="box-header with-border"> 
+    </div>
+
+      <div class="card">
+        <div class="card-header">
+          <!-- Start Menu -->
+          <?php $this->load->view('data_sppt/menu.php') ?>
+          <!-- end Menu -->
+        </div>
+      </div>
+
+      <div class="col-md-12 col-lg-12">
+        <div class="card">
+          <div class="card-header"> 
             <!--<a href="<?=site_url("data_sppt/create_mutasi_sppt/".$sppt['id'])?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Persil">
 							<i class="fa fa-plus"></i>Tambah Mutasi SPPT
 						</a>--> 

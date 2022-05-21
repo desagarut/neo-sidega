@@ -1,142 +1,140 @@
-<?php ?>
-<script>
-	$( function() {
-		$( "#cari" ).autocomplete({
-			source: function( request, response ) {
-				$.ajax( {
-					type: "POST",
-					url: '<?= site_url("data_sppt/autocomplete")?>',
-					dataType: "json",
-					data: {
-						cari: request.term
-					},
-					success: function( data ) {
-						response( JSON.parse( data ));
-					}
-				} );
-			},
-			minLength: 1,
-		} );
-	} );
-</script>
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <div class="pcoded-main-container">
-
-  <div class="page-header">
-    <h1>Pengelolaan SPPT
-      <?= ucwords($this->setting->sebutan_deskel)?>
-      <?= $deskel["nama_deskel"];?>
-    </h1>
-    <ol class="breadcrumb">
-      <li><a href="<?= site_url('home')?>"><i class="fa fa-"></i> Home</a></li>
-      <li class="active">Daftar SPPT PBB</li>
-    </ol>
-  </div>
-  <section class="content" id="maincontent">
-  <form id="mainform" name="mainform" action="" method="post">
-  <div class="row">
-  <div class="col-md-4 col-lg-3">
-    <?php $this->load->view('data_sppt/menu.php')?>
-  </div>
-  <div class="col-md-8 col-lg-9">
-  <div class="box box-info">
-  <div class="card-header">
-    <div class="box-header with-border"> 
-    <a href="<?=site_url("data_sppt/sppt_form/")?>" class="btn btn-social btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Data SPPT"> <i class="fa fa-plus"></i>Tambah SPPT </a> 
-    <a href="<?=site_url("data_sppt/cetak")?>" class="btn btn-social bg-blue btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank"> <i class="fa fa-print"></i> Cetak </a> 
-      <a href="<?= site_url("data_sppt/unduh")?>" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" target="_blank"> <i class="fa fa-download"></i>Unduh </a> 
-
-    <a href="<?= site_url('data_sppt/import')?>" class="btn btn-social bg-teal btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unggah Data SPPT" title="Unggah Data SPPT"> <i class="fa fa-upload"></i>Unggah </a> 
-    <a href="<?= site_url("data_sppt/clear")?>" class="btn btn-social bg-yellow btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan</a> </div>
-  </div>
-  <div class="card-body">
-  <div class="row">
-  <div class="col-sm-12">
-  <div class="card-body">
-  <div class="row">
-  <div class="col-sm-12">
-  <div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-  <form id="mainform" name="mainform" action="" method="post">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="col-sm-6">
-          <h4 class="text-left"><strong>DAFTAR SPPT PBB</strong></h4>
-        </div>
-        <div class="col-sm-6">
-          <div class="box-tools">
-            <div class="input-group input-group-sm pull-right">
-              <input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?=html_escape($cari)?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("data_persil/search")?>');$('#'+'mainform').submit();}">
-              <div class="input-group-btn">
-                <button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("data_sppt/search")?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
-              </div>
+  <div class="pcoded-content">
+    <!-- [ breadcrumb ] start -->
+    <div class="page-header">
+      <div class="page-block">
+        <div class="row class-items-center">
+          <div class="col-md-12">
+            <div class="page-header-title">
+              <h5 class="m-b-10">Pengelolaan SPPT <?= ucwords($this->setting->sebutan_desa) ?> <?= $desa["nama_desa"]; ?></h5>
             </div>
+            <ul class="breadcrumb">
+              <li class="breadcrumb-item"><a href="<?= site_url('beranda') ?>"><i class="feather icon-home"></i></a></li>
+							<li class="breadcrumb-item"><a href="#!">Pertanahan</a></li>
+              <li class="breadcrumb-item"><a href="#!">Daftar SPPT PBB</a></li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="table-responsive">
-          <table class="table table-bordered table-striped dataTable table-hover table-responsive">
-            <thead class="bg-purple">
-              <tr>
-                <th class="text-center" width="5%">No</th>
-                <th class="text-center"  width="12%">Pilih Aksi</th>
-                <th class="text-center"  width="8%">Tahun</th>
-                <th class="text-center"  width="10%">NOP</th>
-                <th class="text-center"  width="12%">Nama Wajib Pajak</th>
-                <th class="text-center"  width="10%">Pajak Awal</th>
-                <th class="text-center"  width="15%">Letak Objek Pajak</th>
-                <th class="text-center"  width="13%">Nama Tertagih</th>
-                <th class="text-center"  width="15%">Alamat Tagih</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php foreach ($data_sppt as $item): ?>
-              <tr>
-                <td align="center"><?= $item['no']?></td>
-                <td align="center"><div class="btn-group">
-                    <button type="button" class="btn btn-info btn-box btn-sm dropdown-toggle" data-toggle="dropdown" title="Detail Info Pajak">Detail <span class="fa fa-caret-down"></span></button>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="<?= site_url("data_sppt/sppt_detail/".$item["id_sppt"])?>" class="btn btn-social bg-purple btn-box btn-block btn-sm" title="Rincian"><i class="fa fa-eye"></i> Detail</a></li>
-                      <li><a href="<?= site_url("data_sppt/tagihan_tambah/edit/".$item["id_sppt"])?>" class="btn btn-social bg-green btn-box btn-block btn-sm"  title="Buat Tagihan Pajak" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Buat Tagihan Pajak"><i class="fa fa-dollar"></i> Buat Tagihan</a> </li>
-                      <li><a href="<?=site_url("data_sppt/ajax_lokasi_maps/".$item["id_sppt"])?>" class="btn btn-social bg-aqua btn-box btn-sm" title="Lokasi <?= $data['nama']?>"><i class="fa fa-map"></i>Peta</a></li>
-                      <li><a href="<?= site_url("data_sppt/sppt_form/edit/".$item["id_sppt"])?>" class="btn btn-social bg-yellow btn-box btn-block btn-sm"  title="Ubah Data"><i class="fa fa-edit"></i> Ubah</a></li>
-                      <li><a href="#" data-href="<?= site_url("data_sppt/hapus/".$item["id_sppt"])?>" class="btn btn-social bg-red btn-box btn-block btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i> Hapus</a></li>
-                    </ul>
-                  </div></td>
-                <td align="center"><?= sprintf("%04s", $item["tahun_awal"]) ?></td>
-                <!--<td><a href="<?//= site_url("data_sppt/sppt_detail/".$item["id_sppt"])?>" class="btn bg-green disabled btn-box btn-sm"  title="Lihat Detail Objek Pajak"><?= sprintf("%04s", $item["nomor"]) ?></a></td>-->
-                <td><?= $item['nomor'] ?></td>
-                <td><?= $item['nama_wp'] ?></td>
-                <td align="right"><?=$rupiah($item["pbb_terhutang"]) ?></td>
-                <td><?= $item['letak_op'] ?></td>
-                <td><?= strtoupper($item["namatertagih"]) ?>
-                  </br>
-                  <i style="color:#090">NIK : </i><i><a href='<?= site_url("penduduk/detail/1/0/$item[id_pend]")?>'>
-                  <?= $item["nik"] ?>
-                  </a></i></td>
-                <td><?= $item['alamat'] ?></td>
-              </tr>
-              <?php endforeach; ?>
-            </tbody>
-          </table>
+
+      <div class="card">
+        <div class="card-header">
+          <!-- Start Menu -->
+          <?php $this->load->view('data_sppt/menu.php') ?>
+          <!-- end Menu -->
         </div>
       </div>
-    </div>
-  </form>
-  <?php $this->load->view('global/paging');?>
+
+      <div class="card">
+        <div class="card-header text-center">
+          <a href="<?= site_url("data_sppt/sppt_form/") ?>" class="btn btn-icon btn-success mb-2 mr-2" title="Tambah Data SPPT"><i class="feather icon-plus"></i> </a>
+          <a href="<?= site_url("data_sppt/cetak") ?>" class="btn btn-icon btn-primary mb-2 mr-2" title="Cetak Data"><i class="feather icon-printer"></i> </a>
+          <a href="<?= site_url("data_sppt/unduh") ?>" class="btn btn-icon btn-secondary mb-2 mr-2" title="Unduh Data"><i class="feather icon-download-cloud"></i> </a>
+          <!--<a href="<?= site_url('data_sppt/import') ?>" class="btn btn-icon btn-secondary mb-2 mr-2" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unggah Data SPPT" title="Unggah Data SPPT"><i class="feather icon-upload-cloud"></i></a>-->
+          <a href="<?= site_url("data_sppt/clear") ?>" class="btn btn-icon btn-warning mb-2 mr-2"><i class="feather icon-refresh-cw"></i></a>
+        </div>
+        <div class="card-body table-border-style">
+          <form id="mainform" name="mainform" action="" method="post">
+            <div class="row">
+              <div class="col-sm-12">
+                <h4 class="text-center"><strong>DAFTAR SPPT PBB</strong></h4>
+                <div class="card-tools">
+                  <div class="input-group input-group-sm pull-right">
+                    <input name="cari" id="cari" class="form-control" placeholder="Cari Nama Wajib pajak / Nomor objek pajak..." type="text" value="<?= html_escape($cari) ?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("data_persil/search") ?>');$('#'+'mainform').submit();}">
+                    <div class="input-group-btn">
+                      <button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("data_sppt/search") ?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th class="text-center" width="5%">No</th>
+                    <th class="text-center" width="12%">Pilih Aksi</th>
+                    <th class="text-center" width="8%">Tahun</th>
+                    <th class="text-center" width="10%">Nama WP | NOP</th>
+                    <th class="text-center" width="10%">Pajak Awal</th>
+                    <th class="text-center" width="15%">Blok</th>
+                    <th class="text-center" width="13%">Nama Tertagih</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php foreach ($data_sppt as $item) : ?>
+                    <tr>
+                      <td class="text-center"><?= $item['no'] ?></td>
+                      <td class="text-center">
+                      <div class="btn-group mb-2 mr-2">
+                          <a href="<?= site_url("data_sppt/sppt_detail/" . $item["id_sppt"]) ?>" ><button type="button" class="btn btn-info btn-sm">Detail</button></a>
+                          <button type="button" class="btn btn-success btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="<?= site_url("data_sppt/sppt_detail/" . $item["id_sppt"]) ?>">Lihat Detail</a>
+                            <a class="dropdown-item" href="<?= site_url("data_sppt/sppt_form/edit/" . $item["id_sppt"]) ?>">Ubah Data</a>
+                            <a class="dropdown-item" href="<?= site_url("data_sppt/ajax_lokasi_maps/" . $item["id_sppt"]) ?>">Lokasi OP</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="<?= site_url("data_sppt/tagihan_tambah/edit/" . $item["id_sppt"]) ?>">Buat Tagihan</a>
+                            <a class="dropdown-item" href="<?= site_url("data_sppt/hapus/" . $item["id_sppt"]) ?>">Hapus</a>
+                          </div>
+                        </div>
+                        <!--<div class="btn-group">
+                          <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" title="Detail Info SPPT">Detail</button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="<?= site_url("data_sppt/sppt_detail/" . $item["id_sppt"]) ?>" class="btn btn-social btn-sm" title="Rincian"><i class="fa fa-eye"></i> Detail</a></li>
+                            <li><a href="<?= site_url("data_sppt/tagihan_tambah/edit/" . $item["id_sppt"]) ?>" class="btn btn-social btn-sm" title="Buat Tagihan Pajak" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Buat Tagihan Pajak"><i class="fa fa-dollar"></i> Buat Tagihan</a> </li>
+                            <li><a href="<?= site_url("data_sppt/ajax_lokasi_maps/" . $item["id_sppt"]) ?>" class="btn btn-social btn-sm" title="Lokasi <?= $data['nama'] ?>"><i class="fa fa-map"></i>Peta</a></li>
+                            <li><a href="<?= site_url("data_sppt/sppt_form/edit/" . $item["id_sppt"]) ?>" class="btn btn-social btn-sm" title="Ubah Data"><i class="fa fa-edit"></i> Ubah</a></li>
+                            <li><a href="#" data-href="<?= site_url("data_sppt/hapus/" . $item["id_sppt"]) ?>" class="btn btn-social btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i> Hapus</a></li>
+                          </ul>
+                        </div>-->
+                      </td>
+                      <td class="text-center"><?= sprintf("%04s", $item["tahun_awal"]) ?></td>
+                      <!--<td><a href="<? //= site_url("data_sppt/sppt_detail/".$item["id_sppt"])
+                                        ?>" class="btn bg-green disabled btn-box btn-sm"  title="Lihat Detail Objek Pajak"><?= sprintf("%04s", $item["nomor"]) ?></a></td>-->
+                      <td><strong><?= $item['nama_wp'] ?></strong><br /><?= $item['nomor'] ?></td>
+                      <td class="right"><?= $rupiah($item["pbb_terhutang"]) ?></td>
+                      <td><?= $item['letak_op'] ?></td>
+                      <td><?= strtoupper($item["namatertagih"]) ?>
+                        </br>
+                        <i style="color:#090">NIK : </i><i><a href='<?= site_url("penduduk/detail/1/0/$item[id_pend]") ?>'>
+                            <?= $item["nik"] ?>
+                          </a></i><br />
+                        <?= $item['alamat'] ?>
+                      </td>
+                    </tr>
+                  <?php endforeach; ?>
+                </tbody>
+              </table>
+              <?php $this->load->view('global/paging'); ?>
+            </div>
+
+          </form>
+        </div>
+      </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</form>
-</div>
-</div>
-<?php $this->load->view('global/confirm_delete');?>
+
+<script>
+  $(function() {
+    $("#cari").autocomplete({
+      source: function(request, response) {
+        $.ajax({
+          type: "POST",
+          url: '<?= site_url("data_sppt/autocomplete") ?>',
+          dataType: "json",
+          data: {
+            cari: request.term
+          },
+          success: function(data) {
+            response(JSON.parse(data));
+          }
+        });
+      },
+      minLength: 1,
+    });
+  });
+</script>

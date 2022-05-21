@@ -52,13 +52,15 @@ class Data_sppt extends Admin_Controller {
 		$data['func'] = 'index';
 		$data['set_page'] = $this->set_page;
 		$data['paging']  = $this->data_sppt_model->paging_data_sppt($page);
-//		$data["deskel"] = $this->config_model->get_data();
+
+//		$data["desa"] = $this->config_model->get_data();
 		$data["data_sppt"] = $this->data_sppt_model->list_data_sppt($data['paging']->offset, $data['paging']->per_page);
 		
 		$data['rupiah'] = function($angka){
             $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
             return $hasil_rupiah;
         };
+
 		$this->render('data_sppt/sppt_daftar', $data);
 	}
 
@@ -110,14 +112,14 @@ class Data_sppt extends Admin_Controller {
 			switch ($post['jenis_wp'])
 			{
 				case '1':
-					# Pemilik deskel
+					# Pemilik desa
 					if (!empty($post['nik']))
 					{
 						$data['wajib_pajak'] = $this->data_sppt_model->get_penduduk($post['nik'], $nik=true);
 					}
 					break;
 				case '2':
-					# Pemilik luar deskel
+					# Pemilik luar desa
 					$data['sppt']['jenis_wp'] = 2;
 					break;
 			}
@@ -141,7 +143,7 @@ class Data_sppt extends Admin_Controller {
 				}
 				break;
 			case '1':
-				// Ubah atau ambil wajib_pajak deskel
+				// Ubah atau ambil wajib_pajak desa
 				$data['wajib_pajak'] = $this->data_sppt_model->get_wajib_pajak($id);
 				if ($post['nik'] and $$data['wajib_pajak']['nik'] != $post['nik'])
 				{
@@ -256,14 +258,14 @@ class Data_sppt extends Admin_Controller {
 			switch ($post['jenis_wp'])
 			{
 				case '1':
-					# Pemilik deskel
+					# Pemilik desa
 					if (!empty($post['nik']))
 					{
 						$data['wajib_pajak'] = $this->data_sppt_model->get_penduduk($post['nik'], $nik=true);
 					}
 					break;
 				case '2':
-					# Pemilik luar deskel
+					# Pemilik luar desa
 					$data['sppt']['jenis_wp'] = 2;
 					break;
 			}
@@ -440,7 +442,7 @@ class Data_sppt extends Admin_Controller {
 
 	public function form_data_sppt($id=0)
 	{
-		$data['deskel'] = $this->config_model->get_data();
+		$data['desa'] = $this->config_model->get_data();
 		$data['sppt'] = $this->data_sppt_model->get_data_sppt($id);
 		//$data['basah'] = $this->data_sppt_model->get_cetak_mutasi($id, 'BASAH');
 		//$data['kering'] = $this->data_sppt_model->get_cetak_mutasi($id, 'KERING');
@@ -455,8 +457,8 @@ class Data_sppt extends Admin_Controller {
 			$data['lokasi_op'] = NULL;
 		}
 
-		$data['deskel'] = $this->config_model->get_data();;
-		$sebutan_deskel = ucwords($this->setting->sebutan_deskel);
+		$data['desa'] = $this->config_model->get_data();;
+		$sebutan_desa = ucwords($this->setting->sebutan_desa);
 		$data['wil_atas'] = $this->config_model->get_data();
 		$data['dusun_gis'] = $this->wilayah_model->list_dusun();
 		$data['rw_gis'] = $this->wilayah_model->list_rw_gis();

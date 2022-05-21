@@ -17,7 +17,7 @@
 	<script src="<?= base_url()?>assets/js/jquery.validate.min.js"></script>
 
 
-	<script src="<?= base_url()?>assets/js/analytics.js"></script>
+<!--	<script src="<?= base_url()?>assets/js/analytics.js"></script>-->
 
 	<script src="<?= base_url()?>assets/js/validasi.js"></script> 
 	<script src="<?= base_url()?>assets/js/jquery.validate.min.js"></script>
