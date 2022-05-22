@@ -1,6 +1,11 @@
-<script async defer
+<!--<script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxsKE9ArOZcaNtsfXIMFqr4N-UCsmp-Ng&callback=initMap">
-</script>
+</script>-->
+
+<?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+<script src="https://cdn.jsdelivr.net/gh/somanchiu/Keyless-Google-Maps-API@v5.7/mapsJavaScriptAPI.js" async defer></script>
+
 <script>
 <?php if (!empty($lokasi_op['lat'] && !empty($lokasi_op['lng']))): ?>
 	var center = { lat: <?= $lokasi_op['lat'].", lng: ".$lokasi_op['lng']; ?> };
@@ -84,158 +89,148 @@ th.horizontal {
         </div>
       </div>
 
-      <div class="col-md-12 col-lg-12">
         <div class="card">
           <div class="card-header"> 
             <!--<a href="<?=site_url("data_sppt/create_mutasi_sppt/".$sppt['id'])?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Persil">
 							<i class="fa fa-plus"></i>Tambah Mutasi SPPT
 						</a>--> 
-            <a href="<?=site_url('data_sppt')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Daftar SPPT"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar SPPT</a> 
-            <a href="<?= site_url("data_sppt/form_data_sppt/".$sppt['id'])?>" class="btn btn-social btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank"><i class="fa fa-print"></i>Cetak SPPT</a> </div>
+            <a href="<?=site_url('data_sppt')?>" class="btn btn-info mb-2 mr-2" title="Kembali Ke Daftar Daftar SPPT"> Kembali</a> 
+            <a href="<?= site_url("data_sppt/form_data_sppt/".$sppt['id'])?>" class="btn btn-icon btn-success mb-2 mr-2" title="Cetak Data" target="_blank"><i class="feather icon-printer"></i></a> </div>
           <div class="card-body">
             <div class="row">
               <div class="col-sm-12">
                 <div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                   <form id="mainform" name="mainform" action="" method="post">
                     <input type="hidden" name="id" value="<?php echo $this->uri->segment(4) ?>">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <div class="card-body"> 
-                          <h4 class="box-title">Detail Data SPPT PBB</h4>
-                            <!-- Map box -->
-                          <div class='modal-body'>
+                          <h4 class="card-title text-center">Detail Data SPPT PBB</h4>
+
                             <div class="row">
-                              <div class="col-sm-12">
+                              <div class="col-sm-6">
                                 <h5> Lokasi Objek Pajak</h5>
                                 <div id="map_lokasi"></div>
                                 <input type="hidden" name="lat" id="lat" value="<?= $lokasi_op['lat']?>"/>
                                 <input type="hidden" name="lng" id="lng" value="<?= $lokasi_op['lng']?>" />
                               </div>
+                              <div class="col-sm-6">
+                                <!-- /.box -->
+                                <table class="table table-hover" >
+                                  <tbody>
+                                    <tr>
+                                      <th class="horizontal">Nama Tertagih
+                                        </td>
+                                      <td> : <strong>
+                                        <?= $wajib_pajak["namatertagih"]?>
+                                        </strong></td>
+                                    </tr>
+                                    <tr>
+                                      <th class="horizontal">NIK
+                                        </td>
+                                      <td> :
+                                        <?= $wajib_pajak["nik"]?></td>
+                                    </tr>
+                                    <tr>
+                                      <th class="horizontal">Alamat Tagih
+                                        </td>
+                                      <td> :
+                                        <?= $wajib_pajak["alamat"]?></td>
+                                    </tr>
+                                    <tr>
+                                      <th class="horizontal">Nomor Objek Pajak
+                                        </td>
+                                      <td> :
+                                        <?= sprintf("%04s", $data_sppt['nomor'])?></td>
+                                    </tr>
+                                    <tr>
+                                      <th class="horizontal">Nama Wajib Pajak Tertulis di SPPT
+                                        </td>
+                                      <td> : <strong>
+                                        <?= $data_sppt["nama_wp"]?>
+                                        </strong></td>
+                                    </tr>
+                                    <tr>
+                                      <th class="horizontal">Tahun Awal Masuk SPPT PBB
+                                        </td>
+                                      <td> : <strong>
+                                        <?= $data_sppt["tahun_awal"]?>
+                                        </strong></td>
+                                    </tr>
+                                    <tr>
+                                      <th class="horizontal">Letak Objek Pajak
+                                        </td>
+                                      <td> : <strong>
+                                        <?= $data_sppt["letak_op"]?>
+                                        </strong></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <br />
+                                <table class="table table-hover" >
+                                  <tbody>
+                                    <tr>
+                                      <th class="horizontal">Objek Pajak
+                                        </td>
+                                      <td width="10%" align="center"> Luas m<sup>2</sup></td>
+                                      <td width="10%" align="center"> Kelas </td>
+                                      <td width="25%" align="center"> NJOP PER m<sup>2</sup></td>
+                                      <td width="25%" align="center"> TOTAL NJOP (Rp.)</td>
+                                    </tr>
+                                    <tr>
+                                      <td align="right">Bumi</td>
+                                      <td align="right"><?= $data_sppt["luas_tanah"]?></td>
+                                      <td align="center"><?= ($data_sppt["kelas_tanah"])?></td>
+                                      <td align="right" class="Rupiah"><?= ($data_sppt["pajak_tanah"])?></td>
+                                      <td align="right" class="Rupiah"></td>
+                                    </tr>
+                                    <tr>
+                                      <td align="right">Bangunan</td>
+                                      <td align="right"><?= $data_sppt["luas_bangunan"]?></td>
+                                      <td align="center"><?= ($data_sppt["kelas_bangunan"])?></td>
+                                      <td align="right" class="Rupiah"><?= ($data_sppt["pajak_bangunan"])?></td>
+                                      <td align="right" class="Rupiah"><?= ($data_sppt["total_pajak_bangunan"])?></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <br />
+                                <table class="table table-hover" >
+                                  <tbody>
+                                    <tr>
+                                      <td class="horizontal"><b>NJOP sebagai dasar pengenaan PBB</b></td>
+                                      <td width="10%" align="center"></td>
+                                      <td width="25%" align="center"></td>
+                                      <td align="right" class="Rupiah"><?= ($data_sppt["dp_pbb"])?></td>
+                                    </tr>
+                                    <tr>
+                                      <td align="left">NJOPTKP (NJOP Tidak Kena Pajak</td>
+                                      <td align="center"></td>
+                                      <td align="right" class="Rupiah"></td>
+                                      <td align="right" class="Rupiah"><?= ($data_sppt["njop_tkp"])?></td>
+                                    </tr>
+                                    <tr>
+                                      <td align="left">NJOP untuk perhitungan PBB</td>
+                                      <td align="center"></td>
+                                      <td align="right" class="Rupiah"></td>
+                                      <td align="right" class="Rupiah"><?= ($data_sppt["njop_ppbb"])?></td>
+                                    </tr>
+                                    <tr>
+                                      <td align="left"><b>PBB yang Terhutang</b></td>
+                                      <td align="center"><b>0,11%</b></td>
+                                      <td align="right" class="Rupiah"><b>
+                                        <?= ($data_sppt["njop_ppbb"])?>
+                                        </b></td>
+                                      <td align="right" class="Rupiah"><b>
+                                        <?= ($data_sppt["pbb_terhutang"])?>
+                                        </b></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
                             </div>
-                          </div>
-                          </br>
-
-                          <!-- /.box -->
-                          <table class="table table-bordered  table-striped table-hover" >
-                            <tbody>
-                              <tr>
-                                <th class="horizontal">Nama Tertagih
-                                  </td>
-                                <td> : <strong>
-                                  <?= $wajib_pajak["namatertagih"]?>
-                                  </strong></td>
-                              </tr>
-                              <tr>
-                                <th class="horizontal">NIK
-                                  </td>
-                                <td> :
-                                  <?= $wajib_pajak["nik"]?></td>
-                              </tr>
-                              <tr>
-                                <th class="horizontal">Alamat Tagih
-                                  </td>
-                                <td> :
-                                  <?= $wajib_pajak["alamat"]?></td>
-                              </tr>
-                              <tr>
-                                <th class="horizontal">Nomor Objek Pajak
-                                  </td>
-                                <td> :
-                                  <?= sprintf("%04s", $data_sppt['nomor'])?></td>
-                              </tr>
-                              <tr>
-                                <th class="horizontal">Nama Wajib Pajak Tertulis di SPPT
-                                  </td>
-                                <td> : <strong>
-                                  <?= $data_sppt["nama_wp"]?>
-                                  </strong></td>
-                              </tr>
-                              <tr>
-                                <th class="horizontal">Tahun Awal Masuk SPPT PBB
-                                  </td>
-                                <td> : <strong>
-                                  <?= $data_sppt["tahun_awal"]?>
-                                  </strong></td>
-                              </tr>
-                              <tr>
-                                <th class="horizontal">Letak Objek Pajak
-                                  </td>
-                                <td> : <strong>
-                                  <?= $data_sppt["letak_op"]?>
-                                  </strong></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                          <br />
-                          <table class="table table-bordered  table-striped table-hover" >
-                            <tbody>
-                              <tr>
-                                <th class="horizontal">Objek Pajak
-                                  </td>
-                                <td width="10%" align="center"> Luas m<sup>2</sup></td>
-                                <td width="10%" align="center"> Kelas </td>
-                                <td width="25%" align="center"> NJOP PER m<sup>2</sup></td>
-                                <td width="25%" align="center"> TOTAL NJOP (Rp.)</td>
-                              </tr>
-                              <tr>
-                                <td align="right">Bumi</td>
-                                <td align="right"><?= $data_sppt["luas_tanah"]?></td>
-                                <td align="center"><?= ($data_sppt["kelas_tanah"])?></td>
-                                <td align="right" class="Rupiah"><?= ($data_sppt["pajak_tanah"])?></td>
-                                <td align="right" class="Rupiah"></td>
-                              </tr>
-                              <tr>
-                                <td align="right">Bangunan</td>
-                                <td align="right"><?= $data_sppt["luas_bangunan"]?></td>
-                                <td align="center"><?= ($data_sppt["kelas_bangunan"])?></td>
-                                <td align="right" class="Rupiah"><?= ($data_sppt["pajak_bangunan"])?></td>
-                                <td align="right" class="Rupiah"><?= ($data_sppt["total_pajak_bangunan"])?></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                          <br />
-                          <table class="table table-bordered  table-striped table-hover" >
-                            <tbody>
-                              <tr>
-                                <td class="horizontal"><b>NJOP sebagai dasar pengenaan PBB</b></td>
-                                <td width="10%" align="center"></td>
-                                <td width="25%" align="center"></td>
-                                <td align="right" class="Rupiah"><?= ($data_sppt["dp_pbb"])?></td>
-                              </tr>
-                              <tr>
-                                <td align="left">NJOPTKP (NJOP Tidak Kena Pajak</td>
-                                <td align="center"></td>
-                                <td align="right" class="Rupiah"></td>
-                                <td align="right" class="Rupiah"><?= ($data_sppt["njop_tkp"])?></td>
-                              </tr>
-                              <tr>
-                                <td align="left">NJOP untuk perhitungan PBB</td>
-                                <td align="center"></td>
-                                <td align="right" class="Rupiah"></td>
-                                <td align="right" class="Rupiah"><?= ($data_sppt["njop_ppbb"])?></td>
-                              </tr>
-                              <tr>
-                                <td align="left"><b>PBB yang Terhutang</b></td>
-                                <td align="center"><b>0,11%</b></td>
-                                <td align="right" class="Rupiah"><b>
-                                  <?= ($data_sppt["njop_ppbb"])?>
-                                  </b></td>
-                                <td align="right" class="Rupiah"><b>
-                                  <?= ($data_sppt["pbb_terhutang"])?>
-                                  </b></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
                   </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </div>
