@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<div class="col-md-4">
+<div class="col-lg-4 col-md-12">
   <div class="card">
     <div class="card-body text-center">
       <h6 class="m-b-15">Realisasi PBB</h6>

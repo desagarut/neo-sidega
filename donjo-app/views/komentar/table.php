@@ -10,6 +10,7 @@
 	});
 </script>
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Pengaturan Komentar</h1>
@@ -18,13 +19,13 @@
 			<li class="active">Pengaturan Komentar</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="box box-info">
 						<div class="box-header with-border">
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("komentar/delete_all/$p/$o")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("komentar/delete_all/$p/$o")?>')" class="btn btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 						</div>
 						<div class="card-body">
 							<div class="row">
@@ -171,9 +172,9 @@
 											Apakah Anda yakin ingin mengarsipkan data ini?
 										</div>
 										<div class='modal-footer'>
-											<button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+											<button type="button" class="btn btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
 											<a class='btn-ok'>
-												<button type="button" class="btn btn-social btn-box btn-danger btn-sm" id="ok-delete"><i class='fa fa-file-archive-o'></i> Arsipkan</button>
+												<button type="button" class="btn btn-box btn-danger btn-sm" id="ok-delete"><i class='fa fa-file-archive-o'></i> Arsipkan</button>
 											</a>
 										</div>
 									</div>

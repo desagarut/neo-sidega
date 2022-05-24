@@ -19,6 +19,7 @@
   } );
 </script>
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Daftar Letter-C <?= ucwords($this->setting->sebutan_desa)?> <?= $kelurahan["nama_desa"];?></h1>
@@ -27,7 +28,7 @@
 			<li class="active">Daftar Letter-C</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
 				<div class="col-md-4 col-lg-3">
@@ -42,13 +43,13 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-										<a href='<?= site_url("letterc/cetak")?>' class="btn btn-social btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank">
+										<a href='<?= site_url("letterc/cetak")?>' class="btn btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank">
 											<i class="fa fa-print"></i>Cetak
 										</a>
-										<a href="<?= site_url("letterc/unduh")?>" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" target="_blank">
+										<a href="<?= site_url("letterc/unduh")?>" class="btn btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" target="_blank">
 											<i class="fa fa-download"></i>Unduh
 										</a>
-										<a href="<?= site_url("letterc/clear")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan</a>
+										<a href="<?= site_url("letterc/clear")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan</a>
 										<form id="mainform" name="mainform" action="" method="post">
 											<div class="row">
 												<div class="col-sm-12">

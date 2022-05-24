@@ -25,26 +25,10 @@
 	});
 </script>
 
-<style>
-	.input-sm {
-		padding: 4px 4px;
-	}
-
-	@media (max-width:780px) {
-		.btn-group-vertical {
-			display: block;
-		}
-	}
-
-	.table-responsive {
-		min-height: 400px;
-	}
-</style>
-
-
 <!-- [ Main Content ] start -->
 <div class="pcoded-main-container">
 	<div class="pcoded-content">
+
 		<!-- [ breadcrumb ] start -->
 		<div class="page-header">
 			<div class="page-block">
@@ -67,25 +51,24 @@
 		<div class="row">
 			<div class="col-xl-12 col-md-12">
 				<div class="card">
-					<div class="card-header">
+					<div class="card-header text-center">
 
 						<?php if ($this->CI->cek_hak_akses('h')) : ?>
-							<a href="<?= site_url('penduduk/form'); ?>" class="btn btn-primary  mb-2 mr-2" title="Tambah Data"><i class="fa fa-plus"></i> Penduduk Domisili</a>
+							<a href="<?= site_url('penduduk/form'); ?>" class="btn btn-primary mb-2 mr-2" title="Tambah Data"><i class="fa fa-plus"></i> Penduduk Domisili</a>
 							<a href="#confirm-delete" class="btn btn-danger mb-2 mr-2" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("penduduk/delete_all/$p/$o"); ?>')"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 						<?php endif; ?>
 
-
-						<!--<div class="btn-group mb-2 mr-2">
-								<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aksi Lainnya</button>
-								<div class="dropdown-menu">-->
-						<!--<button type="button" class="btn  btn-primary" data-toggle="modal" data-target="#exampleModalLive">Launch demo modal</button>-->
-						<!--<a href="<?= site_url("penduduk/ajax_cetak/$o/cetak"); ?>" class="dropdown-item" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="feather icon-printer"></i>&nbsp; Cetak</a>
-									<a href="<?= site_url("penduduk/ajax_cetak/$o/unduh"); ?>" class="dropdown-item" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="feather icon-download"></i>&nbsp; Unduh</a>
-									<a href="<?= site_url("penduduk/ajax_adv_search"); ?>" class="dropdown-item" title="Pencarian Spesifik" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pencarian Spesifik"><i class="feather icon-search"></i>&nbsp; Pencarian Spesifik</a>
-									<a href="<?= site_url("penduduk/search_kumpulan_nik"); ?>" class="dropdown-item" title="Pilihan Kumpulan NIK" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pilihan Kumpulan NIK"><i class="feather icon-users"></i>&nbsp; Pilihan Kumpulan NIK</a>
-									<a href="<?= site_url("penduduk_log/clear"); ?>" class="dropdown-item" title="Log Data Penduduk"><i class="feather icon-book"></i>&nbsp; Log Penduduk</a>
-								</div>
-							</div>-->
+						<div class="btn-group mb-2 mr-2">
+							<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aksi Lainnya</button>
+							<div class="dropdown-menu">
+								<button type="button" class="btn  btn-primary" data-toggle="modal" data-target="#exampleModalLive">Launch demo modal</button>
+								<a href="<?= site_url("penduduk/ajax_cetak/$o/cetak"); ?>" class="dropdown-item" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="feather icon-printer"></i>&nbsp; Cetak</a>
+								<a href="<?= site_url("penduduk/ajax_cetak/$o/unduh"); ?>" class="dropdown-item" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="feather icon-download"></i>&nbsp; Unduh</a>
+								<a href="<?= site_url("penduduk/ajax_adv_search"); ?>" class="dropdown-item" title="Pencarian Spesifik" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pencarian Spesifik"><i class="feather icon-search"></i>&nbsp; Pencarian Spesifik</a>
+								<a href="<?= site_url("penduduk/search_kumpulan_nik"); ?>" class="dropdown-item" title="Pilihan Kumpulan NIK" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pilihan Kumpulan NIK"><i class="feather icon-users"></i>&nbsp; Pilihan Kumpulan NIK</a>
+								<a href="<?= site_url("penduduk_log/clear"); ?>" class="dropdown-item" title="Log Data Penduduk"><i class="feather icon-book"></i>&nbsp; Log Penduduk</a>
+							</div>
+						</div>
 						<a href="<?= site_url("penduduk_log/clear"); ?>" class="btn btn-info mb-2 mr-2">&nbsp; Log Penduduk</a>
 						<a href="<?= site_url("penduduk/ajax_cetak/$o/cetak"); ?>" target="_blank"><button type="button" class="btn btn-icon btn-success mb-2 mr-2"><i class="feather icon-printer"></i></button></a>
 						<a href="<?= site_url("penduduk/ajax_cetak/$o/unduh"); ?>" target="_blank"><button type="button" class="btn btn-icon btn-success mb-2 mr-2"><i class="feather icon-download-cloud"></i></button></a>
@@ -95,15 +78,13 @@
 
 					<div class="card-body">
 						<form id="mainform" name="mainform" action="" method="post">
-							<div class="col-md-12">
-								<div class="row">
-									<div class="col-md-12 col-lg-12">
-										<div class="form-group">
-											<div class="input-group mb-3">
-												<input name="cari" id="cari" class="form-control" placeholder="Cari Nama / NIK Penduduk" type="text" title="Pencarian berdasarkan nama penduduk" value="<?= html_escape($cari); ?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("penduduk/filter/cari"); ?>');$('#'+'mainform').submit();}">
-												<div class="input-group-append">
-													<button type="submit" class="btn btn-success" onclick="$('#'+'mainform').attr('action', '<?= site_url("penduduk/filter/cari"); ?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
-												</div>
+							<div class="row text-center">
+								<div class="col-md-12">
+									<div class="form-group">
+										<div class="input-group mb-3">
+											<input name="cari" id="cari" class="form-control" placeholder="Cari Nama / NIK Penduduk" type="text" title="Pencarian berdasarkan nama penduduk" value="<?= html_escape($cari); ?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("penduduk/filter/cari"); ?>');$('#'+'mainform').submit();}">
+											<div class="input-group-append">
+												<button type="submit" class="btn btn-success" onclick="$('#'+'mainform').attr('action', '<?= site_url("penduduk/filter/cari"); ?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
 											</div>
 										</div>
 									</div>
@@ -148,8 +129,8 @@
 														<td class="text-center"><?= ($key + $paging->offset + 1); ?></td>
 														<td>
 															<div class="btn-group mb-2 mr-2">
-																<a href="<?= site_url("penduduk/detail/$p/$o/$data[id]"); ?>" class="btn btn-success" title="Lihat Detail">Lihat</a>
-																<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
+																<a href="<?= site_url("penduduk/detail/$p/$o/$data[id]"); ?>" class="btn btn-success btn-sm" title="Lihat Detail">Lihat</a>
+																<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
 																<div class="dropdown-menu">
 
 																	<a href="<?= site_url("penduduk/detail/$p/$o/$data[id]"); ?>" class="btn btn-primary dropdown-item"><i class="fa fa-list-ol"></i> Lihat Detail Biodata Penduduk</a>
@@ -241,9 +222,9 @@
 				Apakah Anda yakin ingin mengembalikan status data penduduk ini?
 			</div>
 			<div class='modal-footer'>
-				<button type="button" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+				<button type="button" class="btn btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
 				<a class='btn-ok'>
-					<button type="button" class="btn btn-social btn-box btn-info btn-sm" id="ok-status"><i class='fa fa-check'></i> Simpan</button>
+					<button type="button" class="btn btn-box btn-info btn-sm" id="ok-status"><i class='fa fa-check'></i> Simpan</button>
 				</a>
 			</div>
 		</div>

@@ -1,4 +1,5 @@
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
     <h1>Pengelolaan Data <?= ucwords($this->setting->sebutan_dusun)?></h1>
@@ -8,12 +9,12 @@
 			<li class="active">Data <?= ucwords($this->setting->sebutan_dusun)?></li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="box box-info">
 					<div class="box-header with-border">
-						<a href="<?= site_url("sid_core")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Kembali Ke Daftar Wilayah">
+						<a href="<?= site_url("sid_core")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Kembali Ke Daftar Wilayah">
 							<i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar <?= ucwords($this->setting->sebutan_dusun)?>
            	</a>
 					</div>
@@ -61,8 +62,8 @@
 									</div>
 									<div class='box-footer'>
 										<div class='col-xs-12'>
-											<button type='reset' class='btn btn-social btn-box btn-danger btn-sm invisible' ><i class='fa fa-times'></i> Batal</button>
-											<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
+											<button type='reset' class='btn btn-box btn-danger btn-sm invisible' ><i class='fa fa-times'></i> Batal</button>
+											<button type='submit' class='btn btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
 										</div>
 									</div>
 								</form>

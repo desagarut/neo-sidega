@@ -1,4 +1,5 @@
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 
 	<div class="page-header">
@@ -16,7 +17,7 @@
 				<div class="box box-info">
 					<div class="box-header with-border">
 						<div class="col-md-12">
-							<a href="<?= site_url('covid19_vaksin')?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Pemudik Saat Covid-19"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Peserta Vaksin Covid-19</a>
+							<a href="<?= site_url('covid19_vaksin')?>" class="btn btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Pemudik Saat Covid-19"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Peserta Vaksin Covid-19</a>
 						</div>
 					</div>
 					<div class="card-body">
@@ -41,7 +42,7 @@
 												</select>
 											</div>
 											<div class="col-sm-4">
-												<a href="#" class="btn btn-social btn-block btn-success btn-sm" data-toggle="modal" data-target="#add-warga">
+												<a href="#" class="btn btn-block btn-success btn-sm" data-toggle="modal" data-target="#add-warga">
 													<i class="fa fa-plus"></i>
 													Tambah Penduduk Non Domisili
 												</a>
@@ -70,8 +71,8 @@
 									</div>
 									<div class="card-footer">
 										<div class="col-xs-12">
-											<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
-											<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right" onclick="$('#'+'validasi').submit();"><i class="fa fa-check"></i> Simpan</button>
+											<button type="reset" class="btn btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
+											<button type="submit" class="btn btn-box btn-info btn-sm pull-right" onclick="$('#'+'validasi').submit();"><i class="fa fa-check"></i> Simpan</button>
 										</div>
 									</div>
 								</div>
@@ -98,9 +99,9 @@
 				</div>
 			</div>
 			<div class='modal-footer'>
-				<button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+				<button type="button" class="btn btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
 				<a class='btn-ok'>
-					<button type="submit" class="btn btn-social btn-box btn-success btn-sm" onclick="$('#'+'form_penduduk').submit();"><i class='fa fa-trash-o'></i> Simpan</button>
+					<button type="submit" class="btn btn-box btn-success btn-sm" onclick="$('#'+'form_penduduk').submit();"><i class='fa fa-trash-o'></i> Simpan</button>
 				</a>
 			</div>
 		</div>

@@ -7,6 +7,7 @@
 
 <div class="pcoded-main-container">
 	<div class="pcoded-content">
+
 		<!-- [ breadcrumb ] start -->
 		<div class="page-header">
 			<div class="page-block">
@@ -43,11 +44,11 @@
               <a href="<?= site_url('identitas_desa/form'); ?>" class="btn btn-warning" title="Ubah Data" ><i class="fa fa-edit"></i> Ubah Data
               <?= $desa; ?>
               </a> 
-              <!--<a href="<?= site_url('identitas_desa/maps/kantor'); ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-map-marker'></i> Lokasi Kantor <?= $desa; ?></a>--> 
+              <!--<a href="<?= site_url('identitas_desa/maps/kantor'); ?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-map-marker'></i> Lokasi Kantor <?= $desa; ?></a>--> 
               <a href="<?= site_url('identitas_desa/maps/kantor'); ?>" class="btn btn-success " title="Ubah Lokasi Kantor Desa"><i class="feather mr-2 icon-map-pin"></i> Lokasi Kantor
               <?= $desa; ?>
               </a> 
-              <!--<a href="<?= site_url('identitas_desa/maps/wilayah'); ?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-map'></i> Peta Wilayah <?= $desa; ?></a>--> 
+              <!--<a href="<?= site_url('identitas_desa/maps/wilayah'); ?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-map'></i> Peta Wilayah <?= $desa; ?></a>--> 
               <a href="<?= site_url('identitas_desa/maps/wilayah'); ?>" class="btn btn-primary" title="Ubah Wilayah Desa"><i class="feather mr-2 icon-map"></i> Wilayah Desa | Google </a>
               <!--<a href="<?= site_url('identitas_desa/maps_openstreet/wilayah'); ?>" class="btn btn-secondary" title="Ubah Wilayah Desa"><i class='feather mr-2 icon-map'></i> Wilayah Desa | OSM</a>-->
               <?php endif; ?>

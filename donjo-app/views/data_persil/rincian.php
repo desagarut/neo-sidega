@@ -18,6 +18,7 @@
 	th.horizontal {width: 20%;}
 </style>
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Rincian Letter-C</h1>
@@ -27,16 +28,16 @@
 			<li class="active">Rincian Letter-C</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="box box-info">
 					<div class="box-header with-border">
-						<a href="<?=site_url("letterc/create_mutasi/".$letterc['id'])?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Persil">
+						<a href="<?=site_url("letterc/create_mutasi/".$letterc['id'])?>" class="btn btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Persil">
 							<i class="fa fa-plus"></i>Tambah Mutasi Persil
 						</a>
-						<a href="<?=site_url('letterc')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Letter-C"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Letter-C</a>
-						<a href="<?= site_url("letterc/form_letterc/".$letterc['id'])?>" class="btn btn-social btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank">
+						<a href="<?=site_url('letterc')?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Letter-C"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Letter-C</a>
+						<a href="<?= site_url("letterc/form_letterc/".$letterc['id'])?>" class="btn btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank">
 							<i class="fa fa-print"></i>Cetak Letter-C
 						</a>
 					</div>

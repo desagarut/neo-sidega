@@ -1,8 +1,9 @@
 <?php if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
-	<section class="content" id="maincontent">
+	<div class="card">
         <div class="row">
 			<div class="col-md-12">
                 <div class="box box-primary">

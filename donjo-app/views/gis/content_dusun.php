@@ -5,7 +5,7 @@
 		<div id="isi_popup_dusun_<?= $key_dusun ?>" style="visibility: hidden;">
 			<div id="content">
 				<center><h5 id="firstHeading" class="firstHeading"><b>Wilayah <?= $wilayah . " " . $dusun['dusun']; ?></b></h5></center>
-				<p><center><a href="#collapseStatGraph" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block btn-modal" title="Statistik Penduduk" data-toggle="collapse" data-target="#collapseStatGraph" aria-expanded="false" aria-controls="collapseStatGraph"><i class="fa fa-bar-chart"></i>Statistik Penduduk</a></center></p>
+				<p><center><a href="#collapseStatGraph" class="btn btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block btn-modal" title="Statistik Penduduk" data-toggle="collapse" data-target="#collapseStatGraph" aria-expanded="false" aria-controls="collapseStatGraph"><i class="fa fa-bar-chart"></i>Statistik Penduduk</a></center></p>
 				<div class="collapse box-body no-padding" id="collapseStatGraph">
 					<div id="bodyContent">
 						<div class="card card-body">

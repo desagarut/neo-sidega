@@ -1,4 +1,5 @@
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Pengaturan Slider Besar</h1>
@@ -7,7 +8,7 @@
 			<li class="active">Pengaturan Slider Besar</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<form id="mainform" action="<?= site_url('web/update_slider')?>" method="POST" class="form-horizontal">
 			<div class="row">
 				<div class="col-md-12">
@@ -46,7 +47,7 @@
 						</div>
 						<div class='box-footer'>
 							<div class='col-xs-12'>
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fa fa-check'></i> Simpan</button>
+								<button type='submit' class='btn btn-box btn-info btn-sm pull-right confirm'><i class='fa fa-check'></i> Simpan</button>
 							</div>
 						</div>
 					</div>

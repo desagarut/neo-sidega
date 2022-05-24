@@ -11,6 +11,7 @@
 </script>
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
   <div class="page-header">
     <h1>Detail Transportasi Warga</h1>
@@ -24,16 +25,16 @@
   </div>
 
 
-  <section class="content" id="maincontent">
+  <div class="card">
   <form id="mainform" name="mainform" action="" method="post">
       <div class="row">
           <div class="col-md-12">
               <div class="box box-warning">
-                <div class="box-header with-border"> <a href="<?= site_url("tawa/form_layanan/$gallery")?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah layanan"> <i class="fa fa-plus"></i> Tambah layanan </a>
+                <div class="box-header with-border"> <a href="<?= site_url("tawa/form_layanan/$gallery")?>" class="btn btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah layanan"> <i class="fa fa-plus"></i> Tambah layanan </a>
                   <?php if ($this->CI->cek_hak_akses('h')): ?>
-                  <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("tawa/delete_all_layanan/$gallery")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+                  <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("tawa/delete_all_layanan/$gallery")?>')" class="btn btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
                   <?php endif; ?>
-                  <a href="<?= site_url("tawa")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Kembali Ke Daftar Album"> <i class="fa fa-arrow-circle-left "></i>Kembali </a> 
+                  <a href="<?= site_url("tawa")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Kembali Ke Daftar Album"> <i class="fa fa-arrow-circle-left "></i>Kembali </a> 
                 </div>
               </div>
           

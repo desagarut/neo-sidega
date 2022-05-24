@@ -45,6 +45,7 @@
 
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 
 	<div class="page-header">
@@ -89,7 +90,7 @@
 
 						<?php if (isset($_SESSION['fullscreen'])): ?>
 
-							<a id="toggle-btn" href="<?= current_url()?>/2" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+							<a id="toggle-btn" href="<?= current_url()?>/2" class="btn btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
 
 								<i class="fa fa-search-minus"></i>Normal
 
@@ -97,7 +98,7 @@
 
 						<?php else: ?>
 
-							<a id="toggle-expand-btn" href="<?= current_url()?>/1" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+							<a id="toggle-expand-btn" href="<?= current_url()?>/1" class="btn btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
 
 								<i class="fa fa-search-plus"></i>Full Screen
 
@@ -105,7 +106,7 @@
 
 						<?php endif; ?>
 
-							<a href="<?= site_url()?>analisis_respon" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke Data Sensus</a>
+							<a href="<?= site_url()?>analisis_respon" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke Data Sensus</a>
 
 						</div>
 
@@ -449,9 +450,9 @@
 
 						<div class='col-xs-12'>
 
-							<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
+							<button type='reset' class='btn btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
 
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
+								<button type='submit' class='btn btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
 
 							</div>
 

@@ -24,6 +24,7 @@ $(document).ready(function()
 
 </script>
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1><?= $kat_nama?></h1>
@@ -32,7 +33,7 @@ $(document).ready(function()
       <li class="active"><?= $kat_nama ?></li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
         <?php if (in_array($kat, array('2', '3'))): ?>
@@ -43,20 +44,20 @@ $(document).ready(function()
 				<?php endif; ?>
 					<div class="box box-info">
             <div class="box-header with-border">
-							<a href="<?= site_url("{$this->controller}/form/$kat")?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Menu Baru">
+							<a href="<?= site_url("{$this->controller}/form/$kat")?>" class="btn btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Menu Baru">
 								<i class="fa fa-plus"></i>Tambah <?= $kat_nama?> Baru
             	</a>
 							<?php if ($this->CI->cek_hak_akses('h')): ?>
-								<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("{$this->controller}/delete_all/$kat/$p/$o")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+								<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("{$this->controller}/delete_all/$kat/$p/$o")?>')" class="btn btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 							<?php endif; ?>
-							<a href="<?= site_url("{$this->controller}/dialog_cetak/$kat")?>" class="btn btn-social btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Cetak Dokumen" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan">
+							<a href="<?= site_url("{$this->controller}/dialog_cetak/$kat")?>" class="btn btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Cetak Dokumen" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan">
 								<i class="fa fa-print"></i>Cetak
             	</a>
-							<a href="<?= site_url("{$this->controller}/dialog_excel/$kat")?>" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Unduh Dokumen" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Laporan">
+							<a href="<?= site_url("{$this->controller}/dialog_excel/$kat")?>" class="btn btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Unduh Dokumen" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Laporan">
 								<i class="fa fa-download"></i>Unduh
             	</a>
             	<?php if ($kat == 1): ?>
-								<a href="<?= site_url("informasi_publik/ekspor")?>" class="btn btn-social btn-box bg-blue btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Ekspor Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ekspor Data Informasi Publik">
+								<a href="<?= site_url("informasi_publik/ekspor")?>" class="btn btn-box bg-blue btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Ekspor Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ekspor Data Informasi Publik">
 									<i class="fa fa-download"></i>Ekspor
 	            	</a>
 	            <?php endif; ?>

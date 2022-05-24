@@ -21,6 +21,7 @@
 </script>
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 
 	<div class="page-header">
@@ -43,7 +44,7 @@
 
 	</div>
 
-	<section class="content" id="maincontent">
+	<div class="card">
 
 		<form id="mainform" name="mainform" action="" method="post">
 
@@ -63,7 +64,7 @@
 
 							<?php if ($analisis_master['lock']==1): ?>
 
-								<a href="<?= site_url('analisis_indikator/form')?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block <?php if ($analisis_master['jenis']==1): ?>disabled<?php endif; ?>" title="Tambah Indikator Baru"><i class="fa fa-plus"></i> Tambah Indikator Baru</a>
+								<a href="<?= site_url('analisis_indikator/form')?>" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block <?php if ($analisis_master['jenis']==1): ?>disabled<?php endif; ?>" title="Tambah Indikator Baru"><i class="fa fa-plus"></i> Tambah Indikator Baru</a>
 
 								<a href="#confirm-delete" title="Hapus Data"
 
@@ -73,9 +74,9 @@
 
 									<?php endif; ?>
 
-									class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+									class="btn btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 
-								<a href="<?= site_url()?>analisis_indikator/leave" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke <?= $analisis_master['nama']?></a>
+								<a href="<?= site_url()?>analisis_indikator/leave" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke <?= $analisis_master['nama']?></a>
 
 							<?php endif; ?>
 

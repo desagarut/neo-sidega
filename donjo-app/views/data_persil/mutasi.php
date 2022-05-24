@@ -1,4 +1,5 @@
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Pengelolaan Sebab Dan Tanggal Perubahan Persil</h1>
@@ -8,7 +9,7 @@
 			<li class="active">Pengelolaan Sebab Dan Tanggal Perubahan Persil</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<div class="row">
 			<div class="col-md-3">
 				<?php $this->load->view('data_persil/menu_kiri.php')?>
@@ -87,8 +88,8 @@
 						</div>	
 						<div class='box-footer'>
 							<div class='col-xs-12'>
-								<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
-								<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fa fa-check'></i> Simpan</button>
+								<button type='reset' class='btn btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
+								<button type='submit' class='btn btn-box btn-info btn-sm pull-right confirm'><i class='fa fa-check'></i> Simpan</button>
 							</div>
 						</div>
 					</form>

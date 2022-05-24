@@ -1,6 +1,6 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<section class="content" id="maincontent">
+<div class="card">
   <div class="row">
     <div class="col-md-12">
       <input id="stat" type="hidden" value="<?=$lap?>">

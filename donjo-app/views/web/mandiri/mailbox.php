@@ -3,6 +3,7 @@
 <!-- Content Wrapper. Contains page content -->
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
  
   
   <!-- Content Header (Page header) -->
@@ -53,7 +54,7 @@
             <?php foreach($main_list as $data) : ?>
             <tr class="<?php ($data['status']!=1) and print('unread')?>">
               <td><?=$data['no']?></td>
-              <td nowrap><a href="<?=site_url("mailbox_web/baca_pesan/{$kat}/{$data['id']}")?>" class="btn btn-social bg-navy btn-box btn-sm" title="Baca pesan"><i class="fa fa-envelope-o"></i> Baca</a>
+              <td nowrap><a href="<?=site_url("mailbox_web/baca_pesan/{$kat}/{$data['id']}")?>" class="btn bg-navy btn-box btn-sm" title="Baca pesan"><i class="fa fa-envelope-o"></i> Baca</a>
                 <?php if($kat != 2) : ?>
                 <?php if ($data['status'] == 1): ?>
                 <a href="<?=site_url('mailbox_web/pesan_unread/'.$data['id'])?>" class="btn bg-navy btn-box btn-sm" title="Tandai sebagai belum dibaca"><i class="fa fa-envelope-o"></i></a>

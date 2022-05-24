@@ -2,6 +2,7 @@
 	.nowrap { white-space: nowrap; }
 </style>
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Laporan Keuangan</h1>
@@ -11,7 +12,7 @@
 			<li class="active">Grafik Pelaksanaan Belanja Desa</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<div class="row">
 			<?php $this->load->view('keuangan/filter_laporan_manual', array('data' => $tahun_anggaran)); ?>
 			<div class="col-md-9">

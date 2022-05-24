@@ -1,5 +1,6 @@
 <div class="pcoded-main-container">
-  <div class="pcoded-content">
+	<div class="pcoded-content">
+ 
     <!-- [ breadcrumb ] start -->
     <div class="page-header">
       <div class="page-block">
@@ -25,17 +26,17 @@
           <div class="card">
             <div class="card-header">
               <?php if ($this->CI->cek_hak_akses('h')) : ?>
-                <a href="<?= site_url("penduduk/dokumen/$penduduk[id]") ?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Manajemen Dokumen Penduduk"><i class="fa fa-book"></i> Manajemen Dokumen</a>
-                <!--<a href="<?= site_url("penduduk/rumah/$penduduk[id]") ?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Rumah Penduduk" ><i class="fa fa-book"></i> Rumah Penduduk</a>-->
+                <a href="<?= site_url("penduduk/dokumen/$penduduk[id]") ?>" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Manajemen Dokumen Penduduk"><i class="fa fa-book"></i> Manajemen Dokumen</a>
+                <!--<a href="<?= site_url("penduduk/rumah/$penduduk[id]") ?>" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Rumah Penduduk" ><i class="fa fa-book"></i> Rumah Penduduk</a>-->
                 <?php if ($penduduk['status_dasar_id'] == 1) : ?>
-                  <a href="<?= site_url("penduduk/form/$p/$o/$penduduk[id]") ?>" class="btn btn-social btn-box btn-warning btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Ubah Biodata"><i class="fa fa-edit"></i> Ubah Biodata</a>
+                  <a href="<?= site_url("penduduk/form/$p/$o/$penduduk[id]") ?>" class="btn btn-box btn-warning btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Ubah Biodata"><i class="fa fa-edit"></i> Ubah Biodata</a>
                 <?php endif; ?>
               <?php endif; ?>
-              <a href="<?= site_url("penduduk/cetak_biodata/$penduduk[id]") ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Biodata" target="_blank"><i class="fa fa-print"></i>Cetak Biodata</a>
+              <a href="<?= site_url("penduduk/cetak_biodata/$penduduk[id]") ?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Biodata" target="_blank"><i class="fa fa-print"></i>Cetak Biodata</a>
               <?php if ($penduduk['status_dasar_id'] == 1 and !empty($penduduk['id_kk'])) : ?>
-                <a href="<?= site_url("keluarga/anggota/$p/$o/$penduduk[id_kk]") ?>" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Anggota Keluarga"><i class="fa fa-users"></i> Anggota Keluarga</a>
+                <a href="<?= site_url("keluarga/anggota/$p/$o/$penduduk[id_kk]") ?>" class="btn btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Anggota Keluarga"><i class="fa fa-users"></i> Anggota Keluarga</a>
               <?php endif; ?>
-              <a href="<?= site_url("penduduk/clear") ?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Penduduk"> <i class="fa fa-arrow-circle-left"></i>Kembali Ke Daftar Penduduk </a>
+              <a href="<?= site_url("penduduk/clear") ?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Penduduk"> <i class="fa fa-arrow-circle-left"></i>Kembali Ke Daftar Penduduk </a>
             </div>
           </div>
 
@@ -502,7 +503,7 @@
                             <?php endforeach; ?>
                           </tbody>
                         </table>
-                        <div class="timeline-footer" align="right"> <a href="<?= site_url("penduduk/dokumen_form/$penduduk[id]") ?>" title="Tambah Dokumen" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Dokumen" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-plus'></i>Tambah Dokumen</a> <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("penduduk/delete_all_dokumen/$penduduk[id]") ?>')" class="btn btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a> </div>
+                        <div class="timeline-footer" align="right"> <a href="<?= site_url("penduduk/dokumen_form/$penduduk[id]") ?>" title="Tambah Dokumen" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Dokumen" class="btn btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-plus'></i>Tambah Dokumen</a> <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("penduduk/delete_all_dokumen/$penduduk[id]") ?>')" class="btn btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a> </div>
                       </div>
                       <!-- /.tab-pane -->
 
@@ -564,7 +565,7 @@
                               </tr>
                             <?php endforeach; ?>
                           </table>
-                          <div class="timeline-footer" align="right"> <a href="<?= site_url("penduduk/rumah/$penduduk[id]") ?>" class="btn bg-maroon btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Hapus Rumah"><i class="fa fa-trash-o"></i>Hapus Rumah</a> <a href="<?= site_url("penduduk/rumah_form/$penduduk[id]") ?>" title="Tambah rumah" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah rumah" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-plus'></i>Tambah rumah</a> </div>
+                          <div class="timeline-footer" align="right"> <a href="<?= site_url("penduduk/rumah/$penduduk[id]") ?>" class="btn bg-maroon btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Hapus Rumah"><i class="fa fa-trash-o"></i>Hapus Rumah</a> <a href="<?= site_url("penduduk/rumah_form/$penduduk[id]") ?>" title="Tambah rumah" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah rumah" class="btn btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-plus'></i>Tambah rumah</a> </div>
                         </div>
                       </div>
                       <!-- /.tab-pane -->
@@ -588,7 +589,7 @@
                             <input type="text" disabled="disabled" name="lat" id="lat" value="<?= $penduduk_map['lat'] ?>" />
                             <label>Lng: </label>
                             <input type="text" disabled="disabled" name="lng" id="lng" value="<?= $penduduk_map['lng'] ?>" />
-                            <a href="<?= site_url("penduduk/ajax_penduduk_maps_koordinat/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn btn-social btn-box bg-purple btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Input Koordinat Rumah : <?= strtoupper($penduduk['nama']) ?>"><i class='fa fa-map-marker'></i> Ubah Koordinat</a> <a href="<?= site_url("penduduk/ajax_penduduk_maps_openstreet/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn btn-social btn-box bg-navy btn-sm"><i class='fa fa-map-o'></i> Ubah di Openstreet</a> <a href="<?= site_url("penduduk/ajax_penduduk_maps_google/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn btn-social btn-box btn-primary btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fa fa-google'></i> Ubah di GoogleMap</a>
+                            <a href="<?= site_url("penduduk/ajax_penduduk_maps_koordinat/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn btn-box bg-purple btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Input Koordinat Rumah : <?= strtoupper($penduduk['nama']) ?>"><i class='fa fa-map-marker'></i> Ubah Koordinat</a> <a href="<?= site_url("penduduk/ajax_penduduk_maps_openstreet/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn btn-box bg-navy btn-sm"><i class='fa fa-map-o'></i> Ubah di Openstreet</a> <a href="<?= site_url("penduduk/ajax_penduduk_maps_google/$p/$o/$penduduk[id]/1") ?>" title="Lokasi <?= $penduduk['nama'] ?>" class="btn btn-box btn-primary btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fa fa-google'></i> Ubah di GoogleMap</a>
                           </div>
                         </div>
                         <div class="box box-warning">
@@ -632,7 +633,7 @@
                               <?php endforeach; ?>
                             </table>
                           </div>
-                          <div class="box-footer" align="right"> <a href="<?= site_url("penduduk/rumah/$penduduk[id]") ?>" class="btn bg-maroon btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Hapus Rumah"><i class="fa fa-trash-o"></i>Hapus Rumah</a> <a href="<?= site_url("penduduk/rumah_form/$penduduk[id]") ?>" title="Tambah rumah" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah rumah" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-plus'></i>Tambah rumah</a> </div>
+                          <div class="box-footer" align="right"> <a href="<?= site_url("penduduk/rumah/$penduduk[id]") ?>" class="btn bg-maroon btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Hapus Rumah"><i class="fa fa-trash-o"></i>Hapus Rumah</a> <a href="<?= site_url("penduduk/rumah_form/$penduduk[id]") ?>" title="Tambah rumah" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah rumah" class="btn btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-plus'></i>Tambah rumah</a> </div>
                         </div>
                         <div class="box box-warning">
                           <div class="box-header with-border">

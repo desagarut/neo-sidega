@@ -1,5 +1,6 @@
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Daftar Anggota Keluarga</h1>
@@ -9,26 +10,26 @@
 			<li class="active">Daftar Anggota Keluarga</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<div class="box box-info">
 			<div class="box-header with-border">
 				<div class="btn-group btn-group-vertical">
 					<?php if ($this->CI->cek_hak_akses('h')): ?>
-                    <a class="btn btn-social btn-box btn-success btn-sm" data-toggle="dropdown"><i class='fa fa-plus'></i> Tambah Anggota</a>
+                    <a class="btn btn-box btn-success btn-sm" data-toggle="dropdown"><i class='fa fa-plus'></i> Tambah Anggota</a>
 					<ul class="dropdown-menu" role="menu">
 						
                         <li>
-							<a href="<?= site_url("keluarga/form_a/$p/$o/$kk")?>" class="btn btn-social btn-box btn-block btn-sm" title="Tambah Anggota Keluarga" ><i class="fa fa-plus"></i> Tambah Penduduk Baru</a>
+							<a href="<?= site_url("keluarga/form_a/$p/$o/$kk")?>" class="btn btn-box btn-block btn-sm" title="Tambah Anggota Keluarga" ><i class="fa fa-plus"></i> Tambah Penduduk Baru</a>
 						</li>
 						<li>
-							<a href="<?= site_url("keluarga/ajax_add_anggota/$p/$o/$kk")?>" class="btn btn-social btn-box btn-block btn-sm" title="Tambah Anggota Dari Penduduk Yang Sudah Ada" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Anggota Keluarga"><i class="fa fa-plus"></i> Dari Penduduk Sudah Ada</a>
+							<a href="<?= site_url("keluarga/ajax_add_anggota/$p/$o/$kk")?>" class="btn btn-box btn-block btn-sm" title="Tambah Anggota Dari Penduduk Yang Sudah Ada" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Anggota Keluarga"><i class="fa fa-plus"></i> Dari Penduduk Sudah Ada</a>
 						</li>
                         
 					</ul>
 					<?php endif;?>
 				</div>
-				<a href="<?= site_url("keluarga/kartu_keluarga/$p/$o/$kk")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-book"></i> Kartu Keluarga</a>
-				<a href="<?=site_url("keluarga/index/$p/$o")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Keluarga"><i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar Keluarga
+				<a href="<?= site_url("keluarga/kartu_keluarga/$p/$o/$kk")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-book"></i> Kartu Keluarga</a>
+				<a href="<?=site_url("keluarga/index/$p/$o")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Keluarga"><i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar Keluarga
 				</a>
 			</div>
 			<div class="card-body">
@@ -124,9 +125,9 @@
 						<div class='modal-body btn-info'>
 						</div>
 						<div class='modal-footer'>
-							<button type="button" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+							<button type="button" class="btn btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
 							<a class='btn-ok'>
-								<button type="button" class="btn btn-social btn-box btn-info btn-sm" id="ok-delete"><i class='fa fa-check'></i> Simpan</button>
+								<button type="button" class="btn btn-box btn-info btn-sm" id="ok-delete"><i class='fa fa-check'></i> Simpan</button>
 							</a>
 						</div>
 					</div>

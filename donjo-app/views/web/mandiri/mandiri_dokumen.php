@@ -12,6 +12,7 @@ table.table th {
 </script>
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
   <section class='content' id="maincontent">
     <div class='row'>
@@ -92,7 +93,7 @@ table.table th {
                 </div>
                 <div class="card-footer">
                   <div class="col-xs-12">
-                    <button type="reset" class="btn btn-social btn-box btn-danger btn-sm invisible"><i class="fa fa-times"></i> Batal</button>
+                    <button type="reset" class="btn btn-box btn-danger btn-sm invisible"><i class="fa fa-times"></i> Batal</button>
                     <button type="submit" class="btn btn-primary pull-right" id="isi_form"><i class="fa fa-sign-in"></i> Isi Form</button>
                   </div>
                 </div>
@@ -108,7 +109,7 @@ table.table th {
             </div>
           </div>
           <div class="card-body">
-            <button type="button" title="Tambah Dokumen" data-remote="false" data-toggle="modal" data-target="#modal" data-title="Tambah Dokumen" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" id="tambah_dokumen"><i class='fa fa-plus'></i>Tambah Dokumen</button>
+            <button type="button" title="Tambah Dokumen" data-remote="false" data-toggle="modal" data-target="#modal" data-title="Tambah Dokumen" class="btn btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" id="tambah_dokumen"><i class='fa fa-plus'></i>Tambah Dokumen</button>
             <div class="table-responsive">
               <table class="table table-striped table-bordered" id="dokumen">
                 <thead>
@@ -141,7 +142,7 @@ table.table th {
         <p id="kata_peringatan"></p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+        <button class="btn btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
       </div>
     </div>
   </div>
@@ -215,8 +216,8 @@ table.table th {
           </div>
         </div>
         <div class="modal-footer">
-          <button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-          <button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="upload_btn"><i class='fa fa-check'></i> Simpan</button>
+          <button type="reset" class="btn btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+          <button type="submit" class="btn btn-box btn-info btn-sm" id="upload_btn"><i class='fa fa-check'></i> Simpan</button>
         </div>
       </form>
     </div>

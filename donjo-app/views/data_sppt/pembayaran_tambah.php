@@ -17,7 +17,7 @@
       }
 </script>	  
 
-	<section class="content" id="maincontent">
+	<div class="card">
 					<div class="card-body">
 							<div class="col-sm-12">
 							<!--	<form action="" id="main" name="main" method="POST" class="form-horizontal">
@@ -219,8 +219,8 @@
                                     </div>
                                     <div class="card-footer">
 										<div class="col-xs-12">
-											<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
-											<button type="submit" class="btn btn-social btn-box btn-success btn-sm pull-right"><i class="fa fa-check"></i> Bayar Sekarang</button>
+											<button type="reset" class="btn btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
+											<button type="submit" class="btn btn-box btn-success btn-sm pull-right"><i class="fa fa-check"></i> Bayar Sekarang</button>
 										</div>
 									</div>
 								</form>

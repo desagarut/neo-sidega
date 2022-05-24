@@ -1,4 +1,5 @@
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Profil Desa</h1>
@@ -8,7 +9,7 @@
 			<li class="active">Batas Wilayah</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<form id="mainformexcel" name="mainformexcel"method="post" class="form-horizontal">
 			<div class="row">
 				<div class="col-md-4 col-lg-3">
@@ -17,7 +18,7 @@
 				<div class="col-md-8 col-lg-9">
 					<div class="box box-info">
 						<div class="box-header with-border">
-							<a href="<?= site_url('potensi_umum/form') ?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Data Baru">
+							<a href="<?= site_url('potensi_umum/form') ?>" class="btn btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Data Baru">
 								<i class="fa fa-plus"></i>Tambah Data
 							</a>
 						</div>

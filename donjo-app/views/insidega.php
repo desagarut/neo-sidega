@@ -22,7 +22,7 @@
   <?php else : ?>
     <link rel="shortcut icon" href="<?= base_url() ?>favicon.ico" />
   <?php endif; ?>
-  <script src="<?= base_url() ?>assets/js/jquery.min.js"></script>
+  <script src="<?= base_url() ?>assets/bootstrap/js/jquery.min.js"></script>
   <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.validate.min.js"></script>
   <script type="text/javascript" src="<?= base_url() ?>assets/js/validasi.js"></script>
   <script type="text/javascript" src="<?= base_url() ?>assets/js/localization/messages_id.js"></script>
@@ -102,6 +102,7 @@
   <script src="<?= base_url() ?>assets/js/plugins/bootstrap.min.js"></script>
   <script src="<?= base_url() ?>assets/js/ripple.js"></script>
   <script src="<?= base_url() ?>assets/js/pcoded.min.js"></script>
+  <script src="<?= base_url()?>assets/bootstrap/js/jquery.min.js"></script> 
 
   <script>
     function start_countdown() {

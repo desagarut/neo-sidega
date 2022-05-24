@@ -26,9 +26,9 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="reset" class="btn btn-social btn-flat btn-danger btn-sm"
+							<button type="reset" class="btn btn-danger btn-sm"
 								data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-							<button type="submit" class="btn btn-social btn-flat btn-info btn-sm" id="form_cetak"
+							<button type="submit" class="btn btn-info btn-sm" id="form_cetak"
 								name="form_cetak" onclick="$('#cetak_form').submit();" data-dismiss="modal"><i class='fa fa-check'></i> <span class="aksi">Cetak</span></button>
 						</div>
 					</form>

@@ -47,6 +47,7 @@ function initMap() {
 </style>
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Lokasi : <?=$tukang['nama']?></h1>
@@ -69,11 +70,11 @@ function initMap() {
                     </div>
                     <div class="modal-footer">
                         <div class='col-xs-12'>
-                           <a href="<?= site_url("tukang")?>" class="pull-left"> <button type="#" class="btn btn-social btn-box btn-primary btn-sm"><i class='fa fa-arrow-left'></i> Kembali</button></a>
+                           <a href="<?= site_url("tukang")?>" class="pull-left"> <button type="#" class="btn btn-box btn-primary btn-sm"><i class='fa fa-arrow-left'></i> Kembali</button></a>
                             <input type="text" name="lat" id="lat" value="<?= $tukang['lat']?>"/>
                             <input type="text" name="lng" id="lng" value="<?= $tukang['lng']?>" />
-                            <button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-refresh'></i> Reset</button>
-                            <button type="submit" class="btn btn-social btn-box btn-success btn-sm"><i class='fa fa-check'></i> Simpan</button>
+                            <button type="reset" class="btn btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-refresh'></i> Reset</button>
+                            <button type="submit" class="btn btn-box btn-success btn-sm"><i class='fa fa-check'></i> Simpan</button>
                         </div>
                     </div>
                 </div>

@@ -157,6 +157,7 @@ $(document).ready(function () {
 </style>
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<?php if (empty($halaman_statis)): ?>
 		<div class="page-header">

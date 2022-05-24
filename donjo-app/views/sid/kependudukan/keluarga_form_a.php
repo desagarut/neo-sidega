@@ -1,4 +1,5 @@
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Biodata Anggota Keluarga</h1>
@@ -8,7 +9,7 @@
 			<li class="active">Biodata Anggota Keluarga</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
     <form id="mainform" name="mainform" action="<?= $form_action?>" method="post" enctype="multipart/form-data">
       <div class="row">
         <div class="col-md-12">
@@ -38,10 +39,10 @@
             <div class="col-md-9">
               <div class='box box-primary'>
         			  <div class="box-header with-border">
-  								<a href="<?=site_url("keluarga")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Keluarga">
+  								<a href="<?=site_url("keluarga")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Keluarga">
   									<i class="fa fa-arrow-circle-left"></i>Kembali Ke Daftar Keluarga
   								</a>
-                  <a href="<?=site_url("keluarga/anggota/1/0/$id_kk")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Keluarga">
+                  <a href="<?=site_url("keluarga/anggota/1/0/$id_kk")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Keluarga">
                     <i class="fa fa-arrow-circle-left"></i>Kembali Ke Daftar Anggota Keluarga
                   </a>
   							</div>
@@ -83,8 +84,8 @@
                 </div>
                 <div class='box-footer'>
                   <div class='col-xs-12'>
-                    <button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
-                    <button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
+                    <button type='reset' class='btn btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
+                    <button type='submit' class='btn btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
                   </div>
                 </div>
                 <div  class="modal fade" id="rumah-penduduk" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

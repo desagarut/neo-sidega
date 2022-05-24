@@ -10,6 +10,7 @@
 	});
 </script>
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Format Surat Desa</h1>
@@ -18,13 +19,13 @@
 			<li class="active">Format Surat Desa</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="box box-info">
 					<div class="box-header with-border">
-						<a href="<?= site_url('surat_master/form')?>" title="Tambah Format Surat" class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-plus"></i> Tambah Format Surat</a>
-						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("surat_master/delete_all/$p/$o")?>')" class="btn btn-social btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+						<a href="<?= site_url('surat_master/form')?>" title="Tambah Format Surat" class="btn btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-plus"></i> Tambah Format Surat</a>
+						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("surat_master/delete_all/$p/$o")?>')" class="btn btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 					</div>
 					<div class="card-body">
 						<div class="row">
@@ -104,11 +105,11 @@
 																	<td><?= $data['url_surat']?></td>
 																	<td><?= $data['lampiran']?></td>
 																	<td nowrap>
-																		<a href="<?= site_url("surat_master/kode_isian/$p/$o/$data[id]")?>" class="btn btn-social btn-box btn-info btn-sm"  title="Kode Isian"><i class="fa fa-code"></i>Kode Isian</a>
-																		<a href="<?= site_url("surat_master/form_upload/$p/$o/$data[url_surat]")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" title="Unggah Template Format Surat" data-title="Unggah Template Format Surat" class="btn btn-social btn-box bg-orange btn-sm"><i class='fa fa-upload'></i> Unggah</a>
+																		<a href="<?= site_url("surat_master/kode_isian/$p/$o/$data[id]")?>" class="btn btn-box btn-info btn-sm"  title="Kode Isian"><i class="fa fa-code"></i>Kode Isian</a>
+																		<a href="<?= site_url("surat_master/form_upload/$p/$o/$data[url_surat]")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" title="Unggah Template Format Surat" data-title="Unggah Template Format Surat" class="btn btn-box bg-orange btn-sm"><i class='fa fa-upload'></i> Unggah</a>
 																		<?php $surat = SuratExport($data[url_surat]); ?>
 																		<?php if ($surat != ""): ?>
-																			<a href="<?= base_url($surat)?>" class="btn btn-social btn-box bg-purple btn-sm"  title="Unduh Template Format Surat"><i class="fa fa-download"></i>Unduh </a>
+																			<a href="<?= base_url($surat)?>" class="btn btn-box bg-purple btn-sm"  title="Unduh Template Format Surat"><i class="fa fa-download"></i>Unduh </a>
 																		<?php endif; ?>
 																	</td>
 

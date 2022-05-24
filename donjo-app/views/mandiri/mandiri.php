@@ -11,6 +11,7 @@
 	});
 </script>
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Pendaftar Layanan Masyarakat</h1>
@@ -19,11 +20,11 @@
 			<li class="active">Pendaftar Layanan Masyarakat</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="box box-info">
 				<div class="box-header with-border">
-					<a href="<?= site_url('mandiri/ajax_pin'); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Buat PIN Warga" class="btn btn-social btn-box btn-success btn-sm"><i class="fa fa-plus"></i> Tambah Pengguna</a>
+					<a href="<?= site_url('mandiri/ajax_pin'); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Buat PIN Warga" class="btn btn-box btn-success btn-sm"><i class="fa fa-plus"></i> Tambah Pengguna</a>
 				</div>
 				<div class="card-body">
 					<form id="mainform" name="mainform" action="" method="post">
@@ -125,9 +126,9 @@
 										Berikut adalah kode pin yang baru saja di hasilkan, silakan dicatat atau di ingat dengan baik, kode pin ini sangat rahasia, dan hanya bisa dilihat sekali ini lalu setelah itu hanya bisa di reset saja.<br /><h4>Kode PIN : <?= $info['pin']; ?></h4>
 									</div>
 									<div class="modal-footer">
-										<button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class="fa fa-sign-out"></i> Tutup</button>
+										<button type="button" class="btn btn-box btn-warning btn-sm" data-dismiss="modal"><i class="fa fa-sign-out"></i> Tutup</button>
 										<?php if (cek_koneksi_internet() && $info['pin'] && $info['telepon']): ?>
-											<button type="submit" class="btn btn-social btn-box btn-success btn-sm"><i class="fa fa-whatsapp"></i> Kirim</button>
+											<button type="submit" class="btn btn-box btn-success btn-sm"><i class="fa fa-whatsapp"></i> Kirim</button>
 										<?php endif; ?>
 									</div>
 								</form>

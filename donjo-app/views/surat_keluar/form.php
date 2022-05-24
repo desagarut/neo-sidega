@@ -10,6 +10,7 @@
 	});
 </script>
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Surat Keluar</h1>
@@ -19,12 +20,12 @@
 			<li class="active">Surat Keluar</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="box box-info">
 					<div class="box-header with-border">
-						<a href="<?= site_url("surat_keluar")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Kembali Ke Daftar Surat Keluar">
+						<a href="<?= site_url("surat_keluar")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Kembali Ke Daftar Surat Keluar">
 							<i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar Surat Keluar
 						</a>
 					</div>
@@ -104,8 +105,8 @@
 							</div>
 							<div class='box-footer'>
 								<div class='col-xs-12'>
-									<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
-									<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
+									<button type='reset' class='btn btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
+									<button type='submit' class='btn btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
 								</div>
 							</div>
 						</div>

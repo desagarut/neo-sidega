@@ -1,4 +1,5 @@
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
   <div class="page-header">
     <h1>Detil Pemudik</h1>
@@ -8,15 +9,15 @@
       <li class="active">Detil Penerima Vaksin</li>
     </ol>
   </div>
-  <section class="content" id="maincontent">
+  <div class="card">
     <div class="row">
       <div class="col-md-12">
         <div class="box box-info">
 
           <div class="box-header with-border">
-            <a href="<?= site_url('covid19_vaksin')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Data Penerima Vaksin</a>
+            <a href="<?= site_url('covid19_vaksin')?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Data Penerima Vaksin</a>
             <?php if ($penduduk['id_status'] === '2' OR $penduduk['id_status'] === '3'): ?>
-              <a href="#" class="btn btn-social btn-success btn-sm" data-toggle="modal" data-target="#edit-warga">
+              <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target="#edit-warga">
                 <i class="fa fa-edit"></i>
                 Ubah Data Penduduk Non Domisili
               </a>
@@ -116,9 +117,9 @@
       </div>
 
       <div class='modal-footer'>
-        <button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+        <button type="button" class="btn btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
         <a class='btn-ok'>
-          <button type="submit" class="btn btn-social btn-box btn-success btn-sm" onclick="$('#'+'form_penduduk').submit();"><i class='fa fa-trash-o'></i> Simpan</button>
+          <button type="submit" class="btn btn-box btn-success btn-sm" onclick="$('#'+'form_penduduk').submit();"><i class='fa fa-trash-o'></i> Simpan</button>
         </a>
       </div>
     </div>

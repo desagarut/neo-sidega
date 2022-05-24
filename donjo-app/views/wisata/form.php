@@ -1,4 +1,5 @@
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
   <div class="page-header">
     <h1>Form Tambah/Ubah</h1>
@@ -8,12 +9,12 @@
       <li class="active">Tambah/Ubah</li>
     </ol>
   </div>
-  <section class="content" id="maincontent">
+  <div class="card">
     <form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
       <div class="row">
         <div class="col-md-12">
           <div class="box box-info">
-            <div class="box-header with-border"> <a href="<?= site_url('wisata') ?>" class="btn btn-social btn-flat btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali</a> </div>
+            <div class="box-header with-border"> <a href="<?= site_url('wisata') ?>" class="btn btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali</a> </div>
             <div class="card-body">
               <div class="row">
                 <div class="col-md-12">
@@ -326,8 +327,8 @@
             </div>
             <div class="card-footer">
               <div class="col-xs-12">
-                <button type="reset" class="btn btn-social btn-flat btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
-                <button type="submit" class="btn btn-social btn-flat btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
+                <button type="reset" class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
+                <button type="submit" class="btn btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
               </div>
             </div>
           </div>

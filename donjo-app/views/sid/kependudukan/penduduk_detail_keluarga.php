@@ -1,5 +1,5 @@
 
-	<section class="content" id="maincontent">
+	<div class="card">
 		<div class="box box-info">
 			<div class="card-body">
 				<h5><b>Rincian Keluarga</b></h5>
@@ -96,9 +96,9 @@
 						<div class='modal-body btn-info'>
 						</div>
 						<div class='modal-footer'>
-							<button type="button" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+							<button type="button" class="btn btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
 							<a class='btn-ok'>
-								<button type="button" class="btn btn-social btn-box btn-info btn-sm" id="ok-delete"><i class='fa fa-check'></i> Simpan</button>
+								<button type="button" class="btn btn-box btn-info btn-sm" id="ok-delete"><i class='fa fa-check'></i> Simpan</button>
 							</a>
 						</div>
 					</div>

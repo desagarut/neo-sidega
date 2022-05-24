@@ -1,5 +1,6 @@
 <?php ?>
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Manual Input Anggaran dan Realisasi APBDes</h1>
@@ -8,13 +9,13 @@
 			<li class="active">Manual Input APBDes</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="box box-info">
 					<div class="card-header">
-						<a href="#" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-toggle="modal" data-target="#ModalAdd"><i class="fa fa-plus"></i> Tambah Data</a>
-						<a href="#" id="btn_salin" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-plus"></i>Tambah Data dari Template</a>
+						<a href="#" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-toggle="modal" data-target="#ModalAdd"><i class="fa fa-plus"></i> Tambah Data</a>
+						<a href="#" id="btn_salin" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-plus"></i>Tambah Data dari Template</a>
 					</div>
 					<div class="box-header with-border">
 						<form action="<?= site_url('keuangan_manual/set_tahun_terpilih') ?>" method="POST" class="form form-horizontal">
@@ -49,7 +50,7 @@
 										<!-- TAB PENDAPATAN -->
 										<div role="tabpanel" class="tab-pane active" id="pendapatan_tab">
 											<div class="card-header">
-												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 											</div>
 											<form id="mainform" name="mainform" action="" method="post">
 												<div class="row">
@@ -79,7 +80,7 @@
 										<!-- TAB BELANJA -->
 										<div role="tabpanel" class="tab-pane" id="belanja_tab">
 											<div class="card-header">
-												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_bl','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_bl','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 											</div>
 											<form id="mainform_bl" name="mainform_bl" action="" method="post">
 												<div class="row">
@@ -109,7 +110,7 @@
 										<!-- TAB PEMBIAYAAN -->
 										<div role="tabpanel" class="tab-pane" id="pembiayaan_tab">
 											<div class="card-header">
-												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_by','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+												<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform_by','<?=site_url("keuangan_manual/delete_all/")?>')" class="btn btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 											</div>
 											<form id="mainform_by" name="mainform_by" action="" method="post">
 												<div class="row">
@@ -231,8 +232,8 @@
 				</div>
 
 				<div class="modal-footer">
-					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
-					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_simpan"><i class='fa fa-check'></i>Simpan</button>
+					<button class="btn btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
+					<button class="btn btn-box btn-info btn-sm" id="btn_simpan"><i class='fa fa-check'></i>Simpan</button>
 				</div>
 			</form>
 		</div>
@@ -325,8 +326,8 @@
 				</div>
 
 				<div class="modal-footer">
-					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
-					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_update"><i class='fa fa-check'></i>Simpan</button>
+					<button class="btn btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
+					<button class="btn btn-box btn-info btn-sm" id="btn_update"><i class='fa fa-check'></i>Simpan</button>
 				</div>
 			</form>
 		</div>
@@ -353,8 +354,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
-					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_salin1"><i class='fa fa-check'></i>Salin</button>
+					<button class="btn btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
+					<button class="btn btn-box btn-info btn-sm" id="btn_salin1"><i class='fa fa-check'></i>Salin</button>
 				</div>
 			</form>
 		</div>

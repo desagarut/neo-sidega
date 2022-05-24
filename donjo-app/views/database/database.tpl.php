@@ -2,6 +2,7 @@
 <?php	$this->load->view('nav'); ?>
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Pengaturan Database</h1>
@@ -10,7 +11,7 @@
 			<li class="active">Pengaturan Database</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
 					<div class="box box-info">

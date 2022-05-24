@@ -25,6 +25,7 @@
 
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 
 	<div class="page-header">
@@ -53,7 +54,7 @@
 
 					<div class="box-header with-border">
 
-						<a href="<?= site_url('analisis_master') ?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke Master Analisis</a>
+						<a href="<?= site_url('analisis_master') ?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke Master Analisis</a>
 
 					</div>
 
@@ -269,9 +270,9 @@
 
 							<div class="col-xs-12">
 
-								<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
+								<button type="reset" class="btn btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
 
-								<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
+								<button type="submit" class="btn btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
 
 							</div>
 

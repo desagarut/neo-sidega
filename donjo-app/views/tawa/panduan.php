@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
-	<section class="content" id="maincontent">
+	<div class="card">
 				<div class="card-body">
 					<h4>Kelompok Usaha Transportasi:</h4>
 					<p>

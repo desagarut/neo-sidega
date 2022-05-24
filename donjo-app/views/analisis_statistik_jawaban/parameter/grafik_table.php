@@ -62,6 +62,7 @@
 <script src="<?= base_url()?>assets/js/highcharts/exporting.js"></script>
 <script src="<?= base_url()?>assets/js/highcharts/highcharts-more.js"></script>
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Statistik Jawaban</h1>
@@ -73,7 +74,7 @@
 			<li class="active">Statistik Jawaban</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
 				<div class="col-md-3">
@@ -106,7 +107,7 @@
 											<?php endforeach;?>
 										</select>
 									<?php endif; ?>
-									<a href="<?= site_url()?>analisis_statistik_jawaban" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke Laporan Per Indikator</a>
+									<a href="<?= site_url()?>analisis_statistik_jawaban" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke Laporan Per Indikator</a>
 								</div>
 								<div class="col-sm-12">
 									<h5 class="box-title"><b><?= $analisis_statistik_jawaban['pertanyaan']?></b></h5>

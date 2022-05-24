@@ -1,5 +1,6 @@
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Pengelolaan Data Letter-C <?=ucwords($this->setting->sebutan_deskel)?> <?= $kelurahan["nama_deskel"];?></h1>
@@ -10,7 +11,7 @@
 			<li class="active">Pengelolaan Data Letter-C</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<div class="row">
 			<div class="col-md-3">
 				<?php $this->load->view('data_persil/menu_kiri.php')?>
@@ -19,9 +20,9 @@
 				<div class="box box-info">
 					<div class="card-body">
 						<div class="box-header with-border">
-							<a href="<?= site_url('letterc/rincian/'. $letterc[id])?>" class="btn btn-social btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Rincian Letter-C"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Rincian Letter-C</a>
+							<a href="<?= site_url('letterc/rincian/'. $letterc[id])?>" class="btn btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Rincian Letter-C"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Rincian Letter-C</a>
 							<?php if ($persil): ?>
-								<a href="<?= site_url('letterc/mutasi/'. $letterc[id].'/'.$persil['id'])?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Rincian Letter-C"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Rincian Mutasi Letter-C</a>
+								<a href="<?= site_url('letterc/mutasi/'. $letterc[id].'/'.$persil['id'])?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Rincian Letter-C"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Rincian Mutasi Letter-C</a>
 							<?php endif; ?>
 						</div>
 						<div class="row">
@@ -93,7 +94,7 @@
 													<div class="form-group" >
 										  			<label class="col-sm-3 control-label">Kalau persil belum ada</label>
 														<div class="col-sm-8">
-															<a href="<?=site_url("data_persil/form/0/$letterc[id]")?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Persil">
+															<a href="<?=site_url("data_persil/form/0/$letterc[id]")?>" class="btn btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Persil">
 																<i class="fa fa-plus"></i>Tambah Persil
 															</a>
 														</div>
@@ -143,11 +144,11 @@
 									<?php if (empty($persil['letterc_awal']) and empty($mutasi)): ?>
 										<div id="letterc_awal">
 											<div class="card-body">
-												<a href="<?= site_url('letterc/awal_persil/'. $letterc[id] .'/' .$persil['id'])?>" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block col-sm-2" title="Kembali Ke Rincian Letter-C"><i class="fa fa-step-backward"></i>Letter-C Awal</a>
+												<a href="<?= site_url('letterc/awal_persil/'. $letterc[id] .'/' .$persil['id'])?>" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block col-sm-2" title="Kembali Ke Rincian Letter-C"><i class="fa fa-step-backward"></i>Letter-C Awal</a>
 												<span style="padding-left: 10px;">Catat Letter-C ini sebagai pemilik awal keseluruhan persil <?= $persil["nomor"] ?></span>
 											</div>
 											<div class="card-body">
-												<a class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block col-sm-2" title="Kembali Ke Rincian Letter-C" onclick="tambah_mutasi();"><i class="fa fa-plus"></i>Tambah Mutasi</a>
+												<a class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block col-sm-2" title="Kembali Ke Rincian Letter-C" onclick="tambah_mutasi();"><i class="fa fa-plus"></i>Tambah Mutasi</a>
 												<span style="padding-left: 10px;">Tambah mutasi Letter-C <?= $letterc['nomor']?> untuk persil <?= $persil['nomor']?></span>
 											</div>
 										</div>
@@ -276,8 +277,8 @@
 
 											<div class="card-footer">
 												<div class="col-xs-12">
-													<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
-													<button type="submit" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
+													<button type="reset" class="btn btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
+													<button type="submit" class="btn btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
 												</div>
 											</div>
 

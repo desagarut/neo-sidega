@@ -22,6 +22,7 @@
 <!-- Menampilkan OpenStreetMap -->
 <div class="pcoded-main-container">
 	<div class="pcoded-content">
+
     <div class="page-header">
       <div class="page-block">
         <div class="row align-items-center">
@@ -63,7 +64,7 @@
 								</div>
 							</div>
 							<div class="card-footer">
-								<div class="col-xs-12"> <a href="<?= $tautan['link'] ?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a> <a href="#" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
+								<div class="col-xs-12"> <a href="<?= $tautan['link'] ?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a> <a href="#" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
 									<label class="control-label col-sm-1">Warna</label>
 									<div class="col-sm-2">
 										<div class="input-group my-colorpicker2">
@@ -71,9 +72,9 @@
 											<div class="input-group-addon input-sm"> <i></i> </div>
 										</div>
 									</div>
-									<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' id="resetme"><i class='fa fa-times'></i> Reset</button>
-									<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
-									<!-- <a href="<?= site_url("sid_core/ajax_wilayah_dusun_google_maps/$data[id]") ?>" class="btn btn-social btn-box btn-primary btn-sm pull-right" title="Ubah Wilayah"><i class='fa fa-map'></i> Ubah Wilayah</a>&nbsp;-->
+									<button type='reset' class='btn btn-box btn-danger btn-sm' id="resetme"><i class='fa fa-times'></i> Reset</button>
+									<button type='submit' class='btn btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
+									<!-- <a href="<?= site_url("sid_core/ajax_wilayah_dusun_google_maps/$data[id]") ?>" class="btn btn-box btn-primary btn-sm pull-right" title="Ubah Wilayah"><i class='fa fa-map'></i> Ubah Wilayah</a>&nbsp;-->
 								</div>
 							</div>
 						</div>

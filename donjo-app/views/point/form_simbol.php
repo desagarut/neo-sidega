@@ -60,6 +60,7 @@
 
 </style>
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Pengaturan Simbol Lokasi</h1>
@@ -68,7 +69,7 @@
 			<li class="active">Pengaturan Simbol Lokasi</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 			<div class="row">
 				<div class="col-md-3">
@@ -77,8 +78,8 @@
 				<div class="col-md-9">
 					<div class="box box-info">
             <div class="box-header with-border">
-							<a href="#" id="btn_ikon" class="btn btn-social btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-plus"></i>Tambah Simbol Lokasi</a>
-							<a href="<?= site_url("point/salin_simbol_default")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Salin Simbol Default">
+							<a href="#" id="btn_ikon" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-plus"></i>Tambah Simbol Lokasi</a>
+							<a href="<?= site_url("point/salin_simbol_default")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Salin Simbol Default">
 								<i class="fa fa-copy"></i>Salin Simbol Default
             	</a>
 						</div>
@@ -133,8 +134,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
-					<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="simpan"><i class='fa fa-check'></i>Simpan</button>
+					<button class="btn btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
+					<button type="submit" class="btn btn-box btn-info btn-sm" id="simpan"><i class='fa fa-check'></i>Simpan</button>
 				</div>
 			</form>
 		</div>

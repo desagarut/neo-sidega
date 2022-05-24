@@ -23,7 +23,7 @@
 																					<div class="form-group">
 																						<label for="file" class="col-md-4 col-lg-3 control-label">Kosongkan Database SID</label>
 																						<div class="col-sm-12 col-md-3 col-lg-2">
-																							<a href="#" form="kosongkan" class="btn btn-social btn-box btn-block btn-danger btn-sm"  title="Kosongkan DB" data-toggle="modal" data-target="#confirmsubmit"><i class="fa fa-trash-o"></i> Kosongkan DB</a>
+																							<a href="#" form="kosongkan" class="btn btn-box btn-block btn-danger btn-sm"  title="Kosongkan DB" data-toggle="modal" data-target="#confirmsubmit"><i class="fa fa-trash-o"></i> Kosongkan DB</a>
 																						</div>
 																						<p class="help-block col-sm-12 col-md-5 col-lg-5"><input type="checkbox" name="kosongkan_menu" value='kosongkan'></input>	Juga kosongkan contoh menu statis dan dinamis</p>
 																					</div>
@@ -47,7 +47,7 @@
 																Apakah anda yakin? Proses ini akan menghapus semua data penduduk dan data masukan lainnya.
 															</div>
 															<div class='modal-footer'>
-																<button type='button' class='btn btn-social btn-box btn-warning btn-sm' data-dismiss='modal'><i class='fa fa-sign-out'></i> Tutup</button> <a href="#" id="submit" class='btn btn-social btn-box btn-danger btn-sm'><i class='fa fa-times'></i> Hapus</a>
+																<button type='button' class='btn btn-box btn-warning btn-sm' data-dismiss='modal'><i class='fa fa-sign-out'></i> Tutup</button> <a href="#" id="submit" class='btn btn-box btn-danger btn-sm'><i class='fa fa-times'></i> Hapus</a>
 															</div>
 														</div>
 													</div>

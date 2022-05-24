@@ -19,39 +19,39 @@
 <div class="card">
 	<div class="box-header with-border">
 		<?php if ($this->CI->cek_hak_akses('h')): ?>
-        <a href="<?= site_url('pengurus/form')?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Staf">
+        <a href="<?= site_url('pengurus/form')?>" class="btn btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Staf">
 			<i class="fa fa-plus"></i>Tambah Aparat Pemerintahan <?= ucwords($this->setting->sebutan_desa)?>
 		</a>
         <?php endif;?>
 		<?php if ($this->CI->cek_hak_akses('h')): ?>
         <div class="btn-group btn-group-vertical">
-			<a class="btn btn-social btn-box btn-info btn-sm" data-toggle="dropdown"><i class='fa fa-arrow-circle-down'></i> Aksi Data Terpilih</a>
+			<a class="btn btn-box btn-info btn-sm" data-toggle="dropdown"><i class='fa fa-arrow-circle-down'></i> Aksi Data Terpilih</a>
 			<ul class="dropdown-menu" role="menu">
 				
                 <li>
-					<a href="<?= site_url("pengurus/atur_bagan")?>" title="Ubah Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Atur Struktur Bagan" class="btn btn-social btn-box btn-block btn-sm aksi-terpilih" ><i class="fa fa-sitemap"></i> Atur Struktur Bagan</a>
+					<a href="<?= site_url("pengurus/atur_bagan")?>" title="Ubah Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Atur Struktur Bagan" class="btn btn-box btn-block btn-sm aksi-terpilih" ><i class="fa fa-sitemap"></i> Atur Struktur Bagan</a>
 				</li>
                 <li>
-                    <a href="#confirm-delete" class="btn btn-social btn-box btn-block btn-sm hapus-terpilih" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("pengurus/delete_all")?>')"><i class="fa fa-trash-o"></i> Hapus Data Terpilih</a>
+                    <a href="#confirm-delete" class="btn btn-box btn-block btn-sm hapus-terpilih" title="Hapus Data" onclick="deleteAllBox('mainform', '<?=site_url("pengurus/delete_all")?>')"><i class="fa fa-trash-o"></i> Hapus Data Terpilih</a>
                 </li>
 				
 			</ul>
 		</div>
 		<?php endif; ?>
-		<a href="<?= site_url("pengurus/dialog/cetak")?>" class="btn btn-social btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="fa fa-print "></i> Cetak</a>
-		<a href="<?= site_url("pengurus/dialog/unduh")?>" title="Unduh Data" class="btn btn-social btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="fa fa-download"></i> Unduh</a>
+		<a href="<?= site_url("pengurus/dialog/cetak")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="fa fa-print "></i> Cetak</a>
+		<a href="<?= site_url("pengurus/dialog/unduh")?>" title="Unduh Data" class="btn btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="fa fa-download"></i> Unduh</a>
 		<?php if ($this->CI->cek_hak_akses('h')): ?>
         <div class="btn-group btn-group-vertical">
-			<a class="btn btn-social btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-toggle="dropdown"><i class='fa fa-arrow-circle-down'></i> Bagan Organisasi</a>
+			<a class="btn btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-toggle="dropdown"><i class='fa fa-arrow-circle-down'></i> Bagan Organisasi</a>
 			<ul class="dropdown-menu" role="menu">
 				<li>
-					<a href="<?= site_url("pengurus/bagan")?>" title="Bagan Tanpa BPD" class="btn btn-social btn-box btn-block btn-sm" ><i class="fa fa-sitemap"></i> Bagan Tanpa BPD</a>
+					<a href="<?= site_url("pengurus/bagan")?>" title="Bagan Tanpa BPD" class="btn btn-box btn-block btn-sm" ><i class="fa fa-sitemap"></i> Bagan Tanpa BPD</a>
 				</li>
 				<li>
-					<a href="<?= site_url("pengurus/bagan/bpd")?>" title="Bagan Dengan BPD" class="btn btn-social btn-box btn-block btn-sm" ><i class="fa fa-sitemap"></i> Bagan Dengan BPD</a>
+					<a href="<?= site_url("pengurus/bagan/bpd")?>" title="Bagan Dengan BPD" class="btn btn-box btn-block btn-sm" ><i class="fa fa-sitemap"></i> Bagan Dengan BPD</a>
 				</li>
 				<li>
-					<a href="<?= site_url("pengurus/atur_bagan_layout")?>" title="Atur Ukuran Bagan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Atur Ukuran Bagan" class="btn btn-social btn-box btn-block btn-sm" ><i class="fa fa-cogs"></i> Atur Ukuran Bagan</a>
+					<a href="<?= site_url("pengurus/atur_bagan_layout")?>" title="Atur Ukuran Bagan" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Atur Ukuran Bagan" class="btn btn-box btn-block btn-sm" ><i class="fa fa-cogs"></i> Atur Ukuran Bagan</a>
 				</li>
 			</ul>
 		</div>

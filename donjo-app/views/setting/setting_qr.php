@@ -8,6 +8,7 @@
 	}
 </style>
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>QR Code</h1>
@@ -16,7 +17,7 @@
 			<li class="active">QR Code</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<div class="row">
 			<div class="col-md-6">
 				<div class="box box-info">
@@ -78,8 +79,8 @@
 							</div>
 						</div>
 						<div class="card-footer">
-							<button type="reset" class="btn btn-social btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
-							<button id="generate" class="btn btn-social btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
+							<button type="reset" class="btn btn-box btn-danger btn-sm"><i class="fa fa-times"></i> Batal</button>
+							<button id="generate" class="btn btn-box btn-info btn-sm pull-right"><i class="fa fa-check"></i> Simpan</button>
 						</div>
 					</form>
 				</div>
@@ -93,10 +94,10 @@
 						<div class="form-group">
 							<label for="pathqr"></label>
 							<center>
-								<a href="<?= site_url("setting/qrcode/clear"); ?>" class="btn btn-social btn-box btn-success btn-sm" title="Baru"><i class="fa fa-plus"></i> Baru</a>
-								<a href="<?= site_url("setting/qrcode/hapus/$qrcode[namaqr1]"); ?>" class="btn btn-social btn-box btn-danger btn-sm <?= jecho($qrcode['pathqr'], '', 'disabled'); ?>" title="Buat Baru"><i class="fa fa-trash"></i> Hapus</a>
-								<a href="<?= site_url("setting/qrcode/unduh/$qrcode[namaqr1]"); ?>" class="btn btn-social btn-box bg-navy btn-sm <?= jecho($qrcode['pathqr'], '', 'disabled'); ?>" title="Unduh"><i class="fa fa-download"></i> Unduh</a>
-								<a href="#" class="btn btn-social btn-box bg-purple btn-sm" title="Atur" data-toggle="modal" data-target="#myModal"><i class="fa fa-file"></i> Atur</a>
+								<a href="<?= site_url("setting/qrcode/clear"); ?>" class="btn btn-box btn-success btn-sm" title="Baru"><i class="fa fa-plus"></i> Baru</a>
+								<a href="<?= site_url("setting/qrcode/hapus/$qrcode[namaqr1]"); ?>" class="btn btn-box btn-danger btn-sm <?= jecho($qrcode['pathqr'], '', 'disabled'); ?>" title="Buat Baru"><i class="fa fa-trash"></i> Hapus</a>
+								<a href="<?= site_url("setting/qrcode/unduh/$qrcode[namaqr1]"); ?>" class="btn btn-box bg-navy btn-sm <?= jecho($qrcode['pathqr'], '', 'disabled'); ?>" title="Unduh"><i class="fa fa-download"></i> Unduh</a>
+								<a href="#" class="btn btn-box bg-purple btn-sm" title="Atur" data-toggle="modal" data-target="#myModal"><i class="fa fa-file"></i> Atur</a>
 								<?php if ($qrcode['namaqr1']) : ?>
 									<br><br>
 									<img class="img-thumbnail" src="<?= $qrcode['pathqr']; ?>">

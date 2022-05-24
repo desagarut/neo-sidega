@@ -80,9 +80,9 @@
         </div>
         <div class='modal-body btn-info'> </div>
         <div class='modal-footer'>
-          <button type="button" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+          <button type="button" class="btn btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
           <a class='btn-ok'>
-          <button type="button" class="btn btn-social btn-box btn-info btn-sm" id="ok-delete"><i class='fa fa-check'></i> Simpan</button>
+          <button type="button" class="btn btn-box btn-info btn-sm" id="ok-delete"><i class='fa fa-check'></i> Simpan</button>
           </a> </div>
       </div>
     </div>

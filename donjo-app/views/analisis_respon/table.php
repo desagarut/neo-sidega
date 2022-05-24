@@ -37,6 +37,7 @@
 ?>
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 
 	<div class="page-header">
@@ -57,7 +58,7 @@
 
 	</div>
 
-	<section class="content" id="maincontent">
+	<div class="card">
 
 		<div class="row">
 
@@ -73,13 +74,13 @@
 
 				<div class="box-header with-border">
 
-						<a href="<?= site_url("analisis_respon/data_ajax")?>" class="btn btn-social btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh data respon" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Respon">
+						<a href="<?= site_url("analisis_respon/data_ajax")?>" class="btn btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh data respon" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Respon">
 
 							<i class="fa fa-download"></i>Unduh
 
 						</a>
 
-						<a href="<?= site_url("analisis_respon/import")?>" class="btn btn-social btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Impor Data Respon" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Impor Data Respon">
+						<a href="<?= site_url("analisis_respon/import")?>" class="btn btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Impor Data Respon" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Impor Data Respon">
 
 							<i class="fa fa-upload"></i>Impor
 
@@ -87,7 +88,7 @@
 
 						<?php if ($analisis_master['format_impor'] == 1): ?>
 
-							<a href="<?= site_url("analisis_respon/form_impor_bdt")?>" class="btn btn-social btn-box bg-olive btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Impor Data BDT 2015" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Impor Data BDT 2015">
+							<a href="<?= site_url("analisis_respon/form_impor_bdt")?>" class="btn btn-box bg-olive btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Impor Data BDT 2015" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Impor Data BDT 2015">
 
 								<i class="fa fa-upload"></i>Impor BDT 2015
 
@@ -95,7 +96,7 @@
 
 						<?php endif; ?>
 
-						<a href="<?= site_url()?>analisis_respon/leave" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke <?= $analisis_master['nama']?></a>
+						<a href="<?= site_url()?>analisis_respon/leave" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke <?= $analisis_master['nama']?></a>
 
 					</div>
 

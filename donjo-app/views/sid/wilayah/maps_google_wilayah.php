@@ -190,6 +190,7 @@
 
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
   <div class="pcoded-content">
     <div class="page-header">
       <div class="page-block">
@@ -242,7 +243,7 @@
                   <a href="<?= $tautan['link'] ?>" class="btn btn-info" title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>
                   <a href="#" class="btn btn-warning" download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
                   <!--<button type="reset" class="btn btn-danger" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>-->
-                  <!--<button type="submit" class="btn btn-social btn-box btn-info btn-sm" data-dismiss="modal" id="simpan_wilayah"><i class='fa fa-check'></i> Simpan</button>-->
+                  <!--<button type="submit" class="btn btn-box btn-info btn-sm" data-dismiss="modal" id="simpan_wilayah"><i class='fa fa-check'></i> Simpan</button>-->
                   <button type="submit" class="btn btn-success"><i class='fa fa-check'></i> Simpan</button>
                 <?php endif; ?>
               </div>

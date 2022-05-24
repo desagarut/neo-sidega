@@ -54,6 +54,7 @@
 	</script>
 <?php endif; ?>
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Manajemen <?= $sub_modul ? 'Submodul' : 'Modul';?></h1>
@@ -69,7 +70,7 @@
 		</ol>
 	</div>
 	<?php if(!$sub_modul): ?>
-		<section class="content" id="maincontent">
+		<div class="card">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="box box-info">
@@ -144,8 +145,8 @@
 							</div>
 							<div class='box-footer'>
 								<div class='col-xs-12'>
-									<button type='reset' class='btn btn-social btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
-									<button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
+									<button type='reset' class='btn btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>
+									<button type='submit' class='btn btn-box btn-info btn-sm pull-right'><i class='fa fa-check'></i> Simpan</button>
 								</div>
 							</div>
 						</form>
@@ -154,7 +155,7 @@
 			</div>
 		</div>
 	<?php endif; ?>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="box box-info">
@@ -163,7 +164,7 @@
 							<h4>Pengaturan Modul</h4>
 							<div class="row">
 								<div class="col-xs-12 text-center">
-									<a href="<?= site_url("modul/default_server")?>" class="btn btn-social btn-box btn-success btn-sm" <?php $this->setting->penggunaan_server or print("disabled='disabled'")?>><i class="fa fa-refresh"></i>Kembalikan ke default penggunaan server</a>
+									<a href="<?= site_url("modul/default_server")?>" class="btn btn-box btn-success btn-sm" <?php $this->setting->penggunaan_server or print("disabled='disabled'")?>><i class="fa fa-refresh"></i>Kembalikan ke default penggunaan server</a>
 								</div>
 							</div>
 							<div class="row">
@@ -195,7 +196,7 @@
 							</div>
 					<?php else: ?>
 						<div class="box-header with-border">
-							<a href="<?= site_url('modul/clear')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Modul</a>
+							<a href="<?= site_url('modul/clear')?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Modul</a>
 						</div>
 						<div class="box-header with-border">
 						 <strong> Modul Utama : <?=$sub_modul['modul']?></strong>

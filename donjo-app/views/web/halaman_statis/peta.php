@@ -193,6 +193,7 @@
 })();
 </script>
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
   <form id="mainform_map" name="mainform_map" action="" method="post">
     <div class="row">

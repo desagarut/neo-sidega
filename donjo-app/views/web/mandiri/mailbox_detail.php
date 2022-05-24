@@ -1,6 +1,7 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
   <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
     <!-- Content Header (Page header) -->
     <div class="page-header">
@@ -29,7 +30,7 @@
                                 <div class="col-md-12">
                                     <div class="box no-border">
                                         <div class="card-header">
-                                            <a href="<?= site_url("mandiri_web/mandiri/1/3/$kat")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Artikel">
+                                            <a href="<?= site_url("mandiri_web/mandiri/1/3/$kat")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Artikel">
                                                 <i class="fa fa-arrow-circle-left "></i>Kembali ke <?= $tipe_mailbox ?>
                                             </a>
                                         </div>
@@ -63,7 +64,7 @@
                                         </div>
                                         <div class='box-footer'>
                                             <div class='col-xs-12'>
-                                                <button type="submit" class='btn btn-social btn-box btn-info btn-sm pull-right confirm'><i class='fa fa-reply'></i> Balas Pesan</button>
+                                                <button type="submit" class='btn btn-box btn-info btn-sm pull-right confirm'><i class='fa fa-reply'></i> Balas Pesan</button>
                                             </div>
                                         </div>
                 

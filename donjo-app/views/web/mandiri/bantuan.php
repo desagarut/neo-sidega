@@ -26,6 +26,7 @@
 </script>
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<section class='content' id="maincontent">
         <div class='row'>

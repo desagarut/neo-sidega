@@ -11,6 +11,7 @@
 </script>
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
   <div class="page-header">
     <h1>Permohonan Surat</h1>
@@ -19,7 +20,7 @@
       <li class="active">Daftar Permohonan Surat</li>
     </ol>
   </div>
-  <section class="content" id="maincontent">
+  <div class="card">
   <form id="mainform" name="mainform" action="" method="post">
   <div class="row">
   <div class="col-md-12">
@@ -153,7 +154,7 @@
         <?=$_SESSION['pin'];?>
       </div>
       <div class='modal-footer'>
-        <button type="button" class="btn btn-social btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+        <button type="button" class="btn btn-box btn-warning btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
       </div>
     </div>
   </div>

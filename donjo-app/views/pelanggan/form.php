@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="<?= base_url()?>assets/css/vuetify.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 <div class="page-header">
 	<h1>Info Layanan Pelanggan</h1>

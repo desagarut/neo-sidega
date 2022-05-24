@@ -1,71 +1,81 @@
-<div class="pcoded-main-container">
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-	<div class="page-header">
-		<h1>Daftar Pembangunan</h1>
-		<ol class="breadcrumb">
-			<li><a href="<?= site_url('hom_sid') ?>"><i class="fa fa-home"></i> Home</a></li>
-			<li class="active">Daftar Pembangunan</li>
-		</ol>
-	</div>
-	<section class="content" id="maincontent">
-		<form id="mainformexcel" name="mainformexcel"method="post" class="form-horizontal">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="box box-info">
-						<div class="box-header with-border">
-							<a href="<?= site_url('pembangunan/form') ?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Data Baru">
-								<i class="fa fa-plus"></i>Tambah Data
-							</a>
+<div class="pcoded-main-container">
+	<div class="pcoded-content">
+
+		<!-- [ breadcrumb ] start -->
+		<div class="page-header">
+			<div class="page-block">
+				<div class="row class-items-center">
+					<div class="col-md-12">
+						<div class="page-header-title">
+							<h5 class="m-b-10">Pengelolaan Pembangunan <?= ucwords($this->setting->sebutan_desa) ?> <?= $desa["nama_desa"]; ?></h5>
+						</div>
+						<ul class="breadcrumb">
+							<li class="breadcrumb-item"><a href="<?= site_url('beranda') ?>"><i class="feather icon-home"></i></a></li>
+							<li class="breadcrumb-item"><a href="#!">Pembangunan</a></li>
+							<li class="breadcrumb-item"><a href="#!">Daftar Pembangunan</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="card">
+			<form id="mainformexcel" name="mainformexcel" method="post" class="form-horizontal">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card-header">
+							<div class="col-md-12">
+								<div class="row">
+									<a href="<?= site_url('pembangunan/form') ?>" class="btn btn-icon btn-success btn-sm mb-2 mr-2" title="Tambah Data Baru"><i class="feather icon-plus"></i> </a>
+									<div class="col-md-3">
+										<select class="form-control input-sm" id="tahun" name="tahun" style="width:100%;">
+											<option selected value="semua">Semua Tahun</option>
+											<?php foreach ($list_tahun as $list) : ?>
+												<option value="<?= $list->tahun_anggaran ?>"><?= $list->tahun_anggaran ?></option>
+											<?php endforeach; ?>
+										</select>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="card-body">
 							<div class="row">
 								<div class="col-sm-12">
-									<div class="row">
-										<div class="col-sm-12">
-											<div class="row">
-												<div class="col-sm-2">
-												<select class="form-control input-sm select2" id="tahun" name="tahun" style="width:100%;">
-													<option selected value="semua">Semua Tahun</option>
-													<?php foreach ($list_tahun as $list) : ?>
-														<option value="<?= $list->tahun_anggaran ?>"><?= $list->tahun_anggaran ?></option>
-													<?php endforeach; ?>
-												</select>
-												</div>
-											</div>
-											<hr>
-											<div class="table-responsive">
-												<table id="tabel-pembangunan" class="table table-bordered dataTable table-hover">
-													<thead class="bg-gray">
-														<tr>
-															<th class="text-center">No</th>
-															<th width="230px" class="text-center">Aksi</th>
-															<th class="text-center">Nama Kegiatan</th>
-															<th class="text-center">Sumber Dana</th>
-															<th class="text-center">Anggaran</th>
-															<th class="text-center">Persentase</th>
-															<th class="text-center">Volume</th>
-															<th class="text-center">Tahun</th>
-															<th class="text-center">Pelaksana</th>
-															<th class="text-center">Lokasi</th>
-															<th class="text-center">Gambar</th>
-														</tr>
-													</thead>
-													<tbody>
-													</tbody>
-												</table>
-											</div>
-										</div>
+									<div class="table-responsive">
+										<table id="tabel-pembangunan" class="table dataTable table-hover">
+											<thead class="bg-gray">
+												<tr>
+													<th class="text-center">No</th>
+													<th width="230px" class="text-center">Aksi</th>
+													<th class="text-center">Nama Kegiatan</th>
+													<th class="text-center">Sumber Dana</th>
+													<th class="text-center">Anggaran</th>
+													<th class="text-center">Persentase</th>
+													<th class="text-center">Volume</th>
+													<th class="text-center">Tahun</th>
+													<th class="text-center">Pelaksana</th>
+													<th class="text-center">Lokasi</th>
+													<th class="text-center">Gambar</th>
+												</tr>
+											</thead>
+											<tbody>
+											</tbody>
+										</table>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</form>
+			</form>
+		</div>
 	</div>
 </div>
-<?php $this->load->view('global/confirm_delete'); ?>
+
+
 <script>
 	$(document).ready(function() {
 		let tabelPembangunan = $('#tabel-pembangunan').DataTable({
@@ -87,26 +97,31 @@
 					d.tahun = $('#tahun').val();
 				}
 			},
-			'columns': [
-				{
+			'columns': [{
 					'data': null,
 				},
 				{
 					'data': function(data) {
 						let status;
 						if (data.status == 1) {
-							status = `<a href="<?= site_url('pembangunan/lock/') ?>${data.id}" class="btn bg-navy btn-box btn-sm" title="Non Aktifkan Pembangunan"><i class="fa fa-unlock"></i></a>`
+							status = `<a href="<?= site_url('pembangunan/lock/') ?>${data.id}" class="btn btn-icon btn-success btn-sm mb-2 mr-2" title="Non Aktifkan Pembangunan"><i class="feather icon-unlock"></i></a>`
 						} else {
-							status = `<a href="<?= site_url('pembangunan/unlock/') ?>${data.id}" class="btn bg-navy btn-box btn-sm" title="Aktifkan Pembangunan"><i class="fa fa-lock"></i></a>`
+							status = `<a href="<?= site_url('pembangunan/unlock/') ?>${data.id}" class="btn btn-icon btn-secondary btn-sm mb-2 mr-2" title="Aktifkan Pembangunan"><i class="feather icon-lock"></i></a>`
 						}
 
 						return `
-							<a href="<?= site_url('pembangunan/form/'); ?>${data.id}" title="Edit Data"  class="btn bg-orange btn-box btn-sm"><i class="fa fa-edit"></i></a>
-							<a href="<?= site_url('pembangunan/lokasi_maps/'); ?>${data.id}" class="btn bg-olive btn-box btn-sm" title="Lokasi Pembangunan"><i class="fa fa-map"></i></a>
-							<a href="<?= site_url('pembangunan_dokumentasi/show/'); ?>${data.id}" class="btn bg-purple btn-box btn-sm" title="Rincian Dokumentasi Kegiatan"><i class="fa fa-list-ol"></i></a>
+						<div class="btn-group mb-2 mr-2">
+						<a href="<?= site_url('pembangunan/info_pembangunan/'); ?>${data.id}" target="_blank" title="Lihat Pembangunan"><button type="button" class="btn btn-success">Lihat</button></a>
+							<button type="button" class="btn  btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="<?= site_url('pembangunan/form/'); ?>${data.id}">Edit Data</a>
+								<a class="dropdown-item" href="<?= site_url('pembangunan/lokasi_maps/'); ?>${data.id}">Peta lokasi</a>
+								<a class="dropdown-item" href="<?= site_url('pembangunan_dokumentasi/show/'); ?>${data.id}">Tahap Pelaksanaan</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#" data-href="<?= site_url('pembangunan/delete/'); ?>${data.id}" data-toggle="modal" data-target="#confirm-delete"">Hapus</a>
+							</div>
+						</div>
 							${status}
-							<a href="#" data-href="<?= site_url('pembangunan/delete/'); ?>${data.id}" class="btn bg-maroon btn-box btn-sm"  title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
-							<a href="<?= site_url('pembangunan/info_pembangunan/'); ?>${data.id}" target="_blank" class="btn bg-blue btn-box btn-sm" title="Lihat Summary"><i class="fa fa-eye"></i></a>
 							`
 					}
 				},
@@ -118,7 +133,7 @@
 				},
 				{
 					'data': 'anggaran',
-					'render': $.fn.dataTable.render.number( ',', '.', 0, 'Rp ' )
+					'render': $.fn.dataTable.render.number(',', '.', 0, 'Rp ')
 				},
 				{
 					'data': 'max_persentase'
@@ -136,10 +151,10 @@
 					'data': 'alamat'
 				},
 				{
-					'data': function (data) {
+					'data': function(data) {
 						return `<div class="user-panel">
 									<div class="image2">
-										<img src="<?= base_url(LOKASI_GALERI) ?>${data.foto}" class="img-circle" alt="Gambar Dokumentasi">
+										<img src="<?= base_url(LOKASI_GALERI) ?>${data.foto}" class="img-user wid-80 align-top m-r-15" alt="Gambar Dokumentasi">
 									</div>
 								</div>`
 					}
@@ -159,7 +174,7 @@
 			});
 		});
 
-		$('#tahun').on('select2:select', function (e) {
+		$('#tahun').on('select2:select', function(e) {
 			tabelPembangunan.ajax.reload();
 		});
 	});

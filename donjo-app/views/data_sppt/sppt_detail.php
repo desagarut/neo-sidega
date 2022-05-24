@@ -62,7 +62,8 @@ th.horizontal {
 </style>
 
 <div class="pcoded-main-container">
-  <div class="pcoded-content">
+	<div class="pcoded-content">
+ 
     <!-- [ breadcrumb ] start -->
     <div class="page-header">
       <div class="page-block">
@@ -91,7 +92,7 @@ th.horizontal {
 
         <div class="card">
           <div class="card-header"> 
-            <!--<a href="<?=site_url("data_sppt/create_mutasi_sppt/".$sppt['id'])?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Persil">
+            <!--<a href="<?=site_url("data_sppt/create_mutasi_sppt/".$sppt['id'])?>" class="btn btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Persil">
 							<i class="fa fa-plus"></i>Tambah Mutasi SPPT
 						</a>--> 
             <a href="<?=site_url('data_sppt')?>" class="btn btn-info mb-2 mr-2" title="Kembali Ke Daftar Daftar SPPT"> Kembali</a> 

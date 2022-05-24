@@ -13,13 +13,13 @@
 																			<tr>
 																				<td class="col-sm-10"><b>Backup Seluruh Database SID (.sql)</b></td>
 																				<td class="col-sm-2">
-																					<a href="<?= site_url("database/exec_backup")?>" class="btn btn-social btn-box btn-block btn-info btn-sm"><i class="fa fa-download"></i> Unduh Database</a>
+																					<a href="<?= site_url("database/exec_backup")?>" class="btn btn-box btn-block btn-info btn-sm"><i class="fa fa-download"></i> Unduh Database</a>
 																				</td>
 																			</tr>
 																			<tr>
 																				<td class="col-sm-10"><b>Backup Seluruh Folder Desa SID (.zip)</b> </td>
 																				<td class="col-sm-2">
-																					<a href="<?= site_url("database/desa_backup"); ?>" class="btn btn-social btn-box btn-block btn-info btn-sm"><i class="fa fa-download"></i> Unduh Folder Desa</a>
+																					<a href="<?= site_url("database/desa_backup"); ?>" class="btn btn-box btn-block btn-info btn-sm"><i class="fa fa-download"></i> Unduh Folder Desa</a>
 																				</td>
 																			</tr>
 																		</tbody>

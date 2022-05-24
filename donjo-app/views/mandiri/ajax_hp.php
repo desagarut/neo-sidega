@@ -26,7 +26,7 @@
 		</div>
 	</div>
 	<div class="modal-footer">
-		<button type="reset" class="btn btn-social btn-box btn-danger btn-sm pull-left"><i class='fa fa-times'></i> Batal</button>
-		<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="ok"><i class='fa fa-check'></i> Simpan</button>
+		<button type="reset" class="btn btn-box btn-danger btn-sm pull-left"><i class='fa fa-times'></i> Batal</button>
+		<button type="submit" class="btn btn-box btn-info btn-sm" id="ok"><i class='fa fa-check'></i> Simpan</button>
 	</div>
 </form>

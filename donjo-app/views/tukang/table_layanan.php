@@ -11,6 +11,7 @@
 </script>
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
   <div class="page-header">
     <h1>Detail Layanan Tukang</h1>
@@ -23,12 +24,12 @@
     </ol>
   </div>
   
-  <section class="content" id="maincontent">
+  <div class="card">
   <form id="mainform" name="mainform" action="" method="post">
       <div class="row">
           <div class="col-md-12">
               <div class="box box-warning">
-                <div class="box-header with-border"> <a href="<?= site_url("tukang")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Kembali Ke Daftar Album"> <i class="fa fa-arrow-circle-left "></i>Kembali </a> <a href="<?= site_url("tukang/form_layanan/$gallery")?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Layanan"> <i class="fa fa-plus"></i> Tambah Layanan </a> </div>
+                <div class="box-header with-border"> <a href="<?= site_url("tukang")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Kembali Ke Daftar Album"> <i class="fa fa-arrow-circle-left "></i>Kembali </a> <a href="<?= site_url("tukang/form_layanan/$gallery")?>" class="btn btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Layanan"> <i class="fa fa-plus"></i> Tambah Layanan </a> </div>
               </div>
               
               <div class="row">
@@ -193,9 +194,9 @@
                           <option value="2" <?php if ($filter==2): ?>selected<?php endif ?>>Tidak Aktif</option>
                         </select>
                         <?php if ($this->CI->cek_hak_akses('h')): ?>
-                        <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("tukang/delete_all_layanan/$gallery")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+                        <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("tukang/delete_all_layanan/$gallery")?>')" class="btn btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
                         <?php endif; ?>
-<a href="<?= site_url("tukang/form_layanan/$gallery")?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Layanan"> <i class="fa fa-plus"></i> Tambah Layanan </a>
+<a href="<?= site_url("tukang/form_layanan/$gallery")?>" class="btn btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Layanan"> <i class="fa fa-plus"></i> Tambah Layanan </a>
                       </div>
                       <div class="col-sm-6">
                         <div class="box-tools">

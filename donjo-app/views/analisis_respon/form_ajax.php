@@ -126,7 +126,7 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="submit" class="btn btn-social btn-box btn-info btn-sm" id="kirim"><i class='fa fa-check'></i> Simpan</button>
+							<button type="submit" class="btn btn-box btn-info btn-sm" id="kirim"><i class='fa fa-check'></i> Simpan</button>
 						</div>
 					</div>
 				</div>

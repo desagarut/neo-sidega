@@ -1,4 +1,5 @@
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<section class='content-header'>
 		<h1>Tentang SiDeGa</h1>

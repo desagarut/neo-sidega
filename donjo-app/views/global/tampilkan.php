@@ -15,7 +15,7 @@ SIDEGA
 	</div>
 	<div class="modal-footer">
 		<div class="text-center">
-			<a href="<?= $link_unduh; ?>" class="btn btn-flat bg-navy btn-sm"><i class="fa fa-download"></i> Unduh Dokumen</a>
+			<a href="<?= $link_unduh; ?>" class="btnbg-navy btn-sm"><i class="fa fa-download"></i> Unduh Dokumen</a>
 		</div>
 	</div>
 <?php else: ?>

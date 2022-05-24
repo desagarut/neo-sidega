@@ -1,5 +1,6 @@
 <?php ?>
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Manual Input Tagihan SPPT PBB</h1>
@@ -8,7 +9,7 @@
 			<li class="active">Input Tagihan SPPT PBB</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<div class="row">
             <div class="col-md-3">
                 <?php $this->load->view('data_sppt/menu.php')?>
@@ -136,8 +137,8 @@
                             </div>
             
                             <div class="modal-footer">
-                                <button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
-                                <button class="btn btn-social btn-box btn-info btn-sm" id="btn_simpan"><i class='fa fa-check'></i>Simpan</button>
+                                <button class="btn btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
+                                <button class="btn btn-box btn-info btn-sm" id="btn_simpan"><i class='fa fa-check'></i>Simpan</button>
                             </div>
                         </form>
                     </div>
@@ -234,8 +235,8 @@
 				</div>
 
 				<div class="modal-footer">
-					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
-					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_update"><i class='fa fa-check'></i>Simpan</button>
+					<button class="btn btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
+					<button class="btn btn-box btn-info btn-sm" id="btn_update"><i class='fa fa-check'></i>Simpan</button>
 				</div>
 			</form>
 		</div>
@@ -262,8 +263,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
-					<button class="btn btn-social btn-box btn-info btn-sm" id="btn_salin1"><i class='fa fa-check'></i>Salin</button>
+					<button class="btn btn-box btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-sign-out'></i> Tutup</button>
+					<button class="btn btn-box btn-info btn-sm" id="btn_salin1"><i class='fa fa-check'></i>Salin</button>
 				</div>
 			</form>
 		</div>

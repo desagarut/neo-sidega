@@ -31,9 +31,9 @@
 				<div class="modal-body">
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-social btn-flat btn-danger btn-sm" data-dismiss="modal"><i class="fa fa-sign-out"></i> Tutup</button>
+					<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><i class="fa fa-sign-out"></i> Tutup</button>
 					<a class="btn-ok">
-						<button type="button" class="btn btn-social btn-flat btn-info btn-sm" id="ok-delete"><i class="fa fa-check"></i> Simpan</button>
+						<button type="button" class="btn btn-info btn-sm" id="ok-delete"><i class="fa fa-check"></i> Simpan</button>
 					</a>
 				</div>
 			</div>

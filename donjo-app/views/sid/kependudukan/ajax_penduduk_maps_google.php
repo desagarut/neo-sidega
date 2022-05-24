@@ -76,8 +76,8 @@ function initMap() {
 		</div>
 	<div class="modal-footer">
         <div class='col-xs-12'>
-            <button type="reset" class="btn btn-social btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
-            <button type="submit" class="btn btn-social btn-box btn-success btn-sm"><i class='fa fa-check'></i> Simpan</button>
+            <button type="reset" class="btn btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
+            <button type="submit" class="btn btn-box btn-success btn-sm"><i class='fa fa-check'></i> Simpan</button>
 		</div>
     </div>-->
 </form>

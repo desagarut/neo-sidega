@@ -1,6 +1,7 @@
 <?php ?>
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
   <div class="page-header">
     <h1>Pengelolaan SPPT
@@ -12,7 +13,7 @@
       <li class="active">Laporan</li>
     </ol>
   </div>
-  <section class="content" id="maincontent">
+  <div class="card">
   <div class="row">
     <div class="col-md-3">
       <?php $this->load->view('data_sppt/menu.php')?>

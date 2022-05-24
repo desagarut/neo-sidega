@@ -1,7 +1,8 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <div class="pcoded-main-container">
-  <div class="pcoded-content">
+	<div class="pcoded-content">
+ 
     <!-- [ breadcrumb ] start -->
     <div class="page-header">
       <div class="page-block">
@@ -84,11 +85,11 @@
                         <!--<div class="btn-group">
                           <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" title="Detail Info SPPT">Detail</button>
                           <ul class="dropdown-menu" role="menu">
-                            <li><a href="<?= site_url("data_sppt/sppt_detail/" . $item["id_sppt"]) ?>" class="btn btn-social btn-sm" title="Rincian"><i class="fa fa-eye"></i> Detail</a></li>
-                            <li><a href="<?= site_url("data_sppt/tagihan_tambah/edit/" . $item["id_sppt"]) ?>" class="btn btn-social btn-sm" title="Buat Tagihan Pajak" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Buat Tagihan Pajak"><i class="fa fa-dollar"></i> Buat Tagihan</a> </li>
-                            <li><a href="<?= site_url("data_sppt/ajax_lokasi_maps/" . $item["id_sppt"]) ?>" class="btn btn-social btn-sm" title="Lokasi <?= $data['nama'] ?>"><i class="fa fa-map"></i>Peta</a></li>
-                            <li><a href="<?= site_url("data_sppt/sppt_form/edit/" . $item["id_sppt"]) ?>" class="btn btn-social btn-sm" title="Ubah Data"><i class="fa fa-edit"></i> Ubah</a></li>
-                            <li><a href="#" data-href="<?= site_url("data_sppt/hapus/" . $item["id_sppt"]) ?>" class="btn btn-social btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i> Hapus</a></li>
+                            <li><a href="<?= site_url("data_sppt/sppt_detail/" . $item["id_sppt"]) ?>" class="btn btn-sm" title="Rincian"><i class="fa fa-eye"></i> Detail</a></li>
+                            <li><a href="<?= site_url("data_sppt/tagihan_tambah/edit/" . $item["id_sppt"]) ?>" class="btn btn-sm" title="Buat Tagihan Pajak" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Buat Tagihan Pajak"><i class="fa fa-dollar"></i> Buat Tagihan</a> </li>
+                            <li><a href="<?= site_url("data_sppt/ajax_lokasi_maps/" . $item["id_sppt"]) ?>" class="btn btn-sm" title="Lokasi <?= $data['nama'] ?>"><i class="fa fa-map"></i>Peta</a></li>
+                            <li><a href="<?= site_url("data_sppt/sppt_form/edit/" . $item["id_sppt"]) ?>" class="btn btn-sm" title="Ubah Data"><i class="fa fa-edit"></i> Ubah</a></li>
+                            <li><a href="#" data-href="<?= site_url("data_sppt/hapus/" . $item["id_sppt"]) ?>" class="btn btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i> Hapus</a></li>
                           </ul>
                         </div>-->
                       </td>

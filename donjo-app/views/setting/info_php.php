@@ -1,4 +1,5 @@
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Info Sistem</h1>
@@ -7,7 +8,7 @@
 			<li class="active">Info Sistem</li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<div class="row" >
 			<div class="col-md-12">
 				<div class="box box-primary">

@@ -28,7 +28,7 @@
 <div class="col-md-9">
 	<div class='box box-primary'>
 		<div class="box-header with-border">
-			<a href="<?=site_url('penduduk/clear')?>" class="btn btn-social btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Data Penduduk"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Penduduk</a>
+			<a href="<?=site_url('penduduk/clear')?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Data Penduduk"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Penduduk</a>
 		</div>
 		<div class='box-body'>
       <?php $this->load->view('sid/kependudukan/penduduk_form_isian_bersama'); ?>
@@ -37,8 +37,8 @@
       <div class='box-footer'>
 
         <div class='col-xs-12'>
-          <button type='reset' class='btn btn-social btn-box btn-danger btn-sm ajax' ><i class='fa fa-times'></i> Batal</button>
-          <button type='submit' class='btn btn-social btn-box btn-info btn-sm pull-right ajax'><i class='fa fa-check'></i> Simpan</button>
+          <button type='reset' class='btn btn-box btn-danger btn-sm ajax' ><i class='fa fa-times'></i> Batal</button>
+          <button type='submit' class='btn btn-box btn-info btn-sm pull-right ajax'><i class='fa fa-check'></i> Simpan</button>
         </div>
       </div>
     <?php endif; ?>

@@ -11,6 +11,7 @@
 </script>
 
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
   <div class="page-header">
     <h1>Detail UMKM</h1>
@@ -23,16 +24,16 @@
     </ol>
   </div>
 
-  <section class="content" id="maincontent">
+  <div class="card">
   <form id="mainform" name="mainform" action="" method="post">
       <div class="row">
           <div class="col-md-12">
               <div class="box box-warning">
-                <div class="box-header with-border"> <a href="<?= site_url("toko_warga/form_produk/$gallery")?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Produk"> <i class="fa fa-plus"></i> Tambah Produk </a>
+                <div class="box-header with-border"> <a href="<?= site_url("toko_warga/form_produk/$gallery")?>" class="btn btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Produk"> <i class="fa fa-plus"></i> Tambah Produk </a>
                 <?php if ($this->CI->cek_hak_akses('h')): ?>
-                <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("toko_warga/delete_all_produk/$gallery")?>')" class="btn btn-social btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+                <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("toko_warga/delete_all_produk/$gallery")?>')" class="btn btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
                 <?php endif; ?>
-                <a href="<?= site_url("toko_warga")?>" class="btn btn-social btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Kembali Ke Daftar Album"> <i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar Toko </a> </div>
+                <a href="<?= site_url("toko_warga")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Kembali Ke Daftar Album"> <i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar Toko </a> </div>
               </div>
               <div class="row">
                 <?php $this->load->view($folder_themes .'/toko_warga/peta_view.php') ?>

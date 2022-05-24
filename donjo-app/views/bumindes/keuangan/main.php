@@ -6,6 +6,7 @@
   }
 </style>
 <div class="pcoded-main-container">
+	<div class="pcoded-content">
 
 	<div class="page-header">
 		<h1>Buku Administrasi Keuangan</h1>
@@ -14,7 +15,7 @@
 			<li class="active"><?= $subtitle ?></li>
 		</ol>
 	</div>
-	<section class="content" id="maincontent">
+	<div class="card">
 		<div class="row">
 			<div class="col-md-3">
 				<?php $this->load->view('bumindes/keuangan/side') ?>
