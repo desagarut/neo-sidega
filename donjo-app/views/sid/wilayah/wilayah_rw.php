@@ -1,114 +1,117 @@
 <div class="pcoded-main-container">
 	<div class="pcoded-content">
 
-	<div class="page-header">
-		<h5 class="m-b-10">Wilayah Administratif RW</h5>
-		<ul class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
-			<li><a href="<?= site_url('sid_core')?>"> Daftar <?= ucwords($this->setting->sebutan_dusun)?></a></li>
-			<li class="active">Daftar RW</li>
-		</ul>
-	</div>
-	<div class="card">
-		<div class="row">
-			<div class="col-md-12">
-				
-					<div class="card-header">
-						<?php if ($this->CI->cek_hak_akses('h')): ?>
-                        <a href="<?= site_url("sid_core/form_rw/$id_dusun")?>" class="btn btn-box btn-success btn-sm " title="Tambah Data"><i class="fa fa-plus"></i> Tambah RW</a>
-						<?php endif; ?>
-                        <a href="<?= site_url("sid_core/cetak_rw/$id_dusun")?>" class="btn btn-box bg-purple btn-sm " title="Cetak Data" target="_blank"><i class="fa fa-print "></i> Cetak</a>
-						<a href="<?= site_url("sid_core/excel_rw/$id_dusun")?>" class="btn btn-box bg-navy btn-sm " title="Unduh Data" target="_blank"><i class="fa fa-download"></i> Unduh</a>
-						<a href="<?= site_url("sid_core")?>" class="btn btn-box btn-info btn-sm btn-sm " title="Kembali Ke Daftar RW">
-							<i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar <?= ucwords($this->setting->sebutan_dusun)?>
-						</a>
+		<div class="page-header">
+			<div class="page-block">
+				<div class="row class-items-center">
+					<div class="col-md-12">
+						<div class="page-header-title">
+							<h5 class="m-b-10">Pengelolaan Data <?= ucwords($this->setting->sebutan_dusun) ?></h5>
+						</div>
+						<ul class="breadcrumb">
+							<li class="breadcrumb-item"><a href="<?= site_url('beranda') ?>"><i class="feather icon-home"></i> Home</a></li>
+							<li class="breadcrumb-item"><a href="<?= site_url('sid_core') ?>"> Daftar <?= ucwords($this->setting->sebutan_dusun) ?></a></li>
+							<li class="breadcrumb-item"><a href="#!">Daftar RW</a></li>
+						</ul>
 					</div>
-					<div class="card-header">
-						<strong><?= ucwords($this->setting->sebutan_dusun)?> <?= $dusun?></strong>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="row">
+				<div class="col-md-12">
+
+					<div class="card-header text-center">
+						<a href="<?= site_url("sid_core") ?>" class="btn btn-box btn-info mr-2 md-2" title="Kembali Ke Daftar RW"><i class="feather icon-arrow-left "></i>Kembali<a>
+								<?php if ($this->CI->cek_hak_akses('h')) : ?>
+									<a href="<?= site_url("sid_core/form_rw/$id_dusun") ?>" class="btn btn-icon btn-success btn-sm mr-2 md-2" title="Tambah Data"><i class="feather icon-plus"></i></a>
+								<?php endif; ?>
+								<a href="<?= site_url("sid_core/cetak_rw/$id_dusun") ?>" class="btn btn-icon btn-secondary btn-sm mr-2 md-2" title="Cetak Data" target="_blank"><i class="feather icon-printer "></i></a>
+								<a href="<?= site_url("sid_core/excel_rw/$id_dusun") ?>" class="btn btn-icon btn-secondary btn-sm mr-2 md-2" title="Unduh Data" target="_blank"><i class="feather icon-download-cloud"></i></a>
 					</div>
+
 					<div class="card-body">
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-									<form id="mainform" name="mainform" action="" method="post">
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="table-responsive">
-													<table class="table table-bordered table-striped dataTable table-hover" >
-														<thead class="bg-gray disabled color-palette">
-															<tr >
-																<th class="padat">No</th>
-																<th class="padat">Aksi</th>
-																<th>RW</th>
-																<th>Ketua RW</th>
-																<th>NIK Ketua RW</th>
-																<th>RT</th>
-																<th>KK</th>
-																<th>L+P</th>
-																<th>L</th>
-																<th>P</th>
-															</tr>
-														</thead>
-														<tbody>
-															<?php foreach ($main as $data): ?>
-																<tr>
-																	<td><?= $data['no']?></td>
-																	<td nowrap>
-																		<a href="<?= site_url("sid_core/sub_rt/$id_dusun/$data[id]")?>" class="btn bg-purple btn-box btn-sm" title="Rincian Sub Wilayah RW"><i class="fa fa-search"></i> RT</a>
-																		<?php if ($this->CI->cek_hak_akses('u')): ?>
-																		<?php if ($data['rw']!="-"): ?>
-																			<a href="<?= site_url("sid_core/form_rw/$id_dusun/$data[id]")?>" class="btn bg-orange btn-box btn-sm" title="Ubah"><i class="fa fa-edit"></i></a>
-																		<?php endif; ?>
-																		<?php if ($data['rw']!="-"): ?>
-																			<a href="#" data-href="<?= site_url("sid_core/delete/rw/$data[id]")?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
-																		<?php endif; ?>
-                                                                        <?php endif; ?>
-																		<?php if ($data['rw']!="-"): ?>
-                                                                    <a href="<?= site_url("sid_core/ajax_kantor_rw_google_maps/$id_dusun/$data[id]")?>" class="btn btn-info btn-box btn-sm" title="Lokasi Kantor"><i class="fa fa-map-marker"></i></a>
-                                                                    <a href="<?= site_url("sid_core/ajax_wilayah_rw_google_maps/$id_dusun/$data[id]")?>" class="btn btn-primary btn-box btn-sm" title="Peta Google"><i class="fa fa-google"></i></a>
-                                                                    <a href="<?= site_url("sid_core/ajax_wilayah_rw_openstreet_maps/$id_dusun/$data[id]")?>" class="btn btn-info btn-box btn-sm" title="Peta Openstreet"><i class="fa fa-map-o"></i></a>
-                                                                        
-																		<?php endif; ?>
-																	</td>
-																	<td><?= $data['rw']?></td>
-																	<?php if ($data['rw']=="-"): ?>
-																		<td colspan="2">
-																			Pergunakan RW ini apabila RT berada langsung di bawah <?= ucwords($this->setting->sebutan_dusun)?>, yaitu tidak ada RW
-																		</td>
-																	<?php else: ?>
-																		<td nowrap><strong><?= $data['nama_ketua']?></strong></td>
-																		<td><?= $data['nik_ketua']?></td>
+						<form id="mainform" name="mainform" action="" method="post">
+							<h5>Daftar RW Wilayah <?= ucwords($this->setting->sebutan_dusun) ?> <?= $dusun ?></h5>
+							<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+								<div class="table-responsive">
+									<table class="table table-hover">
+										<tr>
+											<th class="padat">No</th>
+											<th class="padat">Aksi</th>
+											<th>RW</th>
+											<th>Ketua RW</th>
+											<th>NIK Ketua RW</th>
+											<th>RT</th>
+											<th>KK</th>
+											<th>L+P</th>
+											<th>L</th>
+											<th>P</th>
+										</tr>
+										</thead>
+										<tbody>
+											<?php foreach ($main as $data) : ?>
+												<tr>
+													<td><?= $data['no'] ?></td>
+													<td>
+														<div class="btn-group mb-2 mr-2">
+															<a href="<?= site_url("sid_core/sub_rt/$id_dusun/$data[id]") ?>"><button type="button" title="Rincian Sub Wilayah" class="btn btn-sm btn-success">Lihat RT</button></a>
+															<button type="button" class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
+															<div class="dropdown-menu">
+																<?php if ($this->CI->cek_hak_akses('u')) : ?>
+																	<?php if ($data['rw'] != "-") : ?>
+																		<a class="dropdown-item" href="<?= site_url("sid_core/form_rw/$id_dusun/$data[id]") ?>">Edit RW</a>
 																	<?php endif; ?>
-																	<td><a href="<?= site_url("sid_core/sub_rt/$id_dusun/$data[id]")?>" title="Rincian Sub Wilayah"><?= $data['jumlah_rt']?></a></td>
-																	<td><?= $data['jumlah_kk']?></td>
-																	<td><?= $data['jumlah_warga']?></td>
-																	<td><?= $data['jumlah_warga_l']?></td>
-																	<td><?= $data['jumlah_warga_p']?></td>
-																</tr>
-																<?php endforeach; ?>
-															</tbody>
-														<tfoot>
-															<tr>
-																<th colspan="5"><label>TOTAL</label></th>
-																<th><?= $total['jmlrt']?></th>
-																<th><?= $total['jmlkk']?></th>
-																<th><?= $total['jmlwarga']?></th>
-																<th><?= $total['jmlwargal']?></th>
-																<th><?= $total['jmlwargap']?></th>
-															</tr>
-														</tfoot>
-													</table>
-												</div>
-											</div>
-										</div>
-									</form>
+																	<a class="dropdown-item" href="<?= site_url("sid_core/ajax_kantor_dusun_maps_google/$data[id]") ?>" title="Lokasi Kantor">Lokasi Kantor</a>
+																	<a class="dropdown-item" href="<?= site_url("sid_core/ajax_wilayah_dusun_maps_google/$data[id]") ?>" title="Peta Wilayah | Google">Peta Wilayah</a>
+																	<div class="dropdown-divider"></div>
+																	<?php if ($data['rw'] != "-") : ?>
+																		<a class="dropdown-item" href="#!" data-href="<?= site_url("sid_core/delete/rw/$data[id]") ?>" data-toggle="modal" data-target="#confirm-delete" title="Hapus">Hapus</a>
+																	<?php endif; ?>
+																<?php endif; ?>
+																<a class="dropdown-item" href="<?= site_url("sid_core/ajax_kantor_rw_google_maps/$id_dusun/$data[id]") ?>" title="Lokasi Kantor">Lokasi Kantor RW</a>
+																<a class="dropdown-item" href="<?= site_url("sid_core/ajax_wilayah_rw_google_maps/$id_dusun/$data[id]") ?>" title="Peta Google">Wil. RW - Google</a>
+																<a class="dropdown-item" href="<?= site_url("sid_core/ajax_wilayah_rw_openstreet_maps/$id_dusun/$data[id]") ?>" title="Peta Openstreet">Wil. RW - OSM</i></a>
+															</div>
+														</div>
+													</td>
+													<td><?= $data['rw'] ?></td>
+													<?php if ($data['rw'] == "-") : ?>
+														<td colspan="2">
+															Pergunakan RW ini apabila RT berada langsung di bawah <?= ucwords($this->setting->sebutan_dusun) ?>, yaitu tidak ada RW
+														</td>
+													<?php else : ?>
+														<td nowrap><strong><?= $data['nama_ketua'] ?></strong></td>
+														<td><?= $data['nik_ketua'] ?></td>
+													<?php endif; ?>
+													<td><a href="<?= site_url("sid_core/sub_rt/$id_dusun/$data[id]") ?>" title="Rincian Sub Wilayah"><?= $data['jumlah_rt'] ?></a></td>
+													<td><?= $data['jumlah_kk'] ?></td>
+													<td><?= $data['jumlah_warga'] ?></td>
+													<td><?= $data['jumlah_warga_l'] ?></td>
+													<td><?= $data['jumlah_warga_p'] ?></td>
+												</tr>
+											<?php endforeach; ?>
+										</tbody>
+										<tfoot>
+											<tr>
+												<th colspan="5"><label>TOTAL</label></th>
+												<th><?= $total['jmlrt'] ?></th>
+												<th><?= $total['jmlkk'] ?></th>
+												<th><?= $total['jmlwarga'] ?></th>
+												<th><?= $total['jmlwargal'] ?></th>
+												<th><?= $total['jmlwargap'] ?></th>
+											</tr>
+										</tfoot>
+									</table>
 								</div>
 							</div>
-						</div>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<?php $this->load->view('global/confirm_delete');?>
+
+<?php $this->load->view('global/confirm_delete'); ?>

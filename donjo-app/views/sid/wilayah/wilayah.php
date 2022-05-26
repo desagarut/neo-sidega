@@ -39,12 +39,12 @@
 		<div class="card">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="card-header">
+					<div class="card-header text-center">
 						<?php if ($this->CI->cek_hak_akses('h')) : ?>
-							<a href="<?= site_url('sid_core/form') ?>" class="btn btn-success" title="Tambah Data"><i class="fa fa-plus"></i> Tambah Dusun</a>
+							<a href="<?= site_url('sid_core/form') ?>" class="btn btn-icon btn-success mr-2 mb-2" title="Tambah Data"><i class="feather icon-plus"></i></a>
 						<?php endif; ?>
-						<a href="<?= site_url("$this->controller/dialog/cetak") ?>" class="btn btn-primary title=" Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="fa fa-print "></i> Cetak</a>
-						<a href="<?= site_url("$this->controller/dialog/unduh") ?>" title="Unduh Data" class="btn btn-warning" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="fa fa-download"></i> Unduh</a>
+						<a href="<?= site_url("$this->controller/dialog/cetak") ?>" class="btn btn-icon btn-primary mr-2 mb-2" title=" Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="feather icon-printer"></i></a>
+						<a href="<?= site_url("$this->controller/dialog/unduh") ?>" title="Unduh Data" class="btn btn-icon btn-warning mr-2 mb-2" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="feather icon-download-cloud"></i></a>
 						<div class="card-header-right">
 							<div class="btn-group card-option">
 								<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="feather icon-more-horizontal"></i> </button>
@@ -73,8 +73,8 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="table-responsive">
-										<table class="table table-bordered table-striped dataTable table-hover">
-											<thead class="bg-gray disabled color-palette">
+										<table class="table table-hover">
+											<thead>
 												<tr class="text-center">
 													<th class="padat">No</th>
 													<th wlass="padat">Aksi</th>
@@ -104,8 +104,8 @@
 														<td nowrap>
 
 														<div class="btn-group mb-2 mr-2">
-														<a href="<?= site_url("sid_core/sub_rw/$data[id]") ?>"><button type="button" title="Rincian Sub Wilayah" class="btn btn-success">RW</button></a>
-															<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
+														<a href="<?= site_url("sid_core/sub_rw/$data[id]") ?>"><button type="button" title="Rincian Sub Wilayah" class="btn btn-success btn-sm">Lihat RW</button></a>
+															<button type="button" class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
 															<div class="dropdown-menu">
 															<?php if ($this->CI->cek_hak_akses('h')) : ?>
 																<a class="dropdown-item" href="<?= site_url("sid_core/form/$data[id]") ?>">Edit</a>
@@ -170,6 +170,3 @@
 </div>
 </div>
 <?php $this->load->view('global/confirm_delete'); ?>
-<script src="<?= base_url() ?>assets/js/jquery.validate.min.js"></script>
-<script src="<?= base_url() ?>assets/js/validasi.js"></script>
-<script src="<?= base_url() ?>assets/js/localization/messages_id.js"></script>
