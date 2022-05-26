@@ -11,7 +11,7 @@ define("VERSION", '6.0');
 
  */
 
-define('VERSI_DATABASE', '2022010501');
+define('VERSI_DATABASE', '2022050101');
 
 define("LOKASI_LOGO_DESA", 'desa/logo/');
 
