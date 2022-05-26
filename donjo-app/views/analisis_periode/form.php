@@ -35,14 +35,14 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Pengaturan Priode Analisis [ <?= $analisis_master['nama']?> ]</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Pengaturan Priode Analisis [ <?= $analisis_master['nama']?> ]</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('analisis_master')?>"> Master Analisis</a></li>
 			<li><a href="<?= site_url()?>analisis_indikator">Indikator Analisis</a></li>
 			<li><a href="<?= site_url()?>analisis_periode">Pengaturan Priode</a></li>
 			<li class="active">Tambah Priode</li>
-		</ol>
+		</ul>
 	</div>
 	</div>
 	<div class="card">
@@ -52,9 +52,9 @@
 					<?php $this->load->view('analisis_master/left', $data);?>
 				</div>
 				<div class="col-md-8 col-lg-9">
-					<div class="box box-info">
-            <div class="box-header with-border">
-							<a href="<?= site_url()?>analisis_periode" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke Priode Analisis</a>
+					
+            <div class="card-header">
+							<a href="<?= site_url()?>analisis_periode" class="btn btn-box btn-info btn-sm "><i class="fa fa-arrow-circle-left "></i> Kembali Ke Priode Analisis</a>
 						</div>
 						<div class="card-body">
 							<div class="row">

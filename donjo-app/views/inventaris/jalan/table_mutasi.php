@@ -2,11 +2,11 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Daftar Mutasi Inventaris Jalan, Irigasi Dan Jaringan</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Daftar Mutasi Inventaris Jalan, Irigasi Dan Jaringan</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Daftar Mutasi Inventaris Jalan, Irigasi Dan Jaringan</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="mainformexcel" name="mainformexcel" action="" method="post" class="form-horizontal">
@@ -15,7 +15,7 @@
 					<?php $this->load->view('inventaris/menu_kiri.php')?>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
+					
 						<div class="card-body">
 							<div class="row">
 								<div class="col-sm-12">

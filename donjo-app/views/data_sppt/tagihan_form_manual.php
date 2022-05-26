@@ -3,11 +3,11 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Manual Input Tagihan SPPT PBB</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Manual Input Tagihan SPPT PBB</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Input Tagihan SPPT PBB</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
@@ -15,14 +15,14 @@
                 <?php $this->load->view('data_sppt/menu.php')?>
             </div>
 			<div class="col-md-9">
-				<div class="box box-info">
+				
 					<div class="card-header">
                         <h3>Tambah Tagihan SPPT PBB</h3>
 					</div>
                     <!-- MODAL ADD GLOBAL-->
                     <div class="card-body">
                         <form class="form-horizontal">
-                            <div class="card card-header">
+                            <div class="cardheader">
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" >Tahun</label>
                                     <div class="col-sm-8">
@@ -160,7 +160,7 @@
 			</div>
 			<form class="form-horizontal">
 				<div class="modal-body">
-					<div class="box box-info"></div>
+					</div>
 
 					<input type="hidden" id="id2" name="id_edit"/>
 
@@ -254,7 +254,7 @@
 			</div>
 			<form class="form-horizontal">
 				<div class="modal-body">
-					<div class="box box-info"></div>
+					</div>
 					<div class="form-group">
 						<label class="col-sm-3 control-label" >Tahun Anggaran</label>
 						<div class="col-sm-3">

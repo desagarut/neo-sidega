@@ -21,12 +21,12 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Pengelolaan Data SPPT <?=ucwords($this->setting->sebutan_desa)?> <?= $desa["nama_desa"];?></h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Pengelolaan Data SPPT <?=ucwords($this->setting->sebutan_desa)?> <?= $desa["nama_desa"];?></h5>
+		<ul class="breadcrumb">
 			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?=site_url('data_sppt/clear')?>"> Daftar SPPT</a></li>
 			<li class="active">Input/Edit Data SPPT</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
@@ -34,10 +34,10 @@
 				<?php $this->load->view('data_sppt/menu.php')?>
 			</div>
 			<div class="col-md-9">
-				<div class="box box-info">
+				
 					<div class="card-body">
-						<div class="box-header with-border">
-							<a href="<?= site_url('data_sppt/clear_tagih')?>" class="btn btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Objek Pajak"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Objek Pajak</a>
+						<div class="card-header">
+							<a href="<?= site_url('data_sppt/clear_tagih')?>" class="btn btn-box btn-primary btn-sm " title="Kembali Ke Daftar Objek Pajak"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Objek Pajak</a>
 						</div>
 						<div class="row">
 							<div class="col-sm-12">

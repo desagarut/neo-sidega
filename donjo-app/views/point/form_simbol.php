@@ -63,11 +63,11 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Pengaturan Simbol Lokasi</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Pengaturan Simbol Lokasi</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Pengaturan Simbol Lokasi</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
@@ -76,10 +76,10 @@
           <?php $this->load->view('plan/nav.php')?>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
-            <div class="box-header with-border">
-							<a href="#" id="btn_ikon" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-plus"></i>Tambah Simbol Lokasi</a>
-							<a href="<?= site_url("point/salin_simbol_default")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Salin Simbol Default">
+					
+            <div class="card-header">
+							<a href="#" id="btn_ikon" class="btn btn-box btn-success btn-sm "><i class="fa fa-plus"></i>Tambah Simbol Lokasi</a>
+							<a href="<?= site_url("point/salin_simbol_default")?>" class="btn btn-box bg-purple btn-sm "  title="Salin Simbol Default">
 								<i class="fa fa-copy"></i>Salin Simbol Default
             	</a>
 						</div>

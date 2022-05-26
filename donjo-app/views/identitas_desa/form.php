@@ -64,7 +64,7 @@
 
 							<div class="card">
 									<div class="card-header text-right">
-										<a href="<?= site_url('identitas_desa'); ?>" class="btn btn-info visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Data <?= $desa; ?>"><i class='feather mr-2 icon-skip-back'></i> Kembali </a>
+										<a href="<?= site_url('identitas_desa'); ?>" class="btn btn-info " title="Kembali Ke Data <?= $desa; ?>"><i class='feather mr-2 icon-skip-back'></i> Kembali </a>
 										<button type='reset' class='btn btn-danger'><i class='feather mr-2 icon-x'></i> Batal</button>
 										<button type='submit' class='btn btn-success'><i class='feather mr-2 icon-check'></i> Simpan</button>
 

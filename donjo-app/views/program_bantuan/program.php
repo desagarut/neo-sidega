@@ -2,24 +2,24 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Daftar Program Bantuan</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Daftar Program Bantuan</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Daftar Program Bantuan</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
+				
+					<div class="card-header">
 						<?php if ($this->CI->cek_hak_akses('h')): ?>
-                        <a href="<?=site_url('program_bantuan/create')?>" class="btn btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Program Bantuan"><i class="fa fa-plus"></i> Tambah</a>
-						<a href="<?=site_url('program_bantuan/impor')?>" class="btn btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Impor Program Bantuan" data-target="#impor" data-remote="false" data-toggle="modal" data-backdrop="false" data-keyboard="false"><i class="fa fa-upload"></i> Impor</a>
+                        <a href="<?=site_url('program_bantuan/create')?>" class="btn btn-box bg-olive btn-sm " title="Tambah Program Bantuan"><i class="fa fa-plus"></i> Tambah</a>
+						<a href="<?=site_url('program_bantuan/impor')?>" class="btn btn-box bg-navy btn-sm " title="Impor Program Bantuan" data-target="#impor" data-remote="false" data-toggle="modal" data-backdrop="false" data-keyboard="false"><i class="fa fa-upload"></i> Impor</a>
 						<?php endif;?>
-                        <a href="<?=site_url('program_bantuan/panduan')?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Panduan"><i class="fa fa-question-circle"></i> Panduan</a>
+                        <a href="<?=site_url('program_bantuan/panduan')?>" class="btn btn-box btn-info btn-sm " title="Panduan"><i class="fa fa-question-circle"></i> Panduan</a>
 						<?php if ($tampil != 0): ?>
-							<a href="<?=site_url('program_bantuan')?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
+							<a href="<?=site_url('program_bantuan')?>" class="btn btn-box btn-info btn-sm " title="Kembali Ke Daftar Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
 						<?php endif; ?>
 					</div>
 					<div class="card-body">

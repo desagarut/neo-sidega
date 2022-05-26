@@ -161,15 +161,15 @@ $(document).ready(function () {
 
 	<?php if (empty($halaman_statis)): ?>
 		<div class="page-header">
-			<h1>Status IDM <?= ucwords($this->setting->sebutan_desa)?></h1>
-			<ol class="breadcrumb">
+			<h5 class="m-b-10">Status IDM <?= ucwords($this->setting->sebutan_desa)?></h5>
+			<ul class="breadcrumb">
 				<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 				<li class="active">Status IDM <?= ucwords($this->setting->sebutan_desa)?></li>
-			</ol>
+			</ul>
 		</div>
 	<?php endif; ?>
 	<div class="card">
-		<div class="box box-info">
+		
 			<div class="card-body">
 				<div class="row">
 					<div class="col-sm-12">

@@ -14,17 +14,17 @@
 	<div class="pcoded-content">
 
   <div class="page-header">
-    <h1>Permohonan Surat</h1>
-    <ol class="breadcrumb">
+    <h5 class="m-b-10">Permohonan Surat</h5>
+    <ul class="breadcrumb">
       <li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
       <li class="active">Daftar Permohonan Surat</li>
-    </ol>
+    </ul>
   </div>
   <div class="card">
   <form id="mainform" name="mainform" action="" method="post">
   <div class="row">
   <div class="col-md-12">
-  <div class="box box-info">
+  
   <div class="card-body">
   <div class="row">
     <div class="col-sm-3">

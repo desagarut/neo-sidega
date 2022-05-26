@@ -1,7 +1,7 @@
 
 	<div class="card">
-		<div class="box box-info">
-			<div class="box-header with-border">
+		
+			<div class="card-header">
 				<div class="btn-group btn-group-vertical">
 					<a class="btn btn-box btn-success btn-sm" data-toggle="dropdown"><i class='fa fa-plus'></i> Tambah Anggota</a>
 					<ul class="dropdown-menu" role="menu">
@@ -15,8 +15,8 @@
                         <?php endif; ?>
 					</ul>
 				</div>
-				<a href="<?= site_url("keluarga/kartu_keluarga/$p/$o/$kk")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-book"></i> Kartu Keluarga</a>
-				<a href="<?=site_url("keluarga/index/$p/$o")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Keluarga"><i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar Keluarga
+				<a href="<?= site_url("keluarga/kartu_keluarga/$p/$o/$kk")?>" class="btn btn-box bg-purple btn-sm "><i class="fa fa-book"></i> Kartu Keluarga</a>
+				<a href="<?=site_url("keluarga/index/$p/$o")?>" class="btn btn-box btn-info btn-sm btn-sm " title="Kembali Ke Daftar Keluarga"><i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar Keluarga
 				</a>
 			</div>
 			<div class="card-body">

@@ -69,8 +69,8 @@
     })
   })
 </script>-->
-<div class="box box-info">
-	<div class="box-header with-border">
+
+	<div class="card-header">
 		<h3 class="box-title">Menu</h3>
 		<div class="box-tools">
 			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>

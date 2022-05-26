@@ -85,8 +85,8 @@ window.onload = function()
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Lokasi Tempat Tinggal <?= $penduduk['nama']?></h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Lokasi Tempat Tinggal <?= $penduduk['nama']?></h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<?php switch ($edit): ?><?php case '0': ?>
 			<?php case '2': ?>
@@ -97,12 +97,12 @@ window.onload = function()
 				<li><a href=#> Lokasi Tempat Tinggal</a></li>
 				<?php break; ?>
 			<?php endswitch ?>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
+				
 					<form id="validasi1" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 						<div class="card-body">
 							<div class="row">
@@ -147,12 +147,12 @@ window.onload = function()
 								</div>
 								<div class="pull-right">
 								<?php switch ($edit): ?><?php case '0': ?>
-									<a href="<?=site_url("penduduk")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>
-									<a href="<?=site_url("penduduk/ajax_penduduk_maps/$p/$o/$id/2")?>" class="btn btn-box btn-warning btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Ubah"><i class="fa fa-edit"></i> Ubah</a>
+									<a href="<?=site_url("penduduk")?>" class="btn btn-box bg-purple btn-sm " title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>
+									<a href="<?=site_url("penduduk/ajax_penduduk_maps/$p/$o/$id/2")?>" class="btn btn-box btn-warning btn-sm " title="Ubah"><i class="fa fa-edit"></i> Ubah</a>
 									<?php break; ?>
 								<?php case '1': ?>
-									<a href="<?=site_url("penduduk/detail/$p/$o/$id/1")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>
-									<a href="#" class="btn btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
+									<a href="<?=site_url("penduduk/detail/$p/$o/$id/1")?>" class="btn btn-box bg-purple btn-sm " title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>
+									<a href="#" class="btn btn-box bg-navy btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
                                     <a href="<?=site_url("penduduk/ajax_penduduk_maps_google/$p/$o/$penduduk[id]/1")?>" title="Lokasi <?= $penduduk['nama']?>" class="btn btn-box bg-aqua btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fa fa-google'></i> Ubah di GoogleMap</a> 
 									<button type='reset' class='btn btn-box btn-danger btn-sm' id="resetme"><i class='fa fa-times'></i> Reset</button>
                                     
@@ -161,8 +161,8 @@ window.onload = function()
 									<?php endif; ?>
 									<?php break; ?>
 								<?php case '2': ?>
-									<a href="<?=site_url("penduduk")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>
-									<a href="#" class="btn btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
+									<a href="<?=site_url("penduduk")?>" class="btn btn-box bg-purple btn-sm " title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>
+									<a href="#" class="btn btn-box bg-navy btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
                                     <a href="<?=site_url("penduduk/ajax_penduduk_maps_google/$p/$o/$penduduk[id]/1")?>" title="Lokasi <?= $penduduk['nama']?>" class="btn btn-box bg-aqua btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Ubah Lokasi Rumah"><i class='fa fa-google'></i> Ubah di GoogleMap</a> 
 									<button type='reset' class='btn btn-box btn-danger btn-sm' id="resetme"><i class='fa fa-times'></i> Reset</button>
 									<?php if ($penduduk['status_dasar'] == 1 || !isset($penduduk['status_dasar'])): ?>

@@ -5,14 +5,14 @@
 
     <!-- Content Header (Page header) -->
     <div class="page-header">
-      <h1>
+      <h5 class="m-b-10">
         Mailbox
         <small>13 new messages</small>
-      </h1>
-      <ol class="breadcrumb">
+      </h5>
+      <ul class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Mailbox</li>
-      </ol>
+      </ul>
     </div>
 
     <!-- Main content -->
@@ -23,9 +23,9 @@
         </div>
         <!-- /.col -->
         <div class="col-md-9">
-          <div class="box box-info">
+          
             <div class="card-header">
-                <a href="<?= site_url("mandiri_web/mandiri/1/3")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Artikel">
+                <a href="<?= site_url("mandiri_web/mandiri/1/3")?>" class="btn btn-box btn-info btn-sm btn-sm "  title="Tambah Artikel">
                     <i class="fa fa-arrow-circle-left "></i>Kembali ke halaman Kotak Pesan
                 </a>
             </div>

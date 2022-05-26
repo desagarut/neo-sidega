@@ -2,19 +2,19 @@
 	<div class="pcoded-content">
 
   <div class="page-header">
-    <h1>Form Tambah/Ubah</h1>
-    <ol class="breadcrumb">
+    <h5 class="m-b-10">Form Tambah/Ubah</h5>
+    <ul class="breadcrumb">
       <li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
       <li><a href="<?= site_url('tukang')?>"><i class="fa fa-dashboard"></i> Daftar Tukang</a></li>
       <li class="active">Tambah/Ubah</li>
-    </ol>
+    </ul>
   </div>
   <div class="card">
     <form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
       <div class="row">
         <div class="col-md-12">
-          <div class="box box-info">
-            <div class="box-header with-border"> <a href="<?= site_url('tukang') ?>" class="btn btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali</a> </div>
+          
+            <div class="card-header"> <a href="<?= site_url('tukang') ?>" class="btn btn-info btn-sm "><i class="fa fa-arrow-circle-left"></i> Kembali</a> </div>
             <div class="card-body">
               <div class="row">
                 <div class="col-md-12">

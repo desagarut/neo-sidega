@@ -70,25 +70,25 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Statistik Pengunjung Website</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Statistik Pengunjung Website</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Statistik Pengunjung Website</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="box box-info">
-						<div class="box-header with-border">
+					
+						<div class="card-header">
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
 										<div class="row">
 											<div class="col-sm-12">
-												<a href="<?=site_url("pengunjung/cetak")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Laporan" target="_blank"><i class="fa fa-print "></i>Cetak</a>
-												<a href="<?=site_url("pengunjung/unduh")?>" class="btn btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Laporan" target="_blank"><i class="fa fa-print "></i>Unduh</a>
+												<a href="<?=site_url("pengunjung/cetak")?>" class="btn btn-box bg-purple btn-sm " title="Cetak Laporan" target="_blank"><i class="fa fa-print "></i>Cetak</a>
+												<a href="<?=site_url("pengunjung/unduh")?>" class="btn btn-box bg-navy btn-sm " title="Unduh Laporan" target="_blank"><i class="fa fa-print "></i>Unduh</a>
 											</div>
 										</div>
 									</div>
@@ -179,14 +179,14 @@
 								<div class="col-md-12">
 									<div class="row">
 										<div class="col-md-8">
-											<div class="box box-info">
+											
 												<!-- Ini Grafik -->
 												<br>
 												<div id="chart"> </div>
 											</div>
 										</div>
 										<div class="col-md-4">
-											<div class="box box-info">
+											
 											<!-- Tabel Data -->
 												<div class="table-responsive">
 													<table class="table table-bordered table-striped table-hover nowrap">

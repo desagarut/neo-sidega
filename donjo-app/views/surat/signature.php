@@ -11,7 +11,7 @@
 		<li>Setelah semua kolom terisi dengan benar, surat bisa langsung dicetak dengan klik tombol "Cetak" di bagian kanan bawah, atau bisa diedit lebih lanjut ke versi doc. dengan klik "Export Doc" di bagian kanan bawah.</li>
 		<li>Surat dapat dicetak dua eksemplar, 1 eks. untuk penduduk pemohon surat dan 1 eks. untuk arsip pemerintah desa.</li>
 		<li>Setiap jenis surat yang tercetak akan tersimpan data lognya di Menu "Surat Keluar"</li>
-	</ol></p>
+	</ul></p>
 <p>Demikian panduan pembuatan surat dengan menggunakan aplikasi SID. Selamat menyelenggarakan pelayanan administrasi publik.</p>
 
 

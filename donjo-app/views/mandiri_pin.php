@@ -64,8 +64,8 @@
 						<div class="form-top">
 							<a href="<?=site_url(); ?>mandiri_web/balik_first"><img src="<?=gambar_desa($header['logo']);?>" alt="<?=$header['nama_desa']?>" class="img-responsive" /></a>
 							<div class="login-footer-top">
-								<h1>LAYANAN MANDIRI</h1>
-								<br /><h1><?=ucwords($this->setting->sebutan_desa)?> <?=$header['nama_desa']?></h1>
+								<h5 class="m-b-10">LAYANAN MANDIRI</h5>
+								<br /><h5 class="m-b-10"><?=ucwords($this->setting->sebutan_desa)?> <?=$header['nama_desa']?></h5>
 								<h3>
 									<br /><?=$header['alamat_kantor']?><br />Kodepos <?=$header['kode_pos']?>
 									<br /><?=ucwords($this->setting->sebutan_kecamatan)?> <?=$header['nama_kecamatan']?><br /><?=ucwords($this->setting->sebutan_kabupaten)?> <?=$header['nama_kabupaten']?>

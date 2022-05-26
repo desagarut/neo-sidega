@@ -54,14 +54,14 @@
 					<div class="card-header text-center">
 
 						<?php if ($this->CI->cek_hak_akses('h')) : ?>
-							<a href="<?= site_url('penduduk/form'); ?>" class="btn btn-primary mb-2 mr-2" title="Tambah Data"><i class="fa fa-plus"></i> Penduduk Domisili</a>
+							<a href="<?= site_url('penduduk/form'); ?>" class="btn btn-primary mb-2 mr-2" title="Tambah Data"><i class="fa fa-plus"></i> Tambah Penduduk</a>
 							<a href="#confirm-delete" class="btn btn-danger mb-2 mr-2" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?= site_url("penduduk/delete_all/$p/$o"); ?>')"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 						<?php endif; ?>
 
 						<div class="btn-group mb-2 mr-2">
 							<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aksi Lainnya</button>
 							<div class="dropdown-menu">
-								<button type="button" class="btn  btn-primary" data-toggle="modal" data-target="#exampleModalLive">Launch demo modal</button>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLive">Launch demo modal</button>
 								<a href="<?= site_url("penduduk/ajax_cetak/$o/cetak"); ?>" class="dropdown-item" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="feather icon-printer"></i>&nbsp; Cetak</a>
 								<a href="<?= site_url("penduduk/ajax_cetak/$o/unduh"); ?>" class="dropdown-item" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="feather icon-download"></i>&nbsp; Unduh</a>
 								<a href="<?= site_url("penduduk/ajax_adv_search"); ?>" class="dropdown-item" title="Pencarian Spesifik" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Pencarian Spesifik"><i class="feather icon-search"></i>&nbsp; Pencarian Spesifik</a>
@@ -70,25 +70,53 @@
 							</div>
 						</div>
 						<a href="<?= site_url("penduduk_log/clear"); ?>" class="btn btn-info mb-2 mr-2">&nbsp; Log Penduduk</a>
-						<a href="<?= site_url("penduduk/ajax_cetak/$o/cetak"); ?>" target="_blank"><button type="button" class="btn btn-icon btn-success mb-2 mr-2"><i class="feather icon-printer"></i></button></a>
-						<a href="<?= site_url("penduduk/ajax_cetak/$o/unduh"); ?>" target="_blank"><button type="button" class="btn btn-icon btn-success mb-2 mr-2"><i class="feather icon-download-cloud"></i></button></a>
+						<a href="<?= site_url("penduduk/ajax_cetak/$o/cetak"); ?>" target="_blank"><button type="button" class="btn btn-icon btn-secondary mb-2 mr-2"><i class="feather icon-printer"></i></button></a>
+						<a href="<?= site_url("penduduk/ajax_cetak/$o/unduh"); ?>" target="_blank"><button type="button" class="btn btn-icon btn-secondary mb-2 mr-2"><i class="feather icon-download-cloud"></i></button></a>
 						<a href="<?= site_url("{$this->controller}/clear"); ?>"><button type="button" class="btn  btn-icon btn-warning mb-2 mr-2"><i class="feather icon-refresh-cw"></i></button></a>
 
 					</div>
 
 					<div class="card-body">
 						<form id="mainform" name="mainform" action="" method="post">
-							<div class="row text-center">
+							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
-										<div class="input-group mb-3">
-											<input name="cari" id="cari" class="form-control" placeholder="Cari Nama / NIK Penduduk" type="text" title="Pencarian berdasarkan nama penduduk" value="<?= html_escape($cari); ?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("penduduk/filter/cari"); ?>');$('#'+'mainform').submit();}">
-											<div class="input-group-append">
-												<button type="submit" class="btn btn-success" onclick="$('#'+'mainform').attr('action', '<?= site_url("penduduk/filter/cari"); ?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
+										<div class="row">
+											<div class="col-md-2">
+												<select class="form-control input-sm" name="filter" onchange="formAction('mainform', '<?= site_url('penduduk/filter/filter'); ?>')">
+													<option value="">Status Penduduk</option>
+													<?php foreach ($list_status_penduduk as $data) : ?>
+														<option value="<?= $data['id']; ?>" <?= selected($filter, $data['id']); ?>><?= set_ucwords($data['nama']); ?></option>
+													<?php endforeach; ?>
+												</select>
 											</div>
+											<div class="col-md-2">
+												<select class="form-control input-sm" name="status_dasar" onchange="formAction('mainform', '<?= site_url('penduduk/filter/status_dasar'); ?>')">
+													<option value="">Status Dasar</option>
+													<?php foreach ($list_status_dasar as $data) : ?>
+														<option value="<?= $data['id']; ?>" <?= selected($status_dasar, $data['id']); ?>><?= set_ucwords($data['nama']); ?></option>
+													<?php endforeach; ?>
+												</select>
+											</div>
+											<div class="col-md-2">
+												<select class="form-control input-sm" name="sex" onchange="formAction('mainform', '<?= site_url('penduduk/filter/sex'); ?>')">
+													<option value="">Jenis Kelamin</option>
+													<?php foreach ($list_jenis_kelamin as $data) : ?>
+														<option value="<?= $data['id']; ?>" <?= selected($sex, $data['id']); ?>><?= set_ucwords($data['nama']); ?></option>
+													<?php endforeach; ?>
+												</select>
+											</div>
+												<?php $this->load->view('global/filter_wilayah', ['form' => 'mainform']); ?>
+										</div>
+									</div>
+									<div class="input-group mb-3">
+											<input name="cari" id="cari" type="text" class="form-control" placeholder="Cari Nama / NIK Penduduk" title="Pencarian berdasarkan nama penduduk" value="<?= html_escape($cari); ?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("penduduk/filter/cari"); ?>');$('#'+'mainform').submit();}">
+										<div class="input-group-append">
+											<button type="submit" class="btn btn-success" onclick="$('#'+'mainform').attr('action', '<?= site_url("penduduk/filter/cari"); ?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
 										</div>
 									</div>
 								</div>
+
 							</div>
 
 							<div class="table-border-style">
@@ -230,7 +258,7 @@
 		</div>
 	</div>
 </div>
-<!--
+
 <div id="confirm-status" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
@@ -248,4 +276,3 @@
 		</div>
 	</div>
 </div>
--->

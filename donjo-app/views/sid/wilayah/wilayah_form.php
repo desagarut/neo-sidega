@@ -2,19 +2,19 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-    <h1>Pengelolaan Data <?= ucwords($this->setting->sebutan_dusun)?></h1>
-		<ol class="breadcrumb">
+    <h5 class="m-b-10">Pengelolaan Data <?= ucwords($this->setting->sebutan_dusun)?></h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('sid_core')?>"> Daftar <?= ucwords($this->setting->sebutan_dusun)?></a></li>
 			<li class="active">Data <?= ucwords($this->setting->sebutan_dusun)?></li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
-						<a href="<?= site_url("sid_core")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Kembali Ke Daftar Wilayah">
+				
+					<div class="card-header">
+						<a href="<?= site_url("sid_core")?>" class="btn btn-box btn-info btn-sm btn-sm "  title="Kembali Ke Daftar Wilayah">
 							<i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar <?= ucwords($this->setting->sebutan_dusun)?>
            	</a>
 					</div>

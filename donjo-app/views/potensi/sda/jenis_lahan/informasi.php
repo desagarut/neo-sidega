@@ -25,7 +25,7 @@
 					<?= strtoupper($this->setting->sebutan_kecamatan . ' ' . $config['nama_kecamatan'] . ' ' . $this->setting->sebutan_desa . ' ' . $config['nama_desa'] . ' <br>'); ?>
 					MONITORING PELAKSANAAN PEMBANGUNAN
 				</center>
-				</h1>
+				</h5>
 			</div>
 
 			<div class="col-sm-6">

@@ -14,14 +14,14 @@
 	<div class="pcoded-content">
 
   <div class="page-header">
-    <h1>Detail Fasilitas Wisata</h1>
-    <ol class="breadcrumb">
+    <h5 class="m-b-10">Detail Fasilitas Wisata</h5>
+    <ul class="breadcrumb">
       <li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
       <li><a href="<?= site_url('wisata')?>">Fasilitas Wisata</a></li>
       <li class="active">
         <?= $sub['nama']?>
       </li>
-    </ol>
+    </ul>
   </div>
   
   <div class="card">
@@ -29,7 +29,7 @@
       <div class="row">
           <div class="col-md-12">
               <div class="box box-warning">
-                <div class="box-header with-border"> <a href="<?= site_url("wisata")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Kembali Ke Daftar Album"> <i class="fa fa-arrow-circle-left "></i>Kembali </a> <a href="<?= site_url("wisata/form_fasilitas/$gallery")?>" class="btn btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Fasilitas"> <i class="fa fa-plus"></i> Tambah Fasilitas </a> </div>
+                <div class="card-header"> <a href="<?= site_url("wisata")?>" class="btn btn-box btn-info btn-sm btn-sm "  title="Kembali Ke Daftar Album"> <i class="fa fa-arrow-circle-left "></i>Kembali </a> <a href="<?= site_url("wisata/form_fasilitas/$gallery")?>" class="btn btn-box btn-success btn-sm btn-sm "  title="Tambah Fasilitas"> <i class="fa fa-plus"></i> Tambah Fasilitas </a> </div>
               </div>
               
               <div class="row">
@@ -50,7 +50,7 @@
           </div>
           <!-- /. tools --> 
         </div>
-        <!-- /.box-header -->
+        <!-- /.card-header-->
         <div class="box-body no-padding"> 
           <!--The calendar -->
           <div class="col-sm-12">
@@ -177,7 +177,7 @@
       </div>
       
       <div class="box box-warning">
-          <div class="box-header with-border"><i class="fa fa-list"></i>
+          <div class="card-header"><i class="fa fa-list"></i>
             <h3 class="box-title"><strong>DETAIL FASILITAS</strong></h3>
             <!-- tools box -->
             <div class="pull-right box-tools"> 
@@ -202,9 +202,9 @@
                           <option value="2" <?php if ($filter==2): ?>selected<?php endif ?>>Tidak Aktif</option>
                         </select>
                         <?php if ($this->CI->cek_hak_akses('h')): ?>
-                        <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("wisata/delete_all_fasilitas/$gallery")?>')" class="btn btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+                        <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("wisata/delete_all_fasilitas/$gallery")?>')" class="btn btn-box btn-danger btn-sm  hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
                         <?php endif; ?>
-<a href="<?= site_url("wisata/form_fasilitas/$gallery")?>" class="btn btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Fasilitas"> <i class="fa fa-plus"></i> Tambah Fasilitas </a>
+<a href="<?= site_url("wisata/form_fasilitas/$gallery")?>" class="btn btn-box btn-success btn-sm btn-sm "  title="Tambah Fasilitas"> <i class="fa fa-plus"></i> Tambah Fasilitas </a>
                       </div>
                       <div class="col-sm-6">
                         <div class="box-tools">

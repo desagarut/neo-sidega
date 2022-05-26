@@ -42,12 +42,12 @@ function initMap() {
 
 
 	<div class="page-header">
-		<h1>Lokasi <?= $lokasi['nama']?></h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Lokasi <?= $lokasi['nama']?></h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('plan')?>"> Pengaturan Lokasi</a></li>
 			<li class="active">Lokasi <?= $lokasi['nama']?></li>
-		</ol>
+		</ul>
 	</div>
 
 <form action="<?= $form_action?>" method="post" id="validasi">
@@ -62,8 +62,8 @@ function initMap() {
 	</div>
 	<div class="modal-footer">
         <div class='col-xs-12'>
-            <a href="<?= site_url('plan')?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>
-            <a href="#" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
+            <a href="<?= site_url('plan')?>" class="btn btn-box bg-purple btn-sm " title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>
+            <a href="#" class="btn btn-box btn-success btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
             <button type="reset" class="btn btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
             <button type="submit" class="btn btn-box btn-info btn-sm"><i class='fa fa-check'></i> Simpan</button>
 		</div>

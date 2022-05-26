@@ -2,7 +2,7 @@
 
 <div class='col-md-8'>
   <div class='box box-success box-solid'>
-    <div class="box-header with-border">
+    <div class="card-header">
       <h3 class="box-title">Peta Desa</h3>
       <div class="box-tools pull-right"> <a href="<?=site_url()?>gis/clear"><span class="label label-warning">Buka peta</span></a>
         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>

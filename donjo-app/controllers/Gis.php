@@ -98,44 +98,11 @@ class Gis extends Admin_Controller {
 		$data['rt_gis'] = $this->wilayah_model->list_rt_gis();
 		$data['list_ref'] = $this->referensi_model->list_ref(STAT_PENDUDUK);
 		$this->set_minsidebar(1);
-		//$this->render('gis/maps-google', $data);
 		$this->render('gis/maps-osm-sidega', $data);
 	}
 
-	public function googlemap()
+	public function googlemaps()
 	{
-		$list_session = array('filter', 'sex', 'cari', 'umur_min', 'umur_max', 'pekerjaan_id', 'status', 'agama', 'pendidikan_sedang_id', 'pendidikan_kk_id', 'status_penduduk');
-
-		foreach ($list_session as $session)
-		{
-			$data[$session] = $this->session->userdata($session) ?: '';
-		}
-
-		if (isset($_SESSION['dusun']))
-		{
-			$data['dusun'] = $_SESSION['dusun'];
-			$data['list_rw'] = $this->penduduk_model->list_rw($data['dusun']);
-			if (isset($_SESSION['rw']))
-			{
-				$data['rw'] = $_SESSION['rw'];
-				$data['list_rt'] = $this->penduduk_model->list_rt($data['dusun'],$data['rw']);
-				if (isset($_SESSION['rt']))
-					$data['rt'] = $_SESSION['rt'];
-				else $data['rt'] = '';
-			}
-			else $data['rw'] = '';
-		}
-		else
-		{
-			$data['dusun'] = '';
-			$data['rw'] = '';
-			$data['rt'] = '';
-		}
-		$variabel_sesi = array('layer_penduduk', 'layer_keluarga', 'layer_desa', 'layer_wilayah', 'layer_lokasi', 'layer_area', 'layer_dusun', 'layer_rw', 'layer_rt', 'layer_garis');
-		foreach ($variabel_sesi as $variabel)
-		{
-			$data[$variabel] = $this->session->userdata($variabel) ?: 0;
-		}
 
 		$data['list_status_penduduk'] = $this->referensi_model->list_data('tweb_penduduk_status');
 		$data['list_jenis_kelamin'] = $this->referensi_model->list_data('tweb_penduduk_sex');
@@ -153,6 +120,7 @@ class Gis extends Admin_Controller {
 		$data['list_ref'] = $this->referensi_model->list_ref(STAT_PENDUDUK);
 		$this->set_minsidebar(1);
 		$this->render('gis/maps-google', $data);
+		//$this->render('gis/maps-osm', $data);
 	}
 
 	public function search()

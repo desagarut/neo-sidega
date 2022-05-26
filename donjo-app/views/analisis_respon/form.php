@@ -50,9 +50,9 @@
 
 	<div class="page-header">
 
-		<h1>Input Data Sensus - <?= $analisis_master['nama']?></h1>
+		<h5 class="m-b-10">Input Data Sensus - <?= $analisis_master['nama']?></h5>
 
-		<ol class="breadcrumb">
+		<ul class="breadcrumb">
 
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 
@@ -64,7 +64,7 @@
 
 			<li class="active">Input Data</li>
 
-		</ol>
+		</ul>
 
 	</div>
 
@@ -84,13 +84,13 @@
 
 				<div class="col-md-8 col-lg-9">
 
-					<div id="box-full-screen" class="box box-info">
+					<div id="box-full-screen" class="card-info">
 
-            <div class="box-header with-border">
+            <div class="card-header">
 
 						<?php if (isset($_SESSION['fullscreen'])): ?>
 
-							<a id="toggle-btn" href="<?= current_url()?>/2" class="btn btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+							<a id="toggle-btn" href="<?= current_url()?>/2" class="btn btn-box bg-navy btn-sm btn-sm ">
 
 								<i class="fa fa-search-minus"></i>Normal
 
@@ -98,7 +98,7 @@
 
 						<?php else: ?>
 
-							<a id="toggle-expand-btn" href="<?= current_url()?>/1" class="btn btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+							<a id="toggle-expand-btn" href="<?= current_url()?>/1" class="btn btn-box bg-navy btn-sm btn-sm ">
 
 								<i class="fa fa-search-plus"></i>Full Screen
 
@@ -106,7 +106,7 @@
 
 						<?php endif; ?>
 
-							<a href="<?= site_url()?>analisis_respon" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke Data Sensus</a>
+							<a href="<?= site_url()?>analisis_respon" class="btn btn-box btn-info btn-sm "><i class="fa fa-arrow-circle-left "></i> Kembali Ke Data Sensus</a>
 
 						</div>
 

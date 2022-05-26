@@ -56,17 +56,17 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Grafik Surat Keluar</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Grafik Surat Keluar</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('keluar')?>"> Daftar Surat Keluar</a></li>
 			<li class="active">Grafik Surat Keluar</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
+				
 					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">

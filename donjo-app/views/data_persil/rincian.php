@@ -21,23 +21,23 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Rincian Letter-C</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Rincian Letter-C</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('home')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('letterc')?>"> Daftar Letter-C</a></li>
 			<li class="active">Rincian Letter-C</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
-						<a href="<?=site_url("letterc/create_mutasi/".$letterc['id'])?>" class="btn btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Persil">
+				
+					<div class="card-header">
+						<a href="<?=site_url("letterc/create_mutasi/".$letterc['id'])?>" class="btn btn-box btn-success btn-sm btn-sm "  title="Tambah Persil">
 							<i class="fa fa-plus"></i>Tambah Mutasi Persil
 						</a>
-						<a href="<?=site_url('letterc')?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Letter-C"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Letter-C</a>
-						<a href="<?= site_url("letterc/form_letterc/".$letterc['id'])?>" class="btn btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank">
+						<a href="<?=site_url('letterc')?>" class="btn btn-box btn-info btn-sm " title="Kembali Ke Daftar Letter-C"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Letter-C</a>
+						<a href="<?= site_url("letterc/form_letterc/".$letterc['id'])?>" class="btn btn-box bg-purple btn-sm btn-sm " title="Cetak Data" target="_blank">
 							<i class="fa fa-print"></i>Cetak Letter-C
 						</a>
 					</div>
@@ -49,7 +49,7 @@
 										<input type="hidden" name="id" value="<?php echo $this->uri->segment(4) ?>">
 										<div class="row">
 											<div class="col-sm-12">
-												<div class="box-header with-border">
+												<div class="card-header">
 													<h3 class="box-title">Rincian Letter-C</h3>
 												</div>
 												<div class="card-body">
@@ -82,7 +82,7 @@
 											<div class="col-sm-12">
 												<div class="row">
 													<div class="col-sm-9">
-														<div class="box-header with-border">
+														<div class="card-header">
 															<h3 class="box-title">Daftar Persil Letter-C</h3>
 														</div>
 													</div>

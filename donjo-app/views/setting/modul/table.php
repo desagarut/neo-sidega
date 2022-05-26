@@ -57,8 +57,8 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Manajemen <?= $sub_modul ? 'Submodul' : 'Modul';?></h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Manajemen <?= $sub_modul ? 'Submodul' : 'Modul';?></h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 
 			<?php if(!$sub_modul): ?>
@@ -67,13 +67,13 @@
 				<li><a href="<?= site_url('modul/clear')?>"> Daftar Modul</a></li>
 				<li class="active">Manajemen Submodul</li>
 			<?php endif; ?>
-		</ol>
+		</ul>
 	</div>
 	<?php if(!$sub_modul): ?>
 		<div class="card">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="box box-info">
+					
 						<form id="validasi" action="<?= site_url("modul/ubah_server")?>" method="POST" class="form-horizontal">
 							<div class="card-body">
 								<h4>Penggunaan Server</h4>
@@ -158,7 +158,7 @@
 	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
+				
 					<?php if(!$sub_modul): ?>
 						<div class="card-body">
 							<h4>Pengaturan Modul</h4>
@@ -195,10 +195,10 @@
 								</div>
 							</div>
 					<?php else: ?>
-						<div class="box-header with-border">
-							<a href="<?= site_url('modul/clear')?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Modul</a>
+						<div class="card-header">
+							<a href="<?= site_url('modul/clear')?>" class="btn btn-box btn-info btn-sm "><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Modul</a>
 						</div>
-						<div class="box-header with-border">
+						<div class="card-header">
 						 <strong> Modul Utama : <?=$sub_modul['modul']?></strong>
 						</div>
 						<div class="card-body">

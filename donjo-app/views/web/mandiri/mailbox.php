@@ -9,11 +9,11 @@
   <!-- Content Header (Page header) -->
   
   <div class="page-header">
-    <h1> Mailbox </h1>
-    <ol class="breadcrumb">
+    <h5 class="m-b-10"> Mailbox </h5>
+    <ul class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
       <li class="active">Mailbox</li>
-    </ol>
+    </ul>
   </div>
   
   <!-- Main content -->
@@ -27,7 +27,7 @@
     <!-- /.col -->
     
     <div class="col-md-9">
-      <div class="box box-info">
+      
         <div class="card-header">
           <h3 class="box-title">Pesan</h3>
           <div class="box-tools">
@@ -40,7 +40,7 @@
           </div>
         </div>
         
-        <!-- /.box-header -->
+        <!-- /.card-header-->
         
         <div class="box-body table-responsive">
           <table class="table table-hover">

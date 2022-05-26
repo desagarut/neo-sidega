@@ -13,19 +13,19 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Format Surat Desa</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Format Surat Desa</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Format Surat Desa</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
-						<a href="<?= site_url('surat_master/form')?>" title="Tambah Format Surat" class="btn btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-plus"></i> Tambah Format Surat</a>
-						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("surat_master/delete_all/$p/$o")?>')" class="btn btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+				
+					<div class="card-header">
+						<a href="<?= site_url('surat_master/form')?>" title="Tambah Format Surat" class="btn btn-box bg-olive btn-sm "><i class="fa fa-plus"></i> Tambah Format Surat</a>
+						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("surat_master/delete_all/$p/$o")?>')" class="btn btn-box	btn-danger btn-sm  hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 					</div>
 					<div class="card-body">
 						<div class="row">

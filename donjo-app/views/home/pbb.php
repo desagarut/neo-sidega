@@ -2,7 +2,7 @@
 <div class="col-md-12">
           <!-- MAP & BOX PANE -->
           <div class="box box-success">
-            <div class="box-header with-border">
+            <div class="card-header">
               <h3 class="box-title">Usia Penduduk</h3>
 
               <div class="box-tools pull-right">
@@ -11,7 +11,7 @@
                 <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
               </div>
             </div>
-            <!-- /.box-header -->
+            <!-- /.card-header-->
             <div class="box-body no-padding">
               <div class="row">
                 <div style="width:30%">

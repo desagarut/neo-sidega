@@ -22,7 +22,7 @@
 </script>
 <form id="validasi" action="<?= $form_action; ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 	<div class='modal-body'>
-		<div class="box-header with-border">
+		<div class="card-header">
 			<h3 class="box-title">Rincian Program</h3>
 		</div>
 		<div class="card-body">
@@ -43,7 +43,7 @@
 				</table>
 			</div>
 		</div>
-		<div class="box-header with-border">
+		<div class="card-header">
 			<h3 class="box-title">Identitas Pada Kartu Peserta</h3>
 		</div>
 		<div class="card-body">

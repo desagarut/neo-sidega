@@ -1,7 +1,7 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <div class="tab-pane" id="keluarga">
-  <div class="box-header with-border">
+  <div class="card-header">
     <h5><b>Rincian Keluarga</b></h5>
   </div>
   <div class="card-body">

@@ -2,12 +2,12 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Pengaturan Sub Menu Dinamis / Kategori</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Pengaturan Sub Menu Dinamis / Kategori</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('kategori')?>"> Daftar Kategori</a></li>
 			<li class="active">Pengaturan Sub Menu Dinamis</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="mainform" name="mainform" action="" method="post">
@@ -16,11 +16,11 @@
           <?php $this->load->view('kategori/menu_kiri.php')?>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
-            <div class="box-header with-border">
-              <a href="<?= site_url("kategori/ajax_add_sub_kategori/$kategori")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Sub Kategori"  class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-plus'></i> Tambah Sub Kategori</a>
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("kategori/delete_all_sub_kategori/$kategori")?>')" class="btn btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
-							<a href="<?= site_url("kategori")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Artikel">
+					
+            <div class="card-header">
+              <a href="<?= site_url("kategori/ajax_add_sub_kategori/$kategori")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Sub Kategori"  class="btn btn-box btn-success btn-sm "><i class='fa fa-plus'></i> Tambah Sub Kategori</a>
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("kategori/delete_all_sub_kategori/$kategori")?>')" class="btn btn-box btn-danger btn-sm  hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="<?= site_url("kategori")?>" class="btn btn-box btn-info btn-sm btn-sm "  title="Tambah Artikel">
 								<i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar Kategori
             	</a>
 						</div>

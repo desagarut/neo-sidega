@@ -13,22 +13,22 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Arsip Layanan Surat</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Arsip Layanan Surat</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Arsip Layanan Surat</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
-						<a href="<?= site_url('keluar/perorangan_clear')?>" class="btn btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-archive"></i> Rekam Surat Perorangan</a>
-						<a href="<?= site_url('keluar/graph')?>" class="btn btn-box bg-orange btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-pie-chart"></i> Pie Surat Keluar</a>
-						<a href="<?= site_url('keluar/dialog_cetak/cetak')?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Arsip Layanan Surat"><i class="fa fa-print"></i> Cetak</a>
-						<a href="<?= site_url('keluar/dialog_cetak/unduh')?>" class="btn btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Arsip Layanan Surat"><i class="fa fa-download"></i> Unduh</a>
-						<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan Filter</a>
+				
+					<div class="card-header">
+						<a href="<?= site_url('keluar/perorangan_clear')?>" class="btn btn-box bg-olive btn-sm "><i class="fa fa-archive"></i> Rekam Surat Perorangan</a>
+						<a href="<?= site_url('keluar/graph')?>" class="btn btn-box bg-orange btn-sm btn-sm "><i class="fa fa-pie-chart"></i> Pie Surat Keluar</a>
+						<a href="<?= site_url('keluar/dialog_cetak/cetak')?>" class="btn btn-box bg-purple btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Arsip Layanan Surat"><i class="fa fa-print"></i> Cetak</a>
+						<a href="<?= site_url('keluar/dialog_cetak/unduh')?>" class="btn btn-box bg-navy btn-sm btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Arsip Layanan Surat"><i class="fa fa-download"></i> Unduh</a>
+						<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-box bg-purple btn-sm "><i class="fa fa-refresh"></i>Bersihkan Filter</a>
 					</div>
 					<div class="card-body">
 						<div class="row">

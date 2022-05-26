@@ -3,12 +3,12 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Pengelolaan Data Persil <?=ucwords($this->setting->sebutan_deskel)?> <?= $kelurahan["nama_deskel"];?></h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Pengelolaan Data Persil <?=ucwords($this->setting->sebutan_deskel)?> <?= $kelurahan["nama_deskel"];?></h5>
+		<ul class="breadcrumb">
 			<li><a href="<?=site_url('home')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?=site_url('data_persil/clear')?>"> Daftar Persil</a></li>
 			<li class="active">Pengelolaan Data Persil</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
@@ -16,10 +16,10 @@
 				<?php $this->load->view('data_persil/menu_kiri.php')?>
 			</div>
 			<div class="col-md-9">
-				<div class="box box-info">
+				
 					<div class="card-body">
-						<div class="box-header with-border">
-							<a href="<?= site_url('data_persil/clear')?>" class="btn btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Persil"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Persil</a>
+						<div class="card-header">
+							<a href="<?= site_url('data_persil/clear')?>" class="btn btn-box btn-primary btn-sm " title="Kembali Ke Daftar Persil"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Persil</a>
 						</div>
 						<div class="row">
 							<div class="col-sm-12">

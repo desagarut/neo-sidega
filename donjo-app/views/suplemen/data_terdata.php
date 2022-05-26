@@ -4,19 +4,19 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Data Terdata Suplemen</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Data Terdata Suplemen</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url("suplemen/rincian/$suplemen[id]"); ?>"></i> Rincian Suplemen</a></li>
 			<li class="active">Data Terdata Suplemen</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
-						<a href="<?= site_url("suplemen/rincian/$suplemen[id]"); ?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Rincian Suplemen</a>
+				
+					<div class="card-header">
+						<a href="<?= site_url("suplemen/rincian/$suplemen[id]"); ?>" class="btn btn-box btn-info btn-sm "><i class="fa fa-arrow-circle-left"></i> Kembali Ke Rincian Suplemen</a>
 					</div>
 					<div class="card-body">
 						<h5><b>Rincian Suplemen</b></h5>

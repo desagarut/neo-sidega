@@ -168,12 +168,12 @@
 	<div class="pcoded-content">
 
   <div class="page-header">
-		<h1>Peta <?= $area['nama']?></h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Peta <?= $area['nama']?></h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url("area")?>"> Pengaturan Area </a></li>
 			<li class="active">Peta <?= $area['nama']?></li>
-		</ol>
+		</ul>
 	</div>
   <div class="card">
 
@@ -192,8 +192,8 @@
       </div>
     </div>
     <div class="modal-footer">
-        <a href="<?= site_url('area')?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>  
-        <a href="#" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>    
+        <a href="<?= site_url('area')?>" class="btn btn-box bg-purple btn-sm " title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>  
+        <a href="#" class="btn btn-box btn-success btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>    
         <button type="reset" class="btn btn-box btn-danger btn-sm" data-dismiss="modal"><i class='fa fa-sign-out'></i> Tutup</button>
         <button type="submit" class="btn btn-box btn-info btn-sm" data-dismiss="modal" id="simpan_wilayah"><i class='fa fa-check'></i> Simpan</button>
     </div>

@@ -2,14 +2,14 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Daftar Responden - <?= $analisis_master['nama']?> </h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Daftar Responden - <?= $analisis_master['nama']?> </h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('analisis_master')?>"> Master Analisis</a></li>
 			<li><a href="<?= site_url()?>analisis_statistik_jawaban/leave"><?= $analisis_master['nama']?></a></li>
 			<li><a href="<?= site_url()?>analisis_statistik_jawaban">Laporan Per Indikator</a></li>
 			<li class="active">Daftar Responden</li>
-		</ol>
+		</ul>
 	</div>
 	</div>
 	<div class="card">
@@ -19,17 +19,17 @@
 					<?php $this->load->view('analisis_master/left', $data);?>
 				</div>
 				<div class="col-md-8 col-lg-9">
-					<div class="box box-info">
-            <div class="box-header with-border">
-							<a href="<?= site_url("analisis_statistik_jawaban/cetak2/$analisis_statistik_pertanyaan[id]/$analisis_statistik_jawaban[id]")?>" class="btn btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank">
+					
+            <div class="card-header">
+							<a href="<?= site_url("analisis_statistik_jawaban/cetak2/$analisis_statistik_pertanyaan[id]/$analisis_statistik_jawaban[id]")?>" class="btn btn-box bg-purple btn-sm btn-sm " title="Cetak Data" target="_blank">
 								<i class="fa fa-print"></i>Cetak
             	</a>
-						  <a href="<?= site_url("analisis_statistik_jawaban/excel2/$analisis_statistik_pertanyaan[id]/$analisis_statistik_jawaban[id]")?>" class="btn btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh" target="_blank">
+						  <a href="<?= site_url("analisis_statistik_jawaban/excel2/$analisis_statistik_pertanyaan[id]/$analisis_statistik_jawaban[id]")?>" class="btn btn-box bg-navy btn-sm btn-sm " title="Unduh" target="_blank">
 								<i class="fa fa-download"></i>Unduh
             	</a>
-							<a href="<?= site_url()?>analisis_statistik_jawaban" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke Laporan Per Indikator</a>
+							<a href="<?= site_url()?>analisis_statistik_jawaban" class="btn btn-box btn-info btn-sm "><i class="fa fa-arrow-circle-left "></i> Kembali Ke Laporan Per Indikator</a>
 						</div>
-						<div class="box-header with-border">
+						<div class="card-header">
 							<div class="table-responsive">
 								<table class="table table-bordered table-striped table-hover" >
 									<tr>
@@ -45,7 +45,7 @@
 								</table>
 							</div>
 						</div>
-						<div class="box-header with-border">
+						<div class="card-header">
 							<h5><strong>Daftar Responden</strong></h5>
 						</div>
 						<div class="card-body">

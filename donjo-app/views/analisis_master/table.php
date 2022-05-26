@@ -26,15 +26,15 @@
 
 	<div class="page-header">
 
-		<h1>Master Pengumpulan Data Potensi/Sumber Daya </h1>
+		<h5 class="m-b-10">Master Pengumpulan Data Potensi/Sumber Daya </h5>
 
-		<ol class="breadcrumb">
+		<ul class="breadcrumb">
 
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 
 			<li class="active">Master Pengumpulan</li>
 
-		</ol>
+		</ul>
 
 	</div>
 
@@ -44,17 +44,17 @@
 
 			<div class="col-md-12">
 
-				<div class="box box-info">
+				
 
-					<div class="box-header with-border">
+					<div class="card-header">
 
-						<a href="<?= site_url('analisis_master/form')?>" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Analisis Baru"><i class="fa fa-plus"></i> Tambah Analisis Baru</a>
+						<a href="<?= site_url('analisis_master/form')?>" class="btn btn-box btn-success btn-sm " title="Tambah Analisis Baru"><i class="fa fa-plus"></i> Tambah Analisis Baru</a>
 
-						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("analisis_master/delete_all/$p/$o")?>')" class="btn btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+						<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("analisis_master/delete_all/$p/$o")?>')" class="btn btn-box	btn-danger btn-sm  hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 
-						<a href="<?= site_url('analisis_master/import_analisis')?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Impor Analisis" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Impor Analisis"><i class="fa fa-upload"></i> Impor Analisis</a>
+						<a href="<?= site_url('analisis_master/import_analisis')?>" class="btn btn-box bg-purple btn-sm " title="Impor Analisis" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Impor Analisis"><i class="fa fa-upload"></i> Impor Analisis</a>
 
-						<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan Filter</a>
+						<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-box bg-purple btn-sm "><i class="fa fa-refresh"></i>Bersihkan Filter</a>
 
 					</div>
 

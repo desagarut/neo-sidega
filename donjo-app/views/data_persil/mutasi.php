@@ -2,12 +2,12 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Pengelolaan Sebab Dan Tanggal Perubahan Persil</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Pengelolaan Sebab Dan Tanggal Perubahan Persil</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('home')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('data_persil/clear')?>"> Daftar Persil</a></li>
 			<li class="active">Pengelolaan Sebab Dan Tanggal Perubahan Persil</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
@@ -15,7 +15,7 @@
 				<?php $this->load->view('data_persil/menu_kiri.php')?>
 			</div>
 			<div class="col-md-9">
-				<div class="box box-info">
+				
 					<div class="card-header">
 							<?php if ($persil_detail["id"]): ?>
 								<h4 class="text-center"><strong>Sebab Dan Tanggal Perubahan Persil <?= $persil_detail["nopersil"] ?> / Letter-C <?= $persil_detail["letterc"] ?></strong></h4>

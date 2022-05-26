@@ -108,17 +108,17 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Lokasi <?= $data->judul ?></h1>
-		<ol class="breadcrumb">
-			<li><a href="<?= site_url('hom_sid') ?>"><i class="fa fa-home"></i> Home</a></li>
+		<h5 class="m-b-10">Lokasi <?= $data->judul ?></h5>
+		<ul class="breadcrumb">
+			<li class="breadcrumb-item"><a href="<?= site_url('beranda') ?>"><i class="feather icon-home"></i></a></li>
 			<li><a href="<?= site_url('pembangunan') ?>"> Daftar Pembangunan</a></li>
 			<li class="active">Lokasi <?= $data->judul ?></li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
+				
 					<form id="validasi1" action="<?= $form_action ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 						<div class="card-body">
 							<div class="row">
@@ -143,8 +143,8 @@
 										<input type="text" class="form-control number" name="lng" id="lng" value="<?= $data->lng ?>" />
 									</div>
 								</div>
-								<a href="<?= site_url('pembangunan') ?>" class="btnbg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>
-								<a href="#" class="btn btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
+								<a href="<?= site_url('pembangunan') ?>" class="btnbg-purple btn-sm " title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a>
+								<a href="#" class="btn btn-success btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
 								<button type='reset' class='btn btn-danger btn-sm' id="resetme"><i class='fa fa-times'></i> Reset</button>
 								<button type='submit' class='btn btn-info btn-sm pull-right' id="simpan_kantor"><i class='fa fa-check'></i> Simpan</button>
 							</div>

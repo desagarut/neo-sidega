@@ -4,14 +4,14 @@
 	<div class="pcoded-content">
 
   <div class="page-header">
-    <h1>Pengelolaan SPPT
+    <h5 class="m-b-10">Pengelolaan SPPT
       <?= ucwords($this->setting->sebutan_desa)?>
       <?= $desa["nama_desa"];?>
-    </h1>
-    <ol class="breadcrumb">
+    </h5>
+    <ul class="breadcrumb">
       <li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
       <li class="active">Laporan</li>
-    </ol>
+    </ul>
   </div>
   <div class="card">
   <div class="row">
@@ -26,7 +26,7 @@
                 $d = $data->row();
             ?>
           <div class="card">
-            <div class="box-header box-info with-border">
+            <div class="card-headerbox-info with-border">
               <h3 class="box-title">Laporan Pengelolaan SPPT PBB</h3>
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i> </button>
@@ -44,7 +44,7 @@
               </div>
             </div>
             
-            <!-- /.box-header -->
+            <!-- /.card-header-->
             <div class="card-body">
               <div class="row">
                 <div class="col-md-3">

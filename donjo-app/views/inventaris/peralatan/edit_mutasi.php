@@ -2,12 +2,12 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Ubah Data Mutasi Inventaris Peralatan Dan Mesin</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Ubah Data Mutasi Inventaris Peralatan Dan Mesin</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url() ?>inventaris_peralatan/mutasi"><i class="fa fa-dashboard"></i>Daftar Mutasi Inventaris Peralatan Dan Mesin</a></li>
 			<li class="active">Ubah Data</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form class="form-horizontal" id="validasi" name="form_tanah" method="post" action="<?= site_url("api_inventaris_peralatan/update_mutasi/$main->id"); ?>">
@@ -16,9 +16,9 @@
 					<?php $this->load->view('inventaris/menu_kiri'); ?>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
-            <div class="box-header with-border">
-						<a href="<?= site_url() ?>inventaris_peralatan/mutasi" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Daftar Inventaris Peralatan Dan Mesin</a>
+					
+            <div class="card-header">
+						<a href="<?= site_url() ?>inventaris_peralatan/mutasi" class="btn btn-box btn-info btn-sm "><i class="fa fa-arrow-circle-left"></i> Kembali Ke Daftar Inventaris Peralatan Dan Mesin</a>
 						</div>
 						<div class="card-body">
 							<div class="row">

@@ -2,11 +2,11 @@
 	<div class="pcoded-content">
 
 	<section class='content-header'>
-		<h1>Panduan Pembuatan Surat</h1>
+		<h5 class="m-b-10">Panduan Pembuatan Surat</h5>
 		<ol class='breadcrumb'>
 			<li><a href='<?= site_url()?>'><i class='fa fa-home'></i> Home</a></li>
 			<li class='active'>Panduan Pembuatan Surat</li>
-		</ol>
+		</ul>
 	</div>
 	<section class='content'>
 		<div class='row'>

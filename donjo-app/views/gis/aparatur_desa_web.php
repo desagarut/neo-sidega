@@ -47,7 +47,7 @@
 
 <div class="modal-body" id="maincontent">
 
-	<div class="box box-info box-solid">
+	<div class="card-info box-solid">
 
 
 

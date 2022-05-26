@@ -64,7 +64,7 @@
 								</div>
 							</div>
 							<div class="card-footer">
-								<div class="col-xs-12"> <a href="<?= $tautan['link'] ?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a> <a href="#" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
+								<div class="col-xs-12"> <a href="<?= $tautan['link'] ?>" class="btn btn-box bg-purple btn-sm " title="Kembali"><i class="fa fa-arrow-circle-o-left"></i> Kembali</a> <a href="#" class="btn btn-box btn-success btn-sm " download="SIDeGa.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
 									<label class="control-label col-sm-1">Warna</label>
 									<div class="col-sm-2">
 										<div class="input-group my-colorpicker2">

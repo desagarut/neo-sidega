@@ -4,12 +4,12 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Pengaturan Garis</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Pengaturan Garis</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('garis')?>"><i class="fa fa-dashboard"></i> Daftar Garis</a></li>
 			<li class="active">Pengaturan Garis</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 	<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
@@ -18,9 +18,9 @@
           <?php $this->load->view('plan/nav.php')?>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
-            <div class="box-header with-border">
-							<a href="<?= site_url("garis")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Artikel">
+					
+            <div class="card-header">
+							<a href="<?= site_url("garis")?>" class="btn btn-box btn-info btn-sm btn-sm "  title="Tambah Artikel">
 								<i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar Garis
             	</a>
 						</div>

@@ -3,27 +3,27 @@
 
 
 	<div class="page-header">
-		<h1>Pendataan Vaksin Covid-19</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Pendataan Vaksin Covid-19</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('covid19_vaksin')?>"> Daftar Peserta Vaksin Covid-19</a></li>
 			<li class="active">Pendataan Vaksin Covid19</li>
-		</ol>
+		</ul>
 	</div>
 
 	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
+				
+					<div class="card-header">
 						<div class="col-md-12">
-							<a href="<?= site_url('covid19_vaksin')?>" class="btn btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Pemudik Saat Covid-19"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Peserta Vaksin Covid-19</a>
+							<a href="<?= site_url('covid19_vaksin')?>" class="btn btn-box btn-primary btn-sm " title="Kembali Ke Daftar Pemudik Saat Covid-19"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Peserta Vaksin Covid-19</a>
 						</div>
 					</div>
 					<div class="card-body">
 						<div class="row">
 							<div class="col-sm-12">
-								<div class="box-header with-border">
+								<div class="card-header">
 									<h3 class="box-title">Tambahkan Peserta Vaksin</h3>
 								</div>
 								<div class="card-body">

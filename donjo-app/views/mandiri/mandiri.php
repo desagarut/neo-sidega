@@ -14,16 +14,16 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Pendaftar Layanan Masyarakat</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Pendaftar Layanan Masyarakat</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Pendaftar Layanan Masyarakat</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="mainform" name="mainform" action="" method="post">
-			<div class="box box-info">
-				<div class="box-header with-border">
+			
+				<div class="card-header">
 					<a href="<?= site_url('mandiri/ajax_pin'); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Buat PIN Warga" class="btn btn-box btn-success btn-sm"><i class="fa fa-plus"></i> Tambah Pengguna</a>
 				</div>
 				<div class="card-body">

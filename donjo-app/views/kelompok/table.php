@@ -21,18 +21,18 @@
 	<div class="pcoded-content">
 
   <div class="page-header">
-    <h1>Pengelolaan Kelompok</h1>
-    <ol class="breadcrumb">
+    <h5 class="m-b-10">Pengelolaan Kelompok</h5>
+    <ul class="breadcrumb">
       <li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
       <li class="active">Pengelolaan Kelompok</li>
-    </ol>
+    </ul>
   </div>
   <div class="card">
   <form id="mainform" name="mainform" action="" method="post">
   <div class="row">
   <div class="col-md-3">
-    <div id="bantuan" class="box box-info">
-      <div class="box-header with-border">
+    <div id="bantuan" class="card-info">
+      <div class="card-header">
         <h3 class="box-title">Kategori Kelompok</h3>
         <div class="box-tools">
           <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
@@ -53,15 +53,15 @@
     </div>
   </div>
   <div class="col-md-9">
-  <div class="box box-info">
-  <div class="box-header with-border"> 
+  
+  <div class="card-header"> 
   	<?php if ($this->CI->cek_hak_akses('h')): ?>
-    <a href="<?= site_url('kelompok/form'); ?>" title="Tambah kelompok Baru" class="btn btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-plus"></i> Tambah Kelompok Baru</a> 
-    <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("kelompok/delete_all"); ?>')" class="btn btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a> 
+    <a href="<?= site_url('kelompok/form'); ?>" title="Tambah kelompok Baru" class="btn btn-box bg-olive btn-sm "><i class="fa fa-plus"></i> Tambah Kelompok Baru</a> 
+    <a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("kelompok/delete_all"); ?>')" class="btn btn-box btn-danger btn-sm  hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a> 
     <?php endif;?>
-    <a href="<?= site_url("kelompok/dialog/cetak"); ?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Kelompok"><i class="fa fa-print "></i> Cetak</a> 
-    <a href="<?= site_url("kelompok/dialog/unduh"); ?>" class="btn btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Kelompok"><i class="fa fa-download"></i> Unduh</a> 
-    <a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan</a> 
+    <a href="<?= site_url("kelompok/dialog/cetak"); ?>" class="btn btn-box bg-purple btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Kelompok"><i class="fa fa-print "></i> Cetak</a> 
+    <a href="<?= site_url("kelompok/dialog/unduh"); ?>" class="btn btn-box bg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Kelompok"><i class="fa fa-download"></i> Unduh</a> 
+    <a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-box bg-purple btn-sm "><i class="fa fa-refresh"></i>Bersihkan</a> 
 </div>
   <div class="card-body">
   <div class="dataTables_wrapper form-inline dt-bootstrap no-footer">

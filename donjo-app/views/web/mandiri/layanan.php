@@ -7,7 +7,7 @@
         <div class='row'>
 			<div class='col-md-12'>
                 <div class='box box-warning box-solid'>
-                    <div class="box-header with-border">
+                    <div class="card-header">
                         <h3 class="box-title">Permohonan Surat</h3>
                         <div class="box-tools pull-right">
                             <a href="<?=site_url("mandiri_web/mandiri_surat")?>""><span class="label label-success"> Buat Surat</span></a>

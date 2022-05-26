@@ -13,22 +13,22 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Pengelompokan Rumah Tangga</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Pengelompokan Rumah Tangga</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?=site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Daftar Rumah Tangga</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
-		<div class="box box-info">
-			<div class="box-header with-border">
+		
+			<div class="card-header">
 				<?php if ($this->CI->cek_hak_akses('h')): ?>
-                	<a href="<?= site_url('rtm/form_old'); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Data Rumah Tangga Per Penduduk" title="Tambah Dari Data Penduduk" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-plus'></i>Tambah Rumah Tangga</a>
-					<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("rtm/delete_all"); ?>')" class="btn btn-box	btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+                	<a href="<?= site_url('rtm/form_old'); ?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Data Rumah Tangga Per Penduduk" title="Tambah Dari Data Penduduk" class="btn btn-box btn-success btn-sm "><i class='fa fa-plus'></i>Tambah Rumah Tangga</a>
+					<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform','<?= site_url("rtm/delete_all"); ?>')" class="btn btn-box	btn-danger btn-sm  hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 				<?php endif; ?>
-				<a href="<?= site_url("rtm/ajax_cetak/$o/cetak"); ?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" target="_blank"><i class="fa fa-print"></i> Cetak</a>
-				<a href="<?= site_url("rtm/ajax_cetak/$o/unduh"); ?>" class="btn btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fa fa-download"></i> Unduh</a>
-				<a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan Filter</a>
+				<a href="<?= site_url("rtm/ajax_cetak/$o/cetak"); ?>" class="btn btn-box bg-purple btn-sm " title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" target="_blank"><i class="fa fa-print"></i> Cetak</a>
+				<a href="<?= site_url("rtm/ajax_cetak/$o/unduh"); ?>" class="btn btn-box bg-navy btn-sm " title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fa fa-download"></i> Unduh</a>
+				<a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-box bg-purple btn-sm "><i class="fa fa-refresh"></i>Bersihkan Filter</a>
 			</div>
 			<div class="card-body">
 				<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">

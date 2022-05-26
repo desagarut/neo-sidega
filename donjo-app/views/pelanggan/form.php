@@ -5,14 +5,14 @@
 	<div class="pcoded-content">
 
 <div class="page-header">
-	<h1>Info Layanan Pelanggan</h1>
-	<ol class="breadcrumb">
+	<h5 class="m-b-10">Info Layanan Pelanggan</h5>
+	<ul class="breadcrumb">
 		<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 		<li class="active">Info Layanan Pelanggan</li>
-	</ol>
+	</ul>
 </div>
 <div class="card">
-	<div class="box box-info">
+	
 		<div class="card-body">
 			<div class="row">
 				<div class="col-sm-12">

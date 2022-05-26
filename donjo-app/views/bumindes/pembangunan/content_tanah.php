@@ -1,5 +1,5 @@
-<div class="box box-info">
-	<div class="box-header with-border">
+
+	<div class="card-header">
 
 	</div>
 	<div class="card-body">

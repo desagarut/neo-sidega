@@ -13,30 +13,30 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Daftar Gambar Album</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Daftar Gambar Album</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('gallery')?>"><i class="fa fa-dashboard"></i> Daftar Album</a></li>
 			<li class="active">Daftar Gambar Album</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="box box-info">
-            <div class="box-header with-border">
-							<a href="<?= site_url("gallery/form_sub_gallery/$gallery")?>" class="btn btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Album">
+					
+            <div class="card-header">
+							<a href="<?= site_url("gallery/form_sub_gallery/$gallery")?>" class="btn btn-box btn-success btn-sm btn-sm "  title="Tambah Album">
 								<i class="fa fa-plus"></i> Tambah Gambar Baru
             	</a>
 							<?php if ($this->CI->cek_hak_akses('h')): ?>
-								<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("gallery/delete_all_sub_gallery/$gallery")?>')" class="btn btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+								<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("gallery/delete_all_sub_gallery/$gallery")?>')" class="btn btn-box btn-danger btn-sm  hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 							<?php endif; ?>
-							<a href="<?= site_url("gallery")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Kembali Ke Daftar Album">
+							<a href="<?= site_url("gallery")?>" class="btn btn-box btn-info btn-sm btn-sm "  title="Kembali Ke Daftar Album">
 								<i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar Album
             	</a>
 						</div>
-						<div class="box-header with-border">
+						<div class="card-header">
 							<h3 class="box-title">Nama Album : <strong><?= $sub['nama']?></strong></h3>
 						</div>
 						<div class="card-body">

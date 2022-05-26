@@ -4,18 +4,18 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Pengaturan <?= str_replace('-', ' ', ucwords($media))?></h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Pengaturan <?= str_replace('-', ' ', ucwords($media))?></h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active"> Pengaturan <?= str_replace('-', ' ', ucwords($media))?></li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 			<div class="row">
 				<div class="col-md-3">
-					<div class="box box-info">
-						<div class="box-header with-border">
+					
+						<div class="card-header">
 							<h3 class="box-title">Media Sosial</h3>
 							<div class="box-tools">
 								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -32,7 +32,7 @@
 					</div>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
+					
 						<?php $this->load->view('sosmed/'.$media); ?>
 						<div class='box-footer'>
 							<div class='col-xs-12'>

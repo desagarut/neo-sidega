@@ -2,28 +2,28 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Wilayah Administratif RW</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Wilayah Administratif RW</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('sid_core')?>"> Daftar <?= ucwords($this->setting->sebutan_dusun)?></a></li>
 			<li class="active">Daftar RW</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
+				
+					<div class="card-header">
 						<?php if ($this->CI->cek_hak_akses('h')): ?>
-                        <a href="<?= site_url("sid_core/form_rw/$id_dusun")?>" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Data"><i class="fa fa-plus"></i> Tambah RW</a>
+                        <a href="<?= site_url("sid_core/form_rw/$id_dusun")?>" class="btn btn-box btn-success btn-sm " title="Tambah Data"><i class="fa fa-plus"></i> Tambah RW</a>
 						<?php endif; ?>
-                        <a href="<?= site_url("sid_core/cetak_rw/$id_dusun")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank"><i class="fa fa-print "></i> Cetak</a>
-						<a href="<?= site_url("sid_core/excel_rw/$id_dusun")?>" class="btn btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" target="_blank"><i class="fa fa-download"></i> Unduh</a>
-						<a href="<?= site_url("sid_core")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar RW">
+                        <a href="<?= site_url("sid_core/cetak_rw/$id_dusun")?>" class="btn btn-box bg-purple btn-sm " title="Cetak Data" target="_blank"><i class="fa fa-print "></i> Cetak</a>
+						<a href="<?= site_url("sid_core/excel_rw/$id_dusun")?>" class="btn btn-box bg-navy btn-sm " title="Unduh Data" target="_blank"><i class="fa fa-download"></i> Unduh</a>
+						<a href="<?= site_url("sid_core")?>" class="btn btn-box btn-info btn-sm btn-sm " title="Kembali Ke Daftar RW">
 							<i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar <?= ucwords($this->setting->sebutan_dusun)?>
 						</a>
 					</div>
-					<div class="box-header with-border">
+					<div class="card-header">
 						<strong><?= ucwords($this->setting->sebutan_dusun)?> <?= $dusun?></strong>
 					</div>
 					<div class="card-body">

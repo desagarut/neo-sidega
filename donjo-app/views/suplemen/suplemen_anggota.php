@@ -16,20 +16,20 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Daftar Terdata Suplemen</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Daftar Terdata Suplemen</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('suplemen')?>"> Data Suplemen</a></li>
 			<li class="active">Daftar Terdata Suplemen</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
-		<div class="box box-info">
-			<div class="box-header with-border">
-				<a href="<?= site_url("suplemen/form_terdata/".$suplemen['id'])?>" title="Tambah Data Warga" class="btn btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-plus"></i> Tambah Warga Terdata</a>
-				<a href="<?= site_url("suplemen/dialog_daftar/$suplemen[id]/cetak")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Suplemen <?= $sasaran[$suplemen["sasaran"]]; ?> "><i class="fa fa-print "></i> Cetak</a>
-				<a href="<?= site_url("suplemen/dialog_daftar/$suplemen[id]/unduh")?>" class="btn btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Suplemen <?= $sasaran[$suplemen["sasaran"]]; ?> "><i class="fa fa-download "></i> Unduh</a>
-				<a href="<?= site_url("suplemen")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Data Suplemen">
+		
+			<div class="card-header">
+				<a href="<?= site_url("suplemen/form_terdata/".$suplemen['id'])?>" title="Tambah Data Warga" class="btn btn-box bg-olive btn-sm "><i class="fa fa-plus"></i> Tambah Warga Terdata</a>
+				<a href="<?= site_url("suplemen/dialog_daftar/$suplemen[id]/cetak")?>" class="btn btn-box bg-purple btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Suplemen <?= $sasaran[$suplemen["sasaran"]]; ?> "><i class="fa fa-print "></i> Cetak</a>
+				<a href="<?= site_url("suplemen/dialog_daftar/$suplemen[id]/unduh")?>" class="btn btn-box bg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Suplemen <?= $sasaran[$suplemen["sasaran"]]; ?> "><i class="fa fa-download "></i> Unduh</a>
+				<a href="<?= site_url("suplemen")?>" class="btn btn-box btn-info btn-sm btn-sm " title="Kembali Ke Data Suplemen">
 					<i class="fa fa-arrow-circle-left "></i>Kembali ke Data Suplemen
 				</a>
 			</div>

@@ -39,7 +39,7 @@
     height: 100px;
   }
 </style>
-<div class="box box-info box-solid">
+<div class="card-info box-solid">
   <div class="card-header">
     <h3 class="box-title"><a href="<?= site_url("first/keuangan/1")?>"><i class="fa fa-bar-chart"></i> Statistik Keuangan Desa</a></h3>
   </div>

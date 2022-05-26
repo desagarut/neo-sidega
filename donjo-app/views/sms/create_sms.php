@@ -2,19 +2,19 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>SMS</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">SMS</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">SMS</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
 				<div class="col-md-3">
 					<a href="<?= site_url('sms/form/0/0/4')?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tulis Pesan Baru"  class="btn btn-primary btn-block margin-bottom">Tulis Pesan Baru</a>
-					<div class="box box-info">
-						<div class="box-header with-border">
+					
+						<div class="card-header">
 							<h3 class="box-title">SMS</h3>
 							<div class="box-tools">
 								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -31,9 +31,9 @@
 					</div>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
-            <div class="box-header with-border">
-							<a href="<?= site_url('sms/broadcast/0/0/2')?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tulis Pesan Broadcast"  class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class='fa fa-weixin'></i> Tulis Pesan Ke Banyak</a>
+					
+            <div class="card-header">
+							<a href="<?= site_url('sms/broadcast/0/0/2')?>" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tulis Pesan Broadcast"  class="btn btn-box btn-success btn-sm "><i class='fa fa-weixin'></i> Tulis Pesan Ke Banyak</a>
 						</div>
 						<div class="card-body">
 							<div class="row">

@@ -4,17 +4,17 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Bagan Pemerintahan <?= ucwords($this->setting->sebutan_desa)?></h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Bagan Pemerintahan <?= ucwords($this->setting->sebutan_desa)?></h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('pengurus')?>">Pemerintahan <?= ucwords($this->setting->sebutan_desa)?></a></li>
 			<li class="active">Bagan Pemerintahan <?= ucwords($this->setting->sebutan_desa)?></li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
+				
 					<div class="card-body">
 						<figure class="highcharts-figure">
 					    <div id="container"></div>

@@ -3,26 +3,26 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Laporan Kelompok Rentan</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Laporan Kelompok Rentan</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Laporan Kelompok Rentan</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
 				<form id="mainform" name="mainform" action="<?= site_url('laporan/bulan')?>" method="post" class="form-horizontal">
-					<div class="box box-info">
-						<div class="box-header with-border">
-							<a href="<?= site_url("laporan_rentan/cetak")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  target="_blank"><i class="fa fa-print "></i> Cetak</a>
-							<a href="<?= site_url("laporan_rentan/excel/$lap")?>" class="btn btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  target="_blank"><i class="fa  fa-download"></i> Unduh</a>
+					
+						<div class="card-header">
+							<a href="<?= site_url("laporan_rentan/cetak")?>" class="btn btn-box bg-purple btn-sm "  target="_blank"><i class="fa fa-print "></i> Cetak</a>
+							<a href="<?= site_url("laporan_rentan/excel/$lap")?>" class="btn btn-box bg-navy btn-sm "  target="_blank"><i class="fa  fa-download"></i> Unduh</a>
 						</div>
-						<div class="box-header  with-border">
+						<div class="card-header with-border">
 							<h4 class="text-center"><strong>PEMERINTAH KABUPATEN <?= strtoupper($config['nama_kabupaten'])?></strong></h4>
 							<h5 class="text-center"><strong>DATA PILAH KEPENDUDUKAN MENURUT UMUR DAN FAKTOR KERENTANAN (LAMPIRAN A - 9)</strong></h5>
 						</div>
-						<div class="box-header  with-border">
+						<div class="card-header with-border">
 							<div class="form-group">
 								<label class="col-sm-2 col-md-1 control-label" for="kelurahan"><?= ucwords($this->setting->sebutan_desa)?>/Kel</label>
 								<div class="col-sm-4 col-md-2">

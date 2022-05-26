@@ -2,22 +2,22 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Kotak Pesan</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Kotak Pesan</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('hom_sid')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Kotak Pesan</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
 				<?php $this->load->view('mailbox/menu_mailbox') ?>
 				<div class="col-md-9">
-					<div class="box box-info">
-            <div class="box-header with-border">
-							<a href="<?= site_url('mailbox/form') ?>" class="btn btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tulis Pesan"><i class="fa fa-plus"></i> Tulis Pesan</a>
-							<a href="#confirm-delete" title="Arsipkan Data" <?php if(!$filter_archived) : ?>onclick="deleteAllBox('mainform','<?=site_url("mailbox/archive_all/$kat/$p/$o")?>')"<?php endif ?> class="btn btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih" <?php $filter_archived and print('disabled') ?>><i class='fa fa-file-archive-o'></i> Arsipkan Data Terpilih</a>
-							<a href="<?= site_url("mailbox/clear/$kat/$p/$o") ?>" class="btnbg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan Filter</a>
+					
+            <div class="card-header">
+							<a href="<?= site_url('mailbox/form') ?>" class="btn btn-success btn-sm " title="Tulis Pesan"><i class="fa fa-plus"></i> Tulis Pesan</a>
+							<a href="#confirm-delete" title="Arsipkan Data" <?php if(!$filter_archived) : ?>onclick="deleteAllBox('mainform','<?=site_url("mailbox/archive_all/$kat/$p/$o")?>')"<?php endif ?> class="btn btn-danger btn-sm  hapus-terpilih" <?php $filter_archived and print('disabled') ?>><i class='fa fa-file-archive-o'></i> Arsipkan Data Terpilih</a>
+							<a href="<?= site_url("mailbox/clear/$kat/$p/$o") ?>" class="btnbg-purple btn-sm "><i class="fa fa-refresh"></i>Bersihkan Filter</a>
 						</div>
 						<div class="card-body">
 							<div class="row">

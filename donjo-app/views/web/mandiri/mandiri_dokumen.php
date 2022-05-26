@@ -17,10 +17,10 @@ table.table th {
   <section class='content' id="maincontent">
     <div class='row'>
       <div class='col-md-12'>
-        <div class="box box-info" style="margin-top: 10px;">
+        <div class="card-info" style="margin-top: 10px;">
           <div class="card-body">
             <form class="contact_form" id="validasi" action="<?= site_url('permohonan_surat/form/'.$permohonan[id])?>" method="POST" enctype="multipart/form-data">
-              <div class="box-header with-border"> <span><strong>LAYANAN PERMOHONAN SURAT</strong></span>
+              <div class="card-header"> <span><strong>LAYANAN PERMOHONAN SURAT</strong></span>
                 <input type="hidden" name="pemohon" value="<?= $_SESSION['nama']?>"/>
                 <input type="hidden" readonly="readonly" name="nik" value="<?= $_SESSION['nik']?>"/>
                 <input type="hidden" id="id_permohonan" name="id_permohonan" value="<?= $permohonan['id']?>"/>
@@ -65,8 +65,8 @@ table.table th {
                   </div>
                 </div>
               </div>
-              <div class="box box-info" style="margin-top: 10px;">
-                <div class="box-header with-border">
+              <div class="card-info" style="margin-top: 10px;">
+                <div class="card-header">
                   <h4 class="box-title">Lengkapi Dokumen</h4>
                   <div class="box-tools">
                     <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#surat"><i class="fa fa-minus"></i></button>
@@ -101,15 +101,15 @@ table.table th {
             </form>
           </div>
         </div>
-        <div class="box box-info" style="margin-top: 10px;">
-          <div class="box-header with-border">
+        <div class="card-info" style="margin-top: 10px;">
+          <div class="card-header">
             <h4 class="box-title">Dokumen tersedia</h4>
             <div class="box-tools">
               <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#dokumen"><i class="fa fa-minus"></i></button>
             </div>
           </div>
           <div class="card-body">
-            <button type="button" title="Tambah Dokumen" data-remote="false" data-toggle="modal" data-target="#modal" data-title="Tambah Dokumen" class="btn btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" id="tambah_dokumen"><i class='fa fa-plus'></i>Tambah Dokumen</button>
+            <button type="button" title="Tambah Dokumen" data-remote="false" data-toggle="modal" data-target="#modal" data-title="Tambah Dokumen" class="btn btn-box bg-olive btn-sm " id="tambah_dokumen"><i class='fa fa-plus'></i>Tambah Dokumen</button>
             <div class="table-responsive">
               <table class="table table-striped table-bordered" id="dokumen">
                 <thead>

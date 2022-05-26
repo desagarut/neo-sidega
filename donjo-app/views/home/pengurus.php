@@ -17,9 +17,9 @@
 	}
 </style>
 <div class="card">
-	<div class="box-header with-border">
+	<div class="card-header">
 		<?php if ($this->CI->cek_hak_akses('h')): ?>
-        <a href="<?= site_url('pengurus/form')?>" class="btn btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Staf">
+        <a href="<?= site_url('pengurus/form')?>" class="btn btn-box btn-success btn-sm btn-sm " title="Tambah Staf">
 			<i class="fa fa-plus"></i>Tambah Aparat Pemerintahan <?= ucwords($this->setting->sebutan_desa)?>
 		</a>
         <?php endif;?>
@@ -38,11 +38,11 @@
 			</ul>
 		</div>
 		<?php endif; ?>
-		<a href="<?= site_url("pengurus/dialog/cetak")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="fa fa-print "></i> Cetak</a>
-		<a href="<?= site_url("pengurus/dialog/unduh")?>" title="Unduh Data" class="btn btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="fa fa-download"></i> Unduh</a>
+		<a href="<?= site_url("pengurus/dialog/cetak")?>" class="btn btn-box bg-purple btn-sm " title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data"><i class="fa fa-print "></i> Cetak</a>
+		<a href="<?= site_url("pengurus/dialog/unduh")?>" title="Unduh Data" class="btn btn-box bg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data"><i class="fa fa-download"></i> Unduh</a>
 		<?php if ($this->CI->cek_hak_akses('h')): ?>
         <div class="btn-group btn-group-vertical">
-			<a class="btn btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-toggle="dropdown"><i class='fa fa-arrow-circle-down'></i> Bagan Organisasi</a>
+			<a class="btn btn-box bg-olive btn-sm " data-toggle="dropdown"><i class='fa fa-arrow-circle-down'></i> Bagan Organisasi</a>
 			<ul class="dropdown-menu" role="menu">
 				<li>
 					<a href="<?= site_url("pengurus/bagan")?>" title="Bagan Tanpa BPD" class="btn btn-box btn-block btn-sm" ><i class="fa fa-sitemap"></i> Bagan Tanpa BPD</a>

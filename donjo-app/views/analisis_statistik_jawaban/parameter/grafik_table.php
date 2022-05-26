@@ -65,14 +65,14 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Statistik Jawaban</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Statistik Jawaban</h5>
+		<ul class="breadcrumb">
 		<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?=site_url('analisis_master')?>"> Master Analisis</a></li>
 			<li><a href="<?=site_url()?>analisis_statistik_jawaban/leave"><?= $analisis_master['nama']?></a></li>
 			<li><a href="<?=site_url()?>analisis_statistik_jawaban">Laporan Per Indikator</a></li>
 			<li class="active">Statistik Jawaban</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="mainform" name="mainform" action="" method="post">
@@ -81,7 +81,7 @@
 					<?php $this->load->view('analisis_master/left', $data);?>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
+					
 						<div class="card-body">
 							<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
 								<div class="col-sm-12">
@@ -107,7 +107,7 @@
 											<?php endforeach;?>
 										</select>
 									<?php endif; ?>
-									<a href="<?= site_url()?>analisis_statistik_jawaban" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke Laporan Per Indikator</a>
+									<a href="<?= site_url()?>analisis_statistik_jawaban" class="btn btn-box btn-info btn-sm "><i class="fa fa-arrow-circle-left "></i> Kembali Ke Laporan Per Indikator</a>
 								</div>
 								<div class="col-sm-12">
 									<h5 class="box-title"><b><?= $analisis_statistik_jawaban['pertanyaan']?></b></h5>

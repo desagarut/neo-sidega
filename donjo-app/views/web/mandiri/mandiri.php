@@ -138,11 +138,11 @@ table.table th {
           <!-- About Me Box -->
           
           <div class="box box-primary">
-            <div class="box-header with-border"> <small>
+            <div class="card-header"> <small>
               <h4 class="box-title">Ringkasan</h4>
               </small> </div>
             
-            <!-- /.box-header -->
+            <!-- /.card-header-->
             
             <div class="card-body"><small> <strong><i class="fa fa-book margin-r-5"></i> Pendidikan Terakhir</strong></small>
               <p class="text-muted"> <small>

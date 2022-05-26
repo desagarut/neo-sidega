@@ -5,12 +5,12 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Laporan Keuangan</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Laporan Keuangan</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('keuangan_manual/laporan')?>">Laporan Keuangan</a></li>
 			<li class="active">Rincian Realisasi</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">

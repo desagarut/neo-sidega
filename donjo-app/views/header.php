@@ -1,6 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>
@@ -23,9 +22,7 @@
     <!-- css neo -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/jquery-ui.min.css">
-
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/plugins/prism-coy.css">
-
     <!-- DataTables -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/dataTables.bootstrap.min.css">
     <!-- bootstrap wysihtml5 - text editor -->
@@ -44,8 +41,9 @@
         var BASE_URL = "<?= base_url(); ?>";
         var SITE_URL = "<?= site_url(); ?>";
     </script>
-
-    <script src="<?= base_url() ?>assets/js/jquery-ui.min.js"></script>
+<script src="<?= base_url()?>assets/bootstrap/js/jquery.min.js"></script> 
+  <!--  <script src="<?= base_url() ?>assets/js/jquery-ui.min.js"></script>
+    <script src="<?= base_url()?>assets/bootstrap/js/jquery.ui.autocomplete.scroll.min.js"></script> -->
 
     <!-- OpenStreetMap Css -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/leaflet.css" />
@@ -72,17 +70,22 @@
     <script src="<?= base_url() ?>assets/js/leaflet.markercluster.js"></script>
     <script src="<?= base_url() ?>assets/js/peta.js"></script>
     <script src="<?= base_url() ?>assets/js/leaflet-measure-path.js"></script>
-    <script src="<?= base_url() ?>assets/js/osm/apbdes_manual.js"></script>
-    <script src="<?= base_url() ?>assets/js/osm/mapbox-gl.js"></script>
-    <script src="<?= base_url() ?>assets/js/osm/leaflet-mapbox-gl.js"></script>
-    <script src="<?= base_url() ?>assets/js/osm/shp.js"></script>
-    <script src="<?= base_url() ?>assets/js/osm/leaflet.shpfile.js"></script>
-    <script src="<?= base_url() ?>assets/js/osm/leaflet.groupedlayercontrol.min.js"></script>
-    <script src="<?= base_url() ?>assets/js/osm/leaflet.browser.print.js"></script>
-    <script src="<?= base_url() ?>assets/js/osm/leaflet.browser.print.utils.js"></script>
-    <script src="<?= base_url() ?>assets/js/osm/leaflet.browser.print.sizes.js"></script>
-    <script src="<?= base_url() ?>assets/js/osm/dom-to-image.min.js"></script>
-    <script src="<?= base_url() ?>assets/js/osm/toastr.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/apbdes_manual.js"></script>
+    <script src="<?= base_url() ?>assets/js/mapbox-gl.js"></script>
+    <!--<script src="<?= base_url() ?>assets/js/leaflet-mapbox-gl.js"></script>-->
+    <script src="<?= base_url() ?>assets/js/shp.js"></script>
+    <script src="<?= base_url() ?>assets/js/leaflet.shpfile.js"></script>
+    <script src="<?= base_url() ?>assets/js/leaflet.groupedlayercontrol.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/leaflet.browser.print.js"></script>
+    <script src="<?= base_url() ?>assets/js/leaflet.browser.print.utils.js"></script>
+    <script src="<?= base_url() ?>assets/js/leaflet.browser.print.sizes.js"></script>
+    <script src="<?= base_url() ?>assets/js/dom-to-image.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/toastr.min.js"></script>
+
+	<!-- Js for  maps -->
+	<script src="<?= base_url() ?>assets/js/plugins/gmaps.min.js"></script>
+	<script src="<?= base_url() ?>assets/js/pages/google-maps.js"></script>            
+	<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
 
 
 

@@ -40,24 +40,24 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Form Artikel <?= $kategori['kategori']; ?></h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Form Artikel <?= $kategori['kategori']; ?></h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url("web"); ?>"> Daftar Artikel</a></li>
 			<li class="active">Form Artikel</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="validasi" action="<?= $form_action; ?>" method="POST" enctype="multipart/form-data">
 			<div class="row">
 				<div class="col-md-8">
-					<div class="box box-info">
-						<div class="box-header with-border">
-							<a href="<?=site_url("web")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Artikel">
+					
+						<div class="card-header">
+							<a href="<?=site_url("web")?>" class="btn btn-box btn-info btn-sm btn-sm " title="Tambah Artikel">
 								<i class="fa fa-arrow-circle-left "></i>Kembali ke Daftar Artikel
 							</a>
 							<?php if ($artikel['slug']): ?>
-								<a href="<?= site_url('artikel/' . buat_slug($artikel)); ?>" target="_blank" class="btn btn-box bg-green btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-eye"></i> Lihat Artikel</a>
+								<a href="<?= site_url('artikel/' . buat_slug($artikel)); ?>" target="_blank" class="btn btn-box bg-green btn-sm "><i class="fa fa-eye"></i> Lihat Artikel</a>
 							<?php endif; ?>
 						</div>
 						<div class="card-body">
@@ -76,8 +76,8 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="box box-info collapsed-box">
-						<div class="box-header with-border">
+					<div class="card-info collapsed-box">
+						<div class="card-header">
 							<h3 class="box-title">Unggah Gambar</h3>
 							<div class="box-tools">
 								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
@@ -164,8 +164,8 @@
 					</div>
 					<?php if ($cat == 1000): ?>
 						<input type="hidden" name="id_agenda" value="<?= $artikel['id_agenda']?>">
-						<div class="box box-info">
-							<div class="box-header with-border">
+						
+							<div class="card-header">
 								<h3 class="box-title">Pengaturan Agenda Desa</h3>
 								<div class="box-tools">
 									<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -203,8 +203,8 @@
 							</div>
 						</div>
 					<?php endif; ?>
-					<div class="box box-info">
-						<div class="box-header with-border">
+					
+						<div class="card-header">
 							<h3 class="box-title">Pengaturan Lainnya</h3>
 							<div class="box-tools">
 								<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -247,7 +247,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="box box-info">
+					
 						<div class="box-body no-padding">
 							<div class='box-footer'>
 								<button type='reset' class='btn btn-box btn-danger btn-sm' ><i class='fa fa-times'></i> Batal</button>

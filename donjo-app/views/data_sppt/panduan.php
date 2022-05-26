@@ -46,7 +46,7 @@
 					<li>Buat <strong>Mutasi Persil</strong>
 						<p>Buat mutasi untuk setiap pergantian kepemilikan suatu lahan. Mutasi dapat dilakukan untuk sebagian dari luas suatu persil.</p>
 					</li>
-				</ol>
+				</ul>
 				</p>
 			</div>
 		</div>

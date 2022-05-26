@@ -9,10 +9,10 @@
 		});
 	});
 </script>
-<div class="box box-info">
-  <div class="box-header with-border">
-		<a href="<?= site_url("{$this->controller}/dialog/cetak/$o")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Buku Ekspedisi" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Ekspedisi"><i class="fa fa-print "></i> Cetak</a>
-		<a href="<?= site_url("{$this->controller}/dialog/unduh/$o")?>" title="Unduh Buku Ekspedisi" class="btn btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Buku Ekspedisi" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Buku Ekspedisi"><i class="fa fa-download"></i> Unduh</a>
+
+  <div class="card-header">
+		<a href="<?= site_url("{$this->controller}/dialog/cetak/$o")?>" class="btn btn-box bg-purple btn-sm " title="Cetak Buku Ekspedisi" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Buku Ekspedisi"><i class="fa fa-print "></i> Cetak</a>
+		<a href="<?= site_url("{$this->controller}/dialog/unduh/$o")?>" title="Unduh Buku Ekspedisi" class="btn btn-box bg-navy btn-sm " title="Unduh Buku Ekspedisi" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Buku Ekspedisi"><i class="fa fa-download"></i> Unduh</a>
 	</div>
 	<div class="card-body">
 		<div class="row">

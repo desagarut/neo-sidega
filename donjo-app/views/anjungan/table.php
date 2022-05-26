@@ -2,18 +2,18 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Anjungan Layanan Mandiri</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Anjungan Layanan Mandiri</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Anjungan Layanan Mandiri</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
-	        <div class="box-header with-border">
-						<a href="<?=site_url('anjungan/form')?>" class="btn btn-box bg-olive btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Anjungan Layanan Mandiri"><i class="fa fa-plus"></i> Tambah Anjungan Layanan Mandiri</a>
+				
+	        <div class="card-header">
+						<a href="<?=site_url('anjungan/form')?>" class="btn btn-box bg-olive btn-sm " title="Tambah Anjungan Layanan Mandiri"><i class="fa fa-plus"></i> Tambah Anjungan Layanan Mandiri</a>
 					</div>
 					<div class="card-body">
 						<div class="row">

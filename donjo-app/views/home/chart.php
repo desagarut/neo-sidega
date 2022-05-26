@@ -2,7 +2,7 @@
 
 <div class="col-md-4">
 <div class="box box-primary">
-<div class="box-header with-border">
+<div class="card-header">
   <h3 class="box-title">Area Chart</h3>
 
   <div class="box-tools pull-right">

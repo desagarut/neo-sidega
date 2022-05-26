@@ -21,15 +21,15 @@
 	<div class="pcoded-content">
 
   <div class="page-header">
-    <h1>Laporan Hasil Analisis</h1>
-    <ol class="breadcrumb">
+    <h5 class="m-b-10">Laporan Hasil Analisis</h5>
+    <ul class="breadcrumb">
       <li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
       <li><a href="<?= site_url('analisis_master'); ?>"> Master Analisis</a></li>
       <li><a href="<?= site_url('analisis_laporan/leave'); ?>">
         <?= $analisis_master['nama']; ?>
         </a></li>
       <li class="active">Laporan Hasil Klasifikasi</li>
-    </ol>
+    </ul>
   </div>
   </div>
   <div class="card">
@@ -39,11 +39,11 @@
     <?php $this->load->view('analisis_master/left', $data); ?>
   </div>
   <div class="col-md-8 col-lg-9">
-  <div class="box box-info">
-  <div class="box-header with-border"> <a href="<?= site_url("analisis_laporan/dialog/$o/cetak")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan Hasil Analisis <?= $judul['asubjek']; ?>" title="Cetak"><i class="fa fa-print"></i>Cetak</a> <a href="<?= site_url("analisis_laporan/dialog/$o/unduh")?>" class="btn btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan Hasil Analisis <?= $judul['asubjek']; ?>" title="Unduh"><i class="fa fa-download"></i>Unduh</a> <a href="<?= site_url("analisis_laporan/ajax_multi_jawab"); ?>" class="btn btn-box bg-olive btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Filter Indikator" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Filter Indikator"><i class="fa fa-search"></i>Filter Indikator</a> <a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan</a> <a href="<?= site_url(); ?>analisis_laporan/leave" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar RW"><i class="fa fa-arrow-circle-left "></i>Kembali Ke
+  
+  <div class="card-header"> <a href="<?= site_url("analisis_laporan/dialog/$o/cetak")?>" class="btn btn-box bg-purple btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan Hasil Analisis <?= $judul['asubjek']; ?>" title="Cetak"><i class="fa fa-print"></i>Cetak</a> <a href="<?= site_url("analisis_laporan/dialog/$o/unduh")?>" class="btn btn-box bg-navy btn-sm btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Laporan Hasil Analisis <?= $judul['asubjek']; ?>" title="Unduh"><i class="fa fa-download"></i>Unduh</a> <a href="<?= site_url("analisis_laporan/ajax_multi_jawab"); ?>" class="btn btn-box bg-olive btn-sm btn-sm " title="Filter Indikator" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Filter Indikator"><i class="fa fa-search"></i>Filter Indikator</a> <a href="<?= site_url("{$this->controller}/clear"); ?>" class="btn btn-box bg-purple btn-sm "><i class="fa fa-refresh"></i>Bersihkan</a> <a href="<?= site_url(); ?>analisis_laporan/leave" class="btn btn-box btn-info btn-sm btn-sm " title="Kembali Ke Daftar RW"><i class="fa fa-arrow-circle-left "></i>Kembali Ke
     <?= $analisis_master['nama']; ?>
     </a> </div>
-  <div class="box-header with-border">
+  <div class="card-header">
     <div class="table-responsive">
       <table class="table table-bordered table-striped table-hover tabel-rincian">
         <tr>

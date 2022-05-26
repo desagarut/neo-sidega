@@ -5,14 +5,14 @@
 
     <!-- Content Header (Page header) -->
     <div class="page-header">
-      <h1>
+      <h5 class="m-b-10">
         Mailbox
         <small>13 new messages</small>
-      </h1>
-      <ol class="breadcrumb">
+      </h5>
+      <ul class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Mailbox</li>
-      </ol>
+      </ul>
     </div>
 
     <div class="card">
@@ -21,7 +21,7 @@
                 <?php $this->load->view('web/mandiri/mailbox_menu.php');?>
             </div>
             <div class="col-md-9">
-              <div class="box box-info">
+              
                 <div class="card-header">
                     <h3 class="box-title">Layanan Surat</h3>
                     <?php if($pesan) : ?>
@@ -30,7 +30,7 @@
                                 <div class="col-md-12">
                                     <div class="box no-border">
                                         <div class="card-header">
-                                            <a href="<?= site_url("mandiri_web/mandiri/1/3/$kat")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Artikel">
+                                            <a href="<?= site_url("mandiri_web/mandiri/1/3/$kat")?>" class="btn btn-box btn-info btn-sm btn-sm "  title="Tambah Artikel">
                                                 <i class="fa fa-arrow-circle-left "></i>Kembali ke <?= $tipe_mailbox ?>
                                             </a>
                                         </div>

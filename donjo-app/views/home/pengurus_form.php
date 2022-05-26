@@ -9,19 +9,19 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Staf Pemerintahan <?= ucwords($this->setting->sebutan_desa)?></h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Staf Pemerintahan <?= ucwords($this->setting->sebutan_desa)?></h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('pengurus')?>"</i> Daftar Staf Pemerintahan</a></li>
 			<li class="active">Staf Pemerintahan <?= ucwords($this->setting->sebutan_desa)?></li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row" >
 			<div class="col-sm-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
-						<a href="<?= site_url()?>pengurus" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Staf</a>
+				
+					<div class="card-header">
+						<a href="<?= site_url()?>pengurus" class="btn btn-box btn-info btn-sm "><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Staf</a>
 					</div>
 					<div class="card-body">
 						<div class="form-group col-sm-12 form-horizontal">

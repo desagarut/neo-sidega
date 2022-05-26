@@ -2,20 +2,20 @@
 	<div class="pcoded-content">
 
   <div class="page-header">
-    <h1>Detil Pemudik</h1>
-    <ol class="breadcrumb">
+    <h5 class="m-b-10">Detil Pemudik</h5>
+    <ul class="breadcrumb">
       <li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
       <li><a href="<?= site_url('covid19_vaksin')?>"><i class="fa fa-home"></i> Vaksin Covid-19</a></li>
       <li class="active">Detil Penerima Vaksin</li>
-    </ol>
+    </ul>
   </div>
   <div class="card">
     <div class="row">
       <div class="col-md-12">
-        <div class="box box-info">
+        
 
-          <div class="box-header with-border">
-            <a href="<?= site_url('covid19_vaksin')?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Data Penerima Vaksin</a>
+          <div class="card-header">
+            <a href="<?= site_url('covid19_vaksin')?>" class="btn btn-box btn-info btn-sm "><i class="fa fa-arrow-circle-left"></i> Kembali Ke Data Penerima Vaksin</a>
             <?php if ($penduduk['id_status'] === '2' OR $penduduk['id_status'] === '3'): ?>
               <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target="#edit-warga">
                 <i class="fa fa-edit"></i>
@@ -24,7 +24,7 @@
             <?php endif ?>
           </div>
 
-          <div class="box-header with-border">
+          <div class="card-header">
             <h3 class="box-title">Detil Penerima Vaksin</h3>
           </div>
 

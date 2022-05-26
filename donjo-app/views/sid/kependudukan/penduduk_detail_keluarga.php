@@ -1,6 +1,6 @@
 
 	<div class="card">
-		<div class="box box-info">
+		
 			<div class="card-body">
 				<h5><b>Rincian Keluarga</b></h5>
 				<div class="table-responsive">

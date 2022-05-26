@@ -11,17 +11,17 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>QR Code</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">QR Code</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">QR Code</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
 			<div class="col-md-6">
-				<div class="box box-info">
-					<div class="box-header with-border">
+				
+					<div class="card-header">
 						<h3 class="box-title">Buat QR Code</h3>
 					</div>
 					<form id="mainform" name="mainform" action="" method="post">
@@ -86,8 +86,8 @@
 				</div>
 			</div>
 			<div class="col-md-6">
-				<div class="box box-info">
-					<div class="box-header with-border">
+				
+					<div class="card-header">
 						<h3 class="box-title">Scan QR Code</h3>
 					</div>
 					<div class="card-body">

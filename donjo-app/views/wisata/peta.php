@@ -50,17 +50,17 @@ function initMap() {
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Lokasi : <?=$wisata['nama']?></h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Lokasi : <?=$wisata['nama']?></h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('wisata') ?>"> Wisata</a></li>
 			<li class="active">Lokasi <?=$wisata['nama']?></li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
+				
                 <form id="validasi1" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">	
                 <div class='modal-body'>
                     <div class="row">

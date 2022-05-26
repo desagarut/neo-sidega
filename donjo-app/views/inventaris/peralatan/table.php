@@ -2,11 +2,11 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Daftar Inventaris Peralatan Dan Mesin</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Daftar Inventaris Peralatan Dan Mesin</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Daftar Inventaris Peralatan Dan Mesin</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="mainformexcel" name="mainformexcel" action="" method="post" class="form-horizontal">
@@ -15,15 +15,15 @@
 					<?php $this->load->view('inventaris/menu_kiri'); ?>
 				</div>
 				<div class="col-md-9">
-					<div class="box box-info">
-            <div class="box-header with-border">
-							<a href="<?= site_url('inventaris_peralatan/form')?>" class="btn btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Data Baru">
+					
+            <div class="card-header">
+							<a href="<?= site_url('inventaris_peralatan/form')?>" class="btn btn-box btn-success btn-sm btn-sm "  title="Tambah Data Baru">
 								<i class="fa fa-plus"></i>Tambah Data
             	</a>
-							<a href="#" class="btn btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#cetakBox" data-title="Cetak Inventaris">
+							<a href="#" class="btn btn-box bg-purple btn-sm btn-sm " title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#cetakBox" data-title="Cetak Inventaris">
 								<i class="fa fa-print"></i>Cetak
             	</a>
-							<a href="#" class="btn btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#unduhBox" data-title="Unduh Inventaris">
+							<a href="#" class="btn btn-box bg-navy btn-sm btn-sm "  title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#unduhBox" data-title="Unduh Inventaris">
 								<i class="fa fa-download"></i>Unduh
             	</a>
 						</div>

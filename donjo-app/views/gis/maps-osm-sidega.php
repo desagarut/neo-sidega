@@ -15,10 +15,10 @@
 			<?php endif; ?>
 
 			//Inisialisasi tampilan peta
-			var map = L.map('map').setView(posisi, zoom);
+			var mymap = L.map('map').setView(posisi, zoom);
 
 			<?php if (!empty($desa['path'])) : ?>
-				map.fitBounds(<?= $desa['path'] ?>);
+				mymap.fitBounds(<?= $desa['path'] ?>);
 			<?php endif; ?>
 
 			//Menampilkan overlayLayers Peta Semua Wilayah
@@ -55,131 +55,22 @@
 			var overlayLayers = overlayWil(marker_desa, marker_dusun, marker_rw, marker_rt, "<?= ucwords($this->setting->sebutan_desa) ?>", "<?= ucwords($this->setting->sebutan_dusun) ?>");
 
 			//Menampilkan BaseLayers Peta
-			var baseLayers = getBaseLayers(map, '<?= $this->setting->google_key ?>');
+			var baseLayers = getBaseLayers(mymap, '<?= $this->setting->google_key ?>');
 
 			//Geolocation IP Route/GPS
-			geoLocation(map);
+			geoLocation(mymap);
 
 			//Menambahkan zoom scale ke peta
-			L.control.scale().addTo(map);
+			L.control.scale().addTo(mymap);
 
 			//Mencetak peta ke PNG
-			cetakPeta(map);
+			cetakPeta(mymap);
 
-			//Menambahkan Legenda Ke Peta
-			/* var legenda_desa = L.control({position: 'bottomright'});
-    var legenda_dusun = L.control({position: 'bottomright'});
-    var legenda_rw = L.control({position: 'bottomright'});
-    var legenda_rt = L.control({position: 'bottomright'});
-
-    map.on('overlayadd', function (eventLayer) {
-      if (eventLayer.name === 'Peta Wilayah Desa') {
-        setlegendPetaDesa(legenda_desa, map, <?= json_encode($desa) ?>, '<?= ucwords($this->setting->sebutan_desa) ?>', '<?= $desa['nama_desa'] ?>');
-      }
-      if (eventLayer.name === 'Peta Wilayah Dusun') {
-        setlegendPeta(legenda_dusun, map, '<?= addslashes(json_encode($dusun_gis)) ?>', '<?= ucwords($this->setting->sebutan_dusun) ?>', 'dusun', '', '');
-      }
-      if (eventLayer.name === 'Peta Wilayah RW') {
-        setlegendPeta(legenda_rw, map, '<?= addslashes(json_encode($rw_gis)) ?>', 'RW', 'rw', '<?= ucwords($this->setting->sebutan_dusun) ?>');
-      }
-      if (eventLayer.name === 'Peta Wilayah RT') {
-        setlegendPeta(legenda_rt, map, '<?= addslashes(json_encode($rt_gis)) ?>', 'RT', 'rt', 'RW');
-      }
-    });
-
-    map.on('overlayremove', function (eventLayer) {
-      if (eventLayer.name === 'Peta Wilayah Desa') {
-        map.removeControl(legenda_desa);
-      }
-      if (eventLayer.name === 'Peta Wilayah Dusun') {
-        map.removeControl(legenda_dusun);
-      }
-      if (eventLayer.name === 'Peta Wilayah RW') {
-        map.removeControl(legenda_rw);
-      }
-      if (eventLayer.name === 'Peta Wilayah RT') {
-        map.removeControl(legenda_rt);
-      }
-    });
-*/
 			// Menampilkan OverLayer Area, Garis, Lokasi
-			layerCustom = tampilkan_layer_area_garis_lokasi(map, '<?= addslashes(json_encode($area)) ?>', '<?= addslashes(json_encode($garis)) ?>', '<?= addslashes(json_encode($lokasi)) ?>', '<?= base_url() . LOKASI_SIMBOL_LOKASI ?>', '<?= base_url() . LOKASI_FOTO_AREA ?>', '<?= base_url() . LOKASI_FOTO_GARIS ?>', '<?= base_url() . LOKASI_FOTO_LOKASI ?>');
+			layerCustom = tampilkan_layer_area_garis_lokasi(mymap, '<?= addslashes(json_encode($area)) ?>', '<?= addslashes(json_encode($garis)) ?>', '<?= addslashes(json_encode($lokasi)) ?>', '<?= base_url() . LOKASI_SIMBOL_LOKASI ?>', '<?= base_url() . LOKASI_FOTO_AREA ?>', '<?= base_url() . LOKASI_FOTO_GARIS ?>', '<?= base_url() . LOKASI_FOTO_LOKASI ?>');
 
 			//Covid
 			var mylayer = L.featureGroup();
-			var layerControl = {
-				"Peta Sebaran Covid-19": mylayer, // opsi untuk show/hide Peta Sebaran covid19 dari geojson dibawah
-			}
-
-			//loading Peta Covid - data geoJSON dari BNPB- https://bnpb-inacovid19.hub.arcgis.com/datasets/data-harian-kasus-per-provinsi-covid-19-indonesia
-			$.getJSON("https://opendata.arcgis.com/datasets/0c0f4558f1e548b68a1c82112744bad3_0.geojson", function(data) {
-				var datalayer = L.geoJson(data, {
-					onEachFeature: function(feature, layer) {
-						var custom_icon = L.icon({
-							"iconSize": 32,
-							"iconUrl": "<?= base_url() ?>assets/images/covid.png"
-						});
-						layer.setIcon(custom_icon);
-
-						var popup_0 = L.popup({
-							"maxWidth": "100%"
-						});
-
-						var html_a = $('<div id="html_a" style="width: 100.0%; height: 100.0%;">' +
-							'<h4><b>' + feature.properties.Provinsi + '</b></h4>' +
-							'<table><tr>' +
-							'<th style="color:red">Positif&nbsp;&nbsp;</th>' +
-							'<th style="color:green">Sembuh&nbsp;&nbsp;</th>' +
-							'<th style="color:black">Meninggal&nbsp;&nbsp;</th>' +
-							'</tr><tr>' +
-							'<td><center><b style="color:red">' + feature.properties.Kasus_Posi + '</b></center></td>' +
-							'<td><center><b style="color:green">' + feature.properties.Kasus_Semb + '</b></center></td>' +
-							'<td><center><b>' + feature.properties.Kasus_Meni + '</b></center></td>' +
-							'</tr></table></div>')[0];
-
-						popup_0.setContent(html_a);
-
-						layer.bindPopup(popup_0, {
-							'className': 'covid_pop'
-						});
-						layer.bindTooltip(feature.properties.Provinsi, {
-							sticky: true,
-							direction: 'top'
-						});
-					},
-				});
-				mylayer.addLayer(datalayer);
-			});
-
-			mylayer.on('add', function() {
-				setTimeout(function() {
-					var bounds = new L.LatLngBounds();
-					if (mylayer instanceof L.FeatureGroup) {
-						bounds.extend(mylayer.getBounds());
-					}
-					if (bounds.isValid()) {
-						map.fitBounds(bounds);
-					} else {
-						<?php if (!empty($desa['path'])) : ?>
-							map.fitBounds(<?= $desa['path'] ?>);
-						<?php endif; ?>
-					}
-					$('#covid_status').show();
-					$('#covid_status_local').show();
-				});
-			});
-
-			mylayer.on('remove', function() {
-				setTimeout(function() {
-					$('#covid_status').hide();
-					$('#covid_status_local').hide();
-					<?php if (!empty($desa['path'])) : ?>
-						map.fitBounds(<?= $desa['path'] ?>);
-					<?php endif; ?>
-				});
-			});
-
-			//End Covid
 
 			//PENDUDUK
 			<?php if ($layer_penduduk == 1 or $layer_keluarga == 1 and !empty($penduduk)) : ?>
@@ -196,20 +87,15 @@
 				});
 				for (var x = 0; x < jml; x++) {
 					if (penduduk[x].lat || penduduk[x].lng) {
-						//Jika penduduk ada foto, maka pakai foto tersebut
-						//Jika tidak, pakai foto default
-						if (penduduk[x].foto) {
-							foto = '<td><tr><img src="' + AmbilFoto(penduduk[x].foto) + '" class="foto_pend"/></td>';
-						} else
-							foto = '<td><img src="<?= base_url() ?>assets/files/user_pict/kuser.png" class="foto_pend"/></td>';
+						foto = '<td><img src="' + AmbilFoto(penduduk[x].foto, "kecil_", penduduk[x].id_sex) + '" class="img-radius wid-80 align-top m-r-15"/></td>';
 
 						//Konten yang akan ditampilkan saat marker diklik
 						content =
-							'<table border=0><tr>' + foto +
-							'<td style="padding-left:2px"><font size="2.5" style="bold">Nama : ' + penduduk[x].nama + '</font> - ' + penduduk[x].sex +
-							'<p>' + penduduk[x].umur + ' Tahun ' + penduduk[x].agama + '</p>' +
-							'<p>' + penduduk[x].alamat + '</p>' +
-							'<p><a href="<?= site_url("penduduk/detail/1/0/") ?>' + penduduk[x].id + '" target="ajax-modalx" rel="content" header="Rincian Data ' + penduduk[x].nama + '" >LIHAT DETAIL</a></p></td>' +
+							'<table><tr>' + foto +
+							'<td style="padding-left:2px"><font size="2.5"><h5>' + penduduk[x].nama + '</h5><p>Gender : ' + penduduk[x].sex +
+							'Usia : ' + penduduk[x].umur + ' Tahun<br/>Agama : ' + penduduk[x].agama + '<br/>' +
+							'Alamat : ' + penduduk[x].alamat + '<br/>' +
+							'<a href="<?= site_url("penduduk/detail/1/0/") ?>' + penduduk[x].id + '" class="btn btn-primary btn-sm" target="ajax-modalx" rel="content" header="Rincian Data ' + penduduk[x].nama + '" >LIHAT DETAIL</a></font></td>' +
 							'</tr></table>';
 						//Menambahkan point ke marker
 						semua_marker.push(turf.point([Number(penduduk[x].lng), Number(penduduk[x].lat)], {
@@ -245,26 +131,26 @@
 
 				markersList.push(geojson);
 				markers.addLayer(geojson);
-				map.addLayer(markers);
+				mymap.addLayer(markers);
 
 				//Mempusatkan tampilan map agar semua marker terlihat
-				map.fitBounds(geojson.getBounds());
+				mymap.fitBounds(geojson.getBounds());
 			}
 
 			//Menampilkan Baselayer dan Overlayer
 			var mainlayer = L.control.layers(baseLayers, overlayLayers, {
 				position: 'topleft',
 				collapsed: true
-			}).addTo(map);
+			}).addTo(mymap);
 			var customlayer = L.control.groupedLayers('', layerCustom, {
 				groupCheckboxes: true,
 				position: 'topleft',
 				collapsed: true
-			}).addTo(map);
+			}).addTo(mymap);
 			var covidlayer = L.control.layers('', layerControl, {
 				position: 'topleft',
-				collapsed: false
-			}).addTo(map);
+				collapsed: true
+			}).addTo(mymap);
 
 			$('#isi_popup').remove();
 			$('#isi_popup_dusun').remove();
@@ -283,44 +169,64 @@
 		/*height:80vh*/
 	}
 </style>
+
+
+<!-- Menampilkan OpenStreetMap -->
 <div class="pcoded-main-container">
 	<div class="pcoded-content">
 
-		<div class="card">
-			<div class="card-header">
-				<a href="<?= site_url('gis/googlemap') ?>"><button class="btn btn-primary btn-sm mb-2 mr-2">Google</button></a>
-				<a href="<?= site_url('gis') ?>"><button class="btn btn-secondary btn-sm mb-2 mr-2">OSM</button></a>
+		<div class="page-header">
+			<div class="page-block">
+				<div class="row class-items-center">
+					<div class="col-md-12">
+						<div class="page-header-title">
+							<h5 class="m-b-10">Peta Wilayah <?= ucwords($this->setting->sebutan_desa) ?> <?= $desa["nama_desa"]; ?></h5>
+						</div>
+						<ul class="breadcrumb">
+							<li class="breadcrumb-item"><a href="<?= site_url('beranda') ?>"><i class="feather icon-home"></i></a></li>
+							<li class="breadcrumb-item"><a href="#!">Pertanahan</a></li>
+							<li class="breadcrumb-item"><a href="#!">Peta Wilayah </a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
-			<div class="card-body">
-				<form id="mainform_map" name="mainform_map" action="" method="post">
+		</div>
+		<div class="card">
+			<form id="mainform_map" name="mainform_map" action="" method="post">
+				<div class="card-header">
+					<a href="<?= site_url('gis/googlemaps') ?>"><button class="btn btn-primary btn-sm mb-2 mr-2">G-Map</button></a>
+					<a href="<?= site_url('gis') ?>"><button class="btn btn-secondary btn-sm mb-2 mr-2">OSM</button></a>
+
+					<div class="card-header-right">
+						<div class="btn-group card-option">
+							<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="feather icon-more-horizontal"></i> </button>
+							<ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+								<li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+								<li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+								<li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+								<li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="card-body">
 					<div class="row">
 						<div class="col-md-12">
 							<div id="map">
-								<?php //include("donjo-app/views/gis/cetak_peta.php"); 
-								?>
-								<div class="leaflet-top leaflet-left">
-									<div id="covid_status">
-										<?php //$this->load->view("gis/covid_peta.php") 
-										?>
-									</div>
-								</div>
+								<?php include("donjo-app/views/gis/cetak_peta.php");?>
 								<div class="leaflet-top leaflet-right">
-									<div id="covid_status_local">
-										<?php //$this->load->view("gis/covid_peta_local.php") 
-										?>
-									</div>
 									<div class="leaflet-control-layers leaflet-bar leaflet-control">
-										<a class="leaflet-control-control icos" href="#" title="Control Panel" role="button" aria-label="Control Panel" onclick="$('#target1').toggle();$('#target1').removeClass('hidden');$('#target2').hide();"><i class="fa fa-gears"></i></a>
+										<a class="leaflet-control-control icos" href="#" title="Control Panel" role="button" aria-label="Control Panel" onclick="$('#target1').toggle();$('#target1').removeClass('hidden');$('#target2').hide();"><i class="fa fa-search"></i></a>
 										<a class="leaflet-control-control icos" href="#" title="Legenda" role="button" aria-label="Legenda" onclick="$('#target2').toggle();$('#target2').removeClass('hidden');$('#target1').hide();"><i class="fa fa-list"></i></a>
 									</div>
 
-									<?php //$this->load->view("gis/content_desa.php", array('desa' => $desa, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_desa . ' ' . $desa['nama_desa']))) 
+									<?php $this->load->view("gis/content_desa.php", array('desa' => $desa, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_desa . ' ' . $desa['nama_desa']))) 
 									?>
-									<?php //$this->load->view("gis/content_dusun.php", array('dusun_gis' => $dusun_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' '))) 
+									<?php $this->load->view("gis/content_dusun.php", array('dusun_gis' => $dusun_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' '))) 
 									?>
-									<?php //$this->load->view("gis/content_rw.php", array('rw_gis' => $rw_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' '))) 
+									<?php $this->load->view("gis/content_rw.php", array('rw_gis' => $rw_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' '))) 
 									?>
-									<?php //$this->load->view("gis/content_rt.php", array('rt_gis' => $rt_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' '))) 
+									<?php $this->load->view("gis/content_rt.php", array('rt_gis' => $rt_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' '))) 
 									?>
 
 									<div id="target1" class="leaflet-control-layers leaflet-control-layers-expanded leaflet-control hidden" aria-haspopup="true" style="max-width: 250px;">
@@ -421,13 +327,41 @@
 							</div>
 						</div>
 					</div>
-				</form>
-			</div>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
 
+<script>
+	function handle_pend(cb) {
+		formAction('mainform_map', '<?= site_url('gis') ?>/layer_penduduk');
+	}
 
+	function handle_kel(cb) {
+		formAction('mainform_map', '<?= site_url('gis') ?>/layer_keluarga');
+	}
+
+	function AmbilFoto(foto, ukuran = "kecil_", sex) {
+		//Jika penduduk ada foto, maka pakai foto tersebut
+		//Jika tidak, pakai foto default
+		if (foto) {
+			ukuran_foto = ukuran || null
+			file_foto = '<?= base_url() . LOKASI_USER_PICT; ?>' + ukuran_foto + foto;
+		} else {
+			file_foto = sex == '2' ? '<?= FOTO_DEFAULT_WANITA ?>' : '<?= FOTO_DEFAULT_PRIA ?>';
+		}
+
+		return file_foto;
+	}
+
+	function AmbilFotoLokasi(foto, ukuran = "kecil_") {
+		ukuran_foto = ukuran || null
+		file_foto = '<?= base_url() . LOKASI_FOTO_LOKASI; ?>' + ukuran_foto + foto;
+		return file_foto;
+	}
+</script>
+<!--
 <script>
 	function handle_pend(cb) {
 		formAction('mainform_map', '<?= site_url('gis') ?>/layer_penduduk');
@@ -448,7 +382,7 @@
 		file_foto = '<?= base_url() . LOKASI_FOTO_LOKASI; ?>' + ukuran_foto + foto;
 		return file_foto;
 	}
-</script>
+</script>-->
 <!--
 <div class="modal fade" id="modalKecil" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
 	<div class="modal-dialog modal-sm">

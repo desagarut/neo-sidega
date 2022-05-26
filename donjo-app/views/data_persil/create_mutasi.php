@@ -3,13 +3,13 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Pengelolaan Data Letter-C <?=ucwords($this->setting->sebutan_deskel)?> <?= $kelurahan["nama_deskel"];?></h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Pengelolaan Data Letter-C <?=ucwords($this->setting->sebutan_deskel)?> <?= $kelurahan["nama_deskel"];?></h5>
+		<ul class="breadcrumb">
 			<li><a href="<?=site_url('home')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?=site_url('letterc/clear')?>"> Daftar Letter-C</a></li>
 			<li><a href="<?=site_url('letterc/rincian/'. $letterc[id])?>"> Rincian Letter-C</a></li>
 			<li class="active">Pengelolaan Data Letter-C</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
@@ -17,17 +17,17 @@
 				<?php $this->load->view('data_persil/menu_kiri.php')?>
 			</div>
 			<div class="col-md-9">
-				<div class="box box-info">
+				
 					<div class="card-body">
-						<div class="box-header with-border">
-							<a href="<?= site_url('letterc/rincian/'. $letterc[id])?>" class="btn btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Rincian Letter-C"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Rincian Letter-C</a>
+						<div class="card-header">
+							<a href="<?= site_url('letterc/rincian/'. $letterc[id])?>" class="btn btn-box btn-primary btn-sm " title="Kembali Ke Rincian Letter-C"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Rincian Letter-C</a>
 							<?php if ($persil): ?>
-								<a href="<?= site_url('letterc/mutasi/'. $letterc[id].'/'.$persil['id'])?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Rincian Letter-C"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Rincian Mutasi Letter-C</a>
+								<a href="<?= site_url('letterc/mutasi/'. $letterc[id].'/'.$persil['id'])?>" class="btn btn-box btn-info btn-sm " title="Kembali Ke Rincian Letter-C"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Rincian Mutasi Letter-C</a>
 							<?php endif; ?>
 						</div>
 						<div class="row">
 							<div class="col-sm-12">
-								<div class="box-header with-border">
+								<div class="card-header">
 									<h3 class="box-title">Rincian Letter-C</h3>
 								</div>
 								<div class="card-body">
@@ -67,11 +67,11 @@
 									</div>
 								</div>
 
-								<div class="box-header with-border">
+								<div class="card-header">
 									<h3 class="box-title">Tambah Persil</h3>
 								</div>
 								<div class="panel box box-default">
-									<div class="box-header with-border">
+									<div class="card-header">
 										<h4 class="box-title">
 											<a data-toggle="collapse" data-parent="#accordion" href="#persil">Persil</a>
 										</h4>
@@ -94,7 +94,7 @@
 													<div class="form-group" >
 										  			<label class="col-sm-3 control-label">Kalau persil belum ada</label>
 														<div class="col-sm-8">
-															<a href="<?=site_url("data_persil/form/0/$letterc[id]")?>" class="btn btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"  title="Tambah Persil">
+															<a href="<?=site_url("data_persil/form/0/$letterc[id]")?>" class="btn btn-box btn-success btn-sm btn-sm "  title="Tambah Persil">
 																<i class="fa fa-plus"></i>Tambah Persil
 															</a>
 														</div>
@@ -137,18 +137,18 @@
 								</div>
 
 								<?php if ($persil): ?>
-									<div class="box-header with-border">
+									<div class="card-header">
 										<h3 class="box-title">Tambah Mutasi</h3>
 									</div>
 
 									<?php if (empty($persil['letterc_awal']) and empty($mutasi)): ?>
 										<div id="letterc_awal">
 											<div class="card-body">
-												<a href="<?= site_url('letterc/awal_persil/'. $letterc[id] .'/' .$persil['id'])?>" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block col-sm-2" title="Kembali Ke Rincian Letter-C"><i class="fa fa-step-backward"></i>Letter-C Awal</a>
+												<a href="<?= site_url('letterc/awal_persil/'. $letterc[id] .'/' .$persil['id'])?>" class="btn btn-box btn-success btn-sm  col-sm-2" title="Kembali Ke Rincian Letter-C"><i class="fa fa-step-backward"></i>Letter-C Awal</a>
 												<span style="padding-left: 10px;">Catat Letter-C ini sebagai pemilik awal keseluruhan persil <?= $persil["nomor"] ?></span>
 											</div>
 											<div class="card-body">
-												<a class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block col-sm-2" title="Kembali Ke Rincian Letter-C" onclick="tambah_mutasi();"><i class="fa fa-plus"></i>Tambah Mutasi</a>
+												<a class="btn btn-box btn-success btn-sm  col-sm-2" title="Kembali Ke Rincian Letter-C" onclick="tambah_mutasi();"><i class="fa fa-plus"></i>Tambah Mutasi</a>
 												<span style="padding-left: 10px;">Tambah mutasi Letter-C <?= $letterc['nomor']?> untuk persil <?= $persil['nomor']?></span>
 											</div>
 										</div>
@@ -164,7 +164,7 @@
 											<input type="hidden" name="id_persil" value="<?= $persil["id"] ?>"/>
 
 											<?php if ($mutasi['jenis_mutasi'] != 9): ?>
-												<div class="box-header with-border">
+												<div class="card-header">
 													<h4 class="box-title">
 														<a data-toggle="collapse" data-parent="#accordion" href="#persil">Mutasi - Bidang Tanah</a>
 													</h4>
@@ -191,7 +191,7 @@
 														</div>
 													</div>
 												</div>
-												<div class="box-header with-border">
+												<div class="card-header">
 													<h4 class="box-title">
 														<a data-toggle="collapse" data-parent="#accordion" href="#mutasi">Mutasi - Sebab Dan Tanggal Perubahan</a>
 													</h4>
@@ -252,7 +252,7 @@
 													</div>
 												</div>
 											<?php else: ?>
-												<div class="box-header with-border">
+												<div class="card-header">
 													<h4 class="box-title">
 														<a data-toggle="collapse" data-parent="#accordion" href="#mutasi">Pemilik Awal Persil</a>
 													</h4>

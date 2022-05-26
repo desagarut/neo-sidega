@@ -4,9 +4,9 @@
 
 	<div class="page-header">
 
-		<h1>Pengaturan Ukuran/Nilai Indikator Analisis</h1>
+		<h5 class="m-b-10">Pengaturan Ukuran/Nilai Indikator Analisis</h5>
 
-		<ol class="breadcrumb">
+		<ul class="breadcrumb">
 
 			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
 
@@ -18,7 +18,7 @@
 
 			<li class="active">Pengaturan Nilai</li>
 
-		</ol>
+		</ul>
 
 	</div>
 
@@ -38,15 +38,15 @@
 
 				<div class="col-md-8 col-lg-9">
 
-					<div class="box box-info">
+					
 
-            <div class="box-header with-border">
+            <div class="card-header">
 
-							<a href="<?= site_url("analisis_indikator/form_parameter/$analisis_indikator[id]") ?>" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Ukuran Ukuran/Nilai Baru"  data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Data Parameter"><i class="fa fa-plus"></i> Tambah Ukuran Ukuran/Nilai Baru</a>
+							<a href="<?= site_url("analisis_indikator/form_parameter/$analisis_indikator[id]") ?>" class="btn btn-box btn-success btn-sm " title="Tambah Ukuran Ukuran/Nilai Baru"  data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Data Parameter"><i class="fa fa-plus"></i> Tambah Ukuran Ukuran/Nilai Baru</a>
 
-							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("analisis_indikator/p_delete_all/$analisis_indikator[id]") ?>')" class="btn btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+							<a href="#confirm-delete" title="Hapus Data" onclick="deleteAllBox('mainform', '<?= site_url("analisis_indikator/p_delete_all/$analisis_indikator[id]") ?>')" class="btn btn-box btn-danger btn-sm  hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 
-							<a href="<?= site_url() ?>analisis_indikator" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke Indikator Analisis</a>
+							<a href="<?= site_url() ?>analisis_indikator" class="btn btn-box btn-info btn-sm "><i class="fa fa-arrow-circle-left "></i> Kembali Ke Indikator Analisis</a>
 
 						</div>
 

@@ -11,39 +11,52 @@
 		});
 	});
 </script>
+
+<!-- [ Main Content ] start -->
 <div class="pcoded-main-container">
 	<div class="pcoded-content">
 
-	<div class="page-header">
-		<h1>Log Penduduk</h1>
-		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
-			<li><a href="<?= site_url('penduduk/clear')?>"> Daftar Penduduk</a></li>
-			<li class="active">Log Penduduk</li>
-		</ol>
-	</div>
-	<div class="card">
+		<!-- [ breadcrumb ] start -->
+		<div class="page-header">
+			<div class="page-block">
+				<div class="row align-items-center">
+					<div class="col-md-12">
+						<div class="page-header-title">
+							<h5 class="m-b-10">Data Penduduk</h5>
+						</div>
+						<ul class="breadcrumb">
+							<li class="breadcrumb-item"><a href="<?= site_url('beranda'); ?>"><i class="feather icon-home"></i></a></li>
+							<li class="breadcrumb-item"><a href="<?= site_url('penduduk/clear')?>">Data Penduduk</a></li>
+							<li class="breadcrumb-item"><a href="#!">Penduduk Log</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- [ breadcrumb ] end -->
+
+		<!-- [ Main Content ] start -->
 		<div class="row">
-			<div class="col-md-12">
-				<div class="box box-info">
-					<form id="mainform" name="mainform" action="" method="post">
-						<div class="box-header with-border">
+			<div class="col-xl-12 col-md-12">
+				<div class="card">
+					<div class="card-header text-center">
+
 							<div class="row">
 								<div class="col-sm-12">
-									<a href="#confirm-status" title="Kembalikan Status" onclick="aksiBorongan('mainform', '<?=site_url("penduduk_log/kembalikan_status_all")?>')" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-undo'></i> Kembalikan Status Terpilih</a>
-									<a href="<?= site_url("penduduk_log/ajax_cetak/$o/cetak")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" target="_blank"><i class="fa fa-print "></i> Cetak</a>
-									<a href="<?= site_url("penduduk_log/ajax_cetak/$o/unduh")?>" class="btn btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="fa  fa-download"></i> Unduh</a>
-									<a href="<?= site_url('penduduk/clear')?>" class="btn btn-box bg-maroon btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Daftar Penduduk</a>
-									<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan Filter</a>
+								<a href="<?= site_url('penduduk/clear')?>" class="btn btn-primary mb-2 mr-2 "><i class="feather icon-arrow-left"></i> Kembali</a>
+									<a href="#confirm-status" title="Kembalikan Status" onclick="aksiBorongan('mainform', '<?=site_url("penduduk_log/kembalikan_status_all")?>')" class="btn btn-danger hapus-terpilih  mb-2 mr-2"><i class='fa fa-undo'></i> Kembalikan Status Terpilih</a>
+									<a href="<?= site_url("penduduk_log/ajax_cetak/$o/cetak")?>" class="btn btn-icon btn-secondary btn-sm  mb-2 mr-2 " title="Cetak Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data" target="_blank"><i class="feather icon-printer"></i></a>
+									<a href="<?= site_url("penduduk_log/ajax_cetak/$o/unduh")?>" class="btn btn-icon btn-secondary btn-sm mb-2 mr-2 visible-xs-block visible-sm- mb-2 mr-2 inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data" target="_blank"><i class="feather icon-download-cloud"></i></a>
+									<a href="<?= site_url("{$this->controller}/clear") ?>" class="btn btn-icon btn-warning btn-sm mb-2 mr-2 "><i class="feather icon-refresh-cw"></i></a>
 								</div>
 							</div>
 						</div>
 						<div class="card-body">
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+						<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
 										<div class="row">
-											<div class="col-sm-9">
+											<div class="col-md-2">
 												<select class="form-control input-sm" name="status_dasar" onchange="formAction('mainform', '<?=site_url('penduduk_log/filter/status_dasar')?>')">
 													<option value="">Status Dasar</option>
 													<?php foreach ($list_status_dasar as $data): ?>
@@ -52,24 +65,32 @@
 														<?php endif; ?>
 													<?php endforeach; ?>
 												</select>
+											</div>
+											<div class="col-md-2">
 												<select class="form-control input-sm" name="sex" onchange="formAction('mainform','<?= site_url('penduduk_log/filter/sex')?>')">
 													<option value="">Jenis Kelamin</option>
 													<?php foreach ($list_sex AS $data): ?>
 														<option value="<?= $data['id']?>" <?php selected($sex, $data['id']); ?>><?= set_ucwords($data['nama'])?></option>
 													<?php endforeach; ?>
 												</select>
+											</div>
+											<div class="col-md-2">
 												<select class="form-control input-sm" name="agama" onchange="formAction('mainform','<?= site_url('penduduk_log/filter/agama')?>')">
 													<option value="">Agama</option>
 													<?php foreach ($list_agama AS $data): ?>
 														<option value="<?= $data['id']?>" <?php selected($agama, $data['id']); ?>><?= set_ucwords($data['nama'])?></option>
 													<?php endforeach; ?>
 												</select>
+											</div>
+											<div class="col-md-2">
 												<select class="form-control input-sm " name="dusun" onchange="formAction('mainform','<?= site_url('penduduk_log/dusun')?>')">
 													<option value=""><?= ucwords($this->setting->sebutan_dusun)?></option>
 													<?php foreach ($list_dusun AS $data): ?>
 														<option value="<?= $data['dusun']?>" <?php selected($dusun, $data['dusun']); ?>><?= set_ucwords($data['dusun'])?></option>
 													<?php endforeach; ?>
 												</select>
+											</div>
+											<div class="col-md-2">
 												<?php if ($dusun): ?>
 													<select class="form-control input-sm" name="rw" onchange="formAction('mainform','<?= site_url('penduduk_log/rw')?>')" >
 														<option value="">RW</option>
@@ -78,6 +99,8 @@
 														<?php endforeach; ?>
 													</select>
 												<?php endif; ?>
+											</div>
+											<div class="col-md-2">
 												<?php if ($rw): ?>
 													<select class="form-control input-sm" name="rt" onchange="formAction('mainform','<?= site_url('penduduk_log/rt')?>')">
 														<option value="">RT</option>
@@ -87,13 +110,11 @@
 													</select>
 												<?php endif; ?>
 											</div>
-											<div class="col-sm-3">
-												<div class="input-group input-group-sm pull-right">
-													<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?=html_escape($cari)?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?=site_url('penduduk_log/filter/cari')?>');$('#'+'mainform').submit();}">
-													<div class="input-group-btn">
-														<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?=site_url('penduduk_log/filter/cari')?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
-													</div>
-												</div>
+										</div>
+										<div class="input-group mb-3">
+											<input name="cari" id="cari" class="form-control" placeholder="Cari..." type="text" value="<?=html_escape($cari)?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?=site_url('penduduk_log/filter/cari')?>');$('#'+'mainform').submit();}">
+											<div class="input-group-append">
+												<button type="submit" class="btn btn-default" onclick="$('#'+'mainform').attr('action', '<?=site_url('penduduk_log/filter/cari')?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
 											</div>
 										</div>
 										<div class="row">

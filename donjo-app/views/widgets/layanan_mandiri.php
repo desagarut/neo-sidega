@@ -97,7 +97,7 @@
 						<button type="submit" id="but" style="margin-left:0px">Ganti</button>
 					</form>
 					<?php if ($flash_message) { ?>
-						<div id="notification" class='box-header label-danger'><?php echo $flash_message ?></div>
+						<div id="notification" class='card-headerlabel-danger'><?php echo $flash_message ?></div>
 						<script type="text/javascript">
 						$('document').ready(function(){
 							$('#notification').delay(4000).fadeOut();

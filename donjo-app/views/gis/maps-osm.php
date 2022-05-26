@@ -58,43 +58,287 @@
 
 
 <script>
+	(function() {
+		var infoWindow;
+		window.onload = function() {
+			<?php if (!empty($desa['lat']) and !empty($desa['lng'])) : ?>
+				var posisi = [<?= $desa['lat'] . "," . $desa['lng'] ?>];
+				var zoom = <?= $desa['zoom'] ?: 10 ?>;
+			<?php elseif (!empty($desa['path'])) : ?>
+				var wilayah_desa = <?= $desa['path'] ?>;
+				var posisi = wilayah_desa[0][0];
+				var zoom = <?= $desa['zoom'] ?: 10 ?>;
+			<?php else : ?>
+				var posisi = [-7.2025712, 107.8852316];
+				var zoom = 10;
+			<?php endif; ?>
 
-	
-var map = L.map('map').setView([<?=$desa['lat'].", ".$desa['lng']?>], 13);
+			//Inisialisasi tampilan peta
+			var map = L.map('map').setView(posisi, zoom);
 
-//polygon
+			<?php if (!empty($desa['path'])) : ?>
+				map.fitBounds(<?= $desa['path'] ?>);
+			<?php endif; ?>
 
-var WilayahDesa = L.polygon([<?= $desa['path'] ?>
-],{
-color: '<?=$desa['warna_garis']?>',
-    fillColor: '<?=$desa['warna']?>',
-    fillOpacity: 0.5,
-    radius: 500
-}).addTo(map);
+			//Menampilkan overlayLayers Peta Semua Wilayah
+			var marker_desa = [];
+			var marker_dusun = [];
+			var marker_rw = [];
+			var marker_rt = [];
+			var semua_marker = [];
+			var markers = new L.MarkerClusterGroup();
+			var markersList = [];
 
-//polygon
-/*
-var dusun = L.polygon([<?=$wil_ini['path']?>
-],{
-color: '<?=$desa['warna_garis']?>',
-    fillColor: '<?=$desa['warna']?>',
-    fillOpacity: 0.5,
-    radius: 500
-}).addTo(map);
+
+			//OVERLAY WILAYAH DESA
+			<?php if (!empty($desa['path'])) : ?>
+				set_marker_desa_content(marker_desa, <?= json_encode($desa) ?>, "<?= ucwords($this->setting->sebutan_desa) . ' ' . $desa['nama_desa'] ?>", "<?= favico_desa() ?>", '#isi_popup');
+			<?php endif; ?>
+
+			//OVERLAY WILAYAH DUSUN
+			<?php if (!empty($dusun_gis)) : ?>
+				set_marker_content(marker_dusun, '<?= addslashes(json_encode($dusun_gis)) ?>', '<?= ucwords($this->setting->sebutan_dusun) ?>', 'dusun', '#isi_popup_dusun_', '<?= favico_desa() ?>');
+			<?php endif; ?>
+
+			//OVERLAY WILAYAH RW
+			<?php if (!empty($rw_gis)) : ?>
+				set_marker_content(marker_rw, '<?= addslashes(json_encode($rw_gis)) ?>', 'RW', 'rw', '#isi_popup_rw_', '<?= favico_desa() ?>');
+			<?php endif; ?>
+
+			//OVERLAY WILAYAH RT
+			<?php if (!empty($rt_gis)) : ?>
+				set_marker_content(marker_rt, '<?= addslashes(json_encode($rt_gis)) ?>', 'RT', 'rt', '#isi_popup_rt_', '<?= favico_desa() ?>');
+			<?php endif; ?>
+
+			//Menampilkan overlayLayers Peta Semua Wilayah
+			var overlayLayers = overlayWil(marker_desa, marker_dusun, marker_rw, marker_rt, "<?= ucwords($this->setting->sebutan_desa) ?>", "<?= ucwords($this->setting->sebutan_dusun) ?>");
+
+			//Menampilkan BaseLayers Peta
+			var baseLayers = getBaseLayers(map, '<?= $this->setting->google_key ?>');
+
+			//Geolocation IP Route/GPS
+			geoLocation(map);
+
+			//Menambahkan zoom scale ke peta
+			L.control.scale().addTo(map);
+
+			//Mencetak peta ke PNG
+			cetakPeta(map);
+
+			//Menambahkan Legenda Ke Peta
+			/* var legenda_desa = L.control({position: 'bottomright'});
+    var legenda_dusun = L.control({position: 'bottomright'});
+    var legenda_rw = L.control({position: 'bottomright'});
+    var legenda_rt = L.control({position: 'bottomright'});
+
+    map.on('overlayadd', function (eventLayer) {
+      if (eventLayer.name === 'Peta Wilayah Desa') {
+        setlegendPetaDesa(legenda_desa, map, <?= json_encode($desa) ?>, '<?= ucwords($this->setting->sebutan_desa) ?>', '<?= $desa['nama_desa'] ?>');
+      }
+      if (eventLayer.name === 'Peta Wilayah Dusun') {
+        setlegendPeta(legenda_dusun, map, '<?= addslashes(json_encode($dusun_gis)) ?>', '<?= ucwords($this->setting->sebutan_dusun) ?>', 'dusun', '', '');
+      }
+      if (eventLayer.name === 'Peta Wilayah RW') {
+        setlegendPeta(legenda_rw, map, '<?= addslashes(json_encode($rw_gis)) ?>', 'RW', 'rw', '<?= ucwords($this->setting->sebutan_dusun) ?>');
+      }
+      if (eventLayer.name === 'Peta Wilayah RT') {
+        setlegendPeta(legenda_rt, map, '<?= addslashes(json_encode($rt_gis)) ?>', 'RT', 'rt', 'RW');
+      }
+    });
+
+    map.on('overlayremove', function (eventLayer) {
+      if (eventLayer.name === 'Peta Wilayah Desa') {
+        map.removeControl(legenda_desa);
+      }
+      if (eventLayer.name === 'Peta Wilayah Dusun') {
+        map.removeControl(legenda_dusun);
+      }
+      if (eventLayer.name === 'Peta Wilayah RW') {
+        map.removeControl(legenda_rw);
+      }
+      if (eventLayer.name === 'Peta Wilayah RT') {
+        map.removeControl(legenda_rt);
+      }
+    });
 */
+			// Menampilkan OverLayer Area, Garis, Lokasi
+			layerCustom = tampilkan_layer_area_garis_lokasi(map, '<?= addslashes(json_encode($area)) ?>', '<?= addslashes(json_encode($garis)) ?>', '<?= addslashes(json_encode($lokasi)) ?>', '<?= base_url() . LOKASI_SIMBOL_LOKASI ?>', '<?= base_url() . LOKASI_FOTO_AREA ?>', '<?= base_url() . LOKASI_FOTO_GARIS ?>', '<?= base_url() . LOKASI_FOTO_LOKASI ?>');
 
+			//Covid
+			var mylayer = L.featureGroup();
+			var layerControl = {
+				"Peta Sebaran Covid-19": mylayer, // opsi untuk show/hide Peta Sebaran covid19 dari geojson dibawah
+			}
 
-// Menambahkan zoom scale ke peta
-L.control.scale().addTo(map);
+			//loading Peta Covid - data geoJSON dari BNPB- https://bnpb-inacovid19.hub.arcgis.com/datasets/data-harian-kasus-per-provinsi-covid-19-indonesia
+			$.getJSON("https://opendata.arcgis.com/datasets/0c0f4558f1e548b68a1c82112744bad3_0.geojson", function(data) {
+				var datalayer = L.geoJson(data, {
+					onEachFeature: function(feature, layer) {
+						var custom_icon = L.icon({
+							"iconSize": 32,
+							"iconUrl": "<?= base_url() ?>assets/images/covid.png"
+						});
+						layer.setIcon(custom_icon);
 
+						var popup_0 = L.popup({
+							"maxWidth": "100%"
+						});
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors'
-}).addTo(map);
+						var html_a = $('<div id="html_a" style="width: 100.0%; height: 100.0%;">' +
+							'<h4><b>' + feature.properties.Provinsi + '</b></h4>' +
+							'<table><tr>' +
+							'<th style="color:red">Positif&nbsp;&nbsp;</th>' +
+							'<th style="color:green">Sembuh&nbsp;&nbsp;</th>' +
+							'<th style="color:black">Meninggal&nbsp;&nbsp;</th>' +
+							'</tr><tr>' +
+							'<td><center><b style="color:red">' + feature.properties.Kasus_Posi + '</b></center></td>' +
+							'<td><center><b style="color:green">' + feature.properties.Kasus_Semb + '</b></center></td>' +
+							'<td><center><b>' + feature.properties.Kasus_Meni + '</b></center></td>' +
+							'</tr></table></div>')[0];
 
-var KantorDesa = L.marker([<?=$desa['lat'].", ".$desa['lng']?>]).addTo(map)
-    .bindPopup('Kantor <?= ucwords($this->setting->sebutan_desa) . ' ' . $desa['nama_desa'] ?>')
-    .openPopup(true);
+						popup_0.setContent(html_a);
 
+						layer.bindPopup(popup_0, {
+							'className': 'covid_pop'
+						});
+						layer.bindTooltip(feature.properties.Provinsi, {
+							sticky: true,
+							direction: 'top'
+						});
+					},
+				});
+				mylayer.addLayer(datalayer);
+			});
+
+			mylayer.on('add', function() {
+				setTimeout(function() {
+					var bounds = new L.LatLngBounds();
+					if (mylayer instanceof L.FeatureGroup) {
+						bounds.extend(mylayer.getBounds());
+					}
+					if (bounds.isValid()) {
+						map.fitBounds(bounds);
+					} else {
+						<?php if (!empty($desa['path'])) : ?>
+							map.fitBounds(<?= $desa['path'] ?>);
+						<?php endif; ?>
+					}
+					$('#covid_status').show();
+					$('#covid_status_local').show();
+				});
+			});
+
+			mylayer.on('remove', function() {
+				setTimeout(function() {
+					$('#covid_status').hide();
+					$('#covid_status_local').hide();
+					<?php if (!empty($desa['path'])) : ?>
+						map.fitBounds(<?= $desa['path'] ?>);
+					<?php endif; ?>
+				});
+			});
+
+			//End Covid
+
+			//PENDUDUK
+			<?php if ($layer_penduduk == 1 or $layer_keluarga == 1 and !empty($penduduk)) : ?>
+				//Data penduduk
+				var penduduk = JSON.parse('<?= addslashes(json_encode($penduduk)) ?>');
+				var jml = penduduk.length;
+				var foto;
+				var content;
+				var point_style = L.icon({
+					iconUrl: '<?= base_url(LOKASI_SIMBOL_LOKASI) ?>penduduk.png',
+					iconSize: [25, 36],
+					iconAnchor: [13, 36],
+					popupAnchor: [0, -28],
+				});
+				for (var x = 0; x < jml; x++) {
+					if (penduduk[x].lat || penduduk[x].lng) {
+						//Jika penduduk ada foto, maka pakai foto tersebut
+						//Jika tidak, pakai foto default
+						if (penduduk[x].foto) {
+							foto = '<td><tr><img src="' + AmbilFoto(penduduk[x].foto) + '" class="foto_pend"/></td>';
+						} else
+							foto = '<td><img src="<?= base_url() ?>assets/files/user_pict/kuser.png" class="foto_pend"/></td>';
+
+						//Konten yang akan ditampilkan saat marker diklik
+						content =
+							'<table border=0><tr>' + foto +
+							'<td style="padding-left:2px"><font size="2.5" style="bold">Nama : ' + penduduk[x].nama + '</font> - ' + penduduk[x].sex +
+							'<p>' + penduduk[x].umur + ' Tahun ' + penduduk[x].agama + '</p>' +
+							'<p>' + penduduk[x].alamat + '</p>' +
+							'<p><a href="<?= site_url("penduduk/detail/1/0/") ?>' + penduduk[x].id + '" target="ajax-modalx" rel="content" header="Rincian Data ' + penduduk[x].nama + '" >LIHAT DETAIL</a></p></td>' +
+							'</tr></table>';
+						//Menambahkan point ke marker
+						semua_marker.push(turf.point([Number(penduduk[x].lng), Number(penduduk[x].lat)], {
+							content: content,
+							style: point_style
+						}));
+					}
+				}
+			<?php endif; ?>
+
+			if (semua_marker.length != 0) {
+				var geojson = L.geoJSON(turf.featureCollection(semua_marker), {
+					pmIgnore: true,
+					showMeasurements: true,
+					onEachFeature: function(feature, layer) {
+						layer.bindPopup(feature.properties.content);
+						layer.bindTooltip(feature.properties.content);
+					},
+					style: function(feature) {
+						if (feature.properties.style) {
+							return feature.properties.style;
+						}
+					},
+					pointToLayer: function(feature, latlng) {
+						if (feature.properties.style) {
+							return L.marker(latlng, {
+								icon: feature.properties.style
+							});
+						} else
+							return L.marker(latlng);
+					}
+				});
+
+				markersList.push(geojson);
+				markers.addLayer(geojson);
+				map.addLayer(markers);
+
+				//Mempusatkan tampilan map agar semua marker terlihat
+				map.fitBounds(geojson.getBounds());
+			}
+
+			//Menampilkan Baselayer dan Overlayer
+			var mainlayer = L.control.layers(baseLayers, overlayLayers, {
+				position: 'topleft',
+				collapsed: true
+			}).addTo(map);
+			var customlayer = L.control.groupedLayers('', layerCustom, {
+				groupCheckboxes: true,
+				position: 'topleft',
+				collapsed: true
+			}).addTo(map);
+			var covidlayer = L.control.layers('', layerControl, {
+				position: 'topleft',
+				collapsed: false
+			}).addTo(map);
+
+			$('#isi_popup').remove();
+			$('#isi_popup_dusun').remove();
+			$('#isi_popup_rw').remove();
+			$('#isi_popup_rt').remove();
+			$('#covid_status').hide();
+			$('#covid_status_local').hide();
+		}; //EOF window.onload
+
+	})();
 </script>
-
+<style>
+	#map {
+		width: 100%;
+		height: 600px;
+		/*height:80vh*/
+	}
+</style>

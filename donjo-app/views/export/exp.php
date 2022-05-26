@@ -1,7 +1,7 @@
 										<div class="tab-pane <?php if ($act_tab==1): ?>active<?php endif ?>">
 											<div class="row">
 												<div class="col-md-12">
-													<div class="box-header with-border">
+													<div class="card-header">
 														<h3 class="box-title"><strong>Ekspor Data <?= ucwords($this->setting->sebutan_desa); ?></strong></h3>
 													</div>
 													<div class="card-body">

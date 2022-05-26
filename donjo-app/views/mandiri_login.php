@@ -77,7 +77,7 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                  </ol>
+                  </ul>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <img class="d-block w-100" src="<?= base_url()?>assets/bootstrap/1.png" alt="First slide">
@@ -105,7 +105,7 @@
               <div class="brand-wrapper" align="center">
                 <a href="<?=site_url('first'); ?>"><img src="<?=gambar_desa($header['logo']);?>" alt="<?=$header['nama_desa']?>" class="img-responsive"/></a>
               </div>
-              <h1 align="center" style="font-size:18px">Layanan Masyarakat <?=ucwords($this->setting->sebutan_desa)?> <?=$header['nama_desa']?></h1>
+              <h1 align="center" style="font-size:18px">Layanan Masyarakat <?=ucwords($this->setting->sebutan_desa)?> <?=$header['nama_desa']?></h5>
 
 								<form id="validasi" class="login-form" action="<?= site_url('mandiri_web/auth'); ?>" method="post" >
 									<?php if ($this->session->mandiri_wait == 1): ?>

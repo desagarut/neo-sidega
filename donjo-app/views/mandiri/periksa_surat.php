@@ -17,17 +17,17 @@
 
 <div class="content-wrapper periksa">
 	<div class="page-header">
-		<h1>Periksa Surat</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Periksa Surat</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('permohonan_surat_admin/index/1/0')?>"> Daftar Permohonan Surat</a></li>
 			<li class="active">Surat Keterangan</li>
-		</ol>
+		</ul>
 	</div>
 	<section class="content periksa">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
+				
 					<div class="card-body">
 						<form class="form-horizontal">
 						  <div class="form-group">
@@ -75,8 +75,8 @@
 			</div>
 		</div>
 
-	 	<div class="box box-info" style="margin-top: 10px;">
-	    <div class="box-header with-border">
+	 	<div class="card-info" style="margin-top: 10px;">
+	    <div class="card-header">
 	      <h4 class="box-title">Status Kelengkapan Dokumen</h4>
 	      <div class="box-tools">
 	        <button type="button" class="btn btn-box-tool" data-toggle="collapse" data-target="#surat"><i class="fa fa-minus"></i></button>

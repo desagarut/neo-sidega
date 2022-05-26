@@ -3,16 +3,16 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Daftar Anggota Keluarga</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Daftar Anggota Keluarga</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('keluarga/clear')?>"> Daftar Keluarga</a></li>
 			<li class="active">Daftar Anggota Keluarga</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
-		<div class="box box-info">
-			<div class="box-header with-border">
+		
+			<div class="card-header">
 				<div class="btn-group btn-group-vertical">
 					<?php if ($this->CI->cek_hak_akses('h')): ?>
                     <a class="btn btn-box btn-success btn-sm" data-toggle="dropdown"><i class='fa fa-plus'></i> Tambah Anggota</a>
@@ -28,8 +28,8 @@
 					</ul>
 					<?php endif;?>
 				</div>
-				<a href="<?= site_url("keluarga/kartu_keluarga/$p/$o/$kk")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-book"></i> Kartu Keluarga</a>
-				<a href="<?=site_url("keluarga/index/$p/$o")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Keluarga"><i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar Keluarga
+				<a href="<?= site_url("keluarga/kartu_keluarga/$p/$o/$kk")?>" class="btn btn-box bg-purple btn-sm "><i class="fa fa-book"></i> Kartu Keluarga</a>
+				<a href="<?=site_url("keluarga/index/$p/$o")?>" class="btn btn-box btn-info btn-sm btn-sm " title="Kembali Ke Daftar Keluarga"><i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar Keluarga
 				</a>
 			</div>
 			<div class="card-body">

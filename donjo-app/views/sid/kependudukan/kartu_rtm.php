@@ -2,22 +2,22 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Kartu Rumah Tangga</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Kartu Rumah Tangga</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('rtm/clear')?>"> Daftar Rumah Tangga</a></li>
 			<li><a href="<?= site_url("rtm/anggota/$id_kk")?>"> Daftar Anggota Rumah Tangga</a></li>
 			<li class="active">Kartu Rumah Tangga</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="box box-info">
-						<div class="box-header with-border">
-							<a href="<?= site_url("rtm/cetak_kk/$id_kk")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" target="_blank"><i class="fa fa-print "></i> Cetak</a>
-							<a href="<?=site_url("rtm/anggota/$id_kk")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali ke Daftar Anggota Rumah Tangga">
+					
+						<div class="card-header">
+							<a href="<?= site_url("rtm/cetak_kk/$id_kk")?>" class="btn btn-box bg-purple btn-sm " target="_blank"><i class="fa fa-print "></i> Cetak</a>
+							<a href="<?=site_url("rtm/anggota/$id_kk")?>" class="btn btn-box btn-info btn-sm btn-sm " title="Kembali ke Daftar Anggota Rumah Tangga">
 								<i class="fa fa-arrow-circle-left "></i>Kembali Ke Daftar Anggota Rumah Tangga
 							</a>
 						</div>

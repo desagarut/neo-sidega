@@ -9,7 +9,7 @@
 				<?php endif; ?>
 				<h1 class="judul">
 					PEMERINTAH <?= strtoupper($this->setting->sebutan_kabupaten . ' ' . $config['nama_kabupaten'] . ' <br>' . $this->setting->sebutan_kecamatan . ' ' . $config['nama_kecamatan'] . ' <br>' . $this->setting->sebutan_desa . ' ' . $config['nama_desa']); ?>
-				<h1>
+				<h5 class="m-b-10">
 			</td>
 		</tr>
 		<tr>

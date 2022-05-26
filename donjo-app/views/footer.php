@@ -1,10 +1,5 @@
 <?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 	
-	<!-- Js for  maps -->
-	<script src="<?= base_url() ?>assets/js/plugins/gmaps.min.js"></script>
-	<script src="<?= base_url() ?>assets/js/pages/google-maps.js"></script>            
-	<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-	<!-- Make sure you put this AFTER Leaflet's CSS -->
 
 	<!-- Required Js -->
 	<script src="<?= base_url()?>assets/js/vendor-all.min.js"></script>
@@ -16,10 +11,9 @@
 <script src="<?= base_url()?>assets/js/analytics.js"></script>
 	
 
-<script src="<?= base_url()?>assets/bootstrap/js/jquery.min.js"></script> 
 <!-- Jquery UI --> 
-<script src="<?= base_url()?>assets/bootstrap/js/jquery-ui.min.js"></script> 
-<script src="<?= base_url()?>assets/bootstrap/js/jquery.ui.autocomplete.scroll.min.js"></script> 
+<!--<script src="<?= base_url()?>assets/bootstrap/js/jquery-ui.min.js"></script>
+<script src="<?= base_url()?>assets/bootstrap/js/jquery.ui.autocomplete.scroll.min.js"></script> -->
 <script src="<?= base_url()?>assets/bootstrap/js/moment.min.js"></script> 
 <!-- Bootstrap 3.3.7 --> 
 <script src="<?= base_url()?>assets/bootstrap/js/bootstrap.min.js"></script> 

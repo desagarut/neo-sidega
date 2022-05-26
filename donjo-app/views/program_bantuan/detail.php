@@ -12,17 +12,17 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Program Bantuan <?= $detail['nama']; ?></h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Program Bantuan <?= $detail['nama']; ?></h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('program_bantuan')?>"> Daftar Program Bantuan</a></li>
 			<li class="active">Program Bantuan <?= $detail['nama']; ?></li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="mainform" name="mainform" method="post">
-			<div class="box box-info">
-				<div class="box-header with-border">
+			
+				<div class="card-header">
 					<?php if ($detail["status"] == 1): ?>
 						<div class="btn-group btn-group-vertical">
 							<a class="btn btn-box btn-success btn-sm" data-toggle="dropdown"><i class='fa fa-plus'></i> Tambah Peserta Baru</a>
@@ -36,12 +36,12 @@
 							</ul>
 						</div>
 					<?php endif; ?>
-					<a href="#confirm-delete" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?=site_url("program_bantuan/delete_all/$detail[id]")?>')" class="btn btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
-					<a href="<?= site_url("program_bantuan/daftar/$detail[id]/cetak")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak" target="_blank"><i class="fa fa-print"></i> Cetak
+					<a href="#confirm-delete" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform', '<?=site_url("program_bantuan/delete_all/$detail[id]")?>')" class="btn btn-box btn-danger btn-sm  hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+					<a href="<?= site_url("program_bantuan/daftar/$detail[id]/cetak")?>" class="btn btn-box bg-purple btn-sm " title="Cetak" target="_blank"><i class="fa fa-print"></i> Cetak
 					</a>
-					<a href="<?= site_url("program_bantuan/daftar/$detail[id]/unduh")?>" class="btn btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh" target="_blank"><i class="fa fa-download"></i> Unduh
+					<a href="<?= site_url("program_bantuan/daftar/$detail[id]/unduh")?>" class="btn btn-box bg-navy btn-sm " title="Unduh" target="_blank"><i class="fa fa-download"></i> Unduh
 					</a>
-					<a href="<?= site_url('program_bantuan')?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan
+					<a href="<?= site_url('program_bantuan')?>" class="btn btn-box btn-info btn-sm " title="Kembali Ke Daftar Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan
 					</a>
 				</div>
 				<div class="card-body">

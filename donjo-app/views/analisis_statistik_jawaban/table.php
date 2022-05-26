@@ -22,9 +22,9 @@
 
 	<div class="page-header">
 
-		<h1>Laporan Statistik Jawaban</h1>
+		<h5 class="m-b-10">Laporan Statistik Jawaban</h5>
 
-		<ol class="breadcrumb">
+		<ul class="breadcrumb">
 
 			<li><a href="<?= site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
 
@@ -34,7 +34,7 @@
 
 			<li class="active">Laporan Per Indikator</li>
 
-		</ol>
+		</ul>
 
 	</div>
 
@@ -54,23 +54,23 @@
 
 				<div class="col-md-8 col-lg-9">
 
-					<div class="box box-info">
+					
 
-						<div class="box-header with-border">
+						<div class="card-header">
 
-							<a href="<?=site_url("analisis_statistik_jawaban/cetak/$o"); ?>" class="btn btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank">
+							<a href="<?=site_url("analisis_statistik_jawaban/cetak/$o"); ?>" class="btn btn-box bg-purple btn-sm btn-sm " title="Cetak Data" target="_blank">
 
 								<i class="fa fa-print"></i>Cetak
 
 							</a>
 
-							<a href="<?=site_url("analisis_statistik_jawaban/excel/$o"); ?>" class="btn btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh" target="_blank">
+							<a href="<?=site_url("analisis_statistik_jawaban/excel/$o"); ?>" class="btn btn-box bg-navy btn-sm btn-sm " title="Unduh" target="_blank">
 
 								<i class="fa fa-download"></i>Unduh
 
 							</a>
 
-							<a href="<?= site_url(); ?>analisis_laporan/leave" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar RW">
+							<a href="<?= site_url(); ?>analisis_laporan/leave" class="btn btn-box btn-info btn-sm btn-sm " title="Kembali Ke Daftar RW">
 
 								<i class="fa fa-arrow-circle-left "></i>Kembali Ke <?= $analisis_master['nama']; ?>
 
@@ -78,7 +78,7 @@
 
 						</div>
 
-						<div class="box-header with-border">
+						<div class="card-header">
 
 							<h5>Analisis Statistik Jawaban - <a href="<?= site_url(); ?>analisis_master/menu/<?= $_SESSION['analisis_master']; ?>"><a href="<?= site_url(); ?>analisis_master/menu/<?= $_SESSION['analisis_master']; ?>"><?= $analisis_master['nama']; ?></a></a></h5>
 

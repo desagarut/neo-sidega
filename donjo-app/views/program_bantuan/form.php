@@ -3,21 +3,21 @@
 
 	<?php $detail = $program[0];?>
 	<div class="page-header">
-		<h1>Peserta Program Bantuan</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Peserta Program Bantuan</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('program_bantuan')?>"> Daftar Program Bantuan</a></li>
 			<li><a href="<?= site_url("program_bantuan/detail/$detail[id]")?>"> Rincian Program Bantuan</a></li>
 			<li class="active">Peserta Program Bantuan</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="box box-info">
-					<div class="box-header with-border">
-						<a href="<?= site_url('program_bantuan')?>" class="btn btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
-						<a href="<?= site_url("program_bantuan/detail/$detail[id]")?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Rincian Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Rincian Program Bantuan</a>
+				
+					<div class="card-header">
+						<a href="<?= site_url('program_bantuan')?>" class="btn btn-box btn-primary btn-sm " title="Kembali Ke Daftar Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
+						<a href="<?= site_url("program_bantuan/detail/$detail[id]")?>" class="btn btn-box btn-info btn-sm " title="Kembali Ke Rincian Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Rincian Program Bantuan</a>
 					</div>
 					<div class="card-body">
 						<div class="row">
@@ -44,8 +44,8 @@
 									<?php if ($individu['nik']): ?>
 										<div class="row">
 											<div class="col-sm-6">
-												<div class="box box-info box-solid">
-													<div class="box-header with-border">
+												<div class="card-info box-solid">
+													<div class="card-header">
 														<i class="fa fa-user"></i>
 														<h3 class="box-title">Konfirmasi Peserta</h3>
 													</div>
@@ -57,7 +57,7 @@
 										</form>
 										<div class="col-sm-6">
 											<div class="box box-success box-solid">
-												<div class="box-header with-border">
+												<div class="card-header">
 													<i class="fa fa-credit-card"></i>
 													<h3 class="box-title">Identitas Pada Kartu Peserta</h3>
 												</div>

@@ -2,24 +2,24 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Daftar Dokumentasi Pembangunan</h1>
-		<ol class="breadcrumb">
-			<li><a href="<?= site_url('hom_sid') ?>"><i class="fa fa-home"></i> Home</a></li>
+		<h5 class="m-b-10">Daftar Dokumentasi Pembangunan</h5>
+		<ul class="breadcrumb">
+			<li class="breadcrumb-item"><a href="<?= site_url('beranda') ?>"><i class="feather icon-home"></i></a></li>
 			<li class="active">Daftar Jenis</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="mainformexcel" name="mainformexcel"method="post" class="form-horizontal">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="box box-info">
-						<div class="box-header with-border">
-							<a href="<?= site_url('pembangunan_dokumentasi/form') ?>" class="btn btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Data Baru">
+					
+						<div class="card-header">
+							<a href="<?= site_url('pembangunan_dokumentasi/form') ?>" class="btn btn-success btn-sm btn-sm " title="Tambah Data Baru">
 								<i class="fa fa-plus"></i>Tambah Data
 							</a>
-							<a href="<?= site_url("pembangunan/dialog_daftar/{$pembangunan->id}/cetak")?>" class="btnbg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Pembangunan" title="Cetak Data Pembangunan <?= $pembangunan->judul ?> "><i class="fa fa-print "></i> Cetak</a>
-							<a href="<?= site_url("pembangunan/dialog_daftar/{$pembangunan->id}/unduh")?>" class="btnbg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Pembangunan" title="Unduh Data Pembangunan <?= $pembangunan->judul ?> "><i class="fa fa-download "></i> Unduh</a>
-							<a href="<?= site_url('pembangunan') ?>" class="btn btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Pembagunan"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Daftar Pembangunan</a>
+							<a href="<?= site_url("pembangunan/dialog_daftar/{$pembangunan->id}/cetak")?>" class="btnbg-purple btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Data Pembangunan" title="Cetak Data Pembangunan <?= $pembangunan->judul ?> "><i class="fa fa-print "></i> Cetak</a>
+							<a href="<?= site_url("pembangunan/dialog_daftar/{$pembangunan->id}/unduh")?>" class="btnbg-navy btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Pembangunan" title="Unduh Data Pembangunan <?= $pembangunan->judul ?> "><i class="fa fa-download "></i> Unduh</a>
+							<a href="<?= site_url('pembangunan') ?>" class="btn btn-info btn-sm " title="Kembali Ke Daftar Pembagunan"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Daftar Pembangunan</a>
 						</div>
 						<div class="card-body">
 							<h5 class="text-bold">Rincian Dokumentasi Pembangunan</h5>

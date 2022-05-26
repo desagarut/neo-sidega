@@ -1,7 +1,7 @@
 										<div class="tab-pane <?php if ($act_tab==4): ?> active<?php endif ?>">
 											<div class="row">
 												<div class="col-md-12">
-													<div class="box-header with-border">
+													<div class="card-header">
 														<h3 class="box-title"><strong>Backup Database SID</strong></h3>
 													</div>
 													<div class="card-body">
@@ -37,7 +37,7 @@
 													</div>
 												</div>
 												<div class="col-md-12">
-													<div class="box-header with-border">
+													<div class="card-header">
 														<h3 class="box-title"><strong>Restore Database SID</strong></h3>
 													</div>
 													<div class="card-body">

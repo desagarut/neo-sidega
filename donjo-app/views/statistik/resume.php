@@ -4,18 +4,18 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Resume Statistik</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Resume Statistik</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?=site_url('beranda'); ?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Resume Statistik <?= $dusun; ?></li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
                 <div class='col-md-12'>
-                    <div class="box box-info">
-                        <div class="box-header with-border">
+                    
+                        <div class="card-header">
                             <div class="box-tools pull-right">
                                  <a href="<?=site_url()?>penduduk/clear"><span class="label label-info"> Detail</span></a>
                                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -105,7 +105,7 @@
 
                 <div class='col-md-12'>
                     <div class="box box-success">
-                        <div class="box-header with-border">
+                        <div class="card-header">
                             <div class="box-tools pull-right">
                                  <a href="<?=site_url()?>program_bantuan"><span class="label label-info"> Detail</span></a>
                                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -146,7 +146,7 @@
                                         <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
                                       </div>
                                     </div>
-                                    <!-- /.box-header -->
+                                    <!-- /.card-header-->
                                     <div class="box-body text-center">
                                       <div class="sparkline" data-type="pie" data-offset="90" data-width="100px" data-height="100px">
                                         6,4,8

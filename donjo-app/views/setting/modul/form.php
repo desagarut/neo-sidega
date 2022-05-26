@@ -8,28 +8,28 @@
 
 	<div class="page-header">
 		<?php if ($modul['parent']!='0'): ?>
-		<h1>Pengaturan Sub Modul</h1>
+		<h5 class="m-b-10">Pengaturan Sub Modul</h5>
 		<?php else: ?>
-			<h1>Pengaturan Modul</h1>
+			<h5 class="m-b-10">Pengaturan Modul</h5>
 		<?php endif; ?>
-		<ol class="breadcrumb">
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= site_url('modul/clear')?>"> Daftar Modul</a></li>
 			<?php if ($modul['parent']!='0'): ?>
 				<li><a href="<?= site_url()?>modul/sub_modul/<?=($modul['parent'])?>"> Daftar Sub Modul</a></li>
 			<?php endif ?>
 			<li class="active">Pengaturan Modul</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row" >
 			<form id="validasi" action="<?=$form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 				<div class="col-md-12">
 					<div class="box box-primary">
-						<div class="box-header with-border">
-							<a href="<?= site_url('modul/clear')?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Modul</a>
+						<div class="card-header">
+							<a href="<?= site_url('modul/clear')?>" class="btn btn-box btn-info btn-sm "><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Modul</a>
 							<?php if ($modul['parent']!='0'): ?>
-								<a href="<?= site_url()?>modul/sub_modul/<?=($modul['parent'])?>" class="btn btn-box btn-primary btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Sub Modul</a>
+								<a href="<?= site_url()?>modul/sub_modul/<?=($modul['parent'])?>" class="btn btn-box btn-primary btn-sm "><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Sub Modul</a>
 							<?php endif ?>
 						</div>
 						<div class="card-body">

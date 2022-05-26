@@ -2,11 +2,11 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Info Sistem</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Info Sistem</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Info Sistem</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<div class="row" >

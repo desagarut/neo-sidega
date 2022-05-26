@@ -2,20 +2,20 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Pengaturan Data Dokumentasi Pembangunan</h1>
-		<ol class="breadcrumb">
-			<li><a href="<?= site_url('hom_sid') ?>"><i class="fa fa-home"></i> Home</a></li>
+		<h5 class="m-b-10">Pengaturan Data Dokumentasi Pembangunan</h5>
+		<ul class="breadcrumb">
+			<li class="breadcrumb-item"><a href="<?= site_url('beranda') ?>"><i class="feather icon-home"></i></a></li>
 			<li><a href="<?= site_url("pembangunan_dokumentasi/show/{$id_pembangunan}") ?>"><i class="fa fa-dashboard"></i>Daftar Dokumentasi Pembangunan</a></li>
 			<li class="active">Pengaturan Data Pembangunan</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="box box-info">
-						<div class="box-header with-border">
-							<a href="<?= site_url("pembangunan_dokumentasi/show/{$id_pembangunan}") ?>" class="btn btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Daftar Pembangunan</a>
+					
+						<div class="card-header">
+							<a href="<?= site_url("pembangunan_dokumentasi/show/{$id_pembangunan}") ?>" class="btn btn-info btn-sm "><i class="fa fa-arrow-circle-left"></i> Kembali Ke Daftar Pembangunan</a>
 						</div>
 						<div class="card-body">
 							<div class="row">

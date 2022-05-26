@@ -4,17 +4,17 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Tambah Program Bantuan</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Tambah Program Bantuan</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?=site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?=site_url('program_bantuan')?>"> Daftar Program Bantuan</a></li>
 			<li class="active">Tambah Program Bantuan</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
-		<div class="box box-info">
-			<div class="box-header with-border">
-				<a href="<?=site_url('program_bantuan')?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
+		
+			<div class="card-header">
+				<a href="<?=site_url('program_bantuan')?>" class="btn btn-box btn-info btn-sm " title="Kembali Ke Daftar Program Bantuan"><i class="fa fa-arrow-circle-o-left"></i> Kembali Ke Daftar Program Bantuan</a>
 			</div>
 			<form id="validasi" action="<?= $form_action?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
 				<div class="card-body">

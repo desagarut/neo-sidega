@@ -55,7 +55,7 @@
           <a href="<?= site_url("data_sppt/tagihan_daftar/") ?>" class="btn btn-info mb-2 mr-2" title="Master Data">Master Data</a>
           <a href="<?= site_url("data_sppt/tagihan_cetak") ?>" class="btn btn-icon btn-primary mb-2 mr-2" title="Cetak Data" target="_blank"><i class="feather icon-printer"></i></a>
           <a href="<?= site_url("data_sppt/tagihan_unduh") ?>" class="btn btn-icon btn-secondary mb-2 mr-2" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data Tagihan" title="Unduh Data Tagihan"><i class="feather icon-download-cloud"></i></a>
-          <!-- <a href="<?= site_url('data_sppt/import') ?>" class="btn bg-teal btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data SPPT" title="Unduh Data SPPT"> <i class="fa fa-upload"></i>Unggah </a> -->
+          <!-- <a href="<?= site_url('data_sppt/import') ?>" class="btn bg-teal btn-sm btn-sm " data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Data SPPT" title="Unduh Data SPPT"> <i class="fa fa-upload"></i>Unggah </a> -->
           <a href="<?= site_url("data_sppt/clear_tagih") ?>" class="btn btn-icon btn-warning mb-2 mr-2"><i class="feather icon-refresh-cw"></i></a>
         </div>
 

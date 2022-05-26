@@ -1,5 +1,6 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://cdn.jsdelivr.net/gh/somanchiu/Keyless-Google-Maps-API@v5.7/mapsJavaScriptAPI.js" async defer></script>
+
 <script>
   $(document).ready(function() {
     $('#simpan_wilayah').click(function() {
@@ -191,7 +192,6 @@
 
 <div class="pcoded-main-container">
 	<div class="pcoded-content">
-  <div class="pcoded-content">
     <div class="page-header">
       <div class="page-block">
         <div class="row align-items-center">

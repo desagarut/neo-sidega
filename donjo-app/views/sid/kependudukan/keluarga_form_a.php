@@ -2,12 +2,12 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Biodata Anggota Keluarga</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Biodata Anggota Keluarga</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
       <li><a href="<?= site_url('keluarga/clear')?>"> Daftar Keluarga</a></li>
 			<li class="active">Biodata Anggota Keluarga</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
     <form id="mainform" name="mainform" action="<?= $form_action?>" method="post" enctype="multipart/form-data">
@@ -38,11 +38,11 @@
             </div>
             <div class="col-md-9">
               <div class='box box-primary'>
-        			  <div class="box-header with-border">
-  								<a href="<?=site_url("keluarga")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Keluarga">
+        			  <div class="card-header">
+  								<a href="<?=site_url("keluarga")?>" class="btn btn-box btn-info btn-sm btn-sm " title="Kembali Ke Daftar Keluarga">
   									<i class="fa fa-arrow-circle-left"></i>Kembali Ke Daftar Keluarga
   								</a>
-                  <a href="<?=site_url("keluarga/anggota/1/0/$id_kk")?>" class="btn btn-box btn-info btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Kembali Ke Daftar Keluarga">
+                  <a href="<?=site_url("keluarga/anggota/1/0/$id_kk")?>" class="btn btn-box btn-info btn-sm btn-sm " title="Kembali Ke Daftar Keluarga">
                     <i class="fa fa-arrow-circle-left"></i>Kembali Ke Daftar Anggota Keluarga
                   </a>
   							</div>

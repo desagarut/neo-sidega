@@ -2,18 +2,18 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Pengaturan Slider Besar</h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Pengaturan Slider Besar</h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Pengaturan Slider Besar</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="mainform" action="<?= site_url('web/update_slider')?>" method="POST" class="form-horizontal">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="box box-info">
-						<div class="box-header with-border">
+					
+						<div class="card-header">
 								Pilih sumber gambar untuk ditampilkan di slider besar:
 						</div>
 						<div class="card-body">

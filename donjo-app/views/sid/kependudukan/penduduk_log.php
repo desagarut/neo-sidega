@@ -9,29 +9,39 @@
 		});
 	});
 </script>
+<!-- [ Main Content ] start -->
 <div class="pcoded-main-container">
 	<div class="pcoded-content">
 
-	<div class="page-header">
-		<h1>Log Penduduk</h1>
-		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
-			<li><a href="<?= site_url('penduduk/clear')?>"> Daftar Penduduk</a></li>
-			<li class="active">Log Penduduk</li>
-		</ol>
-	</div>
-	<div class="card">
+		<!-- [ breadcrumb ] start -->
+		<div class="page-header">
+			<div class="page-block">
+				<div class="row align-items-center">
+					<div class="col-md-12">
+						<div class="page-header-title">
+							<h5 class="m-b-10">Data Penduduk</h5>
+						</div>
+						<ul class="breadcrumb">
+							<li class="breadcrumb-item"><a href="<?= site_url('beranda'); ?>"><i class="feather icon-home"></i></a></li>
+							<li class="breadcrumb-item"><a href="#!">Data Penduduk</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- [ breadcrumb ] end -->
+
+		<!-- [ Main Content ] start -->
 		<div class="row">
-			<div class="col-md-12">
-				<div class="box box-info">
-					<form id="mainform" name="mainform" action="" method="post">
-						<div class="box-header with-border">
+			<div class="col-xl-12 col-md-12">
+				<div class="card">
+					<div class="card-header text-center">
 							<div class="row">
 								<div class="col-sm-12">
-									<a href="#confirm-status" title="Kembalikan Status" onclick="aksiBorongan('mainform', '<?=site_url("penduduk_log/kembalikan_status_all")?>')" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-undo'></i> Kembalikan Status Terpilih</a>
-									<a href="<?= site_url("penduduk_log/cetak/$o")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank"><i class="fa fa-print "></i> Cetak</a>
-									<a href="<?= site_url("penduduk_log/excel/$o")?>" class="btn btn-box bg-navy btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" target="_blank"><i class="fa  fa-download"></i> Unduh</a>
-									<a href="<?= site_url('penduduk/clear')?>" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left"></i> Kembali Ke Daftar Penduduk</a>
+									<a href="#confirm-status" title="Kembalikan Status" onclick="aksiBorongan('mainform', '<?=site_url("penduduk_log/kembalikan_status_all")?>')" class="btn btn-box btn-success btn-sm  hapus-terpilih"><i class='fa fa-undo'></i> Kembalikan Status Terpilih</a>
+									<a href="<?= site_url("penduduk_log/cetak/$o")?>" class="btn btn-box bg-purple btn-sm " title="Cetak Data" target="_blank"><i class="fa fa-print "></i> Cetak</a>
+									<a href="<?= site_url("penduduk_log/excel/$o")?>" class="btn btn-box bg-navy btn-sm " title="Unduh Data" target="_blank"><i class="fa  fa-download"></i> Unduh</a>
+									<a href="<?= site_url('penduduk/clear')?>" class="btn btn-box btn-info btn-sm "><i class="fa fa-arrow-circle-left"></i> Kembali Ke Daftar Penduduk</a>
 								</div>
 							</div>
 						</div>

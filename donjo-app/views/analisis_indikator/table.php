@@ -26,9 +26,9 @@
 
 	<div class="page-header">
 
-		<h1>Pengaturan Indikator - <?= $analisis_master['nama']?></h1>
+		<h5 class="m-b-10">Pengaturan Indikator - <?= $analisis_master['nama']?></h5>
 
-		<ol class="breadcrumb">
+		<ul class="breadcrumb">
 
 			<li><a href="<?= site_url('beranda')?>"><i class="fa fa-home"></i> Home</a></li>
 
@@ -38,7 +38,7 @@
 
 			<li class="active">Pengaturan Indikator</li>
 
-		</ol>
+		</ul>
 
 	</div>
 
@@ -58,13 +58,13 @@
 
 				<div class="col-md-8 col-lg-9">
 
-					<div class="box box-info">
+					
 
-            <div class="box-header with-border">
+            <div class="card-header">
 
 							<?php if ($analisis_master['lock']==1): ?>
 
-								<a href="<?= site_url('analisis_indikator/form')?>" class="btn btn-box btn-success btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block <?php if ($analisis_master['jenis']==1): ?>disabled<?php endif; ?>" title="Tambah Indikator Baru"><i class="fa fa-plus"></i> Tambah Indikator Baru</a>
+								<a href="<?= site_url('analisis_indikator/form')?>" class="btn btn-box btn-success btn-sm  <?php if ($analisis_master['jenis']==1): ?>disabled<?php endif; ?>" title="Tambah Indikator Baru"><i class="fa fa-plus"></i> Tambah Indikator Baru</a>
 
 								<a href="#confirm-delete" title="Hapus Data"
 
@@ -74,9 +74,9 @@
 
 									<?php endif; ?>
 
-									class="btn btn-box btn-danger btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
+									class="btn btn-box btn-danger btn-sm  hapus-terpilih"><i class='fa fa-trash-o'></i> Hapus Data Terpilih</a>
 
-								<a href="<?= site_url()?>analisis_indikator/leave" class="btn btn-box btn-info btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-arrow-circle-left "></i> Kembali Ke <?= $analisis_master['nama']?></a>
+								<a href="<?= site_url()?>analisis_indikator/leave" class="btn btn-box btn-info btn-sm "><i class="fa fa-arrow-circle-left "></i> Kembali Ke <?= $analisis_master['nama']?></a>
 
 							<?php endif; ?>
 

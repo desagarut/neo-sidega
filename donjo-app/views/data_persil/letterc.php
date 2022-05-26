@@ -22,11 +22,11 @@
 	<div class="pcoded-content">
 
 	<div class="page-header">
-		<h1>Daftar Letter-C <?= ucwords($this->setting->sebutan_desa)?> <?= $kelurahan["nama_desa"];?></h1>
-		<ol class="breadcrumb">
+		<h5 class="m-b-10">Daftar Letter-C <?= ucwords($this->setting->sebutan_desa)?> <?= $kelurahan["nama_desa"];?></h5>
+		<ul class="breadcrumb">
 			<li><a href="<?= site_url('home')?>"><i class="fa fa-home"></i> Home</a></li>
 			<li class="active">Daftar Letter-C</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="card">
 		<form id="mainform" name="mainform" action="" method="post">
@@ -35,7 +35,7 @@
 					<?php $this->load->view('data_persil/menu_kiri.php')?>
 				</div>
 				<div class="col-md-8 col-lg-9">
-					<div class="box box-info">
+					
 						<div class="card-header">
 							<h4 class="text-center"><strong>DAFTAR LETTER C</strong></h4>
 						</div>
@@ -43,13 +43,13 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-										<a href='<?= site_url("letterc/cetak")?>' class="btn btn-box bg-purple btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Cetak Data" target="_blank">
+										<a href='<?= site_url("letterc/cetak")?>' class="btn btn-box bg-purple btn-sm btn-sm " title="Cetak Data" target="_blank">
 											<i class="fa fa-print"></i>Cetak
 										</a>
-										<a href="<?= site_url("letterc/unduh")?>" class="btn btn-box bg-navy btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Unduh Data" target="_blank">
+										<a href="<?= site_url("letterc/unduh")?>" class="btn btn-box bg-navy btn-sm btn-sm " title="Unduh Data" target="_blank">
 											<i class="fa fa-download"></i>Unduh
 										</a>
-										<a href="<?= site_url("letterc/clear")?>" class="btn btn-box bg-purple btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><i class="fa fa-refresh"></i>Bersihkan</a>
+										<a href="<?= site_url("letterc/clear")?>" class="btn btn-box bg-purple btn-sm "><i class="fa fa-refresh"></i>Bersihkan</a>
 										<form id="mainform" name="mainform" action="" method="post">
 											<div class="row">
 												<div class="col-sm-12">
