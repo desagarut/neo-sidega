@@ -1,3 +1,9 @@
+
+<?php defined('BASEPATH') OR exit('No direct script access allowed');?>
+<?php include("donjo-app/views/osm-css.php"); ?>
+<?php include("donjo-app/views/osm-js.php"); ?>
+
+
 <script>
 	(function() {
 		var infoWindow;
@@ -165,8 +171,8 @@
 <style>
 	#map {
 		width: 100%;
-		height: 600px;
-		/*height:80vh*/
+		/*height: 450px;*/
+		height:80vh;
 	}
 </style>
 
@@ -184,8 +190,7 @@
 						</div>
 						<ul class="breadcrumb">
 							<li class="breadcrumb-item"><a href="<?= site_url('beranda') ?>"><i class="feather icon-home"></i></a></li>
-							<li class="breadcrumb-item"><a href="#!">Pertanahan</a></li>
-							<li class="breadcrumb-item"><a href="#!">Peta Wilayah </a></li>
+							<li class="breadcrumb-item"><a href="#!">Peta Wilayah</a></li>
 						</ul>
 					</div>
 				</div>
@@ -220,14 +225,10 @@
 										<a class="leaflet-control-control icos" href="#" title="Legenda" role="button" aria-label="Legenda" onclick="$('#target2').toggle();$('#target2').removeClass('hidden');$('#target1').hide();"><i class="fa fa-list"></i></a>
 									</div>
 
-									<?php $this->load->view("gis/content_desa.php", array('desa' => $desa, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_desa . ' ' . $desa['nama_desa']))) 
-									?>
-									<?php $this->load->view("gis/content_dusun.php", array('dusun_gis' => $dusun_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' '))) 
-									?>
-									<?php $this->load->view("gis/content_rw.php", array('rw_gis' => $rw_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' '))) 
-									?>
-									<?php $this->load->view("gis/content_rt.php", array('rt_gis' => $rt_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' '))) 
-									?>
+									<?php $this->load->view("gis/content_desa.php", array('desa' => $desa, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_desa . ' ' . $desa['nama_desa']))) ?>
+									<?php $this->load->view("gis/content_dusun.php", array('dusun_gis' => $dusun_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' ')))?>
+									<?php $this->load->view("gis/content_rw.php", array('rw_gis' => $rw_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' '))) ?>
+									<?php $this->load->view("gis/content_rt.php", array('rt_gis' => $rt_gis, 'list_ref' => $list_ref, 'wilayah' => ucwords($this->setting->sebutan_dusun . ' '))) ?>
 
 									<div id="target1" class="leaflet-control-layers leaflet-control-layers-expanded leaflet-control hidden" aria-haspopup="true" style="max-width: 250px;">
 										<div class="leaflet-control-layers-overlays">
@@ -361,61 +362,3 @@
 		return file_foto;
 	}
 </script>
-<!--
-<script>
-	function handle_pend(cb) {
-		formAction('mainform_map', '<?= site_url('gis') ?>/layer_penduduk');
-	}
-
-	function handle_kel(cb) {
-		formAction('mainform_map', '<?= site_url('gis') ?>/layer_keluarga');
-	}
-
-	function AmbilFoto(foto, ukuran = "kecil_") {
-		ukuran_foto = ukuran || null
-		file_foto = '<?= base_url() . LOKASI_USER_PICT; ?>' + ukuran_foto + foto;
-		return file_foto;
-	}
-
-	function AmbilFotoLokasi(foto, ukuran = "kecil_") {
-		ukuran_foto = ukuran || null
-		file_foto = '<?= base_url() . LOKASI_FOTO_LOKASI; ?>' + ukuran_foto + foto;
-		return file_foto;
-	}
-</script>-->
-<!--
-<div class="modal fade" id="modalKecil" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
-	<div class="modal-dialog modal-sm">
-		<div class='modal-content'>
-			<div class='modal-header'>
-				<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-				<h4 class='modal-title' id='myModalLabel'></h4>
-			</div>
-			<div class="fetched-data"></div>
-		</div>
-	</div>
-</div>
-
-<div class="modal fade" id="modalSedang" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
-	<div class="modal-dialog">
-		<div class='modal-content'>
-			<div class='modal-header'>
-				<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-				<h4 class='modal-title' id='myModalLabel'></h4>
-			</div>
-			<div class="fetched-data"></div>
-		</div>
-	</div>
-</div>
-
-<div class="modal fade" id="modalBesar" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
-	<div class="modal-dialog modal-lg">
-		<div class='modal-content'>
-			<div class='modal-header'>
-				<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-				<h4 class='modal-title' id='myModalLabel'><i class='fa fa-exclamation-triangle text-red'></i></h4>
-			</div>
-			<div class="fetched-data"></div>
-		</div>
-	</div>
-</div>-->
